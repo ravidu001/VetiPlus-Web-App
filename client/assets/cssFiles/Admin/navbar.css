@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 
 .admin-navbar{
@@ -13,7 +14,6 @@
 }
 .admin-navbar-inside{
     display: flex;
-   
     width: 100%; 
     
 }
@@ -33,8 +33,8 @@
     margin-bottom: 50px;
     padding: 15px 70px;
     font-size: 20px;
-    border-radius: 20px;
-    background-color: #F8ECFF;
+    border-radius: 10px;
+    background-color:rgba(255, 255, 255, 0.50)
 }
 .admin-navbar-inside-left-inner{
     display: flex;
@@ -65,10 +65,17 @@
 }
 .admin-navbar-inside-left-inner-1 ul li{
     list-style: none;
-    margin-top: 10px;
-    
+    border-radius: 10px;
+    border: 2px solid #1a0528;
+    background-color:#733b96;
+    padding: 10px;
     width: 100%;
     height: 50px;
+    display: flex;
+    justify-content: center;
+}
+.admin-navbar-inside-left-inner-1 ul li:hover{
+    background-color: rgba(255, 255, 255, 0.50);;
 }
 .admin-navbar-inside-left-inner-1 ul li img{
     margin-top: 10px;
