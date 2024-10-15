@@ -1,0 +1,33 @@
+/* Parent container */
+.container {
+    display: flex;
+    justify-content:center; /* Adjust spacing between containers */
+    align-items: flex-start; /* Align items at the start of the container */
+    margin: 50px; /* Optional: Add margin around the container */
+}
+
+/* First container */
+.container a  {
+    background: #ffffff;
+    height: 500px;
+    width: 25%;
+    padding: 0px;
+    border-radius: 20px;
+    box-shadow: slategray 0px 5px 5px;
+    border: 2px solid #6a0dad;
+    margin-right: 30px;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.small-svg {
+    width: 100px;
+    height: 100px;
+    margin: 100px 0px 30px 0px;
+}
+
+.container a:hover {
+    background: #6a0dad;
+    color: white;
+}
