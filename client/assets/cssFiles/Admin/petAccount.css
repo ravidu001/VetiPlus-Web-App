@@ -1,0 +1,32 @@
+.pet-account{
+    width: 90%;
+}
+.pet-account-inside{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 40px 100px;
+    background-color: #F1DBFF;
+    height: 60%;
+    border-radius: 50px;
+}
+.pet-account-inside-left{
+    width: 40%;  
+    margin: 10px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pet-account-inside-left img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.pet-account-inside-right{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    gap: 70px;
+    padding: 30px;
+}

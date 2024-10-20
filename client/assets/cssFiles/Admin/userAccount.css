@@ -1,0 +1,75 @@
+.user-account{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.user-account-inside{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 40px 100px;
+    background-color: #F1DBFF;
+    border-radius: 50px;
+
+}
+.user-account-inside-left{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-account-inside-left img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 10px;
+
+}
+.user-account-inside-right{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: left;
+    margin: 10px;
+    gap: 30px;
+}
+.user-account-outside{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 100px;
+    justify-content: space-between;
+    height: 40%;
+}
+.user-account-outside-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    gap: 30px;
+    
+}
+.user-account-outside-left button{
+    width: 300px;
+    height: 40px;
+    background-color: #F1DBFF;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+}
+.user-account-outside-left button:hover{
+    background-color: #D6A2E8;
+}
+.user-account-outside-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    gap: 90px;
+    padding: 10px;
+    margin-left: 100px;
+    background-color: #F1DBFF;
+    border-radius: 30px;
+}
