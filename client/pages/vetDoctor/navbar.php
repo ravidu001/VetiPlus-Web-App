@@ -28,7 +28,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </li>
 
                 <ul class="menu-links">
-                    <li class="nav-link <?= $current_page == 'homeNew.php' ? 'active' : '' ?>">
+                    <li class="nav-link <?= $current_page == 'homeNew.php' ? 'active' : '' ?>">                        
                         <a href="homeNew.php">
                             <i class='bx bx-home icon'></i>
                             <span class="text nav-text"> Home</span>
@@ -78,8 +78,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                             <i class='bx bxs-down-arrow arrow first icon'></i>
                         </a>
                         <ul class="sub-menu" >
-                            <li class="nav-link">
-                                <a href="#">
+                            <li class="nav-link <?= $current_page == 'prescription.php' ? 'active' : '' ?>">
+                                <a href="prescription.php">
                                 <i class='bx bx-book-add icon' ></i>
                                     <span class="text nav-text" style="font-size:14px;">Add Prescription</span>
                                 </a>
@@ -113,14 +113,14 @@ $current_page = basename($_SERVER['PHP_SELF']);
                             <i class='bx bxs-down-arrow arrow first icon'></i>
                         </a>
                         <ul class="sub-menu" >
-                            <li class="nav-link">
-                                <a href="#">
+                            <li class="nav-link <?= $current_page == 'myReview.php' ? 'active' : '' ?>">
+                                <a href="myReview.php">
                                     <i class='bx bx-smile icon' ></i>
                                     <span class="text nav-text" style="font-size:14px;">My Reviews</span>
                                 </a>
                             </li>
-                            <li class="nav-link">
-                                <a href="#">
+                            <li class="nav-link <?= $current_page == 'toReview.php' ? 'active' : '' ?>">
+                                <a href="toReview.php">
                                     <i class='bx bx-upside-down icon' ></i>
                                     <span class="text nav-text" style="font-size:14px;">To Review</span>
                                 </a>

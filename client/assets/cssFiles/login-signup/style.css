@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #4c596d, #d6e0f0);
+    background: linear-gradient(135deg, #f5f7fa, #d6e0f0);
 }
 
 .container {
@@ -25,8 +25,8 @@ body {
 
 .left-panel {
     flex: 1;
-    background: linear-gradient(135deg, #BAA2CB, #9502FF);
-    opacity: 0.8;
+    background: linear-gradient(135deg, #baa2cb70, #9602ffc4);
+    opacity: 0.9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,12 +40,29 @@ body {
     opacity: 1;
     z-index: 100;
     margin-left: 60px;
+    margin-left: -20px;
 }
 
+.home-icon {
+    /*place home icon on the top of the left-panel*/
+    margin-top: -450px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    background-color: #d6e0f0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.home-icon:hover {
+    box-shadow: 0 0px 25px rgba(0, 0, 0, 0.3);
+}
 
 .right-panel {
     flex: 1;
-    padding: 50px;
+    padding: 100px;
     display: flex;
     flex-direction: column; 
     justify-content: center;
@@ -60,12 +77,14 @@ body {
 }
 
 h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 36px;
+    margin-bottom: 30px;
 }
 
 .brand {
     color: #6c63ff;
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .input-group {
@@ -144,3 +163,29 @@ input:focus {
 .register-link:hover {
     text-decoration: underline;
 }
+
+select {
+    width: 100%;
+    padding: 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    appearance: none;
+    background-color: white;
+    
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+select:focus {
+    border-color: #6c63ff;
+}
+
+.sub-heading {
+    margin-bottom: 20px;
+    margin-top: -15px;
+    color:#737475;
+    font-size: 18px;
+}
+
