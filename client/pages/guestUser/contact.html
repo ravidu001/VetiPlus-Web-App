@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/png" href="../img/vpLogo.png" />
+        <title>Contact Us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="../css/hero.css" rel="stylesheet" type="text/css">
+        <link href="../css/myStyle.css" rel="stylesheet" type="text/css">
+        <link href="../css/navbar.css" rel="stylesheet" type="text/css">
+        <link href="../css/footer.css" rel="stylesheet" type="text/css">
+        
+        <style>
+            .contactSection {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                padding: 2em;
+                gap: 2em;
+
+                background-color: aqua;
+            }
+            .contactSection img {
+                width: 30%;
+            }
+
+            .contactForm {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .contactForm header {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            .contactForm form {
+                display: flex;
+                flex-direction: column;
+
+                justify-content: center;
+                gap: 0.5rem;
+                padding: 1rem;
+            }
+            .contactForm input,
+            .contactForm select,
+            .contactForm textarea {
+                font-size: 1.1em;
+                padding: 0.2em;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            textarea {
+                resize: none;
+            }
+            .contactForm form input[type=submit] {
+                font-size: 1.1em;
+
+                background-color: inherit;
+                border-radius: 1em;
+                padding: 0.8em;
+            }
+            .contactForm form input[type=submit]:hover {
+                color: white;
+                background-color: var(--bgColDark);
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../img/vpLogo.png" alt="VetiPlus logo">
+                <p>VetiPlus</p>
+            </div>
+            <div class="links">
+                <a href="../index.html">
+                    <button>Home</button>
+                </a>
+                <a href="services.html">
+                    <button>Services</button>
+                </a>
+                <a href="aboutUs.html">
+                    <button>About Us</button>
+                </a>
+                <a href="contact.html">
+                    <button class="current">Contact Us</button>
+                </a>
+            </div>
+            <a href="login.html" target="_blank" class="loginBtn">
+                <button>Login</button>
+            </a>
+        </div>
+
+        <div class="hero-section">
+            <div>
+                <header>Contact Us:</header>
+                <p>
+                    Get in touch with us for more information.
+                </p>
+            </div>
+            <img class="heroImg" src="../img/guestHeroes/contactUsHero.png" alt="">
+        </div>
+
+        <div class="contactSection">
+            <div class="left">
+                <div class="logo">
+                    <img src="../img/vpLogo.png" alt="VetiPlus logo">
+                    <p>VetiPlus</p>
+                </div>
+                <div class="details">
+                    <h2>Address</h2>
+                    <p>UCSC Building Complex,<br/>35 Reid Ave,<br/>Colombo 00700</p>
+                    <h2>Email</h2>
+                    <p>vetiplus737@gmail.com</p>
+                    <h2>Call us</h2>
+                    <p>+94 12 345 6789<br/>+94 12 345 6789</p>
+                </div>
+            </div>
+            <img src="../img/phoneDoggo.png" alt="">
+            <div class="contactForm">
+                <header>Connect with Us</header>
+                <form action="" method="post">
+                    <label for="email">Email address:</label>
+                        <input type="email" id="email" name="email" required>
+                    <label for="contact">Contact number:</label>
+                        <input type="tel" id="contact" name="contact" required pattern="[0][7][0-9]{8}" placeholder="07X-XXXXXXXX">
+                    <label for="msgType">Type of Message:</label>
+                    <select name="msgType" id="msgType">
+                        <option value="inquiry">Inquiry</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                    <label for="msg">Message:</label>
+                        <textarea id="msg" name="msg" placeholder="Enter a message for us." rows="10" cols="30" required></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footerLinks">
+                <div>
+                    <p>Quick Links:</p>
+                    <div class="quickLinks">
+                        <a href="./pages/aboutUs.html">Home</a><p></p>
+                        <a href="./pages/aboutUs.html">Services</a><p></p>
+                        <a href="./pages/aboutUs.html">About Us</a><p></p>
+                        <a href="./pages/aboutUs.html">Contact Us</a>
+                    </div>
+                </div>
+                <div>
+                    <p>Befriend Us:</p>
+                    <div class="socials">
+                        <a href=""><img src="./img/socialIcons/Facebook.png" alt="Facebook"></a>
+                        <a href=""><img src="./img/socialIcons/TwitterX.png" alt="TwitterX"></a>
+                        <a href=""><img src="./img/socialIcons/Instagram.png" alt="Instagram"></a>
+                        <a href=""><img src="./img/socialIcons/LinkedIn.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="central">
+                <img src="./img/vpLogo.png" alt="logo">
+                <h2>VetiPlus</h2>
+                <p>Copyright 2024 vetiplus@gmail.com<br/>
+                    All Rights Reserved.</p>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+            </div>
+            <img src="./img/FooterImg.png" alt="FooterImg">
+        </div>
+    </body>
+</html>

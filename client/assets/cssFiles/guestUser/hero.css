@@ -1,0 +1,28 @@
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    font-size: 1rem;
+
+    background-image: url("../img/heroBG.jpg");
+    background-size: 100% 100%;
+
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+.hero-section header {
+    padding-top: 2em;
+    font-size: 3.5em;
+    font-weight: bold;
+}
+.hero-section p {
+    font-size: 2em;
+    padding: 1em;
+}
+.hero-section .heroImg {
+    height: auto;
+    width: 40%;
+}
