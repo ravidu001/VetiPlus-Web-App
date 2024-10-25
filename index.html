@@ -1,42 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="icon" type="image/png" href="/img/vpLogo.png" />
+        <link rel="icon" type="image/png" href="./client/assets/images/logo.png" />
         <title>Home - VetiPlus</title>
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="css/myStyle.css" rel="stylesheet" type="text/css">
-        <link href="css/navbar.css" rel="stylesheet" type="text/css">
-        <link href="css/cards.css" rel="stylesheet" type="text/css">
-        <link href="css/hero.css" rel="stylesheet" type="text/css">
-        <link href="css/footer.css" rel="stylesheet" type="text/css">
-        <link href="css/homeDivs.css" rel="stylesheet" type="text/css">
-        <link href="css/userTypes.css" rel="stylesheet" type="text/css">
-        <link href="css/happyCx.css" rel="stylesheet" type="text/css">
+        <link href="./client/assets/cssFiles/guestUser/myStyle.css" rel="stylesheet" type="text/css">
+
+        <link href="./client/assets/cssFiles/guestUser/navbar.css" rel="stylesheet" type="text/css">
+        <link href="./client/assets/cssFiles/guestUser/hero.css" rel="stylesheet" type="text/css">
+        <link href="./client/assets/cssFiles/guestUser/footer.css" rel="stylesheet" type="text/css">
+        
+        <link href="./client/assets/cssFiles/guestUser/happyCx.css" rel="stylesheet" type="text/css">
+
+        <!-- styles for some sections that are only in this page: -->
+        <style>
+            /* for the service cards */
+            .serviceCards {
+                display: flex;
+                justify-content: center;
+                gap: 1em;
+                margin-top: 0;
+                margin: 10px;
+            }
+            .serviceCard {
+                width: 15%;
+                padding: 1em;
+
+                font-size: 1rem;
+                text-align: center;
+
+                background-color: lightblue;
+                border-radius: 20px;
+                
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                justify-content: center;
+                align-items: center;
+            }
+            .serviceCard img {
+                width: 90%;
+                object-fit: contain;
+            }
+
+            /* for the description divs */
+            .homeDiv1, .homeDiv2 {
+                font-size: 1rem;
+                padding: 3em 10em;
+
+                display:flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .homeDiv1 img, .homeDiv2 img {
+                height: auto;
+                width: 60%;
+            }
+            .homeDivText {
+                text-align: center;
+                color: black;
+                font-size: 1.1em;
+            }
+            .homeDivHeader {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+
+            .regBtn button {
+                font-size: 1.2em;
+                color: white;
+
+                border: 1px solid black;
+                background-color: blue;
+
+                padding: 1em;
+                margin-right: 1em;
+                border-radius: 10px;
+            }
+            .regBtn button:hover {
+                cursor: pointer;
+                color: black;
+                background-color: lightblue;
+                transition: ease 500ms;
+            }
+            /* for user types: */
+            .userTypes {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+
+                margin-bottom: 3rem;
+            }
+            .userTypes .userCard {
+                width: 20%;
+                padding: 1rem;
+                background-color: aqua;
+
+                /* border: 1px solid blue; */
+                border-radius: 20px;
+
+                font-size: 1rem;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .userCard img {
+                width: 80%;
+                height: auto;
+
+                border-radius: 20px;
+                background-color: lightblue;
+            }
+            .userTypes .userCard .userTitle {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            .userTypes .userCard .userDescription {
+                font-size: 1em;
+            }
+        </style>
+
     </head>
     <body>
         <div class="navbar">
             <div class="logo">
-                <img src="img/vpLogo.png" alt="VetiPlus logo">
+                <img src="./client/assets/images/logo.png" alt="VetiPlus logo">
                 <p>VetiPlus</p>
             </div>
             <div class="links">
                 <a href="index.html">
                     <button class="current">Home</button>
                 </a>
-                <a href="pages/services.html">
+                <a href="./client/pages/guestUser/services.html">
                     <button>Services</button>
                 </a>
-                <a href="pages/aboutUs.html">
+                <a href="./client/pages/guestUser/aboutUs.html">
                     <button>About Us</button>
                 </a>
-                <a href="pages/contact.html">
+                <a href="./client/pages/guestUser/contact.html">
                     <button>Contact Us</button>
                 </a>
             </div>
-            <a href="pages/login.html" target="_blank" class="loginBtn">
+            <a href="./client/pages/login-singup/login.php" target="_blank" class="loginBtn">
                 <button>Login</button>
             </a>
         </div>
@@ -46,14 +159,14 @@
                 VetiPlus:<br/>
                 Connecting Pet Parents<br/>with<br/>Quality Care
             </header>
-            <img class="heroImg" src="./img/guestHeroes/homeHero.png" alt="">
+            <img class="heroImg" src="./client/assets/images/guestUser/guestHeroes/homeHero.png" alt="">
         </div>
 
         <h1>Our Services</h1>
         <div class="serviceCards"></div>
 
         <div class="homeDiv1">
-            <img src="./img/SittingDoggo.png" alt="SittingDoggo">
+            <img src="./client/assets/images/guestUser/homeImg/SittingDoggo.png" alt="SittingDoggo">
             <div class="homeDivText">
                 <p class="homeDivHeader">Pets do speak, but only to those who know how to listen.</p>
                 <p>Join the VetiPlus family today and connect with professionals who take pet care to another level.</p>    
@@ -76,13 +189,13 @@
                     <button>Register</button>
                 </a>
             </div>
-            <img src="./img/CuteDoggo.png" alt="SittingDoggo">
+            <img src="./client/assets/images/guestUser/homeImg/CuteDoggo.png" alt="SittingDoggo">
         </div>
 
         <h1>Our Community</h1>
         <div class="userTypes">
             <div class="userCard">
-                <img src="./img/userTypes/petOwners.png" alt="">
+                <img src="./client/assets/images/guestUser/userTypes/petOwners.png" alt="">
                 <p class="userTitle">Pet Owner</p>
                 <p class="userDescription">
                     Care for your furry friend from
@@ -93,7 +206,7 @@
                 </p>
             </div>
             <div class="userCard">
-                <img src="./img/userTypes/vetDoctor.png" alt="">
+                <img src="./client/assets/images/guestUser/userTypes/vetDoctor.png" alt="">
                 <p class="userTitle">Veterinary Doctor</p>
                 <p class="userDescription">
                     Expand your practice online. Join
@@ -105,7 +218,7 @@
                 </p>
             </div>
             <div class="userCard">
-                <img src="./img/userTypes/vetAssistant.png" alt="">
+                <img src="./client/assets/images/guestUser/userTypes/vetAssistant.png" alt="">
                 <p class="userTitle">Veterinary Assistant</p>
                 <p class="userDescription">
                     Streamline your work. Sign up to
@@ -116,7 +229,7 @@
                 </p>
             </div>
             <div class="userCard">
-                <img src="./img/userTypes/salon.png" alt="">
+                <img src="./client/assets/images/guestUser/userTypes/salon.png" alt="">
                 <p class="userTitle">Pet Salon</p>
                 <p class="userDescription">
                     Boost your business. Register to
@@ -145,35 +258,35 @@
                 <div>
                     <p>Quick Links:</p>
                     <div class="quickLinks">
-                        <a href="./pages/aboutUs.html">Home</a><p></p>
-                        <a href="./pages/aboutUs.html">Services</a><p></p>
-                        <a href="./pages/aboutUs.html">About Us</a><p></p>
-                        <a href="./pages/aboutUs.html">Contact Us</a>
+                        <a href="./index.html">Home</a><p></p>
+                        <a href="./client/pages/guestUser/services.html">Services</a><p></p>
+                        <a href="./client/pages/guestUser/aboutUs.html">About Us</a><p></p>
+                        <a href="./client/pages/guestUser/contact.html">Contact Us</a>
                     </div>
                 </div>
                 <div>
                     <p>Befriend Us:</p>
                     <div class="socials">
-                        <a href=""><img src="./img/socialIcons/Facebook.png" alt="Facebook"></a>
-                        <a href=""><img src="./img/socialIcons/TwitterX.png" alt="TwitterX"></a>
-                        <a href=""><img src="./img/socialIcons/Instagram.png" alt="Instagram"></a>
-                        <a href=""><img src="./img/socialIcons/LinkedIn.png" alt="LinkedIn"></a>
+                        <a href=""><img src="./client/assets/images/footerImg/socialIcons/Facebook.png" alt="Facebook"></a>
+                        <a href=""><img src="./client/assets/images/footerImg/socialIcons/TwitterX.png" alt="TwitterX"></a>
+                        <a href=""><img src="./client/assets/images/footerImg/socialIcons/Instagram.png" alt="Instagram"></a>
+                        <a href=""><img src="./client/assets/images/footerImg/socialIcons/LinkedIn.png" alt="LinkedIn"></a>
                     </div>
                 </div>
             </div>
             <div class="central">
-                <img src="./img/vpLogo.png" alt="logo">
+                <img src="./client/assets/images/logo.png" alt="logo">
                 <h2>VetiPlus</h2>
                 <p>Copyright 2024 vetiplus@gmail.com<br/>
                     All Rights Reserved.</p>
                 <a href="">Privacy Policy</a>
                 <a href="">Terms & Conditions</a>
             </div>
-            <img src="./img/FooterImg.png" alt="FooterImg">
+            <img src="./client/assets/images/footerImg/footerDoggo.png" alt="FooterDoggo">
         </div>
 
         <script>
-            const imgFolder = "img/serviceCards/"
+            const imgFolder = "./client/assets/images/serviceIcons/"
             const services = [
                 {
                     serviceName: "Vet Appointments",
