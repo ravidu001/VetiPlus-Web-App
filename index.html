@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/png" href="./client/assets/images/logo.png" />
+        <title>Home - VetiPlus</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="./client/assets/cssFiles/guestUser/myStyle.css" rel="stylesheet" type="text/css">
+
+        <link href="./client/assets/cssFiles/guestUser/navbar.css" rel="stylesheet" type="text/css">
+        <link href="./client/assets/cssFiles/guestUser/hero.css" rel="stylesheet" type="text/css">
+        <link href="./client/assets/cssFiles/guestUser/footer.css" rel="stylesheet" type="text/css">
+        
+        <link href="./client/assets/cssFiles/guestUser/happyCx.css" rel="stylesheet" type="text/css">
+
+        <!-- styles for some sections that are only in this page: -->
+        <style>
+            /* for the service cards */
+            .serviceCards {
+                display: flex;
+                justify-content: center;
+                gap: 1em;
+                margin-top: 0;
+                margin: 10px;
+            }
+            .serviceCard {
+                width: 15%;
+                padding: 1em;
+
+                font-size: 1rem;
+                text-align: center;
+
+                background-color: lightblue;
+                border-radius: 20px;
+                
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                justify-content: center;
+                align-items: center;
+            }
+            .serviceCard img {
+                width: 90%;
+                object-fit: contain;
+            }
+
+            /* for the description divs */
+            .homeDiv1, .homeDiv2 {
+                font-size: 1rem;
+                padding: 3em 10em;
+
+                display:flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .homeDiv1 img, .homeDiv2 img {
+                height: auto;
+                width: 60%;
+            }
+            .homeDivText {
+                text-align: center;
+                color: black;
+                font-size: 1.1em;
+            }
+            .homeDivHeader {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+
+            .regBtn button {
+                font-size: 1.2em;
+                color: white;
+
+                border: 1px solid black;
+                background-color: blue;
+
+                padding: 1em;
+                margin-right: 1em;
+                border-radius: 10px;
+            }
+            .regBtn button:hover {
+                cursor: pointer;
+                color: black;
+                background-color: lightblue;
+                transition: ease 500ms;
+            }
+            /* for user types: */
+            .userTypes {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+
+                margin-bottom: 3rem;
+            }
+            .userTypes .userCard {
+                width: 20%;
+                padding: 1rem;
+                background-color: aqua;
+
+                /* border: 1px solid blue; */
+                border-radius: 20px;
+
+                font-size: 1rem;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .userCard img {
+                width: 80%;
+                height: auto;
+
+                border-radius: 20px;
+                background-color: lightblue;
+            }
+            .userTypes .userCard .userTitle {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            .userTypes .userCard .userDescription {
+                font-size: 1em;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./client/assets/images/logo.png" alt="VetiPlus logo">
+                <p>VetiPlus</p>
+            </div>
+            <div class="links">
+                <a href="index.html">
+                    <button class="current">Home</button>
+                </a>
+                <a href="./client/pages/guestUser/services.html">
+                    <button>Services</button>
+                </a>
+                <a href="./client/pages/guestUser/aboutUs.html">
+                    <button>About Us</button>
+                </a>
+                <a href="./client/pages/guestUser/contact.html">
+                    <button>Contact Us</button>
+                </a>
+            </div>
+            <a href="./client/pages/login-singup/login.php" target="_blank" class="loginBtn">
+                <button>Login</button>
+            </a>
+        </div>
+
+        <div class="hero-section">
+            <header>
+                VetiPlus:<br/>
+                Connecting Pet Parents<br/>with<br/>Quality Care
+            </header>
+            <img class="heroImg" src="./client/assets/images/guestUser/guestHeroes/homeHero.png" alt="">
+        </div>
+
+        <h1>Our Services</h1>
+        <div class="serviceCards"></div>
+
+        <div class="homeDiv1">
+            <img src="./client/assets/images/guestUser/homeImg/SittingDoggo.png" alt="SittingDoggo">
+            <div class="homeDivText">
+                <p class="homeDivHeader">Pets do speak, but only to those who know how to listen.</p>
+                <p>Join the VetiPlus family today and connect with professionals who take pet care to another level.</p>    
+                <a href="pages/login.html" class="regBtn">
+                    <button>Register</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="homeDiv2">
+            <div class="homeDivText">
+                <p class="homeDivHeader">Why Choose Us</p>
+                <p>
+                    VetiPlus is a community of pet owners andservice providers revolutionizing pet care.
+                    Whether you're a pet parent or a dedicated professional, 
+                    VetiPlus provides the tools to makeyour experience seamless and rewarding.
+                    Become part of our family today
+                </p>    
+                <a href="pages/login.html" class="regBtn">
+                    <button>Register</button>
+                </a>
+            </div>
+            <img src="./client/assets/images/guestUser/homeImg/CuteDoggo.png" alt="SittingDoggo">
+        </div>
+
+        <h1>Our Community</h1>
+        <div class="userTypes">
+            <div class="userCard">
+                <img src="./client/assets/images/guestUser/userTypes/petOwners.png" alt="">
+                <p class="userTitle">Pet Owner</p>
+                <p class="userDescription">
+                    Care for your furry friend from
+                    anywhere. Register to access 24/7
+                    health records, and appointment
+                    booking, knowing expert care is just
+                    a click away.
+                </p>
+            </div>
+            <div class="userCard">
+                <img src="./client/assets/images/guestUser/userTypes/vetDoctor.png" alt="">
+                <p class="userTitle">Veterinary Doctor</p>
+                <p class="userDescription">
+                    Expand your practice online. Join
+                    our network to grow your client
+                    base with tools for easy
+                    appointment management, digital
+                    prescriptions, and secure record
+                    keeping.
+                </p>
+            </div>
+            <div class="userCard">
+                <img src="./client/assets/images/guestUser/userTypes/vetAssistant.png" alt="">
+                <p class="userTitle">Veterinary Assistant</p>
+                <p class="userDescription">
+                    Streamline your work. Sign up to
+                    efficiently collaborate seamlessly
+                    with veterinarians and provide top
+                    notch support to clients with
+                    consultation sessions.
+                </p>
+            </div>
+            <div class="userCard">
+                <img src="./client/assets/images/guestUser/userTypes/salon.png" alt="">
+                <p class="userTitle">Pet Salon</p>
+                <p class="userDescription">
+                    Boost your business. Register to
+                    showcase your grooming services,
+                    manage bookings, and connect with
+                    pet owners in your area with
+                    increased visibility
+                </p>
+            </div>
+        </div>
+
+        <h1>Our Happy Customers</h1>
+        <div class="happyCx">
+            <div class="cxCard">
+                <img src="" alt="">
+                <p class="cxTitle"></p>
+                <p class="cxReview">
+
+                </p>
+                <div class="stars"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footerLinks">
+                <div>
+                    <p>Quick Links:</p>
+                    <div class="quickLinks">
+                        <a href="./index.html">Home</a><p></p>
+                        <a href="./client/pages/guestUser/services.html">Services</a><p></p>
+                        <a href="./client/pages/guestUser/aboutUs.html">About Us</a><p></p>
+                        <a href="./client/pages/guestUser/contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div>
+                    <p>Befriend Us:</p>
+                    <div class="socials">
+                        <a href=""><img src="./client/assets/images/footerImg/socialIcons/Facebook.png" alt="Facebook"></a>
+                        <a href=""><img src="./client/assets/images/footerImg/socialIcons/TwitterX.png" alt="TwitterX"></a>
+                        <a href=""><img src="./client/assets/images/footerImg/socialIcons/Instagram.png" alt="Instagram"></a>
+                        <a href=""><img src="./client/assets/images/footerImg/socialIcons/LinkedIn.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="central">
+                <img src="./client/assets/images/logo.png" alt="logo">
+                <h2>VetiPlus</h2>
+                <p>Copyright 2024 vetiplus@gmail.com<br/>
+                    All Rights Reserved.</p>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+            </div>
+            <img src="./client/assets/images/footerImg/footerDoggo.png" alt="FooterDoggo">
+        </div>
+
+        <script>
+            const imgFolder = "./client/assets/images/serviceIcons/"
+            const services = [
+                {
+                    serviceName: "Vet Appointments",
+                    imgLoc: imgFolder + "vetAppointmentIcon.png"
+                },
+                {
+                    serviceName: "Salon Appointments",
+                    imgLoc: imgFolder + "salonIcon.png"
+                },
+                {
+                    serviceName: "Adoption",
+                    imgLoc: imgFolder + "petAdoptionIcon.png"
+                },
+                {
+                    serviceName: "Breeding",
+                    imgLoc: imgFolder + "petBreedingIcon.png"
+                },
+                {
+                    serviceName: "Unified Records",
+                    imgLoc: imgFolder + "recordKeepingIcon.png"
+                }
+            ]
+            document.querySelector('.serviceCards').innerHTML = services
+                .map(ser => `<div class='serviceCard'>
+                                <h4>${ser.serviceName}</h4>
+                                <img src='${ser.imgLoc}'/>
+                            </div>`)
+        </script>
+    </body>
+</html>
