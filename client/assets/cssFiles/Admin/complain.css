@@ -1,4 +1,4 @@
-/* .complain{
+.complain{
     width: 80%;
 }
 table {
@@ -52,7 +52,7 @@ table tbody tr td a img{
     width: 30px;
     height: 30px;
     
-} */
+}
 .admin-navbar-inside-left-inner-1 ul li.active {
     background-color: #F8ECFF; /* Active background color */
 }

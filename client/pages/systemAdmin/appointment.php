@@ -10,6 +10,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/appointment.css">
+   
     <title>Appoinment</title>
 </head>
 <body>

@@ -9,7 +9,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Admin/appointment_list.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Admin/appointment_list.css"> 
+   
     <title>Appointment List</title>
 </head>
 <body>
