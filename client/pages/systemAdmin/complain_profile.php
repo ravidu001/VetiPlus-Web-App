@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../cssFiles/Admin/complain_profile.css">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Admin/complain_profile.css">
     <title>Complain Profile</title>
 </head>
 <body>
@@ -108,6 +108,43 @@
                <br>
                <button type="button" title="Click me">Logout</button>
        </div>
+     <div class="complain_profile">
+        <div class="complain_profile_top">
+            <div class="complain_profile_top_left">
+                <img src="../../assets/images/image_8.jpg" alt="">
+            </div>
+            <div class="complain_profile_top_right">
+                <div class="complain_profile_top_right_inner">
+                    <h3>Name : </h3>
+                    <h3>Email : </h3>
+                    <h3>Contact Number : </h3>
+                    <h3>Date : </h3>
+                </div>
+                <div class="complain_profile_top_right_inner">
+                    <h3>Ramesh Peshala</h3>
+                    <h3>rameshpeshala84@gmail.com</h3>
+                    <h3>0762163506</h3>
+                    <h3>2022/05/06</h3>
+                </div>
+            </div>
+        </div>
+        <div class="complain_profile_down">
+            <div class="complain_profile_down_inner">
+                <h1>Complain Massage</h1>
+                &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, obcaecati quis voluptatem veritatis rerum quaerat quod qui perferendis omnis fugiat!</h4>
+            </div>
+            <div class="complain_profile_down_inner">
+                <h1>Complain Image</h1>
+                <img src="../../assets/images/image_8.jpg" alt="">
+                <img src="../../assets/images/image_8.jpg" alt="">
+                <img src="../../assets/images/image_8.jpg" alt="">
+                <img src="../../assets/images/image_8.jpg" alt="">
+            </div>
+        </div>
+     </div>
     </div>
 </body>
 </html>
