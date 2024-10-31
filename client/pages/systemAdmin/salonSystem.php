@@ -9,7 +9,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Admin/petAccount.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Admin/salonSystem.css">
     <title>Salon System</title>
 </head>
 <body>
@@ -93,21 +93,23 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me">Logout</button>
     </div>
-        <div class="pet-account">
-        <div class="pet-account-inside">
-            <div class="pet-account-inside-left">
-                <img src="../../assets/images/image_8.jpg" alt="">
-           </div>
-           <div class="pet-account-inside-right">
-                <h2>Pet ID  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;:-</h2>
-                 <h2>Name &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  :-</h2>
-                 <h2>Gender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :-</h2>
-                 <h2>Pet Owner &nbsp;&nbsp; :-</h2>
-           </div>
-        </div> 
-
+    <div class="salon_system">
+        <div class="salon_system_top">
+            <div class="salon_system_top_inside">
+                <h3>Total Account</h3>
+                <h4>56</h4>
+            </div>
+            <div class="salon_system_top_inside">
+                <h3>Total Account</h3>
+                <h4>56</h4>
+            </div>
+            <div class="salon_system_top_inside">
+                <h3>Total Account</h3>
+                <h4>56</h4>
+            </div>
         </div>
-    
+        <div class="salon_system_down"></div>
     </div>
+</div>
 </body>
 </html>

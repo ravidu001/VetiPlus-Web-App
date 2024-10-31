@@ -1,0 +1,8 @@
+.active {
+    background-color: #007bff;
+    color: #fff; /* Text color for active link */
+}
+
+.active a {
+    color: #fff; /* Text color for active link when hovered */
+}

@@ -9,7 +9,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Admin/petAccount.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Admin/salonSystem.css">
     <title>Salon System</title>
 </head>
 <body>
@@ -93,21 +93,45 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me">Logout</button>
     </div>
-        <div class="pet-account">
-        <div class="pet-account-inside">
-            <div class="pet-account-inside-left">
-                <img src="../../assets/images/image_8.jpg" alt="">
-           </div>
-           <div class="pet-account-inside-right">
-                <h2>Pet ID  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;:-</h2>
-                 <h2>Name &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  :-</h2>
-                 <h2>Gender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :-</h2>
-                 <h2>Pet Owner &nbsp;&nbsp; :-</h2>
-           </div>
-        </div> 
+        <div class="account">
+            <div class="account-inside">
+                <h1>Welcome to Edit Page</h1>
 
+            </div>
+            <div class="account-inside-upper" >
+                <div class="account-inside-upper-1">
+                    <h3>Users  Accounts</h3>
+                </div>
+                <div class="account-inside-upper-1"
+                ><h3>Pets  Accounts</h3>
+            </div>
+
+            </div>
+            <div class="account-inside-lower">
+                <div class="account-inside-lower-left">
+                    <form action="">
+                        <label for="searchInput"></label>
+                        <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
+                        <label for="searchInput"></label>
+                        <input type="password" id="searchInput" title="search Input" placeholder="Enter Admin Password">
+                        <button type="button" title="Click me">Search</button>
+                    </form>
+                    
+                </div>
+                <div class="account-inside-lower-right">
+                    <form action="">
+                        <label for="searchInput"></label>
+                        <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
+                        <label for="searchInput"></label>
+                        <input type="password" id="searchInput" title="search Input" placeholder="Enter Admin Password">
+                        <button type="button" title="Click me">Search</button>
+                    </form>
+
+                </div>
+            </div>
         </div>
-    
     </div>
+    
+    
 </body>
 </html>
