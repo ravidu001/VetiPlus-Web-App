@@ -10,7 +10,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/complain_profile.css">
-    <title>Salon System</title>
+    <title>Complain Profile</title>
 </head>
 <body>
 <div class="admin-navbar"> 
@@ -24,68 +24,52 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <div>
             <div class="admin-navbar-inside-left-inner-1">
                 <ul>
-                    <li>
+                    <li class="<?= ($current_page == 'home.php') ? 'active' : '' ?>">
                         <img src="../../assets/images/image_1.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <div class="<?= ($current_page == 'home.php') ? 'admin-navbar-inside-left-inner-2 active' : 'admin-navbar-inside-left-inner-2' ?>">
-                            <a href="home.php">Dashboard</a>
-                        </div>
+                        <a href="home.php">Dashboard</a>
                     </li>
 
-                    <li>
+                    <li class="<?= ($current_page == 'accountDashboard.php') ? 'active' : '' ?>">
                         <img src="../../assets/images/image_2.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <div class="<?= ($current_page == 'accountDashboard.php') ? 'admin-navbar-inside-left-inner-2 active' : 'admin-navbar-inside-left-inner-2' ?>">
-                            <a href="accountDashboard.php">Accounts</a>
-                        </div>
+                        <a href="accountDashboard.php">Accounts</a>
                     </li>
 
-                    <li>
+                    <li class="<?= ($current_page == 'appointment.php') ? 'active' : '' ?>">
                         <img src="../../assets/images/image_3.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <div class="<?= ($current_page == 'appointment.php') ? 'admin-navbar-inside-left-inner-2 active' : 'admin-navbar-inside-left-inner-2' ?>">
-                            <a href="appointment.php">Appointment</a>
-                        </div>
+                        <a href="appointment.php">Appointment</a>
                     </li>
 
-                    <li>
+                    <li class="<?= ($current_page == 'payment.php') ? 'active' : '' ?>">
                         <img src="../../assets/images/image_4.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <div class="<?= ($current_page == 'payment.php') ? 'admin-navbar-inside-left-inner-2 active' : 'admin-navbar-inside-left-inner-2' ?>">
-                            <a href="payment.php">Payment Transactions</a>
-                        </div>
+                        <a href="payment.php">Payment Transactions</a>
                     </li>
 
-                    <li>
+                    <li class="<?= ($current_page == 'feedback.php') ? 'active' : '' ?>">
                         <img src="../../assets/images/image_5.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <div class="<?= ($current_page == 'feedback.php') ? 'admin-navbar-inside-left-inner-2 active' : 'admin-navbar-inside-left-inner-2' ?>">
-                            <a href="feedback.php">Feedback</a>
-                        </div>
+                        <a href="feedback.php">Feedback</a>
                     </li>
 
-                    <li>
+                    <li class="<?= ($current_page == 'complain.php') ? 'active' : '' ?>">
                         <img src="../../assets/images/image_6.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <div class="<?= ($current_page == 'complain.php') ? 'admin-navbar-inside-left-inner-2 active' : 'admin-navbar-inside-left-inner-2' ?>">
-                            <a href="complain.php">Complain & Issues</a>
-                        </div>
+                        <a href="complain.php">Complain & Issues</a>
                     </li>
 
-                    <li>
+                    <li class="<?= ($current_page == 'salonSystem.php') ? 'active' : '' ?>">
                         <img src="../../assets/images/image_7.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <div class="<?= ($current_page == 'salonSystem.php') ? 'admin-navbar-inside-left-inner-2 active' : 'admin-navbar-inside-left-inner-2' ?>">
-                            <a href="salonSystem.php">Salon System</a>
-                        </div>
+                        <a href="salonSystem.php">Salon System</a>
                     </li>
 
-                    <li>
+                    <li class="<?= ($current_page == 'profile.php') ? 'active' : '' ?>">
                         <img src="../../assets/images/image_7.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <div class="<?= ($current_page == 'profile.php') ? 'admin-navbar-inside-left-inner-2 active' : 'admin-navbar-inside-left-inner-2' ?>">
-                            <a href="profile.php">Profile</a>
-                        </div>
+                        <a href="profile.php">Profile</a>
                     </li>
                 </ul>
             </div>

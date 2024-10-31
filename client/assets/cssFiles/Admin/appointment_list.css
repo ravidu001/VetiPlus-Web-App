@@ -1,5 +1,5 @@
 .appointment-list{
-    width: 90%;
+    width: 80%;
 }
 .container {
     width: 80%;
@@ -50,3 +50,10 @@
   .cancel:hover {
     background-color: #9436e8;
   }
+  .admin-navbar-inside-left-inner-1 ul li.active {
+    background-color: #F8ECFF; /* Active background color */
+}
+
+.admin-navbar-inside-left-inner-1 ul li.active a {
+    color: #000000; /* Text color for the active link */
+}

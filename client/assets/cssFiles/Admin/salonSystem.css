@@ -1,8 +1,7 @@
-.active {
-    background-color: #007bff;
-    color: #fff; /* Text color for active link */
+.admin-navbar-inside-left-inner-1 ul li.active {
+    background-color: #F8ECFF; /* Active background color */
 }
 
-.active a {
-    color: #fff; /* Text color for active link when hovered */
+.admin-navbar-inside-left-inner-1 ul li.active a {
+    color: #000000; /* Text color for the active link */
 }
