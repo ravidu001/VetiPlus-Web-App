@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
  *{
     font-family: 'Poppins', sans-serif;  
@@ -10,10 +10,18 @@
  :root{
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
-    --primary-color: #695cfe;
+    --primary-color: #6a0dad;
     --primary-color-light: #f6f5ff;
     --toggle-color: #ddd;
     --text-color: #707070;
+    --background-light: #c8a2c8;
+    --background-primary: #6a0dad ;
+    --background-white: #fff;
+    --text-black: black;
+    --text-primary: #6a0dad;
+    --text-white: #fff;
+    --shadow-color: slategray;
+    --list-item: #ffecff;
   
     
     --tran-02: all 0.2s ease;
@@ -35,6 +43,14 @@ body.dark {
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+    --background-light: #646464; /* A medium-dark gray for a softer container background */
+    --background-primary: #2b2b2b; /* A dark, muted purple to maintain the purple tone */
+    --background-white: #18191A; /* Dark background replacing white for containers */
+    --text-black: #e6e6e6; /* A light gray for replacing black text */
+    --text-primary: #9a87db; /* A lighter, muted purple for primary text */
+    --text-white: #fff; /* Keep white text for contrast */
+    --shadow-color: #424242;
+    --list-item: #ccc;
 }
 
  .sidebar {
@@ -344,15 +360,15 @@ body.dark .switch::before {
 }
 
 
-.nav-link.active a {
+.nav-link.active {
     background-color: var(--primary-color); /* or any other style to indicate active state */
-    color: white;
+    color: var(--sidebar-color);
 }
 
 .nav-link.active i {
     color: white;
 }
 
-.nav-link.active  {
+.nav-link.active  .text {
     color: white;
 }
