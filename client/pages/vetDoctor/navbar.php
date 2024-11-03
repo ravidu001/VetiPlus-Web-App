@@ -150,8 +150,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
 
             <div class="bottom-content">
-                <li class="">
-                    <a href="#">
+                <li class="nav-link <?= $current_page == 'profile.php' ? 'active' : '' ?>">
+                    <a href="profile.php">
                         <!--<i class='bx bx-log-out icon'></i>-->
                         <div class="profile">
                             <img src="../../../client/assets/images/doctorprofile.jpg"   alt="profile" />
