@@ -1,3 +1,56 @@
+<?php
+    session_start();
+    include(__DIR__ . '/../../../server/config/config.php');
+
+    // Enable error reporting for debugging
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
+    $message = []; // Initialize message array
+
+    if (isset($_POST['login'])) {
+        $email = mysqli_real_escape_string($conn, $_POST['email']); 
+        $password = $_POST['password'];
+
+        // Retrieve user by email
+        $select = mysqli_query($conn, "SELECT * FROM `User` WHERE email='$email'") or die('Query failed');
+
+        if (mysqli_num_rows($select) > 0) {
+            $row = mysqli_fetch_assoc($select);
+            
+            // Verify the password with the hashed password stored in the database
+            if (password_verify($password, $row['password'])) {
+                $_SESSION['user_id'] = $row['email'];
+
+                // Redirect based on user type
+                switch ($row['type']) {
+                    case 'Vet Doctor':
+                        header('Location: ../vetDoctor/homeNew.php');
+                        break;
+                    case 'Pet Owner':
+                        header('Location: ../petOwner/home.php');
+                        break;
+                    case 'Salon':
+                        header('Location: ../salon/home.php');
+                        break;
+                    case 'Vet Assistant':
+                        header('Location: ../vetAssistant/home.php');
+                        break;
+                    default:
+                        $message[] = 'User type not recognized!';
+                }
+                exit();
+            } else {
+                $message[] = 'Incorrect email or password';
+            }
+        } else {
+            $message[] = 'Incorrect email or password';
+        }
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +77,18 @@
             <div class="right-panel">
                 <div class="login-box">
                     <h2>Welcome to <span class="brand"><br />VetiPlus</span></h2>
-                    <form action="#" method="POST" class="login-form">
+                    
+                    <div>
+                        <?php
+                            if(isset($message)){
+                                foreach($message as $message){
+                                    echo '<div class="message">'. $message . '</div>';
+                                }
+                            }
+                        ?>
+                    </div>
+                    
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" class="login-form">
                         <div class="input-group">
                             <label for="email">
                             <img src="../../assets/images/emailrm.png" alt="Email" class="icon">
@@ -39,7 +103,7 @@
                             <span class="toggle-password" onclick="togglePassword()">👁️</span>
                         </div>
                         <a href="#" class="forgot-password">Forgot Password?</a>
-                        <button type="submit" class="login-button">Login</button>
+                        <button type="submit" class="login-button" name="login">Login</button>
                     </form>
                     <p class="register-prompt">
                         Don’t have an account? <a href="signup.php" class="register-link">Register Now</a>

@@ -1,3 +1,41 @@
+<?php
+    
+    include(__DIR__ . '/../../../server/config/config.php');
+    
+
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
+    if (isset($_POST['submit'])) {
+        $email = mysqli_real_escape_string($conn, $_POST['email']); // to prevent sql injection
+        $userType = mysqli_real_escape_string($conn, $_POST['userType']);
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
+        $repassword = mysqli_real_escape_string($conn, $_POST['repassword']);
+
+        $select = mysqli_query($conn, "SELECT * FROM `User` WHERE email='$email' AND password='$password'") or die('query failed');
+
+        if (mysqli_num_rows($select) > 0) {
+            $message[] = 'User already exists';
+        } else {
+            if ($password != $repassword) {
+                $message[] = 'Confirm password not matched!';
+            } else {
+                $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hash the password
+                $insert = mysqli_query($conn, "INSERT INTO `User` (email, password, type) VALUES ('$email', '$hashed_password', '$userType')") or die('query failed');
+
+                if ($insert) {
+                    $message[] = 'Registered successfully!';
+                    header('Location: login.php');
+                    exit();
+                } else {
+                    $message[] = 'Registration failed!';
+                }
+            }
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +65,16 @@
                     <div class="sub-heading">
                         Create your account
                     </div>
-                    <form action="#" method="POST" class="login-form">
+                    
+                    <?php
+                        if(isset($message)){
+                            foreach($message as $message){
+                                echo '<div class="message">'. $message . '</div>';
+                            }
+                        }
+                    ?>
+                    
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" class="login-form" enctype="multipart/form-data">
 
                         <div class="input-group">
                             <label for="email">
@@ -75,7 +122,7 @@
                     <!--
                         <a href="#" class="forgot-password">Forgot Password?</a>
                     -->
-                        <button type="submit" class="login-button">Sign up</button>
+                        <button type="submit" class="login-button" name="submit"> Sign up</button>
                     </form>
                     <p class="register-prompt">
                         Already have an account? <a href="./login.php" class="register-link">Login</a>
