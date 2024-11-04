@@ -15,7 +15,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <body>
 <div class="admin-navbar"> 
     <div class="admin-navbar-inside-left-inner">
-        <img src="../../assets/images/logo.jpeg" alt="">
+        <img src="../../assets/images/logo.png" alt="">
         <h1>VETIPLUS</h1>
     </div>
 </div>
@@ -80,19 +80,104 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="salon_system">
         <div class="salon_system_top">
             <div class="salon_system_top_inside">
-                <h3>Total Account</h3>
+                <h2>Total Account</h2>
                 <h4>56</h4>
             </div>
             <div class="salon_system_top_inside">
-                <h3>Total Account</h3>
+                <h2>Total Account</h2>
                 <h4>56</h4>
             </div>
             <div class="salon_system_top_inside">
-                <h3>Total Account</h3>
+                <h2>Total Account</h2>
                 <h4>56</h4>
             </div>
         </div>
-        <div class="salon_system_down"></div>
+        <div class="salon_system_down">
+        <table>
+        <thead>
+            <tr>
+                <th>Salon ID</th>
+                <th>Salon Name</th>
+                <th>Date</th>
+                <th>Salon Email</th>
+                <th> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>225689</td>
+                <td>Salon Liyo</td>
+                <td>2022/02/05</td>
+                <td>liyosalno@gmail.com</td>
+                <td>
+                    <button class="accept-btn">Accept</button>
+                    <button class="decline-btn">Decline</button>
+                </td>
+            </tr>
+            <tr>
+                <td>225689</td>
+                <td>Salon Liyo</td>
+                <td>2022/02/05</td>
+                <td>liyosalno@gmail.com</td>
+                <td>
+                    <button class="accept-btn">Accept</button>
+                    <button class="decline-btn">Decline</button>
+                </td>
+            </tr>
+            <tr>
+                <td>225689</td>
+                <td>Salon Liyo</td>
+                <td>2022/02/05</td>
+                <td>liyosalno@gmail.com</td>
+                <td>
+                    <button class="accept-btn">Accept</button>
+                    <button class="decline-btn">Decline</button>
+                </td>
+            </tr>
+            <tr>
+                <td>225689</td>
+                <td>Salon Liyo</td>
+                <td>2022/02/05</td>
+                <td>liyosalno@gmail.com</td>
+                <td>
+                    <button class="accept-btn">Accept</button>
+                    <button class="decline-btn">Decline</button>
+                </td>
+            </tr>
+            <tr>
+                <td>225689</td>
+                <td>Salon Liyo</td>
+                <td>2022/02/05</td>
+                <td>liyosalno@gmail.com</td>
+                <td>
+                    <button class="accept-btn">Accept</button>
+                    <button class="decline-btn">Decline</button>
+                </td>
+            </tr>
+            <tr>
+                <td>225689</td>
+                <td>Salon Liyo</td>
+                <td>2022/02/05</td>
+                <td>liyosalno@gmail.com</td>
+                <td>
+                    <button class="accept-btn">Accept</button>
+                    <button class="decline-btn">Decline</button>
+                </td>
+            </tr>
+            <tr>
+                <td>225689</td>
+                <td>Salon Liyo</td>
+                <td>2022/02/05</td>
+                <td>liyosalno@gmail.com</td>
+                <td>
+                    <button class="accept-btn">Accept</button>
+                    <button class="decline-btn">Decline</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+        </div>
     </div>
 </div>
 </body>

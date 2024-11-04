@@ -1,3 +1,70 @@
+.salon_system{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.salon_system_top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 100px;
+    
+}
+.salon_system_top_inside{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 50px;
+   gap: 10px;
+   background-color: #F1DBFF;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 100px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+   
+   
+}
+
+td:last-child {
+    text-align: center;
+    text-align: right;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.accept-btn {
+    background-color: #d8b4f3;
+    color: black;
+    margin-right: 5px;
+}
+
+.decline-btn {
+    background-color: #bb86fc;
+    color: white;
+}
 .admin-navbar-inside-left-inner-1 ul li.active {
     background-color: #F8ECFF; /* Active background color */
 }

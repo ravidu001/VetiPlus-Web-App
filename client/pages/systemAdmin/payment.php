@@ -15,7 +15,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <body>
 <div class="admin-navbar"> 
     <div class="admin-navbar-inside-left-inner">
-        <img src="../../assets/images/logo.jpeg" alt="">
+        <img src="../../assets/images/logo.png" alt="">
         <h1>VETIPLUS</h1>
     </div>
 </div>
