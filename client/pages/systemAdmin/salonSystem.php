@@ -67,7 +67,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     </li>
 
                     <li class="<?= ($current_page == 'profile.php') ? 'active' : '' ?>">
-                        <img src="../../assets/images/image_7.png" alt="">
+                        <img src="../../assets/images/image_11.png" alt="">
                         &nbsp;&nbsp;&nbsp;
                         <a href="profile.php">Profile</a>
                     </li>
@@ -96,85 +96,83 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <table>
         <thead>
             <tr>
-                <th>Salon ID</th>
+                <th>Salon Email</th>
                 <th>Salon Name</th>
                 <th>Date</th>
-                <th>Salon Email</th>
+                <th>  &nbsp; &nbsp;BR <br> Number</th>
+                <th>Downlord <br> Document</th>
                 <th> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                 &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;Action</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>225689</td>
+                <td>liyosalno@gmail.com</td>
                 <td>Salon Liyo</td>
                 <td>2022/02/05</td>
-                <td>liyosalno@gmail.com</td>
+                <td>225689</td>
+                <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
                     <button class="accept-btn">Accept</button>
                     <button class="decline-btn">Decline</button>
                 </td>
             </tr>
             <tr>
-                <td>225689</td>
+                <td>liyosalno@gmail.com</td>
                 <td>Salon Liyo</td>
                 <td>2022/02/05</td>
-                <td>liyosalno@gmail.com</td>
+                <td>225689</td>
+                <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
                     <button class="accept-btn">Accept</button>
                     <button class="decline-btn">Decline</button>
                 </td>
             </tr>
             <tr>
-                <td>225689</td>
+                <td>liyosalno@gmail.com</td>
                 <td>Salon Liyo</td>
                 <td>2022/02/05</td>
+                <td>225689</td>
+                <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
+                <td>
+                    <button class="accept-btn">Accept</button>
+                    <button class="decline-btn">Decline</button>
+                </td>
+            </tr>
+            <tr> 
                 <td>liyosalno@gmail.com</td>
+                <td>Salon Liyo</td>
+                <td>2022/02/05</td>
+                <td>225689</td>
+                <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
                     <button class="accept-btn">Accept</button>
                     <button class="decline-btn">Decline</button>
                 </td>
             </tr>
             <tr>
-                <td>225689</td>
+                <td>liyosalno@gmail.com</td>
                 <td>Salon Liyo</td>
                 <td>2022/02/05</td>
-                <td>liyosalno@gmail.com</td>
+                <td>225689</td>
+                <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
                     <button class="accept-btn">Accept</button>
                     <button class="decline-btn">Decline</button>
                 </td>
             </tr>
             <tr>
-                <td>225689</td>
+                <td>liyosalno@gmail.com</td>>
                 <td>Salon Liyo</td>
                 <td>2022/02/05</td>
-                <td>liyosalno@gmail.com</td>
+                <td>225689</td>
+                <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
                     <button class="accept-btn">Accept</button>
                     <button class="decline-btn">Decline</button>
                 </td>
             </tr>
-            <tr>
-                <td>225689</td>
-                <td>Salon Liyo</td>
-                <td>2022/02/05</td>
-                <td>liyosalno@gmail.com</td>
-                <td>
-                    <button class="accept-btn">Accept</button>
-                    <button class="decline-btn">Decline</button>
-                </td>
-            </tr>
-            <tr>
-                <td>225689</td>
-                <td>Salon Liyo</td>
-                <td>2022/02/05</td>
-                <td>liyosalno@gmail.com</td>
-                <td>
-                    <button class="accept-btn">Accept</button>
-                    <button class="decline-btn">Decline</button>
-                </td>
-            </tr>
+            
         </tbody>
     </table>
         </div>

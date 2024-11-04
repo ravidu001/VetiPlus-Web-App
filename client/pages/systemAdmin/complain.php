@@ -67,7 +67,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     </li>
 
                     <li class="<?= ($current_page == 'profile.php') ? 'active' : '' ?>">
-                        <img src="../../assets/images/image_7.png" alt="">
+                        <img src="../../assets/images/image_11.png" alt="">
                         &nbsp;&nbsp;&nbsp;
                         <a href="profile.php">Profile</a>
                     </li>
@@ -90,37 +90,37 @@ $current_page = basename($_SERVER['PHP_SELF']);
               <tr>
                 <td>Ramesh Peshala</td>
                 <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/image_3.png" alt="View Message"></a></td>
+                <td><a href="#"><img src="../../assets/images/image_12.png" alt="View Message"></a></td>
               </tr>
               <tr>
                 <td>Ramesh Peshala</td>
                 <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/image_3.png" alt="View Message"></a></td>
+                <td><a href="#"><img src="../../assets/images/image_12.png" alt="View Message"></a></td>
               </tr>
               <tr>
                 <td>Ramesh Peshala</td>
                 <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/image_3.png" alt="View Message"></a></td>
+                <td><a href="#"><img src="../../assets/images/image_12.png" alt="View Message"></a></td>
               </tr>
               <tr>
                 <td>Ramesh Peshala</td>
                 <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/image_3.png" alt="View Message"></a></td>
+                <td><a href="#"><img src="../../assets/images/image_12.png" alt="View Message"></a></td>
               </tr>
               <tr>
                 <td>Ramesh Peshala</td>
                 <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/image_3.png" alt="View Message"></a></td>
+                <td><a href="#"><img src="../../assets/images/image_12.png" alt="View Message"></a></td>
               </tr>
               <tr>
                 <td>Ramesh Peshala</td>
                 <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/image_3.png" alt="View Message"></a></td>
+                <td><a href="#"><img src="../../assets/images/image_12.png" alt="View Message"></a></td>
               </tr>
               <tr>
                 <td>Ramesh Peshala</td>
                 <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/image_3.png" alt="View Message"></a></td>
+                <td><a href="#"><img src="../../assets/images/image_12.png" alt="View Message"></a></td>
               </tr>
             </tbody>
           </table>

@@ -46,6 +46,11 @@ td:last-child {
     text-align: center;
     text-align: right;
 }
+td img{
+    width: 32px;
+    height: 32px;
+   
+}
 
 button {
     padding: 8px 12px;
@@ -60,10 +65,18 @@ button {
     color: black;
     margin-right: 5px;
 }
+.accept-btn:hover {
+    background-color: hsl(267, 54%, 54%);
+    color: white;
+}
 
 .decline-btn {
     background-color: #bb86fc;
     color: white;
+}
+.decline-btn:hover {
+    background-color: hsl(267, 54%, 54%);
+    color: black;
 }
 .admin-navbar-inside-left-inner-1 ul li.active {
     background-color: #F8ECFF; /* Active background color */

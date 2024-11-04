@@ -25,7 +25,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <div>
             <div class="admin-navbar-inside-left-inner-1">
                 <ul>
-                    <!-- Ensure active class logic is applied correctly -->
+                    
                     <li class="<?= ($current_page == 'home.php') ? 'active' : '' ?>">
                         <img src="../../assets/images/image_1.png" alt="">
                         &nbsp;&nbsp;&nbsp;
@@ -69,7 +69,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     </li>
 
                     <li class="<?= ($current_page == 'profile.php') ? 'active' : '' ?>">
-                        <img src="../../assets/images/image_7.png" alt="">
+                        <img src="../../assets/images/image_11.png" alt="">
                         &nbsp;&nbsp;&nbsp;
                         <a href="profile.php">Profile</a>
                     </li>
