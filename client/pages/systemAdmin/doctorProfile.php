@@ -9,8 +9,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Admin/complain.css">
-    <title>Complain</title>
+    <link rel="stylesheet" href="../../assets/cssFiles/Admin/doctorProfile.css">
+    <title>Doctor Profile</title>
 </head>
 <body>
 <div class="admin-navbar"> 
@@ -77,56 +77,27 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me">Logout</button>
     </div>
-       <div class="complain">
-        <table>
-            <thead>
-              <tr>
-                <th>User's Name</th>
-                <th>Complain Message</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Ramesh Peshala</td>
-                <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/mail.png" alt="View Message"></a></td>
-              </tr>
-              <tr>
-                <td>Ramesh Peshala</td>
-                <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/mail.png" alt="View Message"></a></td>
-              </tr>
-              <tr>
-                <td>Ramesh Peshala</td>
-                <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/mail.png" alt="View Message"></a></td>
-              </tr>
-              <tr>
-                <td>Ramesh Peshala</td>
-                <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/mail.png" alt="View Message"></a></td>
-              </tr>
-              <tr>
-                <td>Ramesh Peshala</td>
-                <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/mail.png" alt="View Message"></a></td>
-              </tr>
-              <tr>
-                <td>Ramesh Peshala</td>
-                <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/mail.png" alt="View Message"></a></td>
-              </tr>
-              <tr>
-                <td>Ramesh Peshala</td>
-                <td>It is a long established fact that a reader will be...</td>
-                <td><a href="#"><img src="../../assets/images/mail.png" alt="View Message"></a></td>
-              </tr>
-            </tbody>
-          </table>
-
-       </div>
+    <div class="doctor_profile">
+        <div class="doctor_profile_top">
+            <div class="doctor_profile_top_left">
+                <img src="../../assets/images/image_8.jpg" alt="">
+            </div>
+            <div class="doctor_profile_top_right">
+                 <h2>Full Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp; Ramesh Peshala</h2>
+                 <h2>Date of Birth &nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp;2002/05/09</h2>
+                 <h2>Gender &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp; Male</h2>
+                 <h2>Email &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp; rameshpeshala84@gmail.com</h2>
+                 <h2>Phone Number &nbsp;:-&nbsp;&nbsp;&nbsp; 0762163506</h2>
+                 <h2>NIC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:- &nbsp;&nbsp;200212702901</h2>
+            </div>
+        </div>
+        <div class="doctor_profile_down">
+            <div>
+                 <button>Change Email</button>
+                 <button>Reset Password</button>
+            </div>
+        </div>
     </div>
-    
+</div>
 </body>
 </html>
