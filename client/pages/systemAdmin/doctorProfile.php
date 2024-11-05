@@ -92,8 +92,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
         <div class="doctor_profile_down">
-            
-
+            <div>
+                 <button>Change Email</button>
+                 <button>Reset Password</button>
+            </div>
         </div>
     </div>
 </div>

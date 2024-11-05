@@ -30,3 +30,21 @@
     justify-content: center;
     gap: 30px;
 }
+.doctor_profile_down button{
+    width: 250px;
+    height: 40px;
+    background-color: #B89ACB;
+    border-radius: 5px;
+    color: black;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 50px 100px;
+    align-items: center;
+    justify-content: center;
+}
+.doctor_profile_down button:hover{
+    background-color: #8F53B4;
+    color: white;
+}

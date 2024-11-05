@@ -24,12 +24,11 @@ table thead tr th{
 table tbody{
    
     width: 100%;
-   
+    cursor: pointer;
 }
 table tbody tr{
     display: flex;
     justify-content: space-between;
-   
     background-color: #F8ECFF;
   
 }
