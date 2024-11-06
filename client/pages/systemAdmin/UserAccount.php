@@ -87,12 +87,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </div>
                 <div class="user-account-inside-right">
                     
-                    <h2>Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :-</h2>
-                    <h2>Email  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :-</h2>
-                    <h2>Address     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    &nbsp; &nbsp;  :-</h2>
-                    <h2>Contact Number  &nbsp; &nbsp; :-</h2>
-                    <h2>ID Number   &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp;&nbsp;   :-</h2>
-                    <h2>User ID   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    :-</h2>
+                    <h2>Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; Ramesh Peshala</h2>
+                    <h2>Email  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; rameshpeshala84@gmail.com</h2>
+                    <h2>Address     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:- &nbsp; 419,gangasirigama,Thissamaharama</h2>
+                    <h2>Contact Number  &nbsp; &nbsp;:- &nbsp; 0762163506</h2>
+                    <h2>ID Number   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  :- &nbsp; 200212702901</h2>
+                    <h2>User ID   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; 22001557</h2>
                 </div>
 
             </div>
@@ -101,13 +101,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
                     <button>Reset Password</button>
                     <button>Delete Account</button>
-                    <button>Pet Data</button>
+                    <button onclick="window.location.href='petAccount.php'">Pet Data</button>
 
                 </div>
                 <div class="user-account-outside-right">
 
-                    <h2>Total Appointment</h2>
-                    <h2>Cancel Appointment</h2>
+                    <h2>Total Appointment  &nbsp;  &nbsp; :- &nbsp; &nbsp; &nbsp; 456</h2>
+                    <h2>Cancel Appointment  &nbsp; :-  &nbsp; &nbsp; &nbsp; 23</h2>
 
                 </div>
             </div>

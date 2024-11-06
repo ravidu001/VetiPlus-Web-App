@@ -37,18 +37,9 @@
     background-color: #e4d1ff;
     color: #000;
   }
-  
-  .accept:hover {
-    background-color: #d4c1f5;
-  }
-  
   .cancel {
     background-color: #ae5df2;
     color: #fff;
-  }
-  
-  .cancel:hover {
-    background-color: #9436e8;
   }
   .admin-navbar-inside-left-inner-1 ul li.active {
     background-color: #F8ECFF; /* Active background color */

@@ -105,7 +105,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
                         <div class="Payment-outside-down">
 
-                            <button type="submit">Search</button>
+                            <button type="button" onclick="window.location.href='paymentProfile.php'">Search</button>
                         </div>
                        
                     </form>

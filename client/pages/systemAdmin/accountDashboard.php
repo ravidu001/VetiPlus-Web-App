@@ -99,7 +99,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
                         <label for="searchInput"></label>
                         <input type="password" id="searchInput" title="search Input" placeholder="Enter Admin Password">
-                        <button type="button" title="Click me">Search</button>
+                        <button type="button" title="Click me" onclick="window.location.href='UserAccount.php'">Search</button>
                        
                     </form>
                     
@@ -110,7 +110,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
                         <label for="searchInput"></label>
                         <input type="password" id="searchInput" title="search Input" placeholder="Enter Admin Password">
-                        <button type="button" title="Click me">Search</button>
+                        <button type="button" title="Click me" onclick="window.location.href='petAccount.php'">Search</button>
                     </form>
 
                 </div>
