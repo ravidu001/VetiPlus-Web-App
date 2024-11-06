@@ -32,7 +32,7 @@
         <tbody>
             <tr>
                 <td>Pet Bathing</td>
-                <td>$5</td>
+                <td>5 $</td>
                 <td>30 min</td>
                 <td>
                     <img src="../../../assets/images/salon/groomer.jpg" class="service-photo">
