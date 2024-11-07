@@ -60,10 +60,14 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <a href="complain.php">Complain & Issues</a>
                     </li>
 
-                    <li class="<?= ($current_page == 'salonSystem.php') ? 'active' : '' ?>">
-                        <img src="../../assets/images/image_7.png" alt="">
+                    <li class="<?= ($current_page == '') ? 'active' : '' ?>">
+                    <img src="../../assets/images/image_12.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <a href="salonSystem.php">Salon System</a>
+                        <a href="">System</a>
+                        <div class="dropdown">
+                            <a href="salonSystem.php">Salon System</a>
+                            <a href="doctorSystem.php">Doctor System</a>
+                        </div>
                     </li>
 
                     <li class="<?= ($current_page == 'profile.php') ? 'active' : '' ?>">
@@ -80,13 +84,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <div class="pet-account">
         <div class="pet-account-inside">
             <div class="pet-account-inside-left">
-                <img src="../../assets/images/image_8.jpg" alt="">
+                <img src="../../assets/images/pet.jpg" alt="">
            </div>
            <div class="pet-account-inside-right">
-                <h2>Pet ID  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;:-</h2>
-                 <h2>Name &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  :-</h2>
-                 <h2>Gender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :-</h2>
-                 <h2>Pet Owner &nbsp;&nbsp; :-</h2>
+                <h2>Pet ID  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp; 22001557</h2>
+                 <h2>Name &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp; Rocky</h2>
+                 <h2>Gender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :-&nbsp; Male</h2>
+                 <h2>Pet Owner &nbsp;&nbsp; :-&nbsp;Ramesh Peshala</h2>
            </div>
         </div> 
 

@@ -52,7 +52,7 @@
 .user-account-outside-left button{
     width: 300px;
     height: 40px;
-    background-color: #F1DBFF;
+    background-color: #B89ACB;
     border: none;
     border-radius: 5px;
     color: black;
@@ -60,7 +60,8 @@
     cursor: pointer;
 }
 .user-account-outside-left button:hover{
-    background-color: #D6A2E8;
+    background-color: #8F53B4;
+    color: white;
 }
 .user-account-outside-right{
     display: flex;
@@ -74,9 +75,58 @@
     border-radius: 30px;
 }
 .admin-navbar-inside-left-inner-1 ul li.active {
-    background-color: #F8ECFF; /* Active background color */
+    background-color: #F8ECFF; 
 }
 
 .admin-navbar-inside-left-inner-1 ul li.active a {
-    color: #000000; /* Text color for the active link */
+    color: #000000; 
 }
+.blurred {
+    filter: blur(10px);
+    }
+.modal-background {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5); 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 1000;
+        }
+
+.modal-content {
+     background-color: #F1DBFF;
+     padding: 30px;
+     border-radius: 8px;
+     width: 300px;
+     text-align: center;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+.modal-content p{
+    font-size: 20px;
+    color: #000000;
+}
+
+.modal-buttons {
+     margin-top: 20px;
+     display: flex;
+     justify-content: space-between;
+    
+}
+.modal-buttons button {
+     padding: 10px 20px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+}
+.modal-buttons button:hover {
+     background-color: #B89ACB;
+     color: #000000;
+}
+.confirmation-message {
+     font-size: 18px;
+     color: #F1DBFF; 
+        }

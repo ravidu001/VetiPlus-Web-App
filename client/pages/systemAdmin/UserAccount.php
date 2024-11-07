@@ -60,10 +60,14 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <a href="complain.php">Complain & Issues</a>
                     </li>
 
-                    <li class="<?= ($current_page == 'salonSystem.php') ? 'active' : '' ?>">
-                        <img src="../../assets/images/image_7.png" alt="">
+                    <li class="<?= ($current_page == '') ? 'active' : '' ?>">
+                    <img src="../../assets/images/image_12.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <a href="salonSystem.php">Salon System</a>
+                        <a href="">System</a>
+                        <div class="dropdown">
+                            <a href="salonSystem.php">Salon System</a>
+                            <a href="doctorSystem.php">Doctor System</a>
+                        </div>
                     </li>
 
                     <li class="<?= ($current_page == 'profile.php') ? 'active' : '' ?>">
@@ -87,33 +91,48 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </div>
                 <div class="user-account-inside-right">
                     
-                    <h2>Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :-</h2>
-                    <h2>Email  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :-</h2>
-                    <h2>Address     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    &nbsp; &nbsp;  :-</h2>
-                    <h2>Contact Number  &nbsp; &nbsp; :-</h2>
-                    <h2>ID Number   &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp;&nbsp;   :-</h2>
-                    <h2>User ID   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    :-</h2>
+                    <h2>Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; Ramesh Peshala</h2>
+                    <h2>Email  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; rameshpeshala84@gmail.com</h2>
+                    <h2>Address     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:- &nbsp; 419,gangasirigama,Thissamaharama</h2>
+                    <h2>Contact Number  &nbsp; &nbsp;:- &nbsp; 0762163506</h2>
+                    <h2>ID Number   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  :- &nbsp; 200212702901</h2>
+                    <h2>User ID   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; 22001557</h2>
                 </div>
 
             </div>
             <div class="user-account-outside">
-                <div class="user-account-outside-left">
+                <div class="user-account-outside-left"id="main-content">
 
-                    <button>Reset Password</button>
+                <button onclick="openConfirmModal()">Reset Password</button>
                     <button>Delete Account</button>
-                    <button>Pet Data</button>
+                    <button onclick="window.location.href='petAccount.php'">Pet Data</button>
 
                 </div>
                 <div class="user-account-outside-right">
 
-                    <h2>Total Appointment</h2>
-                    <h2>Cancel Appointment</h2>
+                    <h2>Total Appointment  &nbsp;  &nbsp; :- &nbsp; &nbsp; &nbsp; 456</h2>
+                    <h2>Cancel Appointment  &nbsp; :-  &nbsp; &nbsp; &nbsp; 23</h2>
 
                 </div>
             </div>
 
             
         </div>
-</div>
+        <div id="modal" class="modal-background" style="display: none;">
+        <div class="modal-content">
+            <p>Do you want to reset your password?</p>
+            <div class="modal-buttons">
+                <button onclick="confirmReset()">Yes</button>
+                <button onclick="closeModal()">No</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmationModal" class="modal-background" style="display: none;">
+        <div class="modal-content">
+            <p class="confirmation-message">Password reset process initiated</p>
+        </div>
+    </div>
+<script src="../../assets/jsFIles/Admin/passwordReset.js"></script>
 </body>
 </html>

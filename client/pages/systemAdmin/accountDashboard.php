@@ -61,10 +61,14 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <a href="complain.php">Complain & Issues</a>
                     </li>
 
-                    <li class="<?= ($current_page == 'salonSystem.php') ? 'active' : '' ?>">
-                        <img src="../../assets/images/image_7.png" alt="">
+                    <li class="<?= ($current_page == '') ? 'active' : '' ?>">
+                    <img src="../../assets/images/image_12.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <a href="salonSystem.php">Salon System</a>
+                        <a href="">System</a>
+                        <div class="dropdown">
+                            <a href="salonSystem.php">Salon System</a>
+                            <a href="doctorSystem.php">Doctor System</a>
+                        </div>
                     </li>
 
                     <li class="<?= ($current_page == 'profile.php') ? 'active' : '' ?>">
@@ -99,7 +103,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
                         <label for="searchInput"></label>
                         <input type="password" id="searchInput" title="search Input" placeholder="Enter Admin Password">
-                        <button type="button" title="Click me">Search</button>
+                        <button type="button" title="Click me" onclick="window.location.href='UserAccount.php'">Search</button>
                        
                     </form>
                     
@@ -110,7 +114,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
                         <label for="searchInput"></label>
                         <input type="password" id="searchInput" title="search Input" placeholder="Enter Admin Password">
-                        <button type="button" title="Click me">Search</button>
+                        <button type="button" title="Click me" onclick="window.location.href='petAccount.php'">Search</button>
                     </form>
 
                 </div>
