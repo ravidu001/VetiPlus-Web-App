@@ -61,9 +61,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     </li>
 
                     <li class="<?= ($current_page == 'salonSystem.php') ? 'active' : '' ?>">
-                        <img src="../../assets/images/image_7.png" alt="">
+                    <img src="../../assets/images/image_7.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <a href="salonSystem.php">Salon System</a>
+                        <a href=""> Salon System</a>
+                        <div class="dropdown">
+                            <a href="salonSystem.php">Salon System</a>
+                            <a href="doctorSystem.php">Doctor System</a>
+                        </div>
                     </li>
 
                     <li class="<?= ($current_page == 'profile.php') ? 'active' : '' ?>">
