@@ -101,9 +101,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
             </div>
             <div class="user-account-outside">
-                <div class="user-account-outside-left">
+                <div class="user-account-outside-left"id="main-content">
 
-                    <button>Reset Password</button>
+                <button onclick="openConfirmModal()">Reset Password</button>
                     <button>Delete Account</button>
                     <button onclick="window.location.href='petAccount.php'">Pet Data</button>
 
@@ -118,6 +118,21 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
             
         </div>
-</div>
+        <div id="modal" class="modal-background" style="display: none;">
+        <div class="modal-content">
+            <p>Do you want to reset your password?</p>
+            <div class="modal-buttons">
+                <button onclick="confirmReset()">Yes</button>
+                <button onclick="closeModal()">No</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmationModal" class="modal-background" style="display: none;">
+        <div class="modal-content">
+            <p class="confirmation-message">Password reset process initiated</p>
+        </div>
+    </div>
+<script src="../../assets/jsFIles/Admin/passwordReset.js"></script>
 </body>
 </html>
