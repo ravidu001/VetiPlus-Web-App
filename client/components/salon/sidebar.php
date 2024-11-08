@@ -34,12 +34,14 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <i class='bx bx-chevron-down'></i>
                     </button>
                     <ul class="sub-menu">
+                    <li class="nav-link <?= $current_page == 'appointment.php' ? 'active' : '' ?>"> 
                         <li><a href="#">New</a></li>
                         <li><a href="#">View</a></li>
                         <li><a href="#">History</a></li>
                     </ul>
                 </li>
                 <li>
+                <li class="nav-link <?= $current_page == 'timeslot.php' ? 'active' : '' ?>"> 
                     <a href="calendar.html">
                         <i class='bx bxs-pie-chart-alt icon'></i>
                         <span>Time Slot</span>
@@ -52,6 +54,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <i class='bx bx-chevron-down icon'></i>
                     </button>
                     <ul class="sub-menu">
+                    <li class="nav-link <?= $current_page == 'ServiceDEtails.php' ? 'active' : '' ?>"> 
                         <li><a href="../../pages/salon/Service/ServiceDetails.php">View</a></li>
                         <li><a href="../../pages/salon/Service/AddService.html">Add</a></li>
                         <li><a href="../../pages/salon/Service/EditService.html">Edit</a></li>
@@ -66,7 +69,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <i class='bx bx-chevron-down icon'></i>
                     </button>
                     <ul class="sub-menu">
-                        <li><a href="#">View</a></li>
+                    <li class="nav-link <?= $current_page == 'staffdetails.php' ? 'active' : '' ?>"> 
+                        <li><a href="../../pages/salon/staff/staffdetails.php">View</a></li>
                         <li><a href="#">Add</a></li>
                         <li><a href="#">Edit</a></li>
                         <li><a href="#">Delete</a></li>
@@ -74,6 +78,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </li>
     
                 <li>
+                <li class="nav-link <?= $current_page == 'Feedback.php' ? 'active' : '' ?>"> 
                     <a href="profile.html">
                         <i class='bx bxs-message icon'></i>
                         <span>Feedback</span>
@@ -81,6 +86,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </li>
 
                 <li>
+                <li class="nav-link <?= $current_page == 'about.php' ? 'active' : '' ?>"> 
                     <a href="profile.html">
                         <i class='bx bxs-user-account icon'></i>
                         <span>About Us</span>
@@ -88,6 +94,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </li>
 
                 <li>
+                <li class="nav-link <?= $current_page == 'contact.php' ? 'active' : '' ?>"> 
                     <a href="profile.html">
                         <i class='bx bxs-phone-call icon' ></i>
                         <span>Contact Us</span>
@@ -96,6 +103,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     
     
                 <li>
+                <li class="nav-link <?= $current_page == 'profile.php' ? 'active' : '' ?>"> 
                     <a href="profile.html">
                         <i class='bx bx-user icon'></i>
                         <span>Profile</span>

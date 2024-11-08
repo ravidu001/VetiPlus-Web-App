@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../../assets/cssFiles/salon/Dashboard.css"> 
     <link rel="stylesheet" href="../../assets/cssFiles/salon/Home.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/common/footer.css"> 
+     <link rel="stylesheet" href="../../assets/cssFiles/common/userFooter.css">  
 
     <title>Document</title>
 </head>
@@ -28,7 +28,7 @@
 
         <div>
             <?php
-                require "./footer.php";
+                require "../../components/common/userFooter.php";
             ?>
         </div> 
     </div>
