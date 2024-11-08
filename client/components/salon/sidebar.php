@@ -9,16 +9,20 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <script type="text/javascript" src="../../assets/jsFIles/salon/sidebar.js" defer></script>
 </head>
 <body>
-    <div class="content" style="display: inline-block;">
+    <div class="content">
         <nav id="sidebar" class="close">
             <ul>
-                    <span class="logo">VetiPlus</span>
-                    <button onclick="toggleSidebar()" id="toggle-btn">
+                <div class="logocontent">
+                    <img class="logo" src="../../assets/images/vetiplus-logo.png" alt="">
+                    <span class="logoname">VetiPlus<br></span>
+                </div>
+                <button onclick="toggleSidebar()" id="toggle-btn">
                         <i class='bx bxs-chevron-left-circle' ></i>
-                    </button>
+                </button>  
                 </li>
                 <li>
-                    <a href="#">
+                <li class="nav-link <?= $current_page == 'home.php' ? 'active' : '' ?>">                        
+                    <a href="../../pages/salon/home.php">
                         <i class='bx bx-grid-alt icon'></i>
                         <span>Dashboard</span>
                     </a>
