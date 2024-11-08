@@ -62,6 +62,8 @@ body {
 }
 
 #sidebar .nav-link.active {
+    margin-bottom: 10px;
+    margin-top: 10px;
     border-radius: 10px;
     background-color: var(--primary-color); /* or any other style to indicate active state */
     color: var(--sidebar-color);
@@ -174,8 +176,8 @@ body {
 }
 
 #sidebar a:hover, #sidebar .dropdown-btn:hover {
-    width: 90%;
-    padding-left: 0;
+    width: 100%;
+    padding-left: 10px;
     background-color: var(--background-primary);
     color: var(--primary-color-light);
 }
