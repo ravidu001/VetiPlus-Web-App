@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #6a0dad;
+    --primary-color-light: #f6f5ff;
+    --toggle-color: #ddd;
+    --text-color: #707070;
+    --background-light: #c8a2c8;
+    --background-primary: #6a0dad ;
+    --background-white: #fff;
+    --text-black: black;
+    --text-primary: #6a0dad;
+    --text-white: #fff;
+    --shadow-color: slategray;
+    --list-item: #ffecff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content{
+    overflow-y: auto;
+    display: flex;
+}
+
+html{
+    font-family:'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5rem;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--background-white);
+    color: var(--text-clr);
+    font-family: 'Poppins', sans-serif;
+}
+
+#navbar {
+    padding: 0.4rem;
+    background-color: var(--background-primary);
+    color: var(--text-clr);
+    
+}
+
+#sidebar {
+    height: 100vh;
+    width: 250px;
+    padding-left: 0;
+    background-color: var(--primary-color-light);
+    padding: 10px 1rem;
+    position: sticky;
+    top: 0;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    align-self: start;
+}
+
+
+#sidebar.close .logo{
+    display: none;
+}
+
+#sidebar .toggle-btn i {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+    fill: var(--background-primary);
+}
+
+#sidebar i{
+    flex-shrink: 0;
+    fill: var(--text-clr);
+}
+
+#sidebar a span,#sidebar .dropdown-btn span{
+    flex-grow: 1;
+}
+
+#sidebar.close {
+    width: 70px;
+    padding-left: 0;
+}
+
+
+#sidebar.close ul li.active a span,
+#sidebar.close ul li a span,
+#sidebar.close ul li .dropdown-btn span {
+    display: none; /* Hide menu text when sidebar is closed */
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar > ul > li:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#sidebar .logo {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: var(--background-primary);
+}
+
+#sidebar ul li.active a{
+    color: var(--accent-clr);
+
+    i{
+        fill: var(--accent-clr);
+    }
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    min-width: 60px;
+    
+}
+
+#sidebar a, #sidebar .dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 0.75em;
+    color: var(--text-clr);
+    text-decoration: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+#sidebar a:hover, #sidebar .dropdown-btn:hover {
+    width: 100%;
+    background-color: var(--background-primary);
+    color: var(--primary-color-light);
+}
+
+.dropdown-btn {
+    width:100%;
+    justify-content: space-between;
+    text-align: left;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+#sidebar .dropdown-btn i {
+    margin-left: auto;
+    transition: transform 0.2s ease;
+}
+
+.rotate i {
+    transform: rotate(180deg);
+}
+
+
+
+.sub-menu {
+    overflow: hidden;
+    display: none;
+    padding-left: 1.5em;
+    flex-direction: column;
+    transition: 300ms ease-in-out;
+}
+
+.sub-menu.show {
+    display: flex;
+}
+
+.bottomcontent{
+    margin-top: auto;
+    padding-top: 60px;
+}
+
+#toggle-btn {
+    margin-left: auto;
+    display: flex;
+    background: none;
+    border-radius: .5em;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer; 
+}
+
+
+.sidebar.close header .toggle {
+    transform: translateY(-100%);
+}
+
+body.dark .sidebar header .toggle {
+    transform: rotate(180deg);
+    color: var(--text-color);
+}
+
+.rotate i{
+    transform: 180deg;
+}
+
+
+/* @media (max-width: 800px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    #sidebar {
+        width: 100%;
+        height: 60px;
+        bottom: 0;
+        position: fixed;
+        padding: 0;
+        border-top: 1px solid var(--line-clr);
+        top: auto;
+    }
+
+    #sidebar.close {
+        width: 100%;
+    }
+
+    #sidebar > ul {
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+    }
+
+    #sidebar ul li {
+        height: 100%;
+    }
+
+    #sidebar a, #sidebar .dropdown-btn {
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+    }
+
+    #sidebar .sub-menu.show {
+        position: fixed;
+        bottom: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--hover-clr);
+        border-top: 1px solid var(--line-clr);
+    }
+} */
