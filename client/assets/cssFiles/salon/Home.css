@@ -1,0 +1,29 @@
+/* Ensure the main container fills the full viewport width */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.homecontent {
+    width: 100%;
+    height: auto; /* Optional: to make it fill the full viewport height */
+}
+
+.sideanddashbord {
+    padding: 0;
+    display: flex;
+    width: 100%;
+}
+
+.sideanddashbord .dash {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer {
+    width: 100%;
+    margin-top: auto;
+}
