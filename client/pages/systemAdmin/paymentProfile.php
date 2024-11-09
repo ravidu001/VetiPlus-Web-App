@@ -93,9 +93,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <h2>Exprie date  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -:&nbsp; 25/28</h2>
                     <h2>CVV  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;-:&nbsp; 199 </h2>
                 </div>
-                <div class="payment-profile-inside-right-down">
-                   <button>Reset Payment Details</button>
-                </div>
             </div>
 
         </div>
