@@ -3,13 +3,13 @@ function openConfirmModal() {
     document.getElementById("main-content").classList.add("blurred"); 
 }
 
-function closeModal() {
-    document.getElementById("modal").style.display = "none"; 
+function pcloseModal() {
     document.getElementById("main-content").classList.remove("blurred"); 
+    document.getElementById("modal").style.display="none";
 }
 
 function confirmReset() {
-    closeModal(); 
+    document.getElementById("modal").style.display = "none"; 
     document.getElementById("confirmationModal").style.display = "flex"; 
 
     setTimeout(() => {

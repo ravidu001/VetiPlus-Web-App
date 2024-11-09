@@ -104,7 +104,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <div class="user-account-outside-left"id="main-content">
 
                 <button onclick="openConfirmModal()">Reset Password</button>
-                    <button>Delete Account</button>
+                    <button onclick="openDeleteModal()">Delete Account</button>
                     <button onclick="window.location.href='petAccount.php'">Pet Data</button>
 
                 </div>
@@ -123,7 +123,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <p>Do you want to reset your password?</p>
             <div class="modal-buttons">
                 <button onclick="confirmReset()">Yes</button>
-                <button onclick="closeModal()">No</button>
+                <button onclick="pcloseModal()">No</button>
             </div>
         </div>
     </div>
@@ -133,6 +133,33 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <p class="confirmation-message">Password reset process initiated</p>
         </div>
     </div>
+
+    <div id="deleteModal" class="modal-background" style="display: none;">
+        <div class="modal-content">
+            <p>Do you want to delete this account?</p>
+            <div class="modal-buttons">
+                <button onclick="openPasswordModal()">Yes</button>
+                <button onclick="closeModal()">No</button>
+            </div>
+        </div>
+    </div>
+    <div id="passwordModal" class="modal-background" style="display: none;">
+        <div class="modal-content">
+            <p>Enter your password:</p>
+            <input type="password" id="password" class="password-input" placeholder="Password">
+            <div class="modal-buttons">
+                <button onclick="initiateProcess()">Submit</button>
+                <button onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div id="confirmationModal" class="modal-background" style="display: none;">
+        <div class="modal-content">
+            <p class="confirmation-message">Process initiated</p>
+        </div>
+    </div>
+</div>
 <script src="../../assets/jsFIles/Admin/passwordReset.js"></script>
+<script src="../../assets/jsFIles/Admin/deleteaccount.js"></script>
 </body>
 </html>

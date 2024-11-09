@@ -121,11 +121,11 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <div class="home-below">
                 <div class="home-below-inside">
                     <h2>Total transactions</h2>
-
+                    <h2>234</h2>
                 </div>
                 <div class="home-below-inside">
                     <h2>Total Salon </h2>
-
+                    <h2>102</h2>
                 </div>
             </div>
             
