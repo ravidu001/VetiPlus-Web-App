@@ -1,0 +1,186 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.pageclose {
+    text-decoration: none;
+    font-size: 24px; /* adjust font size to your liking */
+    color: #6A0DAD; /* adjust color to your liking */
+    padding: 10px;
+    
+    background-color:none; /* adjust background color to your liking */
+    transition: background-color 0.2s ease;
+  }
+  
+  .close:hover {
+    background-color: #ccc; /* adjust hover background color to your liking */
+  }
+  
+  .close:active {
+    transform: scale(0.9);
+  }
+
+.Service-details {
+    width: 90%;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 2px solid #6A0DAD;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Topic Styles */
+.service-topic {
+    color: rebeccapurple;
+    text-align: center;
+    padding: 30px;
+}
+
+.content-1{
+    display:flex;
+}
+
+a{
+    text-decoration: none;
+    color: #f2f2f2;
+}
+/* Add Button */
+.add {
+    display:table-column;
+    margin: 10px 0;
+    margin-right: auto;
+    padding: 8px 12px;
+    width: 70px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #3d0466;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.add:hover {
+    background-color: #b76feb;
+    color: black;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    font-size: 18px;
+    background-color: #f8f9fa;
+    color: #333;
+    align-items: center;
+    justify-content: center;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Image Styles */
+.service-photo {
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+    display: grid;
+    padding: 1rem;
+    border: 3px solid black;
+}
+
+/* Description Styles */
+td {
+    vertical-align: top;
+}
+
+td img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Action Buttons */
+button {
+    display: grid;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #ffffff;
+    width: 70px;
+    background-color: #3d0466;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+button.delete {
+    margin-bottom: 5px;
+    background-color: #3d0466;
+}
+
+button.delete:hover {
+    background-color: #ab5fe1;
+    color:black;
+}
+
+button.edit {
+    background-color: #3d0466;
+}
+
+button.edit:hover {
+    background-color: #ab5fe1;
+    color:black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body{
+        border: #6A0DAD;
+    }
+    table {
+        display:table;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    th, td {
+        text-align: right;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th::before, td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+    }
+
+    td::before {
+        content: "";
+    }
+
+    button{
+        padding: 5px;
+        margin:5px;
+    }
+}

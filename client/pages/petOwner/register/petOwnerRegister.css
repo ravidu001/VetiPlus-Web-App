@@ -1,0 +1,79 @@
+body {
+    font-size: 0.9rem;
+    background-image: linear-gradient(115deg, rgb(71, 149, 175), white);
+}
+
+.main {
+    border: 2px solid black;
+    padding: 2em;
+    margin: 1em;
+    background-color: white;
+
+    display: flex;
+    gap: 2rem;
+}
+/* @media (width <= 1000px) {
+    .main {    
+        flex-direction: column;
+    }
+} */
+
+.main .logoPart {
+    background-color: rgb(136, 178, 192);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 1em;
+    padding: 1em;
+}
+.main .logoPart img {
+    margin: auto;
+    width: 10em;
+}
+
+.main .formPart header {
+    font-size: 2em;
+    padding: 10px;
+    color: blue;
+    font-weight: bolder;
+}
+.main .formPart form fieldset {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.3em;
+
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    font-size: 1.2em;
+}
+.main .formPart form fieldset label {
+    grid-column: 1/2;
+    text-align: center;
+}
+.main .formPart form fieldset legend {
+    font-weight: bold;
+    padding: 0 5px;
+}
+.main .formPart form input:invalid {
+    border-color: rgb(255, 68, 68);
+}
+
+.main .formPart form input[type=submit] {
+    padding: 0.7em;
+    border: none;
+
+    font-size: 1.2em;
+    font-weight: bold;
+
+    border-radius: 1em;
+    background-color: lightblue;
+
+    width: 80%;
+}
+.main .formPart form input[type=submit]:hover {
+    cursor: pointer;
+    background-color: rgb(136, 178, 192);
+}

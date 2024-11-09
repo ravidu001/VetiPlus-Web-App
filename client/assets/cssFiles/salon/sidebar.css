@@ -49,25 +49,39 @@ body {
 
 #sidebar {
     height: 100vh;
-    width: 250px;
+    width: 260px;
     padding-left: 0;
     background-color: var(--primary-color-light);
-    padding: 10px 1rem;
-    position: sticky;
+    position: sticky;  
+    padding: 10px;
     top: 0;
     transition: width 0.3s ease-in-out;
     overflow: hidden;
-    position: sticky;
     top: 0;
-    align-self: start;
+    align-self: start; 
 }
 
+#sidebar .nav-link.active {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: var(--primary-color); /* or any other style to indicate active state */
+    color: var(--sidebar-color);
+}
 
-#sidebar.close .logo{
+#sidebar .nav-link.active i {
+    margin-left: -10px;
+    color: white;
+}
+
+#sidebar .nav-link.active  .a {
+    color: white;
+}
+#sidebar.close .logoname{
     display: none;
 }
 
-#sidebar .toggle-btn i {
+#sidebar .-btn i {
     transform: rotate(180deg);
     transition: transform 0.2s ease;
     fill: var(--background-primary);
@@ -79,7 +93,7 @@ body {
 }
 
 #sidebar a span,#sidebar .dropdown-btn span{
-    flex-grow: 1;
+    flex-grow: 1; 
 }
 
 #sidebar.close {
@@ -87,11 +101,20 @@ body {
     padding-left: 0;
 }
 
-
 #sidebar.close ul li.active a span,
 #sidebar.close ul li a span,
+#sidebar.close .logoname,
 #sidebar.close ul li .dropdown-btn span {
     display: none; /* Hide menu text when sidebar is closed */
+}
+
+#sidebar.close .logocontent{
+    border-bottom: none;
+}
+
+#sidebar.close #toggle-btn{
+    transform: rotate(180deg);
+    margin-left: 30px;
 }
 
 #sidebar ul {
@@ -105,16 +128,29 @@ body {
     margin-bottom: 20px;
 }
 
-#sidebar .logo {
-    font-weight: 600;
-    font-size: 1.2em;
-    color: var(--background-primary);
+#sidebar .logo{
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#sidebar .logocontent{
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: #700392 3px solid;
+}
+
+#sidebar .logoname {
+    margin: 15px;
+    font-size: 1.4em;
 }
 
 #sidebar ul li.active a{
     color: var(--accent-clr);
 
-    i{
+    .i{
         fill: var(--accent-clr);
     }
 }
@@ -141,6 +177,7 @@ body {
 
 #sidebar a:hover, #sidebar .dropdown-btn:hover {
     width: 100%;
+    padding-left: 10px;
     background-color: var(--background-primary);
     color: var(--primary-color-light);
 }
@@ -191,11 +228,6 @@ body {
     border: none;
     font-size: 1.5em;
     cursor: pointer; 
-}
-
-
-.sidebar.close header .toggle {
-    transform: translateY(-100%);
 }
 
 body.dark .sidebar header .toggle {

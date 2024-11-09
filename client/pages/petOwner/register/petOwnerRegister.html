@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/png" href="../../img/vpLogo.png" />
+        <title>Get Registered!</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="../../css/myStyle.css" rel="stylesheet" type="text/css">
+        <link href="petOwnerRegister.css" rel="stylesheet" type="text/css">
+        <link href="../../css/footer.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="logoPart">
+                <img src="../../img/vpLogo.png" alt="VetiPlus Logo">
+            </div>
+            <div class="formPart">
+                <header>Pet Owner Signup</header>
+                <form id="regForm" action="petOwnerRegister.php" method="post" novalidate>
+                    <fieldset>
+                        <legend>Personal Details</legend>
+                        <label for="fname">First name</label>
+                            <input type="text" id="fname" name="fname" required>
+                        <label for="lname">Last name</label>
+                            <input type="text" id="lname" name="lname" required>
+                        <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Address</legend>
+                        <label for="homeNo">Apartment/ House no.</label>
+                            <input type="text" id="homeNo" name="homeNo" required>
+                        <label for="street">Street</label>
+                            <input type="text" id="street" name="street" required>
+                        <label for="city">City</label>
+                            <input type="text" id="city" name="city" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Contact</legend>
+                        <label for="mobile">Mobile no.</label>
+                            <input type="tel" id="mobile" name="mobile" required pattern="[0][7][0-9]{8}" placeholder="07X-XXXXXXXX">
+                        <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Password Setup</legend>
+                        <label for="password">Enter a Password</label>
+                            <input type="password" id="password" name="password" required>
+                        <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" required>
+                    </fieldset>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footerLinks">
+                <div>
+                    <p>Quick Links:</p>
+                    <div class="quickLinks">
+                        <a href="./pages/aboutUs.html">Home</a><p></p>
+                        <a href="./pages/aboutUs.html">Services</a><p></p>
+                        <a href="./pages/aboutUs.html">About Us</a><p></p>
+                        <a href="./pages/aboutUs.html">Contact Us</a>
+                    </div>
+                </div>
+                <div>
+                    <p>Befriend Us:</p>
+                    <div class="socials">
+                        <a href=""><img src="./img/socialIcons/Facebook.png" alt="Facebook"></a>
+                        <a href=""><img src="./img/socialIcons/TwitterX.png" alt="TwitterX"></a>
+                        <a href=""><img src="./img/socialIcons/Instagram.png" alt="Instagram"></a>
+                        <a href=""><img src="./img/socialIcons/LinkedIn.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="central">
+                <img src="./img/vpLogo.png" alt="logo">
+                <h2>VetiPlus</h2>
+                <p>Copyright 2024 vetiplus@gmail.com<br/>
+                    All Rights Reserved.</p>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+            </div>
+            <img src="./img/FooterImg.png" alt="FooterImg">
+        </div>
+              
+        <script>
+            document.getElementById('regForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const getElement = name => document.getElementById(name)
+
+                let inputs = []
+                inputs.push(getElement('fname'))
+                inputs.push(getElement('lname'))
+                inputs.push(getElement('dob'))
+                inputs.push(getElement('homeNo'))
+                inputs.push(getElement('street'))
+                inputs.push(getElement('city'))
+                inputs.push(getElement('mobile'))
+                inputs.push(getElement('email'))
+                inputs.push(getElement('password'))
+
+                inputs.forEach(x => {
+                    if (x.value.trim() === '') {
+                        x.setCustomValidity("Please fill in this field.");
+                    } else {
+                        x.setCustomValidity('');
+                    }
+                })
+
+                // password logic
+                let password = getElement('password')
+                if (password.value.length < 10) {
+                    password.setCustomValidity("Password should be at least 10 characters.")
+                } else if (password.value.trim().length < password.value.length) {
+                    password.setCustomValidity("No whitespaces at either end of the password please.")
+                } else {
+                    password.setCustomValidity('')
+                }
+
+                // confirm password logic
+                let confirmPassword = getElement('confirmPassword')
+                if (password.value !== confirmPassword.value) {
+                    confirmPassword.setCustomValidity("Passwords do not match.")
+                } else {
+                    confirmPassword.setCustomValidity('')
+                }
+
+
+                if (this.checkValidity()) {
+                    console.log('Form is valid, submitting...');
+                    this.submit();
+                } else {
+                    this.reportValidity();
+                }
+            });
+        </script>
+    </body>
+</html>
