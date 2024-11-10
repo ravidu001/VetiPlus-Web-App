@@ -1,7 +1,7 @@
 .home{
     background-color: #F8ECFF;
     padding: 20px;
-    margin: 30px;
+    margin: 30px 100px;
     border-radius: 10px;
     width: 80%;
     height: 133px;
@@ -52,6 +52,8 @@
     border-radius: 20px;
     gap: 20px;
     background-color: #F8ECFF;
+    box-shadow: 5px 10px 18px #888888;
+
     
 }
 .home-after-outer{
@@ -65,6 +67,8 @@
     border-radius: 20px;
     gap: 20px;
     background-color: #F8ECFF;
+    box-shadow: 5px 10px 18px #888888;
+
 }
 .home-after-inside-upper{
     display: flex;
@@ -88,7 +92,8 @@
     padding: 40px;
     border-radius: 20px;
     background-color: #F8ECFF;
-    
+    box-shadow: 5px 10px 18px #888888;
+
 }
 .admin-navbar-inside-left-inner-1 ul li.active {
     background-color: #F8ECFF; /* Active background color */
