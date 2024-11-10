@@ -4,7 +4,8 @@
 .profile_top{
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 60%;
+
 }
 .profile_top_inside{
     display: flex;
