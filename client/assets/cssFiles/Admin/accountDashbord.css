@@ -79,5 +79,11 @@
     background-color: #8F53B4;
     color: white;
 }
+.admin-navbar-inside-left-inner-1 ul li.active {
+    background-color: #F8ECFF; /* Active background color */
+}
 
+.admin-navbar-inside-left-inner-1 ul li.active a {
+    color: #000000; /* Text color for the active link */
+}
 

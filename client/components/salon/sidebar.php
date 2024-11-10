@@ -23,6 +23,7 @@
             <ul>
                 <div class="logocontent">
                     <img class="logo" src="../../assets/images/vetiplus-logo.png" alt="logo">
+
                     <span class="logoname">VetiPlus<br></span>
                 </div>
                 <button onclick="toggleSidebar()" id="toggle-btn">
@@ -43,6 +44,7 @@
                         <i class='bx bx-chevron-down'></i>
                     </button>
                     <ul class="sub-menu">
+
                         <li class="nav-link <?= ($current_page =='Newappointment.php') ? 'active' : '' ?>"> 
                             <a href="../../pages/salon/Newappointment.php">New</a>
                         </li>
@@ -52,12 +54,15 @@
                         <li class="nav-link <?= ($current_page == 'Completeappointment.php') ? 'active' : '' ?>">
                             <a href="../../pages/salon/Completeappointment.php">Complete</a>
                         </li>
+
                     </ul>
                 </li>
 
                 <li>
                 <li class="nav-link <?= $current_page == 'timeslot.php' ? 'active' : '' ?>"> 
+
                     <a href="../../components/salon/booking-calendar-compact.php">
+
                         <i class='bx bxs-pie-chart-alt icon'></i>
                         <span>Time Slot</span>
                     </a>
@@ -66,20 +71,26 @@
                 <li class="nav-link <?= $current_page == 'ServiceDetails.php' ? 'active' : '' ?>"> 
                     <a href="../../pages/salon/ServiceDetails.php">
                         <i class='bx bxs-briefcase icon'></i>
+
                         <span>Services</span>
                     </a>
+
                 </li>
             
                 <li class="nav-link <?= $current_page == 'staffdetails.php' ? 'active' : '' ?>"> 
                     <a href="../../pages/salon/staffdetails.php">
                         <i class='bx bx-male-female icon'></i>
+
                         <span>Salon Team</span>
                     </a>
+
                 </li>
 
                 <li>
                 <li class="nav-link <?= $current_page == 'Feedback.php' ? 'active' : '' ?>"> 
+
                     <a href="../../pages/salon/Feedback.php">
+
                         <i class='bx bxs-message icon'></i>
                         <span>Feedback</span>
                     </a>
@@ -103,9 +114,10 @@
 
 
                 <li>
+
                 <li class="nav-link <?= $current_page == 'salonprofile.php' ? 'active' : '' ?>"> 
                     <a href="../../pages/salon/salonprofile.php">
-                        <i class='bx bx-user icon'></i>
+          <i class='bx bx-user icon'></i>
                         <span>Profile</span>
                     </a>
                 </li>

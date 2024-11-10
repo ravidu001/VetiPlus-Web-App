@@ -10,10 +10,12 @@
 </head>
 <body>
     <div class="Service-details">
-    <a class="pageclose" href="../../salon/Tool.php">&CircleTimes;</a>
+    <a class="pageclose" href="../Home.php">&CircleTimes;</a>
         <h2 class="header-name">Service Details</h2>
         <div class="content-1">
-            <button class="add" id="service-add">Add</button>
+            <button class="add" id="service-add">
+                <a href="./AddService.html">Add</a>
+            </button>
                 <?php
                     require_once("../../../components/common/serchbar.php")
                 ?>
@@ -21,28 +23,54 @@
     <table>
         <thead>
             <tr>
-                <th>Service Name</th>
-                <th>Charge</th>
-                <th>Time Duration(for one service)</th>
-                <th>Photo</th>
-                <th>Discription</th>
+                <th>Photoes</th>
+                <th>Details</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Pet Bathing</td>
-                <td>$5</td>
-                <td>30 min</td>
                 <td>
                     <img src="../../../assets/images/salon/groomer.jpg" class="service-photo">
+                    <p>Photo - 01</p>
+                    <img src="../../../assets/images/salon/groomer.jpg" class="service-photo">
+                    <p>Photo - 02</p>
                 </td>
                 <td>
-                    Good pet Service
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Name</td>
+                                <td>Pet bathing</td>
+                            </tr>
+                            <tr>
+                                <td>Charge</td>
+                                <td>30 $</td>
+                            </tr>
+                            <tr>
+                                <td>Time(duration)</td>
+                                <td>30 min</td>
+                            </tr>
+                            <tr>
+                                <td>Description</td>
+                                <td>Pet bathing is a grooming process that keeps pets clean and healthy. 
+                                    It involves using pet-safe shampoo and water to remove dirt, odors, 
+                                    and excess oils from their coat and skin. Bathing starts with a lukewarm 
+                                    rinse, followed by gentle shampooing, thorough rinsing, and optional conditioning.
+                                     After the bath, pets are towel- or blow-dried on a low-heat setting.
+                                    The frequency of baths varies by breed and lifestyle, but most pets 
+                                    benefit from a bath every few weeks. Bathing supports hygiene, reduces 
+                                    shedding, and helps prevent skin issues, making it an essential part of pet care.
+</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </td>
                 <td>
                     <button class="delete" id="delete">Delete</button>
-                    <button class="edit" id="edit">Edit</button>
+                    <button class="edit" id="edit">
+                        <a href="./EditService.html">Edit</a>
+                    </button>
                 </td>
             </tr>
         </tbody>

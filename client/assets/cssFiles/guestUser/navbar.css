@@ -1,0 +1,78 @@
+.navbar {
+    background-image: linear-gradient(var(--bgColDark), blue, rgba(255, 255, 255, 0));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* display: grid;
+    grid-template-columns: 3fr 3fr 1fr;
+    text-align: center; */
+    
+    font-size: 1rem;
+
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+
+    height: fit-content;
+    width: 100%;
+}
+
+.navbar .logo {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 1em;
+}
+.navbar .logo img {
+    height: 4em;
+}
+.navbar .logo p {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    height: 100%
+}
+.navbar .links button {
+    border: none;
+    border-radius: 10px;
+    background-color: inherit;
+
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+
+    padding: 15px;
+}
+.navbar .links button:hover,
+.navbar .loginBtn button:hover {
+    cursor: pointer;
+    
+    /* background-color: rgb(140, 197, 199); */
+    background-color: lightblue;
+    color: black;
+
+    transition: ease 150ms;
+}
+.navbar .links .current {
+    background-color: coral;
+}
+
+.navbar .loginBtn button {
+    font-size: 1.3em;
+
+    border: 1px solid black;
+    color: white;
+    background-color: inherit;
+
+    padding: 15px;
+    /* margin-top: 1em; */
+    margin-right: 1em;
+    border-radius: 10px;
+}

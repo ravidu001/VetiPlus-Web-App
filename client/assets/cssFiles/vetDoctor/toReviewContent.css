@@ -1,0 +1,225 @@
+.heading {
+    font-size: 30px;
+    color: var(--text-primary);
+    font-family: 'arial';
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.maincontainer{
+    color: black;
+}
+
+.maincontainer#blur.active {
+    filter: blur(10px);
+    pointer-events: none; 
+    user-select: none;
+}
+
+.toReview {
+    border-collapse: collapse;
+    width: 97%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.toReviewHead {
+    background-color: var(--background-primary);
+    color: var(--text-white);
+    font-size: 20px;
+    height: 60px;
+}
+
+.toReview th, td {
+    padding-left: 15px;
+    border-bottom: 6px solid var(--background-white);
+    font-weight: bold;
+}
+
+.toReview tr td {
+    background-color: var(--list-item);
+    height: 120px;
+    padding-bottom: 0px;
+}
+
+.toReview tr td img {
+    width: 60px;
+    height: 60px;
+    margin-top: 0px;    
+    border-radius: 50px;
+}
+
+.toReview tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+.toReview tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+.button {
+    color: black;
+    font-size: 40px;
+}
+
+.button:hover {
+    text-shadow: var(--shadow-color) 1px 1px 1px;
+}
+
+#popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: auto;
+    padding:50px;
+    border: 2px solid var(--text-primary);
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    background: var(--background-white);
+}
+
+#popup.active{
+    top: 50%;  
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.container1 {
+    display: block;
+    margin-left: 0px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    background: var(--background-light);
+    height: 90px;
+    width: 90%;
+    padding-left: 20px;
+    padding-top: 0px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-color) 5px 5px 5px;
+    
+}
+
+.container1 h1 {
+    color: var(--text-black);
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 30px;
+    font-family: 'arial';
+    
+}
+
+.container1 img{
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+    margin-right: 30px;
+}
+
+.formtext {
+    font-size: 20px;
+    color: var(--text-black);
+    font-family: 'arial';
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.buttoncontainer {
+    background: var(--text-primary);
+    color: var(--text-white);
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 200px;
+    font-family: 'arial';
+    cursor: pointer;
+}
+
+/*input type is number*/
+.rating {
+    width: 400px;
+    background: none;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rating .star-widget input {
+    display: none;
+}
+
+.star-widget label {
+    font-size: 40px;
+    color: #444; 
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+.star-widget input:not(:checked) ~ label:hover,
+.star-widget input:not(:checked) ~ label:hover ~ label {
+    color: var(--text-primary);
+}
+
+.star-widget input:checked ~ label {
+    color: var(--text-primary);
+}
+
+input#rate-5:checked ~ label {
+    color: var(--text-primary);
+    text-shadow: 0 0 20px var(--background-light);
+}
+
+/* Display rating text based on selection */
+#rate-1:checked ~ header:before {
+    content: 'Very Bad 😖';
+} 
+#rate-2:checked ~ header:before {
+    content: 'Bad 🙁';
+}
+#rate-3:checked ~ header:before {
+    content: 'Good 😃';
+}
+#rate-4:checked ~ header:before {
+    content: 'Very Good 😎';
+}
+#rate-5:checked ~ header:before {
+    content: "Excellent 😍";
+}
+
+star-widget header {
+    display: none;
+}
+
+input:checked ~ header {
+    display: block;
+}
+
+.star-widget header {
+    width: 100%;
+    font-size: 25px;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+} 
+
