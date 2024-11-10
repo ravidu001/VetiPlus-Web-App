@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;   
+}
+
+.StaffandSidebar {
+    display: flex;
+}
+
+.staff-content {
+    border: #6A0DAD solid 2px;
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.staff-content a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.staff-topic {
+    color: #6A0DAD;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.content-0 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+button.add {
+    background-color: #3d0466;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.add:hover {
+    background-color: #b76feb;
+}
+
+button.edit {
+    background-color: #3d0466;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.edit:hover {
+    background-color:#b76feb;
+    color: white;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.table th{
+    background-color: #f8f3fb;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+}
+
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Picture Styles */
+.staff-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.staff-picture:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .staff-content {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .content-0 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button.add
+    button.edit {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+    }
+}

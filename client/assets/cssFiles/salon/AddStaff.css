@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.staff-detail-content {
+    width: 40%;
+    height: 40%;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: #6A0DAD solid 2px;
+}
+
+.staff-detail-content h2 {
+    margin-bottom: 20px;
+    color: #6A0DAD;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #6A0DAD;
+}
+
+label {
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+    font-family: 'Arial', sans-serif;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: 80%;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: 1px solid #b76feb;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #6A0DAD;
+    outline: none;
+}
+
+input[type="file"] {
+    padding: 6px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+}
+
+button.remove {
+    width: 15%;
+    padding: 6px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #6A0DAD;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.remove:hover {
+    background-color:#b76feb;
+}
+
+button.save {
+    margin-top: 30px;
+    width: 20%;
+    padding: 9px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #6A0DAD;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.save:hover {
+    background-color: #b76feb;
+}
