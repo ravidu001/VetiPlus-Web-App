@@ -10,7 +10,7 @@
     --background-light: #c8a2c8;
     --background-primary: #6a0dad ;
     --background-white: #fff;
-    --text-black: black;
+    --text-clr: black;
     --text-primary: #6a0dad;
     --text-white: #fff;
     --shadow-color: slategray;
@@ -20,17 +20,11 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-.content{
-    overflow-y: auto;
-    display: flex;
 }
 
 html{
     font-family:'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5rem;
+    /* line-height: 1.5rem; */
 }
 
 body {
@@ -74,7 +68,8 @@ body {
     color: white;
 }
 
-#sidebar .nav-link.active  .a {
+
+#sidebar .nav-link.active  a {
     color: white;
 }
 #sidebar.close .logoname{
@@ -177,7 +172,7 @@ body {
 
 #sidebar a:hover, #sidebar .dropdown-btn:hover {
     width: 100%;
-    padding-left: 10px;
+    padding-left: 5px;
     background-color: var(--background-primary);
     color: var(--primary-color-light);
 }
