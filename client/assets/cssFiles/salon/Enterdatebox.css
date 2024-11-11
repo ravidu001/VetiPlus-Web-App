@@ -1,29 +1,54 @@
 .selectdatebox {
-    background-color: #eed9fe;
+
+    background-color: #fff;
     padding: 10px;
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0  15px rgba(197, 62, 224, 0.3);
+    border: #e0bdf9 3px solid;
+
+    /*one side shadow -  
+        box-shadow: 10px 0 15px rgba(197, 62, 224, 0.3);
+        two side -
+        box-shadow: 10px 10px 15px rgba(197, 62, 224, 0.3);
+        threee side -
+        box-shadow: 0 -10px 15px rgba(197, 62, 224, 0.3), top
+        10px 0 15px rgba(197, 62, 224, 0.3),   right
+        0 10px 15px rgba(197, 62, 224, 0.3);  bottom
+
+        four side 
+        box-shadow: 0 0 15px rgba(197, 62, 224, 0.3);
+
+    */
+
 }
 
 .selectdateboxname {
     font-size: 25px;
+    gap: 3rem;
     padding: 5px;
     font-weight: bold;
     border-bottom: 3px solid #6A0DAD;
 }
 
 .enterdate input[type="date"] {
+
+    align-items: center;
     margin: 10px;
-    padding: 10px;
+    padding: 13px;
     border: 1px solid #6A0DAD;
     border-radius: 5px;
-    color: black;
+    color: rgb(81, 81, 81);
+    margin-left: 20%;
 }
 
 button.cancel, button.ok {
+    position: relative;
+    left: 55%;
+
+
     padding: 5px 10px;
     border-radius: 5px;
     border: none;
@@ -49,4 +74,12 @@ button.ok {
 button.ok:hover {
     background-color: #e0bdf9;
     color: black;
+
+}
+
+/* Optional: Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+
+
 }

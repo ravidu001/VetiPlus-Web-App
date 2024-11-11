@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/salon/sidebar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="../../assets/jsFiles/salon/sidebar.js" defer></script>
+    <link rel="text/image" href="../../assets/images/vetiplus-logo.png">
     <link rel="stylesheet" href="../../assets/cssFiles/salon/Dashboard.css"> 
     <link rel="stylesheet" href="../../assets/cssFiles/salon/Home.css">
-     <link rel="stylesheet" href="../../assets/cssFiles/common/userFooter.css">  
+    <link rel="stylesheet" href="../../assets/cssFiles/common/userFooter.css">  
 
     <title>Document</title>
 </head>
@@ -28,13 +29,9 @@
 
         <div>
             <?php
-                require "../../components/common/userFooter.php";
+                require "./userFooter.php";
             ?>
         </div> 
-    </div>
-    
-
-   
-    
+    </div> 
 </body>
 </html>

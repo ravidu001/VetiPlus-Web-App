@@ -1,7 +1,6 @@
 <div class="selectdatebox">
     <div class="selectdateboxname">
-        Enter Date
-        <i class="fa-solid fa-calendar-days icon"></i>
+           Enter Date 
     </div>
     <div class="enterdate">
         <input type="date" class="selectdate">

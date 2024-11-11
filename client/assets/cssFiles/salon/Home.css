@@ -9,14 +9,13 @@ body, html {
 
 .homecontent {
     width: 100%;
-    height: auto;
+    height: auto; /* Optional: to make it fill the full viewport height */
 }
 
 .sideanddashbord {
     padding: 0;
     display: flex;
     width: 100%;
-    margin-bottom: 10px; 
 }
 
 .sideanddashbord .dash {
@@ -27,4 +26,9 @@ body, html {
 .footer {
     width: 100%;
     margin-top: auto;
+}
+
+/* Optional: Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
 }
