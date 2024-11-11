@@ -103,8 +103,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <td>225689</td>
                 <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
-                    <button class="accept-btn">Accept</button>
-                    <button class="decline-btn">Decline</button>
+                    <button class="accept-btn" onclick="openModal('accept')">Accept</button>
+                    <button class="decline-btn" onclick="openModal('decline')">Decline</button>
                 </td>
             </tr>
             <tr>
@@ -114,8 +114,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <td>225689</td>
                 <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
-                    <button class="accept-btn">Accept</button>
-                    <button class="decline-btn">Decline</button>
+                    <button class="accept-btn" onclick="openModal('accept')">Accept</button>
+                    <button class="decline-btn" onclick="openModal('decline')">Decline</button>
                 </td>
             </tr>
             <tr>
@@ -125,8 +125,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <td>225689</td>
                 <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
-                    <button class="accept-btn">Accept</button>
-                    <button class="decline-btn">Decline</button>
+                    <button class="accept-btn" onclick="openModal('accept')">Accept</button>
+                    <button class="decline-btn" onclick="openModal('decline')">Decline</button>
                 </td>
             </tr>
             <tr> 
@@ -136,8 +136,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <td>225689</td>
                 <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
-                    <button class="accept-btn">Accept</button>
-                    <button class="decline-btn">Decline</button>
+                    <button class="accept-btn" onclick="openModal('accept')">Accept</button>
+                    <button class="decline-btn" onclick="openModal('decline')">Decline</button>
                 </td>
             </tr>
             <tr>
@@ -147,8 +147,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <td>225689</td>
                 <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
-                    <button class="accept-btn">Accept</button>
-                    <button class="decline-btn">Decline</button>
+                    <button class="accept-btn" onclick="openModal('accept')">Accept</button>
+                    <button class="decline-btn" onclick="openModal('decline')">Decline</button>
                 </td>
             </tr>
             <tr>
@@ -158,8 +158,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <td>225689</td>
                 <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
-                    <button class="accept-btn">Accept</button>
-                    <button class="decline-btn">Decline</button>
+                    <button class="accept-btn" onclick="openModal('accept')">Accept</button>
+                    <button class="decline-btn" onclick="openModal('decline')">Decline</button>
                 </td>
             </tr>
             <tr>
@@ -169,8 +169,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <td>225689</td>
                 <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
-                    <button class="accept-btn">Accept</button>
-                    <button class="decline-btn">Decline</button>
+                    <button class="accept-btn" onclick="openModal('accept')">Accept</button>
+                    <button class="decline-btn" onclick="openModal('decline')">Decline</button>
                 </td>
             </tr>
             <tr>
@@ -180,8 +180,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <td>225689</td>
                 <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
-                    <button class="accept-btn">Accept</button>
-                    <button class="decline-btn">Decline</button>
+                    <button class="accept-btn" onclick="openModal('accept')">Accept</button>
+                    <button class="decline-btn" onclick="openModal('decline')">Decline</button>
                 </td>
             </tr>
             <tr>
@@ -191,8 +191,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <td>225689</td>
                 <td><a href=""><img src="../../assets/images/image_10.png" alt=""></a></td>
                 <td>
-                    <button class="accept-btn">Accept</button>
-                    <button class="decline-btn">Decline</button>
+                    <button class="accept-btn" onclick="openModal('accept')">Accept</button>
+                    <button class="decline-btn" onclick="openModal('decline')">Decline</button>
                 </td>
             </tr>
             
@@ -201,5 +201,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </div>
     </div>
 </div>
+<div class="modal" id="systemModal">
+    <div class="modal-content">
+        <h3 id="modal-message">Do you want to proceed?</h3>
+        <button onclick="confirmAction()">Yes</button>
+        <button onclick="closeModal()">No</button>
+    </div>
+</div>
+<script src="../../assets/jsFIles/Admin/systemAccept.js"></script>
 </body>
 </html>

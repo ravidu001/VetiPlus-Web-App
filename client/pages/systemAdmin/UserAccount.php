@@ -153,7 +153,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
     </div>
-    <div id="confirmationModal" class="modal-background" style="display: none;">
+    <div id="dconfirmationModal" class="modal-background" style="display: none;">
         <div class="modal-content">
             <p class="confirmation-message">Process initiated</p>
         </div>
