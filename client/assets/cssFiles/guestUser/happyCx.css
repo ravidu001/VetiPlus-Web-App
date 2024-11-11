@@ -1,0 +1,15 @@
+.happyCx {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.happyCx .cxCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.happyCx .cxCard img {
+    width: 90%;
+
+}

@@ -1,0 +1,130 @@
+/* Feedback Content Layout */
+.feedbackcontent {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #333;
+}
+
+
+
+
+/* Feedback Details */
+.feedbackdetail {
+    flex: 1;
+    padding: 20px;
+}
+
+.feedbackdetail h3 {
+    font-size: 2rem;
+    text-align: left;
+    padding: 10px;
+    color: #642CA9;
+    box-shadow: 5px 5px 10px rgba(225, 183, 233, 0.5);
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.feedbackdetail p {
+    text-align: left;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Table Content */
+.tablecontent {
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0px 5px 15px rgba(225, 183, 233, 0.5);
+    border-radius: 4px;
+    background-color: #ffffff;
+    border-top: 3px solid #A71FE6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px;
+    vertical-align: top;
+}
+
+/* User Details */
+.userdetail {
+    align-items: center;
+    gap: 2rem;
+}
+
+.userdetail .image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 15px;
+}
+
+.userdetail h4 {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    margin: 0;
+}
+
+/* Star Rating */
+.star {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.star .icon {
+    font-size: 1.2rem;
+    color: #642CA9;
+}
+
+.star p {
+    margin: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Review Description */
+.description {
+    width: 95%;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+
+/* Reply Section */
+textarea[name="reply"] {
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-family: sans-serif;
+    padding: 5px;
+}
+
+button.reply {
+    margin-top: 5px;
+    padding: 8px 12px;
+    background-color: #642CA9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.reply:hover {
+    background-color: #551A8B;
+}
