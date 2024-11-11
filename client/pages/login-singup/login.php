@@ -45,7 +45,7 @@
                 $message[] = 'Incorrect email or password';
             }
         } else {
-            $message[] = 'Incorrect email or password';
+            $message[] = 'Account not exisits. Please register';
         }
     }
 ?>

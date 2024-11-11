@@ -8,6 +8,9 @@
     }
 
     $user_id = $_SESSION['user_id'];
+    // login page eka nthuwa meka wdada
+    // $_SESSION['user_id'] = abc@gmail.com;
+    // $user_id = $_SESSION['user_id'];
 ?>
 
 <!DOCTYPE html>
