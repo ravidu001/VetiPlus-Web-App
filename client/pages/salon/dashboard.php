@@ -1,6 +1,7 @@
 <header>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="../../assets/cssFiles/salon/Dashboard.css">
+<link rel="stylesheet" href="../../assets/cssFiles/salon/Enterdatebox.css">
 </header>
 <div class="dashboardcontent">
     <div class="dashbardheader">
@@ -44,7 +45,7 @@
                     </div>
                 </div> -->
                 <?php
-                    require "../../components/salon/booking-calendar-compact.php";
+                    require "../../components/salon/Calendar.php";
                 ?> 
             </div>
         </div>
@@ -54,69 +55,64 @@
                     Upcoming Appointments
                 </h2>
             </div>
-            <div class="selectdatebox">
-                <div class="selectdateboxname">
-                    Enter Date
-                    <i class="fa-solid fa-calendar-days icon"></i>
-                </div>
-                <div class="enterdate">
-                    <input type="date" class="selectdate">
-                </div>
-                <button class="cancel">Cancel</button>
-                <button class="ok">Ok</button>
+            <div>
+                <?php
+                    require "../../components/salon/Enterdatebox.php";
+                ?>
             </div>
-
             <div class="upcominappointments">
                 <div class="appointmentbox">
-                    <img class="image" src="../../assets/images/boy.jpg" alt="">
+                    <img class="image" src="../../assets/images/boy.jpg" alt="boy">
                     <div class="userdetails">
-                        <h4 class="username">Abdul Rahim</h4>
+                        <p class="username">Abdul Rahim</p>
                         <p class="servicename">Pet Bathing</p>
-                        <p class="time">10.30 a.m - 11.30 a.m</p>
+                        <p class="time">077-5369984</p>
                     </div>
                     <button>
-                        View 
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        10.30 a.m <br>
+                         <b> - </b><br>
+                        11.00 a.m                        
                     </button>
                 </div>
                 <div class="appointmentbox">
+                    <img class="image" src="../../assets/images/boy.jpg" alt="boy">
                     <div class="userdetails">
-                        <h4 class="username">Abdul Rahim</h4>
+                        <p class="username">Abdul Rahim</p>
                         <p class="servicename">Pet Bathing</p>
-                        <p class="time">10.30 a.m - 11.30 a.m</p>
-                    </div>
-                    <div class="imageandview">
-                    <img class="image" src="../../assets/images/boy.jpg" alt="">
-                    <button>
-                        View 
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    </button>
-                    </div>
-                </div>
-                <div class="appointmentbox">
-                    <img class="image" src="../../assets/images/boy.jpg" alt="">
-                    <div class="userdetails">
-                        <h4 class="username">Abdul Rahim</h4>
-                        <p class="servicename">Pet Bathing</p>
-                        <p class="time">10.30 a.m - 11.30 a.m</p>
+                        <p class="time">077-5369984</p>
                     </div>
                     <button>
-                        View 
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        10.30 a.m <br>
+                         <b> - </b><br>
+                        11.00 a.m                        
                     </button>
                 </div>
                 <div class="appointmentbox">
-                    <img class="image" src="../../assets/images/boy.jpg" alt="">
+                    <img class="image" src="../../assets/images/boy.jpg" alt="boy">
                     <div class="userdetails">
-                        <h4 class="username">Abdul Rahim</h4>
+                        <p class="username">Abdul Rahim</p>
                         <p class="servicename">Pet Bathing</p>
-                        <p class="time">10.30 a.m - 11.30 a.m</p>
+                        <p class="time">077-5369984</p>
                     </div>
                     <button>
-                        View 
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        10.30 a.m <br>
+                         <b> - </b><br>
+                        11.00 a.m                        
                     </button>
-                </div> 
+                </div>
+                <div class="appointmentbox">
+                    <img class="image" src="../../assets/images/boy.jpg" alt="boy">
+                    <div class="userdetails">
+                        <p class="username">Abdul Rahim</p>
+                        <p class="servicename">Pet Bathing</p>
+                        <p class="time">077-5369984</p>
+                    </div>
+                    <button>
+                        10.30 a.m <br>
+                         <b> - </b><br>
+                        11.00 a.m                        
+                    </button>
+                </div>
             </div>
         </div>
         <div class="part2">
@@ -125,67 +121,52 @@
                     Complete Appointments
                 </h2>
             </div>
-            <div class="selectdatebox">
-                <div class="selectdateboxname">
-                    Enter Date
-                    <i class="fa-solid fa-calendar-days icon"></i>
-                </div>
-                <div class="enterdate">
-                    <input type="date" class="selectdate">
-                </div>
-                <button class="cancel">Cancel</button>
-                <button class="ok">Ok</button>
+            <div>
+                <?php
+                    require "../../components/salon/Enterdatebox.php";
+                ?>
             </div>
 
             <div class="upcominappointments">
-                <div class="appointmentbox">
-                    <img class="image" src="../../assets/images/boy.jpg" alt="">
-                    <div class="userdetails">
-                        <h4 class="username">Abdul Rahim</h4>
-                        <p class="servicename">Pet Bathing</p>
-                        <p class="time">10.30 a.m - 11.30 a.m</p>
+                    <div class="appointmentbox">
+                        <img class="image" src="../../assets/images/boy.jpg" alt="boy">
+                        <div class="userdetails">
+                            <p class="username">Abdul Rahim</p>
+                            <p class="servicename">Pet Bathing</p>
+                            <p class="time">077-5369984</p>
+                        </div>
+                        <button>
+                            10.30 a.m <br>
+                            <b> - </b><br>
+                            11.00 a.m                        
+                        </button>
                     </div>
-                    <button>
-                        View 
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    </button>
-                </div>
-                <div class="appointmentbox">
-                    <img class="image" src="../../assets/images/boy.jpg" alt="">
-                    <div class="userdetails">
-                        <h4 class="username">Abdul Rahim</h4>
-                        <p class="servicename">Pet Bathing</p>
-                        <p class="time">10.30 a.m - 11.30 a.m</p>
+                    <div class="appointmentbox">
+                        <img class="image" src="../../assets/images/boy.jpg" alt="boy">
+                        <div class="userdetails">
+                            <p class="username">Abdul Rahim</p>
+                            <p class="servicename">Pet Bathing</p>
+                            <p class="time">077-5369984</p>
+                        </div>
+                        <button>
+                            10.30 a.m <br>
+                            <b> - </b><br>
+                            11.00 a.m                        
+                        </button>
                     </div>
-                    <button>
-                        View 
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    </button>
-                </div>
-                <div class="appointmentbox">
-                    <img class="image" src="../../assets/images/boy.jpg" alt="">
-                    <div class="userdetails">
-                        <h4 class="username">Abdul Rahim</h4>
-                        <p class="servicename">Pet Bathing</p>
-                        <p class="time">10.30 a.m - 11.30 a.m</p>
+                    <div class="appointmentbox">
+                        <img class="image" src="../../assets/images/boy.jpg" alt="boy">
+                        <div class="userdetails">
+                            <p class="username">Abdul Rahim</p>
+                            <p class="servicename">Pet Bathing</p>
+                            <p class="time">077-5369984</p>
+                        </div>
+                        <button>
+                            10.30 a.m <br>
+                            <b> - </b><br>
+                            11.00 a.m                        
+                        </button>
                     </div>
-                    <button>
-                        View 
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    </button>
-                </div>
-                <div class="appointmentbox">
-                    <img class="image" src="../../assets/images/boy.jpg" alt="">
-                    <div class="userdetails">
-                        <h4 class="username">Abdul Rahim</h4>
-                        <p class="servicename">Pet Bathing</p>
-                        <p class="time">10.30 a.m - 11.30 a.m</p>
-                    </div>
-                    <button>
-                        View 
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    </button>
-                </div> 
             </div>
         </div>
     </div>
