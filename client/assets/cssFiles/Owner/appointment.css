@@ -1,0 +1,81 @@
+.Appoinment{
+    width: 80%;
+}
+.Appoinment-inside{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 100px;
+    justify-content: space-between;
+}
+.Appoinment-inside-left{
+
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+   padding: 30px;
+   gap: 50px;
+   background-color: #F1DBFF;
+   box-shadow: 5px 10px 18px #888888;
+}
+
+.Appoinment-outside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.Appoinment-outside-top{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  
+}
+.Appoinment-outside form .Appoinment-outside-top{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: #F1DBFF;
+    
+}
+.Appoinment-outside form .Appoinment-outside-top  input{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.Appoinment-outside form .Appoinment-outside-down{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 100px;
+}
+.Appoinment-outside form .Appoinment-outside-down  button{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #B89ACB;
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 200px;
+    cursor: pointer;
+    align-items: center;
+}
+.Appoinment-outside form .Appoinment-outside-down  button:hover{
+    background-color: #8F53B4;
+    color: white;
+}
+.Appoinment-outside-down  button:hover{
+    background-color: #F1DBFF;
+    color: white;
+}
+.admin-navbar-inside-left-inner-1 ul li.active {
+    background-color: #F8ECFF; /* Active background color */
+}
+
+.admin-navbar-inside-left-inner-1 ul li.active a {
+    color: #000000; /* Text color for the active link */
+}

@@ -9,7 +9,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/account.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/appointment.css">
    <title>Dashboard</title>
 </head>
 <body>
@@ -64,50 +64,35 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-    <div class="accounts">
-        <div class="accounts-inside">
-            <div class="accounts-inside-left">
-                <h2>Total Accounts</h2>
-                <h2>345</h2>
+    <div class="Appoinment">
+        <div class="Appoinment-inside">
+            <div class="Appoinment-inside-left">
+                <h2>Daily Appointment</h2>
+                <h2>45</h2>
             </div>
-            <div class="accounts-inside-left">
-                <h2>Active Accounts</h2>
-                <h2>345</h2>
+            <div class="Appoinment-inside-left">
+                <h2>Cancel Appointment</h2>
+                <h2>15</h2>
             </div>
-            <div class="accounts-inside-left">
-                <h2>Delete Accounts</h2>
-                <h2>23</h2>
-            </div>
-        </div>
-       
-            <div class="account-inside-upper" >
-                <div class="account-inside-upper-1">
-                    <h3>Users  Accounts</h3>
-                </div>
-                <div class="account-inside-upper-1">
-                    <h3>Pets  Accounts</h3>
-                </div>
-            </div>
-            <div class="account-inside-lower">
-                <div class="account-inside-lower-left">
-                    <form action="">
-                        <label for="searchInput"></label>
-                        <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
-                        <label for="searchInput"></label>
-                        <button type="button" title="Click me" onclick="window.location.href=''">Search</button>
-                    </form>   
-                </div>
-                <div class="account-inside-lower-right">
-                    <form action="">
-                        <label for="searchInput"></label>
-                        <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
-                        <label for="searchInput"></label>
-                        <button type="button" title="Click me" onclick="window.location.href=''">Search</button>
-                    </form>
-                </div>
+            <div class="Appoinment-inside-left">
+                <h2>Total Appointment</h2>
+                <h2>523</h2>
             </div>
         </div>
-    
+        <div class="Appoinment-outside">
+            <form action="">
+                <div class="Appoinment-outside-top">
+                    <input type="text" placeholder="Enter User ID">
+                    <input type="text" placeholder="Enter Pet ID">
+                    <input type="date" placeholder="Enter Date">
+                </div>
+                <div class="Appoinment-outside-down">
+                    <button type="button" onclick="window.location.href=''">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <div id="modal" class="modalbackground" style="display: none;">
         <div class="modalcontent">
             <p>Do you want to Logout?</p>
