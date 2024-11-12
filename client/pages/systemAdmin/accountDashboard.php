@@ -80,21 +80,19 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
         <br><br>
-        <button type="button" title="Click me">Logout</button>
+        <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
         <div class="account">
             <div class="account-inside">
                 <h1>Welcome to Edit Page</h1>
-
             </div>
             <div class="account-inside-upper" >
                 <div class="account-inside-upper-1">
                     <h3>Users  Accounts</h3>
                 </div>
-                <div class="account-inside-upper-1"
-                ><h3>Pets  Accounts</h3>
-            </div>
-
+                <div class="account-inside-upper-1">
+                    <h3>Pets  Accounts</h3>
+                </div>
             </div>
             <div class="account-inside-lower">
                 <div class="account-inside-lower-left">
@@ -104,9 +102,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <label for="searchInput"></label>
                         <input type="password" id="searchInput" title="search Input" placeholder="Enter Admin Password">
                         <button type="button" title="Click me" onclick="window.location.href='UserAccount.php'">Search</button>
-                       
-                    </form>
-                    
+                    </form>   
                 </div>
                 <div class="account-inside-lower-right">
                     <form action="">
@@ -116,12 +112,19 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <input type="password" id="searchInput" title="search Input" placeholder="Enter Admin Password">
                         <button type="button" title="Click me" onclick="window.location.href='petAccount.php'">Search</button>
                     </form>
-
                 </div>
             </div>
         </div>
     </div>
-    
-    
+    <div id="modal" class="modalbackground" style="display: none;">
+        <div class="modalcontent">
+            <p>Do you want to Logout?</p>
+            <div class="modalbuttons">
+                <button onclick="confirmLogout()">Yes</button>
+                <button onclick="closeLogout()">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/jsFIles/Admin/logout.js"></script>   
 </body>
 </html>

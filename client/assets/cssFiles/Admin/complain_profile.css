@@ -39,21 +39,23 @@
 .complain_profile_down{
     display: flex;
     flex-direction: column;
-
     margin: 10px 100px;
     height: 60%;
     gap: 20px;
 }
+
 .complain_profile_down_inner{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    box-shadow: 5px 10px 18px #888888;
     border-radius: 10px;
     background-color: #F8ECFF;
     height: 50%;
+}
+.complain_profile_down_inner h1{
+    margin: 10px;
 }
 .complain_profile_down_inner img{
     width: 150px;

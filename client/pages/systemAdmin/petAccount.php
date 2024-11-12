@@ -79,10 +79,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
         <br><br>
-        <button type="button" title="Click me">Logout</button>
+        <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-        <div class="pet-account">
-        <div class="pet-account-inside">
+    <div class="pet-account">
+    <div class="pet-account-inside">
             <div class="pet-account-inside-left">
                 <img src="../../assets/images/pet.jpg" alt="">
            </div>
@@ -93,9 +93,17 @@ $current_page = basename($_SERVER['PHP_SELF']);
                  <h2>Pet Owner &nbsp;&nbsp; :-&nbsp;Ramesh Peshala</h2>
            </div>
         </div> 
-
-        </div>
-    
     </div>
+</div>
+<div id="modal" class="modalbackground" style="display: none;">
+    <div class="modalcontent">
+        <p>Do you want to Logout?</p>
+        <div class="modalbuttons">
+            <button onclick="confirmLogout()">Yes</button>
+            <button onclick="closeLogout()">No</button>
+        </div>
+    </div>
+</div>
+<script src="../../assets/jsFIles/Admin/logout.js"></script> 
 </body>
 </html>
