@@ -15,7 +15,6 @@
 .admin-navbar-inside{
     display: flex;
     width: 100%; 
-  
 }
 .admin-navbar-inside-left{
    
@@ -24,7 +23,7 @@
     width: 20%;
     background: linear-gradient( #3E244E 0%, #8F53B4 100%);
     align-items: center;
-   
+    height: 653px;
 }
 .admin-navbar-inside-left button{
    
@@ -63,13 +62,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 80px;
 }
 .admin-navbar-inside-left-inner-1 a{
     text-decoration: none;
     font-size: 20px;
     color: white;
-
-   
 }
 .admin-navbar-inside-left-inner-1 ul li{
     list-style: none;
@@ -80,8 +78,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 25px;
- 
+    margin-top: 30px;
  
 }
 .dropdown {

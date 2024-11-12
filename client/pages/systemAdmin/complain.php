@@ -79,7 +79,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
         <br><br>
-        <button type="button" title="Click me">Logout</button>
+        <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
        <div class="complain">
         <table>
@@ -91,7 +91,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr onclick="window.location.href='complain_profile.php'">
                 <td>Ramesh Peshala</td>
                 <td>It is a long established fact that a reader will be...</td>
                 <td><a href="#"><img src="../../assets/images/mail.png" alt="View Message"></a></td>
@@ -131,6 +131,15 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
        </div>
     </div>
-    
+    <div id="modal" class="modalbackground" style="display: none;">
+        <div class="modalcontent">
+            <p>Do you want to Logout?</p>
+            <div class="modalbuttons">
+                <button onclick="confirmLogout()">Yes</button>
+                <button onclick="closeLogout()">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/jsFIles/Admin/logout.js"></script> 
 </body>
 </html>

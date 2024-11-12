@@ -10,7 +10,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../assets/cssFiles/Admin/navbar.css">
     
-   <title>Salon System</title>
+   <title>Navbar</title>
 </head>
 <body>
 <div class="admin-navbar"> 
@@ -79,8 +79,18 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
         <br><br>
-        <button type="button" title="Click me">Logout</button>
+        <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
 </div>
+<div id="modal" class="modalbackground" style="display: none;">
+        <div class="modalcontent">
+            <p>Do you want to Logout?</p>
+            <div class="modalbuttons">
+                <button onclick="confirmLogout()">Yes</button>
+                <button onclick="closeLogout()">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../../assets/jsFIles/Admin/logout.js"></script>
 </body>
 </html>

@@ -79,9 +79,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
         <br><br>
-        <button type="button" title="Click me">Logout</button>
+        <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-        <div class="home-before">
+    <div class="home-before">
         <div class="home">
             <div class="home-inside">
                 <img src="../../assets/images/image_8.jpg" alt="">
@@ -94,43 +94,48 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <div class="home-inside-right">
                 <img src="../../assets/images/image_9.png" alt="">
             </div>
-
         </div>
-
-           <div class="home-after">
-                <div class="home-after-inside">
-                     <h2>Total Account</h2>
-                     <h2>2345</h2>
-                    <div class="home-after-inside-upper">
-                        <div>
-                            <h3>Users</h3>
-                            <h3>234</h3>
-                        </div>
-                       <div>
+        <div class="home-after">
+            <div class="home-after-inside">
+                <h2>Total Account</h2>
+                <h2>2345</h2>
+                <div class="home-after-inside-upper">
+                    <div>
+                       <h3>Users</h3>
+                       <h3>234</h3>
+                    </div>
+                    <div>
                         <h3>Pets</h3>
                         <h3>231</h3>
-                       </div>
                     </div>
-
-                </div>
-                 <div class="home-after-outer">
-                  <h2>Total Appointment</h2>
-                   <h2>4561</h2>
                 </div>
             </div>
-            <div class="home-below">
-                <div class="home-below-inside">
-                    <h2>Total transactions</h2>
-                    <h2>234</h2>
-                </div>
-                <div class="home-below-inside">
-                    <h2>Total Salon </h2>
-                    <h2>102</h2>
-                </div>
+            <div class="home-after-outer">
+                <h2>Total Appointment</h2>
+                <h2>4561</h2>
             </div>
-            
+        </div>
+        <div class="home-below">
+            <div class="home-below-inside">
+                <h2>Total Transactions</h2>
+                <h2>234</h2>
+            </div>
+            <div class="home-below-inside">
+                <h2>Total Salon </h2>
+                <h2>102</h2>
+            </div>
+        </div>    
+    </div>
+</div>
+<div id="modal" class="modalbackground" style="display: none;">
+    <div class="modalcontent">
+        <p>Do you want to Logout?</p>
+        <div class="modalbuttons">
+            <button onclick="confirmLogout()">Yes</button>
+            <button onclick="closeLogout()">No</button>
         </div>
     </div>
-    
+</div>
+<script src="../../assets/jsFIles/Admin/logout.js"></script> 
 </body>
 </html>

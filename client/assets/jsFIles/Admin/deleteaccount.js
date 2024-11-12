@@ -5,7 +5,7 @@ function openDeleteModal() {
 function closeModal() {
     document.getElementById("deleteModal").style.display = "none";
     document.getElementById("passwordModal").style.display = "none";
-    document.getElementById("confirmationModal").style.display = "none";
+    document.getElementById("dconfirmationModal").style.display = "none";
     document.getElementById("main-content").classList.remove("blurred");
 }
 function openPasswordModal() {
@@ -16,10 +16,10 @@ function initiateProcess() {
     const password = document.getElementById("password").value;
     if (password) {
         closeModal(); 
-        document.getElementById("confirmationModal").style.display = "flex"; 
+        document.getElementById("dconfirmationModal").style.display = "flex"; 
 
         setTimeout(() => {
-            document.getElementById("confirmationModal").style.display = "none"; 
+            document.getElementById("dconfirmationModal").style.display = "none"; 
         }, 3000);
     } else {
         alert("Please enter your password.");

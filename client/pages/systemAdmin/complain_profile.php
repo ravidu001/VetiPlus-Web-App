@@ -79,9 +79,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
         <br><br>
-        <button type="button" title="Click me">Logout</button>
+        <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-     <div class="complain_profile">
+    <div class="complain_profile">
         <div class="complain_profile_top">
             <div class="complain_profile_top_left">
                 <img src="../../assets/images/image_8.jpg" alt="">
@@ -103,14 +103,14 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </div>
         <div class="complain_profile_down">
             <div class="complain_profile_down_inner">
-                <h1>Complain Massage</h1>
+                <h1>Complain Message</h1>
                 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, obcaecati quis voluptatem veritatis rerum quaerat quod qui perferendis omnis fugiat!</h4>
             </div>
             <div class="complain_profile_down_inner">
-                <h1>Complain Image</h1>
+                <h1>Complain <br> Image</h1>
                 <img src="../../assets/images/image_8.jpg" alt="">
                 <img src="../../assets/images/image_8.jpg" alt="">
                 <img src="../../assets/images/image_8.jpg" alt="">
@@ -119,5 +119,15 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </div>
      </div>
     </div>
+    <div id="modal" class="modalbackground" style="display: none;">
+        <div class="modalcontent">
+            <p>Do you want to Logout?</p>
+            <div class="modalbuttons">
+                <button onclick="confirmLogout()">Yes</button>
+                <button onclick="closeLogout()">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/jsFIles/Admin/logout.js"></script> 
 </body>
 </html>
