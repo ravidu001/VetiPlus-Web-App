@@ -82,10 +82,11 @@
     display: none;
     position: absolute; 
     background-color: #B89ACB;
-    border-radius: 10px;
     min-width: 230px;
     z-index: 1;
-    margin-top: 140px;
+    margin-top: 50px;
+    margin-left: 228px;
+    border-radius: 5px;
   }
   
   .dropdown a {
