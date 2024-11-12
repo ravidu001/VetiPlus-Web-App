@@ -27,6 +27,12 @@
     margin-left: 10px;
     background-color: #F8ECFF;
 }
+.home-inside-left-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .home-inside-left h1{
     font-size: 50px;
 }

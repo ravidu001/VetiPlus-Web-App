@@ -8,8 +8,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/home.css">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/payment.css">
    <title>Dashboard</title>
 </head>
 <body>
@@ -64,55 +64,46 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-    <div class="home">
-        <div class="home-inside-inner">
-            <div class="home-inside-left">
-                <img src="../../assets/images/image_8.jpg" alt="">
-                <div class="home-inside-left-top">
-                    <h1>Welcome Back</h1>
-                    <h3>Ramesh Peshala</h3>
-                </div>
+    <div class="payment">
+        <div class="payment-inside">
+            <div class="payment-inside-top">
+                <h2>Daily Income</h2>
+                <h3>Rs.15 000</h3>
             </div>
-            <div class="home-inside-right">
-                <img src="../../assets/images/image_9.png" alt="">
+            <div class="payment-inside-top">
+                <h2>Total Income</h2>
+                <h3>Rs.1 000 000</h3>
+            </div>
+            <div class="payment-inside-top">
+                <h2>Total Expenses</h2>
+                <h3>Rs.100 000</h3>
             </div>
         </div>
-            <div class="home-inside">
-                <div class="home-inside-middle">
-                   <h2>Active Account</h2>
-                   <h3>1.2K</h3>
+        <div class="Payment-outside">
+            <form action="">
+                <div class="Payment-outside-top">
+                        <input type="text" placeholder="Enter User ID">
+                        
+                        <input type="text" placeholder="Enter Pet ID">
+                               
+                        <input type="date" placeholder="Enter Date">
                 </div>
-                <div class="home-inside-middle">
-                    <h2>Active Users</h2>
-                    <h3>1.2K</h3>
-                </div>
-                <div class="home-inside-middle">
-                     <h2>Total Users</h2>
-                     <h3>10.2K</h3>
-                </div>
-            </div>
-        <div class="home-inside">
-             <div class="home-inside-down">
-             <h4>Pet Type</h4>
-                <p>Dog <span class="bar"></span></p>
-                <p>Cat <span class="bar short"></span></p>
-                <p>Pig <span class="bar shorter"></span></p>
-             </div>
-             <div class="home-inside-top">
-                <h4>Monthly Revenue</h4>
-             </div>
+                <div class="Payment-outside-down">
+                        <button type="button" onclick="window.location.href='paymentProfile.php'">Search</button>
+                </div>      
+            </form>
         </div>
     </div>
 </div>
 <div id="modal" class="modalbackground" style="display: none;">
-        <div class="modalcontent">
-            <p>Do you want to Logout?</p>
-            <div class="modalbuttons">
-                <button onclick="confirmLogout()">Yes</button>
-                <button onclick="closeLogout()">No</button>
-            </div>
+    <div class="modalcontent">
+        <p>Do you want to Logout?</p>
+        <div class="modalbuttons">
+            <button onclick="confirmLogout()">Yes</button>
+            <button onclick="closeLogout()">No</button>
         </div>
     </div>
-    <script src="../../assets/jsFIles/Admin/logout.js"></script>
+</div>
+<script src="../../assets/jsFIles/Admin/logout.js"></script> 
 </body>
 </html>

@@ -42,10 +42,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <a href="appointment.php">Appointment</a>
                     </li>
 
-                    <li class="<?= ($current_page == '') ? 'active' : '' ?>">
+                    <li class="<?= ($current_page == 'payment.php') ? 'active' : '' ?>">
                     <img src="../../assets/images/image_4.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <a href="">Payment Transactions</a>
+                        <a href="payment.php">Payment Transactions</a>
                     </li>
                     <li class="<?= ($current_page == '') ? 'active' : '' ?>">
                     <img src="../../assets/images/image_11.png" alt="">
