@@ -1,0 +1,239 @@
+
+/* Add Service Css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #2d3748;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Page Close Icon*/ 
+.pageclose {
+    position: relative;
+    left: 99%;
+    font-size: 20px;
+    color: #6A0DAD;
+}
+
+.form-wrapper {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Title */
+.form-title {
+    text-align: center;
+    color: #6A0DAD;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.form-group label i {
+    margin-right: 8px;
+    color: #6A0DAD;
+}
+
+.required {
+    color: #e53e3e;
+    margin-left: 4px;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #6A0DAD;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+/* Price Input Wrapper */
+.price-input-wrapper {
+    position: relative;
+}
+
+.price-input-wrapper::before {
+    content: '$';
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4a5568;
+}
+
+.input[type= "date"]::before {
+    content: '$';
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4a5568;
+}
+
+.price-input-wrapper input {
+    padding-left: 25px;
+}
+
+/* Textarea Styles */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Image Upload Styles */
+.image-upload-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.image-upload-box {
+    border: 2px dashed #e2e8f0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.image-upload-box:hover {
+    border-color: #6A0DAD;
+}
+
+.image-preview {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f7fafc;
+}
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upload-button {
+    position: relative;
+    cursor: pointer;
+}
+
+.upload-button i {
+    margin-right: 8px;
+    color: #6A0DAD;
+}
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #6A0DAD;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.submit-button:hover {
+    background-color: #6A0DAD;
+}
+
+.submit-button i {
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 25px;
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+
+    .image-upload-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Input Placeholder Styles */
+::placeholder {
+    color: #a0aec0;
+}
+
+/* Error States */
+input:invalid,
+textarea:invalid {
+    border-color:#6A0DAD;
+}
+
+/* Success States */
+input:valid,
+textarea:valid {
+    border-color: #6A0DAD;
+}
+
+/* Optional: Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
