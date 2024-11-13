@@ -1,0 +1,158 @@
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+.RendarContent {
+    display: flex;
+    width: 90%;
+    margin: 0.25% auto;
+    padding: 10px;
+    border: 4px solid #60D;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+/* page close */
+.RendarContent .pageclose {
+    position: absolute;
+    left: 93%;
+    font-size: 20px;
+    color: #6A0DAD;
+}
+
+/* First Column */
+.rendarpart1 {
+    width: 50%;
+    padding: 10px;
+    margin-right: 3%;
+}
+
+.rendarpart1 h2 {
+    text-align: center;
+    font-size: 36px;
+    color: rgb(81, 6, 168);
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+.rendarpart1 p {
+    color: rgb(130, 129, 129);
+    font-size: 14px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.rendarpart1 h3 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Form Styles */
+.salon-form {
+    margin-top: 10px;
+}
+
+.salon-form label {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.salon-form label i {
+    margin-right: 8px;
+    color: #6A0DAD;
+}
+
+.salon-form .required {
+    color: #e53e3e;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="number"],
+input[type="url"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #6A0DAD;
+    box-shadow: 0 0 4px rgba(106, 13, 173, 0.3);
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.rendarpart2 p {
+    display: inline;
+    font-size: 11.5px;
+    color: #333;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 30%;
+    margin: 1%;
+    margin-left: 40%;
+    margin-bottom: 5%;
+    padding: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #6A0DAD;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #5a0c9a;
+}
+
+/* Second Column */
+.rendarpart2 {
+    width: 50%;
+    padding: 20px;
+    border-left: 1px solid #e2e2e2;
+}
+
+.rendarpart2 h2 {
+    display: flex;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+   text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .RendarContent {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .rendarpart1, .rendarpart2 {
+        width: 100%;
+        padding: 10px;
+    }
+}
