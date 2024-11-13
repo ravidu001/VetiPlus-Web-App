@@ -89,7 +89,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <input type="date" placeholder="Enter Date">
                 </div>
                 <div class="Payment-outside-down">
-                        <button type="button" onclick="window.location.href='paymentProfile.php'">Search</button>
+                        <button type="button" onclick="window.location.href='payment_list.php'">Search</button>
                 </div>      
             </form>
         </div>
