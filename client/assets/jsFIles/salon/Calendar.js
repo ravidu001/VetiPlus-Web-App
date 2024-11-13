@@ -2,6 +2,32 @@
 let currentDate = new Date();
 let selectedDate = null;
 
+
+// Add these functions to your existing Calendar.js file
+
+function goToSelectedDate() {
+    const datePicker = document.getElementById('datePicker');
+    const selectedDate = new Date(datePicker.value);
+    
+    // Only update if a valid date is selected
+    if (!isNaN(selectedDate.getTime())) {
+        currentDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1);
+        initCalendar();
+        
+        // Select the specific day
+        const day = selectedDate.getDate();
+        selectDate(day);
+        
+        // Find and highlight the selected day
+        const dayElements = document.querySelectorAll('.calendar-day');
+        dayElements.forEach(element => {
+            if (parseInt(element.textContent) === day && !element.classList.contains('closed')) {
+                element.click();
+            }
+        });
+    }
+}
+
 // Sample data for blocked time slots (you would typically get this from an API)
 const blockedTimeSlots = {
     '2024-08-15': ['10:00', '10:20', '11:00'],
