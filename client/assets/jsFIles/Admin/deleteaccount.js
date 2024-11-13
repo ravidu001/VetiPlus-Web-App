@@ -20,6 +20,8 @@ function initiateProcess() {
 
         setTimeout(() => {
             document.getElementById("dconfirmationModal").style.display = "none"; 
+            window.location.href = "/delete";
+
         }, 3000);
     } else {
         alert("Please enter your password.");

@@ -8,8 +8,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/home.css">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/payment_list.css">
    <title>Dashboard</title>
 </head>
 <body>
@@ -64,47 +64,71 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-    <div class="home">
-        <div class="home-inside-inner">
-            <div class="home-inside-left">
-                <img src="../../assets/images/image_8.jpg" alt="">
-                <div class="home-inside-left-top">
-                    <h1>Welcome Back</h1>
-                    <h3>Ramesh Peshala</h3>
+    <div class="payment-profile">
+        <div class="payment-profile-inside">
+            <div class="payment-profile-inside-left">
+               <img src="../../assets/images/image_8.jpg" alt="">
+            </div>
+            <div class="payment-profile-inside-right">
+                <div class="payment-profile-inside-right-top">
+                    <h2>Holder's Name   &nbsp; &nbsp; &nbsp;  &nbsp; -:&nbsp; Ramesh Peshala </h2>
+                    <h2>Account Number &nbsp;  &nbsp; -:&nbsp; 061200140007057 </h2>
+                    <h2>Exprie date  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -:&nbsp; 25/28</h2>
+                    <h2>CVV  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;-:&nbsp; 199 </h2>
                 </div>
             </div>
-            <div class="home-inside-right">
-                <img src="../../assets/images/image_9.png" alt="">
+
+        </div>
+        <div class="payment-profile-outside">
+            <div class="container">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Payment ID</th>
+                      <th>Appoinment ID</th>
+                      <th>Date</th>
+                      <th>Doctor Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>220022</td>
+                      <td>22001557</td>
+                      <td>2024/04/07</td>
+                      <td>Ravindu Piris</td>
+                      
+                    </tr>
+                    <tr>
+                      <td>220022</td>
+                      <td>22001557</td>
+                      <td>2024/04/07</td>
+                      <td>Ravindu Piris</td>
+                    </tr>
+                    <tr>
+                      <td>220022</td>
+                      <td>22001557</td>
+                      <td>2024/04/07</td>
+                      <td>Ravindu Piris</td>
+                    </tr>
+                    <tr>
+                      <td>220022</td>
+                      <td>22001557</td>
+                      <td>2024/04/07</td>
+                      <td>Ravindu Piris</td>
+                    </tr>
+                    <tr>
+                      <td>220022</td>
+                      <td>22001557</td>
+                      <td>2024/04/07</td>
+                      <td>Ravindu Piris</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
         </div>
-            <div class="home-inside">
-                <div class="home-inside-middle">
-                   <h2>Active Account</h2>
-                   <h3>1.2K</h3>
-                </div>
-                <div class="home-inside-middle">
-                    <h2>Active Users</h2>
-                    <h3>1.2K</h3>
-                </div>
-                <div class="home-inside-middle">
-                     <h2>Total Users</h2>
-                     <h3>10.2K</h3>
-                </div>
-            </div>
-        <div class="home-inside">
-             <div class="home-inside-down">
-             <h4>Pet Type</h4>
-                <p>Dog <span class="bar"></span></p>
-                <p>Cat <span class="bar short"></span></p>
-                <p>Pig <span class="bar shorter"></span></p>
-             </div>
-             <div class="home-inside-top">
-                <h4>Monthly Revenue</h4>
-             </div>
         </div>
-    </div>
-</div>
-<div id="modal" class="modalbackground" style="display: none;">
+        <div id="modal" class="modalbackground" style="display: none;">
         <div class="modalcontent">
             <p>Do you want to Logout?</p>
             <div class="modalbuttons">
@@ -112,7 +136,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <button onclick="closeLogout()">No</button>
             </div>
         </div>
-    </div>
-    <script src="../../assets/jsFIles/Admin/logout.js"></script>
+</div>
+<script src="../../assets/jsFIles/Admin/logout.js"></script> 
 </body>
 </html>

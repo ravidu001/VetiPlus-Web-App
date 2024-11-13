@@ -1,0 +1,101 @@
+.accounts{
+    width: 80%;
+}
+.accounts-inside{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 100px;
+    justify-content: space-between;
+}
+.accounts-inside-left{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    gap: 20px;
+    width: 32%;
+    background-color: #F1DBFF;
+    box-shadow: 5px 10px 18px #888888;
+}
+.accounts-inside-left h2{
+    font-size: 23px;
+}
+.account-inside-upper{
+    display: flex;
+    flex-direction: row;
+    margin: 50px 100px;
+    gap: 500px;
+
+}
+.account-inside-upper-1{
+    padding: 10px 60px;
+    background-color: #F1DBFF;
+    font-size: 15px;
+    font-weight: 700;
+}
+.account-inside-lower{
+    display: flex;
+    flex-direction: row;
+    gap: 450px;
+    margin: 40px 60px;
+}
+.account-inside-lower-left form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    height: 200px;
+    background-color: #F1DBFF;
+}
+.account-inside-lower-left form input{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.account-inside-lower-left form button{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #B89ACB;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.account-inside-lower-left form button:hover{
+    background-color: #8F53B4;
+    color: white;
+}
+.account-inside-lower-right form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #F1DBFF;
+}
+.account-inside-lower-right form input{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.account-inside-lower-right form button{
+    padding: 10px ;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #B89ACB;
+    cursor: pointer;
+}
+.account-inside-lower-right form button:hover{
+    background-color: #8F53B4;
+    color: white;
+}
+.admin-navbar-inside-left-inner-1 ul li.active {
+    background-color: #F8ECFF; /* Active background color */
+}
+
+.admin-navbar-inside-left-inner-1 ul li.active a {
+    color: #000000; /* Text color for the active link */
+}
+

@@ -8,8 +8,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/home.css">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/appointment.css">
    <title>Dashboard</title>
 </head>
 <body>
@@ -64,43 +64,32 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-    <div class="home">
-        <div class="home-inside-inner">
-            <div class="home-inside-left">
-                <img src="../../assets/images/image_8.jpg" alt="">
-                <div class="home-inside-left-top">
-                    <h1>Welcome Back</h1>
-                    <h3>Ramesh Peshala</h3>
-                </div>
+    <div class="Appoinment">
+        <div class="Appoinment-inside">
+            <div class="Appoinment-inside-left">
+                <h2>Daily Appointment</h2>
+                <h2>45</h2>
             </div>
-            <div class="home-inside-right">
-                <img src="../../assets/images/image_9.png" alt="">
+            <div class="Appoinment-inside-left">
+                <h2>Cancel Appointment</h2>
+                <h2>15</h2>
+            </div>
+            <div class="Appoinment-inside-left">
+                <h2>Total Appointment</h2>
+                <h2>523</h2>
             </div>
         </div>
-            <div class="home-inside">
-                <div class="home-inside-middle">
-                   <h2>Active Account</h2>
-                   <h3>1.2K</h3>
+        <div class="Appoinment-outside">
+            <form action="">
+                <div class="Appoinment-outside-top">
+                    <input type="text" placeholder="Enter User ID">
+                    <input type="text" placeholder="Enter Pet ID">
+                    <input type="date" placeholder="Enter Date">
                 </div>
-                <div class="home-inside-middle">
-                    <h2>Active Users</h2>
-                    <h3>1.2K</h3>
+                <div class="Appoinment-outside-down">
+                    <button type="button" onclick="window.location.href='appointment_list.php'">Search</button>
                 </div>
-                <div class="home-inside-middle">
-                     <h2>Total Users</h2>
-                     <h3>10.2K</h3>
-                </div>
-            </div>
-        <div class="home-inside">
-             <div class="home-inside-down">
-             <h4>Pet Type</h4>
-                <p>Dog <span class="bar"></span></p>
-                <p>Cat <span class="bar short"></span></p>
-                <p>Pig <span class="bar shorter"></span></p>
-             </div>
-             <div class="home-inside-top">
-                <h4>Monthly Revenue</h4>
-             </div>
+            </form>
         </div>
     </div>
 </div>
@@ -113,6 +102,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
     </div>
-    <script src="../../assets/jsFIles/Admin/logout.js"></script>
+    <script src="../../assets/jsFIles/Admin/logout.js"></script> 
 </body>
 </html>

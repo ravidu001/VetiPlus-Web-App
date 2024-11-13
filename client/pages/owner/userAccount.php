@@ -8,8 +8,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/home.css">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/userAccount.css">
    <title>Dashboard</title>
 </head>
 <body>
@@ -64,55 +64,69 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-    <div class="home">
-        <div class="home-inside-inner">
-            <div class="home-inside-left">
+    <div class="user-account">
+        <div class="user-account-inside">
+            <div class="user-account-inside-left">
                 <img src="../../assets/images/image_8.jpg" alt="">
-                <div class="home-inside-left-top">
-                    <h1>Welcome Back</h1>
-                    <h3>Ramesh Peshala</h3>
-                </div>
             </div>
-            <div class="home-inside-right">
-                <img src="../../assets/images/image_9.png" alt="">
+            <div class="user-account-inside-right">  
+                <h2>Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; Ramesh Peshala</h2>
+                <h2>Email  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; rameshpeshala84@gmail.com</h2>
+                <h2>Address     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:- &nbsp; 419,gangasirigama,Thissamaharama</h2>
+                <h2>Contact Number  &nbsp; &nbsp;:- &nbsp; 0762163506</h2>
+                <h2>ID Number   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  :- &nbsp; 200212702901</h2>
+                <h2>User ID   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; 22001557</h2>
             </div>
         </div>
-            <div class="home-inside">
-                <div class="home-inside-middle">
-                   <h2>Active Account</h2>
-                   <h3>1.2K</h3>
-                </div>
-                <div class="home-inside-middle">
-                    <h2>Active Users</h2>
-                    <h3>1.2K</h3>
-                </div>
-                <div class="home-inside-middle">
-                     <h2>Total Users</h2>
-                     <h3>10.2K</h3>
-                </div>
+        <div class="user-account-outside">
+            <div class="user-account-outside-left"id="main-content">
+                <button onclick="openDeleteModal()">Delete Account</button>
+                <button onclick="window.location.href='petAccount.php'">Pet Data</button>
             </div>
-        <div class="home-inside">
-             <div class="home-inside-down">
-             <h4>Pet Type</h4>
-                <p>Dog <span class="bar"></span></p>
-                <p>Cat <span class="bar short"></span></p>
-                <p>Pig <span class="bar shorter"></span></p>
-             </div>
-             <div class="home-inside-top">
-                <h4>Monthly Revenue</h4>
-             </div>
+            <div class="user-account-outside-right">
+                <h2>Total Appointment  &nbsp;  &nbsp; :- &nbsp; &nbsp; &nbsp; 456</h2>
+                <h2>Cancel Appointment  &nbsp; :-  &nbsp; &nbsp; &nbsp; 23</h2>
+            </div>
         </div>
     </div>
 </div>
-<div id="modal" class="modalbackground" style="display: none;">
-        <div class="modalcontent">
-            <p>Do you want to Logout?</p>
-            <div class="modalbuttons">
-                <button onclick="confirmLogout()">Yes</button>
-                <button onclick="closeLogout()">No</button>
-            </div>
+<div id="deleteModal" class="modal-background" style="display: none;">
+    <div class="modal-content">
+        <p>Do you want to delete this account?</p>
+        <div class="modal-buttons">
+            <button onclick="openPasswordModal()">Yes</button>
+            <button onclick="closeModal()">No</button>
         </div>
     </div>
-    <script src="../../assets/jsFIles/Admin/logout.js"></script>
+</div>
+<div id="passwordModal" class="modal-background" style="display: none;">
+    <div class="modal-content">
+        <p>Enter your password:</p>
+
+        <input type="password" id="password" class="password-input" placeholder="Password">
+
+        <div class="modal-buttons">
+            <button onclick="initiateProcess()">Submit</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+<div id="dconfirmationModal" class="modal-background" style="display: none;">
+    <div class="modal-content">
+        <p class="confirmation-message">Process initiated</p>
+    </div>
+  </div>
+</div>
+<div id="modal" class="modalbackground" style="display: none;">
+    <div class="modalcontent">
+        <p>Do you want to Logout?</p>
+        <div class="modalbuttons">
+            <button onclick="confirmLogout()">Yes</button>
+            <button onclick="closeLogout()">No</button>
+        </div>
+    </div>
+</div>
+<script src="../../assets/jsFIles/Admin/logout.js"></script> 
+<script src="../../assets/jsFIles/Admin/deleteaccount.js"></script>
 </body>
 </html>

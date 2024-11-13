@@ -8,8 +8,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/home.css">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/account.css">
    <title>Dashboard</title>
 </head>
 <body>
@@ -64,46 +64,50 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-    <div class="home">
-        <div class="home-inside-inner">
-            <div class="home-inside-left">
-                <img src="../../assets/images/image_8.jpg" alt="">
-                <div class="home-inside-left-top">
-                    <h1>Welcome Back</h1>
-                    <h3>Ramesh Peshala</h3>
-                </div>
+    <div class="accounts">
+        <div class="accounts-inside">
+            <div class="accounts-inside-left">
+                <h2>Total Accounts</h2>
+                <h2>345</h2>
             </div>
-            <div class="home-inside-right">
-                <img src="../../assets/images/image_9.png" alt="">
+            <div class="accounts-inside-left">
+                <h2>Active Accounts</h2>
+                <h2>345</h2>
+            </div>
+            <div class="accounts-inside-left">
+                <h2>Delete Accounts</h2>
+                <h2>23</h2>
             </div>
         </div>
-            <div class="home-inside">
-                <div class="home-inside-middle">
-                   <h2>Active Account</h2>
-                   <h3>1.2K</h3>
+       
+            <div class="account-inside-upper" >
+                <div class="account-inside-upper-1">
+                    <h3>Users  Accounts</h3>
                 </div>
-                <div class="home-inside-middle">
-                    <h2>Active Users</h2>
-                    <h3>1.2K</h3>
-                </div>
-                <div class="home-inside-middle">
-                     <h2>Total Users</h2>
-                     <h3>10.2K</h3>
+                <div class="account-inside-upper-1">
+                    <h3>Pets  Accounts</h3>
                 </div>
             </div>
-        <div class="home-inside">
-             <div class="home-inside-down">
-             <h4>Pet Type</h4>
-                <p>Dog <span class="bar"></span></p>
-                <p>Cat <span class="bar short"></span></p>
-                <p>Pig <span class="bar shorter"></span></p>
-             </div>
-             <div class="home-inside-top">
-                <h4>Monthly Revenue</h4>
-             </div>
+            <div class="account-inside-lower">
+                <div class="account-inside-lower-left">
+                    <form action="">
+                        <label for="searchInput"></label>
+                        <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
+                        <label for="searchInput"></label>
+                        <button type="button" title="Click me" onclick="window.location.href='userAccount.php'">Search</button>
+                    </form>   
+                </div>
+                <div class="account-inside-lower-right">
+                    <form action="">
+                        <label for="searchInput"></label>
+                        <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
+                        <label for="searchInput"></label>
+                        <button type="button" title="Click me" onclick="window.location.href='petAccount.php'">Search</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    
 <div id="modal" class="modalbackground" style="display: none;">
         <div class="modalcontent">
             <p>Do you want to Logout?</p>
@@ -113,6 +117,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
     </div>
-    <script src="../../assets/jsFIles/Admin/logout.js"></script>
+    <script src="../../assets/jsFIles/Admin/logout.js"></script> 
 </body>
 </html>
