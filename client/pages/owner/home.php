@@ -56,7 +56,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <li class="<?= ($current_page == '') ? 'active' : '' ?>">
                     <img src="../../assets/images/image_11.png" alt="">
                         &nbsp;&nbsp;&nbsp;
-                        <a href="">Profile</a>
+                        <a href="profile.php">Profile</a>
                     </li>
                 </ul>
             </div>
