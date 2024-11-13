@@ -9,7 +9,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/account.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/petAccount.css">
    <title>Dashboard</title>
 </head>
 <body>
@@ -47,6 +47,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         &nbsp;&nbsp;&nbsp;
                         <a href="payment.php">Payment Transactions</a>
                     </li>
+
                     <li class="<?= ($current_page == '') ? 'active' : '' ?>">
                     <img src="../../assets/images/Owner/add_member.png" alt="">
                         &nbsp;&nbsp;&nbsp;
@@ -64,59 +65,29 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-    <div class="accounts">
-        <div class="accounts-inside">
-            <div class="accounts-inside-left">
-                <h2>Total Accounts</h2>
-                <h2>345</h2>
-            </div>
-            <div class="accounts-inside-left">
-                <h2>Active Accounts</h2>
-                <h2>345</h2>
-            </div>
-            <div class="accounts-inside-left">
-                <h2>Delete Accounts</h2>
-                <h2>23</h2>
-            </div>
-        </div>
-       
-            <div class="account-inside-upper" >
-                <div class="account-inside-upper-1">
-                    <h3>Users  Accounts</h3>
-                </div>
-                <div class="account-inside-upper-1">
-                    <h3>Pets  Accounts</h3>
-                </div>
-            </div>
-            <div class="account-inside-lower">
-                <div class="account-inside-lower-left">
-                    <form action="">
-                        <label for="searchInput"></label>
-                        <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
-                        <label for="searchInput"></label>
-                        <button type="button" title="Click me" onclick="window.location.href='userAccount.php'">Search</button>
-                    </form>   
-                </div>
-                <div class="account-inside-lower-right">
-                    <form action="">
-                        <label for="searchInput"></label>
-                        <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
-                        <label for="searchInput"></label>
-                        <button type="button" title="Click me" onclick="window.location.href='petAccount.php'">Search</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    
+    <div class="pet-account">
+    <div class="pet-account-inside">
+            <div class="pet-account-inside-left">
+                <img src="../../assets/images/pet.jpg" alt="">
+           </div>
+           <div class="pet-account-inside-right">
+                <h2>Pet ID  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp; 22001557</h2>
+                 <h2>Name &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp; Rocky</h2>
+                 <h2>Gender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :-&nbsp; Male</h2>
+                 <h2>Pet Owner &nbsp;&nbsp; :-&nbsp;Ramesh Peshala</h2>
+           </div>
+        </div> 
+    </div>
+</div>
 <div id="modal" class="modalbackground" style="display: none;">
-        <div class="modalcontent">
-            <p>Do you want to Logout?</p>
-            <div class="modalbuttons">
-                <button onclick="confirmLogout()">Yes</button>
-                <button onclick="closeLogout()">No</button>
-            </div>
+    <div class="modalcontent">
+        <p>Do you want to Logout?</p>
+        <div class="modalbuttons">
+            <button onclick="confirmLogout()">Yes</button>
+            <button onclick="closeLogout()">No</button>
         </div>
     </div>
-    <script src="../../assets/jsFIles/Admin/logout.js"></script> 
+</div>
+<script src="../../assets/jsFIles/Admin/logout.js"></script> 
 </body>
 </html>
