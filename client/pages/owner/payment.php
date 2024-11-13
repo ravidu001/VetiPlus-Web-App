@@ -48,7 +48,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <a href="payment.php">Payment Transactions</a>
                     </li>
                     <li class="<?= ($current_page == '') ? 'active' : '' ?>">
-                    <img src="../../assets/images/image_11.png" alt="">
+                    <img src="../../assets/images/Owner/add_member.png" alt="">
                         &nbsp;&nbsp;&nbsp;
                         <a href="">Add Admin</a>
                     </li>

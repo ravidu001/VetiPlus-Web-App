@@ -48,7 +48,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <a href="payment.php">Payment Transactions</a>
                     </li>
                     <li class="<?= ($current_page == '') ? 'active' : '' ?>">
-                    <img src="../../assets/images/image_11.png" alt="">
+                    <img src="../../assets/images/Owner/add_member.png" alt="">
                         &nbsp;&nbsp;&nbsp;
                         <a href="">Add Admin</a>
                     </li>
@@ -94,7 +94,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <label for="searchInput"></label>
                         <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
                         <label for="searchInput"></label>
-                        <button type="button" title="Click me" onclick="window.location.href=''">Search</button>
+                        <button type="button" title="Click me" onclick="window.location.href='userAccount.php'">Search</button>
                     </form>   
                 </div>
                 <div class="account-inside-lower-right">
