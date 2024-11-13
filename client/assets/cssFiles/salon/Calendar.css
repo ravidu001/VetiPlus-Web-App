@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,6 +16,43 @@ body {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+/* Add these styles to your existing Calendar.css file */
+
+.date-selector {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.date-input {
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.selectdate{
+    padding: 8px;
+    font-size: 15px;
+}
+
+.date-button {
+    padding: 8px 16px;
+    background: #6A0DAD;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.date-button:hover {
+    background: #560a8b;
 }
 
 .calendar-header {
@@ -134,3 +170,8 @@ body {
 .dot-available { background: #e0bdf9; }
 .dot-blocked { background: #ff5252; }
 .dot-closed { background: #ffebee; }
+
+/* Optional: Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}

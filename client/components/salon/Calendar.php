@@ -8,6 +8,12 @@
 </head>
 <body>
     <div class="calendar-container">
+        <!-- add the go to date sector -->
+        <div class="date-selector">
+            <input type="date" id="datePicker" class="selectdate">
+            <button onclick="goToSelectedDate()" class="date-button">Go to Date</button>
+        </div>
+
         <div class="calendar-header">
             <h2 id="current-month">August 2024</h2>
             <div>
