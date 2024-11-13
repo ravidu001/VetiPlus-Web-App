@@ -87,7 +87,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <input type="date" placeholder="Enter Date">
                 </div>
                 <div class="Appoinment-outside-down">
-                    <button type="button" onclick="window.location.href=''">Search</button>
+                    <button type="button" onclick="window.location.href='appointment_list.php'">Search</button>
                 </div>
             </form>
         </div>
