@@ -44,6 +44,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 10px 100px;
+    background-color: #f1e0fb;
 }
 .admin-regi-bottom{
     display: flex;
