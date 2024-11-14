@@ -55,8 +55,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                                     <span class="text nav-text" style="font-size:14px;">View Appointment</span>
                                 </a>
                             </li>
-                            <li class="nav-link">
-                                <a href="#">
+                            <li class="nav-link <?= $current_page == 'historyAppointment.php' ? 'active' : '' ?>">
+                                <a href="historyAppointment.php">
                                 <i class='bx bx-calendar-check icon' ></i>
                                     <span class="text nav-text" style="font-size:14px;"> History</span>
                                 </a>
