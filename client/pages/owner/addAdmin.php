@@ -9,7 +9,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/payment.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/addAdmin.css">
    <title>Dashboard</title>
 </head>
 <body>
@@ -64,46 +64,31 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-    <div class="payment">
-        <div class="payment-inside">
-            <div class="payment-inside-top">
-                <h2>Daily Income</h2>
-                <h3>Rs.15 000</h3>
-            </div>
-            <div class="payment-inside-top">
-                <h2>Total Income</h2>
-                <h3>Rs.1 000 000</h3>
-            </div>
-            <div class="payment-inside-top">
-                <h2>Total Expenses</h2>
-                <h3>Rs.100 000</h3>
-            </div>
+    <div class="admin">
+        <div class="admin-inside">
+             <div class="admin-inside-top">
+                <h2>Total Admin</h2>
+                <h3>24</h3>
+             </div>
+             <div class="admin-inside-top">
+                <h2>Active Admin</h2>
+                <h3>14</h3>
+             </div>
+             <div class="admin-inside-top">
+                <h2>Leave Admin</h2>
+                <h3>03</h3>
+             </div>
         </div>
-        <div class="Payment-outside">
-            <form action="">
-                <div class="Payment-outside-top">
-                        <input type="text" placeholder="Enter User ID">
-                        
-                        <input type="text" placeholder="Enter Pet ID">
-                               
-                        <input type="date" placeholder="Enter Date">
-                </div>
-                <div class="Payment-outside-down">
-                        <button type="button" onclick="window.location.href='payment_list.php'">Search</button>
-                </div>      
-            </form>
+        <div class="admin-outside">
+            <div class="admin-outside-left">
+               <input type="text" placeholder="Enter Admin ID">
+               <button>Search</button>
+            </div>
+            <div class="admin-outside-right">
+                <button onclick="window.location.href='adminRegistration.php'">Add Admin</button>
+            </div>
         </div>
     </div>
 </div>
-<div id="modal" class="modalbackground" style="display: none;">
-    <div class="modalcontent">
-        <p>Do you want to Logout?</p>
-        <div class="modalbuttons">
-            <button onclick="confirmLogout()">Yes</button>
-            <button onclick="closeLogout()">No</button>
-        </div>
-    </div>
-</div>
-<script src="../../assets/jsFIles/Admin/logout.js"></script> 
 </body>
 </html>

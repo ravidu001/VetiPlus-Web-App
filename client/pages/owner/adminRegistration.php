@@ -9,7 +9,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/payment.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/adminRegistration.css">
    <title>Dashboard</title>
 </head>
 <body>
@@ -64,46 +64,52 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-    <div class="payment">
-        <div class="payment-inside">
-            <div class="payment-inside-top">
-                <h2>Daily Income</h2>
-                <h3>Rs.15 000</h3>
-            </div>
-            <div class="payment-inside-top">
-                <h2>Total Income</h2>
-                <h3>Rs.1 000 000</h3>
-            </div>
-            <div class="payment-inside-top">
-                <h2>Total Expenses</h2>
-                <h3>Rs.100 000</h3>
-            </div>
+    <div class="admin-regi">
+        <div class="admin-regi-top">
+            <h1>Admin Registration Form</h1>
         </div>
-        <div class="Payment-outside">
-            <form action="">
-                <div class="Payment-outside-top">
-                        <input type="text" placeholder="Enter User ID">
-                        
-                        <input type="text" placeholder="Enter Pet ID">
-                               
-                        <input type="date" placeholder="Enter Date">
+        <div>
+            <form action="" method="POST">
+                <div class="admin-regi-inside">
+                    <div class="admin-regi-inside-left">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <label for="cpassword">Confirm Password</label>
+                        <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="admin-regi-inside-left">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Address" required>
+                        <label for="city">Gender</label>
+                        <input type="text" id="gender" name="gender" placeholder="Gender" required>
+                        <label for="state">Date of Birth</label>
+                        <input type="text" id="state" name="state" placeholder="State" required>
+                        <label for="state">NIC</label>
+                        <input type="text" id="nic" name="nic" placeholder="NIC" required>
+                    </div>
                 </div>
-                <div class="Payment-outside-down">
-                        <button type="button" onclick="window.location.href='payment_list.php'">Search</button>
-                </div>      
+                <div class="admin-regi-down">
+                    <h1>Certificate</h1>
+                    <div class="admin-regi-down-inside">
+                        <input type="file" id="certificate" name="certificate" required>
+                        <input type="file" id="certificate" name="certificate" required>
+                        <input type="file" id="certificate" name="certificate" required>
+                    </div>
+                </div> 
+                <div class="admin-regi-bottom">
+                    <button type="submit" name="submit">Register</button>
+                </div>
             </form>
         </div>
     </div>
 </div>
-<div id="modal" class="modalbackground" style="display: none;">
-    <div class="modalcontent">
-        <p>Do you want to Logout?</p>
-        <div class="modalbuttons">
-            <button onclick="confirmLogout()">Yes</button>
-            <button onclick="closeLogout()">No</button>
-        </div>
-    </div>
-</div>
-<script src="../../assets/jsFIles/Admin/logout.js"></script> 
 </body>
 </html>

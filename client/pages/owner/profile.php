@@ -9,7 +9,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/payment.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/profile.css">
    <title>Dashboard</title>
 </head>
 <body>
@@ -64,34 +64,46 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-    <div class="payment">
-        <div class="payment-inside">
-            <div class="payment-inside-top">
-                <h2>Daily Income</h2>
-                <h3>Rs.15 000</h3>
-            </div>
-            <div class="payment-inside-top">
-                <h2>Total Income</h2>
-                <h3>Rs.1 000 000</h3>
-            </div>
-            <div class="payment-inside-top">
-                <h2>Total Expenses</h2>
-                <h3>Rs.100 000</h3>
+    <div class="profile">
+        <div class="profile_top">
+            <div class="profile_top_inside">
+                <div class="profile_top_inside_left">
+                    <img src="../../assets/images/image_8.jpg" alt="">
+                </div>
+                <div class="profile_top_inside_right">
+                    <h2>Full Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp; Ramesh Peshala</h2>
+                    <h2>Email &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp; rameshpeshala84@gmail.com</h2>
+                    <h2>Phone Number &nbsp;:-&nbsp;&nbsp;&nbsp; 0762163506</h2>
+                    <h2>Address &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;:- &nbsp;&nbsp; 419,Gangasirigama , Thissamaharama</h2>
+               </div>
             </div>
         </div>
-        <div class="Payment-outside">
-            <form action="">
-                <div class="Payment-outside-top">
-                        <input type="text" placeholder="Enter User ID">
-                        
-                        <input type="text" placeholder="Enter Pet ID">
-                               
-                        <input type="date" placeholder="Enter Date">
-                </div>
-                <div class="Payment-outside-down">
-                        <button type="button" onclick="window.location.href='payment_list.php'">Search</button>
-                </div>      
+        <div class="profile_down">
+            <button onclick="openModal()">Edit Profile</button>
+        </div>
+    </div>
+</div>
+<div id="passwordModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-content-inside">
+            <h3>Do you want to change your password?</h3>
+            <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+            <button onclick="showPasswordForm()">Yes</button>
+            <button onclick="closeModal()">No</button>
+        <div id="passwordForm" style="display: none;">
+            <h3>Change Password</h3>
+            <form onsubmit="changePassword(event)">
+
+                <input type="password" id="newPassword" placeholder="Enter new Password" required><br><br>
+
+                <input type="password" id="confirmPassword" placeholder="Confirm new Password" required><br><br>
+
+                <button type="submit">Change Password</button>
             </form>
+        </div>
+        <div id="successMessage" style="display: none;">
+            <h3>Password chnaged successfully</h3>
         </div>
     </div>
 </div>
@@ -105,5 +117,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
     </div>
 </div>
 <script src="../../assets/jsFIles/Admin/logout.js"></script> 
+<script src="../../assets/jsFIles/Admin/changePassword.js"></script>
 </body>
 </html>

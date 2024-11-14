@@ -1,0 +1,76 @@
+.admin-regi{
+    width: 80%;
+}
+.admin-regi-top {
+    margin: 10px 100px;
+    height: 80px;
+    background-color: #E9C5FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.admin-regi-top h1{
+    font-size: 35px;
+}
+.admin-regi-inside{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 20px 100px;
+}
+.admin-regi-inside-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: #f1e0fb;
+    height: 400px;
+
+}
+.admin-regi-inside-left label{
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
+.admin-regi-inside-left input{
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 70%;
+    border: none;
+}
+.admin-regi-down{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 100px;
+    background-color: #f1e0fb;
+}
+.admin-regi-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.admin-regi-bottom button{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #B89ACB;
+    color: black;
+    border-radius: 10px;
+    width: 30%;
+    cursor: pointer;
+    align-items: center; 
+}
+.admin-regi-bottom button:hover{
+    background-color: #8F53B4;
+    color: white;
+}
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+   
+}
