@@ -1,16 +1,23 @@
+<?php
+    include '../../../config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="icon" type="image/png" href="../../assets/images/logo.png" />
         <title>Our Services</title>
+        <link rel="icon" href="<?= BASE_PATH ?>/client/assets/images/vetiplus-logo.png" type="image/png">
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="../../assets/cssFiles/guestUser/hero.css" rel="stylesheet" type="text/css">
-        <link href="../../assets/cssFiles/guestUser/myStyle.css" rel="stylesheet" type="text/css">
-        <link href="../../assets/cssFiles/guestUser/navbar.css" rel="stylesheet" type="text/css">
-        <link href="../../assets/cssFiles/guestUser/footer.css" rel="stylesheet" type="text/css">
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/colourPalette.css" rel="stylesheet">
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/styles.css" rel="stylesheet">
+
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/navBar.css" rel="stylesheet">
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/myFooter.css" rel="stylesheet">
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/hero.css" rel="stylesheet">
+
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         
         <style>
             .services {
@@ -60,30 +67,8 @@
         
     </head>
     <body>
-
-        <div class="navbar">
-            <div class="logo">
-                <img src="../../assets/images/logo.png" alt="VetiPlus logo">
-                <p>VetiPlus</p>
-            </div>
-            <div class="links">
-                <a href="../../../index.html">
-                    <button>Home</button>
-                </a>
-                <a href="services.html">
-                    <button class="current">Services</button>
-                </a>
-                <a href="aboutUs.html">
-                    <button>About Us</button>
-                </a>
-                <a href="contact.html">
-                    <button>Contact Us</button>
-                </a>
-            </div>
-            <a href="../login-singup/login.php" target="_blank" class="loginBtn">
-                <button>Login</button>
-            </a>
-        </div>
+        <!-- navbar on top: -->
+        <?php include INCLUDE_BASE.'/client/components/guestUser/guestNavbar.php'; ?>
 
         <div class="hero-section">
             <div>
@@ -153,37 +138,8 @@
             </div>
         </div>
    
-        <div class="footer">
-            <div class="footerLinks">
-                <div>
-                    <p>Quick Links:</p>
-                    <div class="quickLinks">
-                        <a href="../../../index.html">Home</a><p></p>
-                        <a href="services.html">Services</a><p></p>
-                        <a href="aboutUs.html">About Us</a><p></p>
-                        <a href="contact.html">Contact Us</a>
-                    </div>
-                </div>
-                <div>
-                    <p>Befriend Us:</p>
-                    <div class="socials">
-                        <a href=""><img src="../../assets/images/footerImg/socialIcons/Facebook.png" alt="Facebook"></a>
-                        <a href=""><img src="../../assets/images/footerImg/socialIcons/TwitterX.png" alt="TwitterX"></a>
-                        <a href=""><img src="../../assets/images/footerImg/socialIcons/Instagram.png" alt="Instagram"></a>
-                        <a href=""><img src="../../assets/images/footerImg/socialIcons/LinkedIn.png" alt="LinkedIn"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="central">
-                <img src="../../assets/images/logo.png" alt="logo">
-                <h2>VetiPlus</h2>
-                <p>Copyright 2024 vetiplus@gmail.com<br/>
-                    All Rights Reserved.</p>
-                <a href="">Privacy Policy</a>
-                <a href="">Terms & Conditions</a>
-            </div>
-            <img src="../../assets/images/footerImg/footerDoggo.png" alt="FooterImg">
-        </div>
+        <!-- footer at page's bottom: -->
+        <?php include INCLUDE_BASE.'/client/components/guestUser/guestFooter.php'; ?>
 
     </body>
 </html>

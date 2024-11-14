@@ -1,0 +1,109 @@
+/* for the service cards */
+.serviceCards {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 0;
+    margin: 10px;
+}
+.serviceCard {
+    width: 15%;
+    padding: 1em;
+
+    font-size: 1rem;
+    text-align: center;
+
+    background-color: lightblue;
+    border-radius: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+}
+.serviceCard img {
+    width: 90%;
+    object-fit: contain;
+}
+
+/* for the description divs */
+.homeDiv1, .homeDiv2 {
+    font-size: 1rem;
+    padding: 3em 10em;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeDiv1 img, .homeDiv2 img {
+    height: auto;
+    width: 60%;
+}
+.homeDivText {
+    text-align: center;
+    color: black;
+    font-size: 1.1em;
+}
+.homeDivHeader {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.regBtn button {
+    font-size: 1.2em;
+    color: white;
+
+    border: 1px solid black;
+    background-color: blue;
+
+    padding: 1em;
+    margin-right: 1em;
+    border-radius: 10px;
+}
+.regBtn button:hover {
+    cursor: pointer;
+    color: black;
+    background-color: lightblue;
+    transition: ease 500ms;
+}
+/* for user types: */
+.userTypes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    margin-bottom: 3rem;
+}
+.userTypes .userCard {
+    width: 20%;
+    padding: 1rem;
+    background-color: aqua;
+
+    /* border: 1px solid blue; */
+    border-radius: 20px;
+
+    font-size: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.userCard img {
+    width: 80%;
+    height: auto;
+
+    border-radius: 20px;
+    background-color: lightblue;
+}
+.userTypes .userCard .userTitle {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.userTypes .userCard .userDescription {
+    font-size: 1em;
+}
