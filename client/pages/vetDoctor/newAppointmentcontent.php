@@ -179,9 +179,10 @@
                         <td colspan="3" style="border-bottom: none;"> <button type="submit" id="sendRequest" name="sendRequest"> Create </button> </td>
 
                     </tr>
-
-
-                
+                </table>
+            </form>
+        </div>
+    </div>            
                       
 </div>
 

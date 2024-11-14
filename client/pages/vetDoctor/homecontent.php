@@ -44,7 +44,7 @@
             <td>147, Galthude, Panadura</td>
             <td>10</td>
             <td>
-                <a href="#">
+                <a href="./view.php">
                     <div class="viewbutton">
                         <i class='bx bx-right-arrow-circle' ></i>
                     </div>
