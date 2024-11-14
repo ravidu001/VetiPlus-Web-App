@@ -85,7 +85,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                <button>Search</button>
             </div>
             <div class="admin-outside-right">
-                <button>Add Admin</button>
+                <button onclick="window.location.href='adminRegistration.php'">Add Admin</button>
             </div>
         </div>
     </div>
