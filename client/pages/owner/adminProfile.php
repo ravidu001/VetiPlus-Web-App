@@ -9,8 +9,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/addAdmin.css">
-   <title>Add Admin</title>
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/adminProfile.css">
+   <title>Admin Profile</title>
 </head>
 <body>
 <div class="admin-navbar"> 
@@ -64,31 +64,36 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-    <div class="admin">
-        <div class="admin-inside">
-             <div class="admin-inside-top">
-                <h2>Total Admin</h2>
-                <h3>24</h3>
-             </div>
-             <div class="admin-inside-top">
-                <h2>Active Admin</h2>
-                <h3>14</h3>
-             </div>
-             <div class="admin-inside-top">
-                <h2>Leave Admin</h2>
-                <h3>03</h3>
-             </div>
+    <div class="profile">
+        <div class="profile_top">
+            <div class="profile_top_inside">
+                <div class="profile_top_inside_left">
+                    <img src="../../assets/images/image_8.jpg" alt="">
+                </div>
+                <div class="profile_top_inside_right">
+                    <h2>Full Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp; Ramesh Peshala</h2>
+                    <h2>Date of Birth &nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp;2002/05/09</h2>
+                    <h2>Email &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp; rameshpeshala84@gmail.com</h2>
+                    <h2>Phone Number &nbsp;:-&nbsp;&nbsp;&nbsp; 0762163506</h2>
+                    <h2>Address &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;:- &nbsp;&nbsp; 419,Gangasirigama , Thissamaharama</h2>
+                    <h2>Gender &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp;&nbsp; Male</h2>
+               </div>
+            </div>
         </div>
-        <div class="admin-outside">
-            <div class="admin-outside-left">
-               <input type="text" placeholder="Enter Admin ID">
-               <button onclick="window.location.href='adminProfile.php '">Search</button>
-            </div>
-            <div class="admin-outside-right">
-                <button onclick="window.location.href='adminRegistration.php'">Add Admin</button>
-            </div>
+        <div class="profile_down">
+            <button onclick="openModal()">Edit Profile</button>
         </div>
     </div>
 </div>
+<div id="modal" class="modalbackground" style="display: none;">
+    <div class="modalcontent">
+        <p>Do you want to Logout?</p>
+        <div class="modalbuttons">
+            <button onclick="confirmLogout()">Yes</button>
+            <button onclick="closeLogout()">No</button>
+        </div>
+    </div>
+</div>
+<script src="../../assets/jsFIles/Admin/logout.js"></script> 
 </body>
 </html>

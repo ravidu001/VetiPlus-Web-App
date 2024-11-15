@@ -10,7 +10,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
     <link rel="stylesheet" href="../../assets/cssFiles/Owner/appointment_list.css">
-   <title>Dashboard</title>
+   <title>Appointment List</title>
 </head>
 <body>
 <div class="admin-navbar"> 
