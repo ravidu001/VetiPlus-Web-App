@@ -92,10 +92,26 @@
     align-items: center;
     border: 3px solid var(--text-primary);
     border-radius: 30px;
-    padding-left: 15px;
-    height: 35px;
+    padding-left: 25px;
+    height: auto;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+.table-format .data-box table {
+    position: relative;
+    border: 3px solid var(--text-primary);
+    border-radius: 30px;
+    padding-left: 25px;
+    height: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    scroll-behavior: auto;
+    text-align: left;
+}
+
+.table-format .data-box table td {
+    text-align: left;
 }
 
 /*
