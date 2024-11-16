@@ -9,8 +9,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/adminProfile.css">
-   <title>Admin Profile</title>
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/editProfile.css">
+   <title>Edit Profile</title>
 </head>
 <body>
 <div class="admin-navbar"> 
@@ -64,37 +64,46 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <br><br>
         <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-    <div class="profile">
-        <div class="profile_top">
-            <div class="profile_top_inside">
-                <div class="profile_top_inside_left">
-                    <img src="../../assets/images/image_8.jpg" alt="">
-                </div>
-                <div class="profile_top_inside_right">
-                    <h2>Full Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp; Ramesh Peshala</h2>
-                    <h2>Date of Birth &nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp;2002/05/09</h2>
-                    <h2>Email &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp; rameshpeshala84@gmail.com</h2>
-                    <h2>Phone Number &nbsp;:-&nbsp;&nbsp;&nbsp; 0762163506</h2>
-                    <h2>Address &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;:- &nbsp;&nbsp; 419,Gangasirigama , Thissamaharama</h2>
-                    <h2>Gender &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp;&nbsp; Male</h2>
-               </div>
-            </div>
+    <div class="admin-regi">
+        <div class="admin-regi-top">
+            <h1>Admin Update Form</h1>
         </div>
-        <div class="profile_down">
-            <button onclick="window.location.href='editProfile.php'">Edit Profile</button>
-            <button>Delete Profile</button>
+        <div>
+            <form action="" method="POST">
+                <div class="admin-regi-inside">
+                    <div class="admin-regi-inside-left">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" required> 
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Address" required>
+                    </div>
+                    <!-- <div class="admin-regi-inside-left">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Address" required>
+=                    </div> -->
+                </div>
+                <div class="admin-regi-bottom">
+                    <button type="submit" name="submit">Update Profile</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 <div id="modal" class="modalbackground" style="display: none;">
-    <div class="modalcontent">
-        <p>Do you want to Logout?</p>
-        <div class="modalbuttons">
-            <button onclick="confirmLogout()">Yes</button>
-            <button onclick="closeLogout()">No</button>
+        <div class="modalcontent">
+            <p>Do you want to Logout?</p>
+            <div class="modalbuttons">
+                <button onclick="confirmLogout()">Yes</button>
+                <button onclick="closeLogout()">No</button>
+            </div>
         </div>
     </div>
-</div>
-<script src="../../assets/jsFIles/Admin/logout.js"></script> 
+    <script src="../../assets/jsFIles/Admin/logout.js"></script>
 </body>
 </html>

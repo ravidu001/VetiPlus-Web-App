@@ -90,5 +90,15 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </div>
     </div>
 </div>
+<div id="modal" class="modalbackground" style="display: none;">
+        <div class="modalcontent">
+            <p>Do you want to Logout?</p>
+            <div class="modalbuttons">
+                <button onclick="confirmLogout()">Yes</button>
+                <button onclick="closeLogout()">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/jsFIles/Admin/logout.js"></script>
 </body>
 </html>
