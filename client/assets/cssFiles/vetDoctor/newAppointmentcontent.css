@@ -115,7 +115,7 @@ table th {
 .appointment-form form #nextBtn, 
 .appointment-form form #cancel,
 .appointment-form form #create {
-background: var(--background-light);
+    background: var(--background-light);
     color: var(--text-black);
     padding: 10px 20px;
     border: none;
@@ -192,7 +192,7 @@ background: var(--background-light);
 
 .assistant-form form #cancelRequest,
 .assistant-form form #sendRequest {
-background: var(--background-light);
+    background: var(--background-light);
     color: var(--text-black);
     padding: 10px 20px;
     border: none;
