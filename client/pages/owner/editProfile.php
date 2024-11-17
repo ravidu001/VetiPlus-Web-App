@@ -72,10 +72,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <form action="" method="POST">
                 <div class="admin-regi-inside">
                     <div class="admin-regi-inside-left">
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="fname" placeholder="First Name" required> 
-                        <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name" required> 
                         <label for="phone">Phone Number</label>
                         <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
                         <label for="address">Address</label>

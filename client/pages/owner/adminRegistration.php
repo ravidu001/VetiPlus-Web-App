@@ -1,6 +1,32 @@
 <?php
 // Get the current filename
 $current_page = basename($_SERVER['PHP_SELF']);
+
+include ( __DIR__ . '/../../../server/config/phpConfig.php');
+
+$message = '';
+
+if($_SERVER['REQUEST_METHOD']=='POST'){
+
+    $name = $_POST['name'];
+    $phone_number = $_POST['phone_number'];
+    $email = $_POST['email'];
+    $password = password_hash($_POST['password'],PASSWORD_BCRYPT);
+    $address = $_POST['address'];  
+    $gender = $_POST['gender'];
+    $dob = $_POST['dob'];
+    $nic = $_POST['nic'];
+
+        $sql = "INSERT INTO systemadmin(email,password,name,contactNumber,address,gender,NIC) VALUES ('$email','$password','$name','$phone_number','$address','$gender','$nic')";
+
+        if ($conn->query($sql) === TRUE) {
+            $message = "Registration successful! ";
+        } else {
+           $message = "Error: " . $sql . "<br>" . $conn->error;
+        }
+        $conn->close();
+    } 
+
 ?>
 
 <!DOCTYPE html>
@@ -13,13 +39,22 @@ $current_page = basename($_SERVER['PHP_SELF']);
    <title>Admin Registration</title>
 </head>
 <body>
+
+
+<?php if (!empty($message)) : ?>
+    <div class="blurred-background"></div>
+    <div class="message">
+        <?= htmlspecialchars($message) ?>
+    </div>
+<?php endif; ?>
+
 <div class="admin-navbar"> 
     <div class="admin-navbar-inside-left-inner">
         <img src="../../assets/images/admin_logo.png" alt="">
         <h1>VETIPLUS</h1>
     </div>
 </div>
-<div class="admin-navbar-inside">
+<div class="admin-navbar-inside" id="messgeHandler">
     <div class="admin-navbar-inside-left">
         <div>
             <div class="admin-navbar-inside-left-inner-1">
@@ -72,10 +107,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <form action="" method="POST">
                 <div class="admin-regi-inside">
                     <div class="admin-regi-inside-left">
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                        <label for="name"> Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
                         <label for="phone">Phone Number</label>
-                        <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+                        <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required>
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Email" required>
                         <label for="password">Password</label>
@@ -84,26 +119,16 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" required>
                     </div>
                     <div class="admin-regi-inside-left">
-                        <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="lname" placeholder="Last Name" required>
                         <label for="address">Address</label>
                         <input type="text" id="address" name="address" placeholder="Address" required>
                         <label for="city">Gender</label>
                         <input type="text" id="gender" name="gender" placeholder="Gender" required>
                         <label for="state">Date of Birth</label>
-                        <input type="text" id="state" name="state" placeholder="State" required>
+                        <input type="text" id="dob" name="dob" placeholder="Date of Birth" required>
                         <label for="state">NIC</label>
                         <input type="text" id="nic" name="nic" placeholder="NIC" required>
                     </div>
                 </div>
-                <div class="admin-regi-down">
-                    <h1>Certificate</h1>
-                    <div class="admin-regi-down-inside">
-                        <input type="file" id="certificate" name="certificate" required>
-                        <input type="file" id="certificate" name="certificate" required>
-                        <input type="file" id="certificate" name="certificate" required>
-                    </div>
-                </div> 
                 <div class="admin-regi-bottom">
                     <button type="submit" name="submit">Register</button>
                 </div>
@@ -121,5 +146,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </div>
     </div>
     <script src="../../assets/jsFIles/Admin/logout.js"></script>
+    <script src="../../assets/jsFIles/Owner/messageHandler.js"></script>
 </body>
 </html>
