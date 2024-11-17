@@ -2,7 +2,7 @@
 // Get the current filename
 $current_page = basename($_SERVER['PHP_SELF']);
 
-include ( __DIR__ . '/../../../server/config/phpConfig.php');
+include ( __DIR__ . '/../../../server/config/backendConfig.php');
 
 $message = '';
 
