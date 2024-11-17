@@ -1,3 +1,18 @@
+<?php
+    session_start();
+    include (__DIR__ . '/../../../server/config/config.php');
+    
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: ../../../client/pages/login-signup/login.php");
+        exit();
+    }
+
+    $user_id = $_SESSION['user_id'];
+    // login page eka nthuwa meka wdada
+    // $_SESSION['user_id'] = abc@gmail.com;
+    // $user_id = $_SESSION['user_id'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

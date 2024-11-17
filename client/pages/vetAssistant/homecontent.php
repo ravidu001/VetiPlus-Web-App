@@ -2,7 +2,7 @@
 <div class="container">
     <div class="profilecontainer">
         
-        <img src="../../../client/assets/images/doctorprofile.jpg" class="profile"  alt="profile" />
+        <img src="../../../client/assets/images/assistantprofile.avif" class="profile"  alt="profile" />
         <?php
             // Enable error reporting for debugging
             ini_set('display_errors', 1);
@@ -25,13 +25,13 @@
 
 <!--add a container to display the table of feilds no., starting time, closing time, Assistance without borders-->
 <div class="frame">
-    <h2>My latst Appointments</h2>
+    <h2>Doctor request </h2>
     <table>
         <thead>
             <th> No.</th>
             <th>Starting Time</th>
             <th>Closing Time</th>
-            <th>Assistance </th>
+            <th>Doctor's name </th>
             <th>Location</th>
             <th>No. of Appointments </th>
             <th> Button</th>

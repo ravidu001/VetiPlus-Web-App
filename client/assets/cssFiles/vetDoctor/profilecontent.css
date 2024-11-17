@@ -1,0 +1,266 @@
+/*
+.main-container1 {
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 1000px;
+        height: auto;
+        padding: 20px 30px 20px 30px;
+        border: 4px solid var(--text-primary);
+        border-radius: 10px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+        transition: 0.5s;
+        background: var(--background-white);
+        margin-top: 100px;
+        margin-bottom: 200px;
+        scroll-behavior: auto;
+}
+*/
+
+.main-container1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: auto;
+        padding: 20px 30px 20px 30px;
+        border: 4px solid var(--text-primary);
+        border-radius: 10px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+        transition: 0.5s;
+        background: var(--background-white);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        scroll-behavior: auto;
+        margin-left: 60px;
+}
+
+
+.profile-pic {
+        position:relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+}
+
+.profile-pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+
+.profile-pic::before { 
+        content: "";  
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: none;
+        z-index: 1;
+}
+
+.profile-pic::after { 
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+}
+
+.profile-pic i {
+        position: absolute;
+        font-size: 50px;
+        color: var(--text-primary);
+        z-index: 2;
+        display: none;
+}
+
+.profile-pic:hover i {
+        display: block;
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 100px;
+}
+
+.sub-heading {
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--text-primary);
+        margin-bottom: 10px;
+        text-align: center;
+}
+
+.form-container .formtext {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--text-primary);
+        margin-bottom: 10px;
+        text-align: left;
+        padding: 10px 0 0px 0;
+}
+
+.form-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        align-content: left;
+        align-items: left;
+        align-self: left;
+}
+
+table td {
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--text-black);
+}
+
+.form-container form input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="number"], input[type="file"], select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid var(--text-primary);
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--text-black);
+        background: var(--sidebar-color);
+}
+
+/*change the input placeholder color*/
+.form-container form input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="password"]::placeholder, input[type="date"]::placeholder, input[type="number"]::placeholder, input[type="file"]::placeholder, select::placeholder {
+        color: var(--text-color);
+}
+
+/* change the date and file placeholder color*/
+.form-container form input[type="date"]::placeholder, input[type="file"]::placeholder {
+        color: var(--text-color);
+}
+
+/*space between the radio buttons*/
+.form-container form .female {
+        margin-left: 100px;
+}
+
+.form-container form input[type="radio"] {
+        margin-right: 15px ;
+        margin-top: 10px;
+        margin-bottom: 20px;
+}       
+
+.form-container form input[type="checkbox"] {
+        margin-right: 15px ;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        transform: 1.5;
+}
+
+.form-container form .passwordBtn {
+        background: var(--background-light);
+        color: var(--text-black);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: 0.3s;
+}
+
+.form-container form .passwordBtn:hover {
+        background: var(--text-primary);
+        color: var(--background-white);
+        box-shadow: var(--box-shadow);
+}
+
+#current-password, #new-password, #confirm-password, #cancel-password {
+        display: none;
+}
+
+.form-container form .cancelBtn {
+        background: var(--background-light);
+        color: var(--text-black);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: 0.3s;
+}
+
+.form-container form .cancelBtn:hover {
+        background: var(--text-primary);
+        color: var(--background-white);
+        box-shadow: var(--box-shadow);
+}
+
+form .password-field {
+        position: relative;
+        
+}
+
+form .password-field input[type="password"] {
+        padding-right: 40px; /* Add space for the toggle button */
+        width: 100%;
+}
+
+form .toggle-password {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+}
+
+.form-container form .addBtn,
+.form-container form .submitBtn {
+        background: var(--background-light);
+        color: var(--text-black);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: 0.3s;
+}
+
+.form-container form .addBtn:hover,
+.form-container form .submitBtn:hover {
+        background: var(--text-primary);
+        color: var(--background-white);
+        box-shadow: var(--box-shadow);
+}
+  
+#special2, #special3 {
+        display: none;
+}
+
+.bio {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--text-black);
+        margin-bottom: 10px;
+        text-align: left;
+        padding: 10px 10px 10px 10px;
+        width: 100%;  
+        height: 200px;
+        border-color: var(--text-primary);
+        background: var(--background-white);
+
+}
+

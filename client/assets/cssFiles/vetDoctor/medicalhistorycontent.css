@@ -1,3 +1,4 @@
+/*
 .main-container {
     position: relative;
     display:flex;
@@ -19,10 +20,30 @@
     margin-bottom: 200px;
     scroll-behavior: auto;
 }
+*/
+
+.main-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    padding: 20px 30px 20px 30px;
+    border: 4px solid var(--text-primary);
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    transition: 0.5s;
+    background: var(--background-white);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
 
 .heading {
     color: var(--text-primary);
-    font-size: 24px;
+    font-size: 18px;
     text-align: left;
     width: 100%;
     margin-left: 0;
@@ -92,10 +113,26 @@
     align-items: center;
     border: 3px solid var(--text-primary);
     border-radius: 30px;
-    padding-left: 15px;
-    height: 35px;
+    padding-left: 25px;
+    height: auto;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+.table-format .data-box table {
+    position: relative;
+    border: 3px solid var(--text-primary);
+    border-radius: 30px;
+    padding-left: 25px;
+    height: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    scroll-behavior: auto;
+    text-align: left;
+}
+
+.table-format .data-box table td {
+    text-align: left;
 }
 
 /*

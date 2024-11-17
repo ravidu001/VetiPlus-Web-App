@@ -154,7 +154,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <a href="profile.php">
                         <!--<i class='bx bx-log-out icon'></i>-->
                         <div class="profile">
-                            <img src="../../../client/assets/images/doctorprofile.jpg"   alt="profile" />
+                            <img src="../../../client/assets/images/assistantprofile.avif"   alt="profile" />
                         </div>
                         <span class="text nav-text"> Profile</span>
                     </a>
