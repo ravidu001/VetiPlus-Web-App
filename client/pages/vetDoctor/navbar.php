@@ -140,8 +140,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                             <span class="text nav-text"> About Us</span>
                         </a>
                     </li>
-                    <li class="nav-link">
-                        <a href="#">
+                    <li class="nav-link <?= $current_page == 'contactus.php' ? 'active' : '' ?>">
+                        <a href="contactus.php">
                             <i class='bx bx-phone-call icon'></i>
                             <span class="text nav-text"> Contact Us</span>
                         </a>

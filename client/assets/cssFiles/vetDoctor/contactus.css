@@ -1,25 +1,33 @@
 /* Parent container */
 .container {
-    display: flex;
-    justify-content: space-between; /* Adjust spacing between containers */
-    align-items: flex-start; /* Align items at the start of the container */
-    margin: 50px; /* Optional: Add margin around the container */
+    display: flex; /* Use flexbox layout */
+    gap: 20px; /* Space between boxes */
+    align-items: stretch; /* Ensure the boxes align properly */
+    margin: 20px;
+    color: var(--text-black);
 }
 
-/* First container */
 .box1 {
-    background: #ffffff;
-    height: 850px;
-    width: 30%;
+    background: var(--background-white);
+    flex: 1; /* Make `.box1` size proportionate */
     padding: 0px;
     border-radius: 20px;
     box-shadow: slategray 0px 5px 5px;
-    border: 2px solid #6a0dad;
+    border: 2px solid var(--background-primary);
+}
+
+.box2 {
+    background: var(--background-white);
+    flex: 2; /* Give `.box2` more space */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: slategray 0px 5px 5px;
+    border: 2px solid var(--background-primary);
 }
 
 .box1 h1 {
-    color: white;
-    background: #6a0dad;
+    color: var(--text-white);
+    background: var(--background-primary);
     border-radius: 18px 18px 0px 0px;
     font-size: 40px;
     font-weight: bold;
@@ -29,19 +37,9 @@
     padding-bottom: 20px;
 }
 
-/* Second container */
-.box2 {
-    background: #ffffff;
-    height: 850px;
-    width: 68%;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: slategray 0px 5px 5px;
-    border: 2px solid #6a0dad;
-}
 
 .box2 h1 {
-    color: #6a0dad;
+    color: var(--text-primary);
     font-size: 40px;
     font-weight: bold;
     padding-top: 0px;
@@ -49,9 +47,9 @@
     padding-bottom: 20px;
 }
 
-.small-svg {
-    width: 40px;
-    height: 40px;
+i {
+    font-size: 36pt;
+    color: var(--text-black);
 }
 
 table {
@@ -72,14 +70,15 @@ form {
     font-size: 18px;
     padding-bottom: 20px;
 }
-input[type=text] {
+.text-feild input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     margin-bottom: 20px;
     box-sizing: border-box;
-    border: 2px solid #c8a2c8;
+    border: 2px solid var(--background-light);
     border-radius: 5px;
+    font-size: 14pt;
     box-shadow: rgb(175, 185, 196) 0px 2px 1px;
 }
 
@@ -89,8 +88,9 @@ input[type=email] {
     margin: 8px 0;
     margin-bottom: 20px;
     box-sizing: border-box;
-    border: 2px solid #c8a2c8;
+    border: 2px solid var(--background-light);
     border-radius: 5px;
+    font-size: 14pt;
     box-shadow: rgb(175, 185, 196) 0px 2px 1px;
 }
 
@@ -100,8 +100,9 @@ select {
     margin: 8px 0;
     margin-bottom: 20px;
     box-sizing: border-box;
-    border: 2px solid #c8a2c8;
+    border: 2px solid var(--background-light);
     border-radius: 5px;
+    font-size: 14pt;
     box-shadow: rgb(175, 185, 196) 0px 2px 1px;
 }
 
@@ -112,16 +113,17 @@ textarea {
     margin-top: 10px;
     margin-bottom: 20px;
     box-sizing: border-box;
-    border: 2px solid #c8a2c8;
+    border: 2px solid var(--background-light);
     border-radius: 5px;
     background-color: #f8f8f8;
     resize: none;
+    font-size: 14pt;
     box-shadow: rgb(175, 185, 196) 0px 2px 1px;
   }
 
 input[type=radio] {
     margin: 10px;
-    border: #c8a2c8;
+    border: var(--background-light);
     border-radius: 5px;
     padding-left: 20px;
     margin-bottom: 20px;
@@ -129,33 +131,106 @@ input[type=radio] {
 
 input[type=file] {
     margin: 20px;
-    border: #c8a2c8;
+    border: 2px solid var(--background-light);
     border-radius: 5px;
     padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14pt;
+    background: var(--background-white);
 }
 
 input[type=button], input[type=submit], input[type=reset] {
-    background-color: #6a0dad;
+    background-color: var(--background-primary);
     border: none;
-    color: white;
+    color: var(--text-white);
     padding: 16px 32px;
     font-size: 18px;
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 50px;
-    margin-left: 250px;
+    margin-left: 150px;
     margin-top: 20px;
-    
+    border: 2px solid var(--background-white);
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
-    background-color: #c8a2c8;
-    color: #6a0dad;
-    border: 2px solid #6a0dad;
+    background-color: var(--background-light);
+    color: var(--text-primary);
+    border: 2px solid var(--background-primary);
     box-shadow: rgb(175, 185, 196) 0px 2px 1px;
 }
 
+.rating {
+    width: 400px;
+    background: none;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.rating .star-widget input {
+    display: none;
+}
+
+.star-widget label {
+    font-size: 40px;
+    color: #444; 
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+.star-widget input:not(:checked) ~ label:hover,
+.star-widget input:not(:checked) ~ label:hover ~ label {
+    color: var(--text-primary);
+}
+
+.star-widget input:checked ~ label {
+    color: var(--text-primary);
+}
+
+input#rate-5:checked ~ label {
+    color: var(--text-primary);
+    text-shadow: 0 0 20px var(--background-light);
+}
+
+/* Display rating text based on selection */
+#rate-1:checked ~ header:before {
+    content: 'Very Bad 😖';
+} 
+#rate-2:checked ~ header:before {
+    content: 'Bad 🙁';
+}
+#rate-3:checked ~ header:before {
+    content: 'Good 😃';
+}
+#rate-4:checked ~ header:before {
+    content: 'Very Good 😎';
+}
+#rate-5:checked ~ header:before {
+    content: "Excellent 😍";
+}
+
+star-widget header {
+    display: none;
+}
+
+input:checked ~ header {
+    display: block;
+}
+
+.star-widget header {
+    width: 100%;
+    font-size: 25px;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+} 
 
 
