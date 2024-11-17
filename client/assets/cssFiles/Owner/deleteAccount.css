@@ -1,0 +1,46 @@
+.delete-profile{
+    width: 80%;
+}
+.delete-profile-inside{
+    margin: 10px 100px;
+    height: 80px;
+    background-color: #E9C5FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delete-profile form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 50px 200px;
+    justify-content: center;
+    align-items: center;
+    width: 70%; 
+    background-color: #f1e0fb;
+    height: 400px;
+}
+.delete-profile form label{
+    font-size: 20px;
+    margin: 5px;
+    font-weight: bold;
+}
+.delete-profile form input{
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 30%;
+}
+.delete-profile button{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #B89ACB;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center; 
+}
+.delete-profile button:hover{
+    background-color:#E9C5FF;
+    color: black;
+}

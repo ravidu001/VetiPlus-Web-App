@@ -109,8 +109,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     <div class="admin-regi-inside-left">
                         <label for="name"> Name</label>
                         <input type="text" id="name" name="name" placeholder="Name" required>
-                        <label for="phone">Phone Number</label>
-                        <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required>
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Email" required>
                         <label for="password">Password</label>
@@ -123,8 +121,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                         <input type="text" id="address" name="address" placeholder="Address" required>
                         <label for="city">Gender</label>
                         <input type="text" id="gender" name="gender" placeholder="Gender" required>
-                        <label for="state">Date of Birth</label>
-                        <input type="text" id="dob" name="dob" placeholder="Date of Birth" required>
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required>
                         <label for="state">NIC</label>
                         <input type="text" id="nic" name="nic" placeholder="NIC" required>
                     </div>
