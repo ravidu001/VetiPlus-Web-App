@@ -158,6 +158,13 @@ table td {
         margin-bottom: 20px;
 }       
 
+.form-container form input[type="checkbox"] {
+        margin-right: 15px ;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        transform: 1.5;
+}
+
 .form-container form .passwordBtn {
         background: var(--background-light);
         color: var(--text-black);
@@ -219,7 +226,8 @@ form .toggle-password {
         font-size: 18px;
 }
 
-.form-container form .addBtn {
+.form-container form .addBtn,
+.form-container form .submitBtn {
         background: var(--background-light);
         color: var(--text-black);
         padding: 10px 20px;
@@ -231,7 +239,8 @@ form .toggle-password {
         transition: 0.3s;
 }
 
-.form-container form .addBtn:hover {
+.form-container form .addBtn:hover,
+.form-container form .submitBtn:hover {
         background: var(--text-primary);
         color: var(--background-white);
         box-shadow: var(--box-shadow);
