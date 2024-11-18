@@ -1,21 +1,30 @@
 <?php
-// Get the current filename
 $current_page = basename($_SERVER['PHP_SELF']);
 
 include ( __DIR__ . '/../../../server/config/backendConfig.php');
+include ( __DIR__ . '/../../../server/controllers/Owner/selectAdmin.php');
 
-session_start();
+// $admin = [];
+// if (isset($_GET['email'])) {
+//     $email = htmlspecialchars($_GET['email']);
 
-$logged_in_email = 'malith@gmail.com';
-$sql = "SELECT email,name,contactNumber, address, gender,NIC FROM systemadmin WHERE email = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $logged_in_email);
-$stmt->execute();
-$result = $stmt->get_result();
-$admin = $result->fetch_assoc();
+//     $sql = "SELECT * FROM systemadmin WHERE email = ?";
+//     $stmt = $conn->prepare($sql);
+//     $stmt->bind_param("s", $email);
+//     $stmt->execute();
+//     $result = $stmt->get_result();
 
-$stmt->close();
-$conn->close();
+//     if ($result->num_rows > 0) {
+//         $admin = $result->fetch_assoc();
+//     } else {
+//         echo "<p>No admin found with the email: $email</p>";
+//     }
+//     $stmt->close();
+// } else {
+//     echo "<p>No email provided. Please go back and enter an email.</p>";
+// }
+
+// $conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -86,17 +95,19 @@ $conn->close();
                     <img src="../../assets/images/image_8.jpg" alt="">
                 </div>
                 <div class="profile_top_inside_right">
-                    <h2>Full Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp; <?= htmlspecialchars($admin['name']); ?></h2>
-                    <h2>Email &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp; <?= htmlspecialchars($admin['email']); ?></h2>
-                    <h2>Phone Number &nbsp;:-&nbsp;&nbsp;&nbsp; <?= htmlspecialchars($admin['contactNumber']);?></h2>
-                    <h2>Address &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;:- &nbsp;&nbsp; <?= htmlspecialchars($admin['address']);?></h2>
-                    <h2>Gender &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp;&nbsp; <?= htmlspecialchars($admin['gender']);?></h2>
-                    <h2>NIC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp;&nbsp; <?= htmlspecialchars($admin['NIC'])?></h2>
-               </div>
+                    <?php if (!empty($admin)): ?>
+                        <h2>Full Name &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; <?= htmlspecialchars($admin['name']); ?></h2>
+                        <h2>Email &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; <?= htmlspecialchars($admin['email']); ?></h2>
+                        <h2>Phone Number :- &nbsp; <?= htmlspecialchars($admin['contactNumber']); ?></h2>
+                        <h2>Address &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  :- &nbsp; <?= htmlspecialchars($admin['address']); ?></h2>
+                        <h2>Gender &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp; <?= htmlspecialchars($admin['gender']); ?></h2>
+                        <h2>NIC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; :- &nbsp; <?= htmlspecialchars($admin['NIC']); ?></h2>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
         <div class="profile_down">
-            <button onclick="window.location.href='editProfile.php'">Edit Profile</button>
+            <button onclick="window.location.href='editProfile.php?email=<?= urlencode($admin['email']); ?>'">Edit Profile</button>
             <button onclick="window.location.href='deleteAccount.php'">Delete Profile</button>
         </div>
     </div>
@@ -111,5 +122,6 @@ $conn->close();
     </div>
 </div>
 <script src="../../assets/jsFIles/Admin/logout.js"></script> 
+
 </body>
 </html>

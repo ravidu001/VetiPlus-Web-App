@@ -32,13 +32,18 @@
     width: 50%;
     gap: 20px;
 }
+.admin-outside-left form{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
 .admin-outside-left input{
     padding: 10px;
     font-size: 20px;
     border-radius: 10px;
-    width: 70%;
-   
+    width: 100%;
 }
+
 .admin-outside-left button{
     padding: 10px;
     font-size: 20px;

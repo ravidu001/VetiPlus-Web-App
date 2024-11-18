@@ -4,50 +4,49 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 include ( __DIR__ . '../../../../server/config/backendConfig.php');
 
-// session_start();
-
- $_SESSION['email'] = 'malith@gmail.com'; 
-
 $message = '';
+$email = htmlspecialchars($_GET['email'] ?? ''); // Fetch email from URL
 
-if($_SERVER['REQUEST_METHOD']=='POST'){
-
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Update logic
     $name = $_POST['name'];
     $phone_number = $_POST['phone_number'];
     $address = $_POST['address'];
-   
-    session_start();
 
-    if(isset($_SESSION['email'])){
-        $email = $_SESSION['email'];
-       
-        $sql = "UPDATE systemadmin SET name= '$name', contactNumber = '$phone_number', address = '$address' WHERE email = '$email'";
+    if (!empty($email)) {
+        $sql = "UPDATE systemadmin SET name = ?, contactNumber = ?, address = ? WHERE email = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssss", $name, $phone_number, $address, $email);
 
-        if ($conn->query($sql) === TRUE){
-            $message = "Profile Updated Successfully!";
-        } else{
-            $message = "Error updating profile: " . $conn->error; 
+        if ($stmt->execute()) {
+            $message = "Profile updated successfully!";
+            header("Location: adminProfile.php?email=" . urlencode($email));
+            exit;
+        } else {
+            $message = "Error updating profile: " . $conn->error;
         }
-    } else{
-        $message = "Error: User not logged in";
-    }
-  
-} 
-
-$name = $phone_number = $address = '';
-if (isset($_SESSION['email'])) {
-    $email = $_SESSION['email'];
-
-    $sql = "SELECT name, contactNumber, address FROM systemadmin WHERE email = '$email'";
-    $result = $conn->query($sql);
-
-    if ($result && $result->num_rows > 0) {
-        $user = $result->fetch_assoc();
-        $name = $user['name'];
-        $phone_number = $user['contactNumber'];
-        $address = $user['address'];
+        $stmt->close();
     }
 }
+
+// Fetch admin details for the form
+$name = $phone_number = $address = '';
+if (!empty($email)) {
+    $sql = "SELECT name, contactNumber, address FROM systemadmin WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result && $result->num_rows > 0) {
+        $admin = $result->fetch_assoc();
+        $name = $admin['name'];
+        $phone_number = $admin['contactNumber'];
+        $address = $admin['address'];
+    }
+    $stmt->close();
+}
+
 $conn->close();
 
 ?>
@@ -134,13 +133,15 @@ $conn->close();
                   <h3>NIC : 200212702901</h3>
                 </div>
                     <div class="admin-regi-inside-left">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Name" required> 
-                        <label for="phone">Phone Number</label>
-                        <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required>
-                        <label for="address">Address</label>
-                        <input type="text" id="address" name="address" placeholder="Address" required>
-                    </div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" value="<?= htmlspecialchars($name); ?>" required>
+
+                    <label for="phone_number">Phone Number</label>
+                    <input type="text" id="phone_number" name="phone_number" value="<?= htmlspecialchars($phone_number); ?>" required>
+
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" value="<?= htmlspecialchars($address); ?>" required>
+                </div>
                 </div>
                 <div class="admin-regi-bottom">
                     <button type="submit" name="submit">Update Profile</button>

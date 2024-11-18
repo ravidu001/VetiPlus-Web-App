@@ -1,28 +1,5 @@
 <?php
 $current_page = basename($_SERVER['PHP_SELF']);
-
-include ( __DIR__ . '/../../../server/config/backendConfig.php');
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $data = json_decode(file_get_contents('php://input'), true);
-    $email = $data['email'] ?? '';
-
-    $stmt = $conn->prepare("SELECT COUNT(*) AS count FROM systemadmin WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $row = $result->fetch_assoc();
-
-    if ($row['count'] > 0) {
-        echo json_encode(['exists' => true]);
-    } else {
-        echo json_encode(['exists' => false]);
-    }
-
-    $stmt->close();
-    $conn->close();
-    exit;
-}
 ?>
 
 <!DOCTYPE html>
@@ -88,23 +65,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <div class="admin">
         <div class="admin-inside">
-             <div class="admin-inside-top">
+            <div class="admin-inside-top">
                 <h2>Total Admin</h2>
                 <h3>24</h3>
-             </div>
-             <div class="admin-inside-top">
+            </div>
+            <div class="admin-inside-top">
                 <h2>Active Admin</h2>
                 <h3>14</h3>
-             </div>
-             <div class="admin-inside-top">
+            </div>
+            <div class="admin-inside-top">
                 <h2>Leave Admin</h2>
                 <h3>03</h3>
-             </div>
+            </div>
         </div>
         <div class="admin-outside">
             <div class="admin-outside-left">
-               <input type="email" id="email" name="email" placeholder="Enter Admin ID">
-               <button onclick="window.location.href='adminProfile.php'" id="checkEmailButton">Search</button>
+                <!-- Form to search for an admin -->
+                <form action="adminProfile.php" method="GET">
+                    <input type="email" id="email" name="email" placeholder="Enter Admin Email" required>
+                    <button type="submit" name="submit">Search</button>
+                </form>
             </div>
             <div class="admin-outside-right">
                 <button onclick="window.location.href='adminRegistration.php'">Add Admin</button>
@@ -113,15 +93,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </div>
 <div id="modal" class="modalbackground" style="display: none;">
-        <div class="modalcontent">
-            <p>Do you want to Logout?</p>
-            <div class="modalbuttons">
-                <button onclick="confirmLogout()">Yes</button>
-                <button onclick="closeLogout()">No</button>
-            </div>
+    <div class="modalcontent">
+        <p>Do you want to Logout?</p>
+        <div class="modalbuttons">
+            <button onclick="confirmLogout()">Yes</button>
+            <button onclick="closeLogout()">No</button>
         </div>
     </div>
-    <script src="../../assets/jsFIles/Admin/logout.js"></script>
-    <script src="../../assets/jsFIles/Owner/checkEmail.js"></script>
+</div>
+<script src="../../assets/jsFIles/Admin/logout.js"></script>
 </body>
 </html>
