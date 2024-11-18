@@ -6,7 +6,7 @@ include ( __DIR__ . '../../../../server/config/backendConfig.php');
 
 // session_start();
 
-$_SESSION['email'] = 'malith@gmail.com'; 
+ $_SESSION['email'] = 'malith@gmail.com'; 
 
 $message = '';
 
@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     session_start();
 
     if(isset($_SESSION['email'])){
-        $email = $_SESSION['email']='malith@gmail.com';
+        $email = $_SESSION['email'];
        
         $sql = "UPDATE systemadmin SET name= '$name', contactNumber = '$phone_number', address = '$address' WHERE email = '$email'";
 

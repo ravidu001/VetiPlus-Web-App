@@ -6,7 +6,7 @@ include ( __DIR__ . '/../../../server/config/backendConfig.php');
 
 session_start();
 
-$logged_in_email = "malith@gmail.com";
+$logged_in_email = 'malith@gmail.com';
 $sql = "SELECT email,name,contactNumber, address, gender,NIC FROM systemadmin WHERE email = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $logged_in_email);
