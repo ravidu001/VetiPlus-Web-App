@@ -154,7 +154,38 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <a href="profile.php">
                         <!--<i class='bx bx-log-out icon'></i>-->
                         <div class="profile">
-                            <img src="../../../client/assets/images/doctorprofile.jpg"   alt="profile" />
+                            
+                            <?php
+                                // Ensure $conn and $user_id are defined
+                                if (isset($conn) && isset($user_id)) {
+                                    // Sanitize the user ID to prevent SQL injection
+                                    $user_id = mysqli_real_escape_string($conn, $user_id);
+
+                                    // Prepare the SQL query
+                                    $query = "SELECT * FROM vetDoctor WHERE doctorID = '$user_id'";
+                                    $result = mysqli_query($conn, $query);
+
+                                    // Check if the query was successful
+                                    if ($result) {
+                                        if (mysqli_num_rows($result) > 0) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $image = $row['profilePicture'];
+                                            echo "<img src='../../assets/images/vetDoctor/profile/$image' alt='profile pict'>";
+                                            // echo "<img src='../../assets/images/vetDoctor/profile/defaultProfile.png' alt='profile pictu'>";
+                                        } else {
+                                            echo "<img src='../../assets/images/vetDoctor/profile/defaultProfile.png' alt='profile pictu'>";
+                                        }
+                                    } else {
+                                        // Handle query error
+                                        echo "Error executing query: " . mysqli_error($conn);
+                                    }
+                                } else {
+                                    // Handle undefined $conn or $user_id
+                                    echo "Database connection or user ID is not set.";
+                                }
+                            ?>
+
+
                         </div>
                         <span class="text nav-text"> Profile</span>
                     </a>

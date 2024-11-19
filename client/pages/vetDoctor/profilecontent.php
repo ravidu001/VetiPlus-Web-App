@@ -16,7 +16,21 @@
                     if (mysqli_num_rows($result) > 0) {
                         $row = mysqli_fetch_assoc($result);
                         $image = $row['profilePicture'];
-                        echo "<img src='../../assets/images/vetDoctor/profile/$image' alt='profile pict'>";
+                         echo "<img src='../../assets/images/vetDoctor/profile/$image' alt='profile pict'>";
+                        // echo "<img src='../../assets/images/vetDoctor/profile/defaultProfile.png' alt='profile pictu'>";
+
+                        // Pre-fill form fields with existing data
+                        $fullName = $row['fullName'];
+                        $contactNumber = $row['contactNumber'];
+                        $address = $row['address'];
+                        $NIC = $row['NIC'];
+                        $DOB = $row['DOB'];
+                        $gender = $row['gender'];
+                        $experience = $row['experience'];
+                        $bio = $row['bio'];
+                        $doctorCertificate = $row['doctorCertificate'];
+                        $timeSlot = $row['timeSlot']; 
+
                     } else {
                         echo "<img src='../../assets/images/vetDoctor/profile/defaultProfile.png' alt='profile pictu'>";
                     }
@@ -34,15 +48,16 @@
         <!--<i class='bx bx-edit-alt'></i>-->
 
     </div>
-    <input type="file" class="box" id="box" accept="image/jpg, image/jpeg, image/png">
-
-    <div class="sub-heading">
-        johndoe@gmail.com </br>
-        Veterinarian
-    </div>
 
     <div class="form-container">
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" name="doctorProfile">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" name="doctorProfile" enctype="multipart/form-data">
+            <input type="file" class="box" id="box" name="image" accept="image/jpg, image/jpeg, image/png">
+
+            <div class="sub-heading">
+                johndoe@gmail.com </br>
+                Veterinarian
+            </div>
+    
             <table class="form-group">
                 <tr>
                     <td colspan="2">
@@ -260,10 +275,10 @@
         $doctorID = $user_id;
 
         // get the profile picture
-        $image = $_FILES['image']['name'];
-        $image_size = $_FILES['image']['size'];
-        $image_tmp_name = $_FILES['image']['tmp_name'];
-        $image_folder = '../../assets/images/vetDoctor/profile/'.$image;
+        $image = $_FILES['image']['name']; // get the image name
+        $image_size = $_FILES['image']['size']; // get the image size
+        $image_tmp_name = $_FILES['image']['tmp_name']; // get the image temporary name
+        $image_folder = '../../assets/images/vetDoctor/profile/' .$image;
 
         $fullName = $_POST['name'];
         $contactNumber = $_POST['contactNumber'];
@@ -278,7 +293,7 @@
         $doctorCertificate = $_FILES['certificate']['name'];
         $doctorCertificate_size = $_FILES['certificate']['size'];
         $doctorCertificate_tmp_name = $_FILES['certificate']['tmp_name'];
-        $doctorCertificate_folder = '../../assets/images/vetDoctor/certificate/'.$doctorCertificate;
+        $doctorCertificate_folder = '../../assets/images/vetDoctor/certificate/' .$doctorCertificate;
 
         // get the time taken for treatment
         $timeSlot = $_POST['treatmentTime'];
@@ -357,8 +372,27 @@
         if($image_size > 1000000) {
             echo "<script>alert('Image size is too large')</script>";
         } else {
-            
-            move_uploaded_file($image_tmp_name, $image_folder);
+        /*
+            if ($_FILES['image']['error'] !== UPLOAD_ERR_OK) { // check if the file is uploaded
+                echo "<script> altert('File upload error: ')</script>" . $_FILES['image']['error'];
+                exit;
+            } else {
+                echo "<script>alert('File  successfully.');</script>";
+            }
+            if (!file_exists($image_tmp_name)) { // check if the file exists
+                echo "<script>alert('Temporary file does not exist.')</script>";
+                exit;
+            } else {
+                echo "<script>alert('Temporary file exists.')</script>";
+            }
+
+            */
+            if (move_uploaded_file($image_tmp_name, $image_folder)) { // move the file to the folder
+                echo "<script>alert('File uploaded successfully.');</script>";
+            } else {
+                echo "<script>alert('File not uploaded');</script>";
+
+            }
             move_uploaded_file($doctorCertificate_tmp_name, $doctorCertificate_folder);
             move_uploaded_file($specializationCertificate1_tmp_name, $specializationCertificate1_folder);
             move_uploaded_file($specializationCertificate2_tmp_name, $specializationCertificate2_folder);    
