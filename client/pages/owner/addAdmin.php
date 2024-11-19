@@ -1,5 +1,4 @@
 <?php
-// Get the current filename
 $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
@@ -66,23 +65,26 @@ $current_page = basename($_SERVER['PHP_SELF']);
     </div>
     <div class="admin">
         <div class="admin-inside">
-             <div class="admin-inside-top">
+            <div class="admin-inside-top">
                 <h2>Total Admin</h2>
                 <h3>24</h3>
-             </div>
-             <div class="admin-inside-top">
+            </div>
+            <div class="admin-inside-top">
                 <h2>Active Admin</h2>
                 <h3>14</h3>
-             </div>
-             <div class="admin-inside-top">
+            </div>
+            <div class="admin-inside-top">
                 <h2>Leave Admin</h2>
                 <h3>03</h3>
-             </div>
+            </div>
         </div>
         <div class="admin-outside">
             <div class="admin-outside-left">
-               <input type="text" placeholder="Enter Admin ID">
-               <button onclick="window.location.href='adminProfile.php '">Search</button>
+                <!-- Form to search for an admin -->
+                <form action="adminProfile.php" method="GET">
+                    <input type="email" id="email" name="email" placeholder="Enter Admin Email" required>
+                    <button type="submit" name="submit">Search</button>
+                </form>
             </div>
             <div class="admin-outside-right">
                 <button onclick="window.location.href='adminRegistration.php'">Add Admin</button>
@@ -91,14 +93,14 @@ $current_page = basename($_SERVER['PHP_SELF']);
     </div>
 </div>
 <div id="modal" class="modalbackground" style="display: none;">
-        <div class="modalcontent">
-            <p>Do you want to Logout?</p>
-            <div class="modalbuttons">
-                <button onclick="confirmLogout()">Yes</button>
-                <button onclick="closeLogout()">No</button>
-            </div>
+    <div class="modalcontent">
+        <p>Do you want to Logout?</p>
+        <div class="modalbuttons">
+            <button onclick="confirmLogout()">Yes</button>
+            <button onclick="closeLogout()">No</button>
         </div>
     </div>
-    <script src="../../assets/jsFIles/Admin/logout.js"></script>
+</div>
+<script src="../../assets/jsFIles/Admin/logout.js"></script>
 </body>
 </html>

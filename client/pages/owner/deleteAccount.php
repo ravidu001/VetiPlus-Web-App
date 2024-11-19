@@ -1,9 +1,6 @@
 <?php
+// Get the current filename
 $current_page = basename($_SERVER['PHP_SELF']);
-
-include ( __DIR__ . '/../../../server/config/backendConfig.php');
-include ( __DIR__ . '/../../../server/controllers/Owner/selectAdmin.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +9,7 @@ include ( __DIR__ . '/../../../server/controllers/Owner/selectAdmin.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/ownerNavbar.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/adminProfile.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/deleteAccount.css">
    <title>Admin Profile</title>
 </head>
 <body>
@@ -67,28 +64,20 @@ include ( __DIR__ . '/../../../server/controllers/Owner/selectAdmin.php');
         <br><br>
         <button type="button" title="Click me" onclick="openLogout()">Logout</button>
     </div>
-    <div class="profile">
-        <div class="profile_top">
-            <div class="profile_top_inside">
-                <div class="profile_top_inside_left">
-                    <img src="../../assets/images/image_8.jpg" alt="">
-                </div>
-                <div class="profile_top_inside_right">
-                    <?php if (!empty($admin)): ?>
-                        <h2>Full Name &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; <?= htmlspecialchars($admin['name']); ?></h2>
-                        <h2>Email &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; <?= htmlspecialchars($admin['email']); ?></h2>
-                        <h2>Phone Number :- &nbsp; <?= htmlspecialchars($admin['contactNumber']); ?></h2>
-                        <h2>Address &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  :- &nbsp; <?= htmlspecialchars($admin['address']); ?></h2>
-                        <h2>Gender &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp; <?= htmlspecialchars($admin['gender']); ?></h2>
-                        <h2>NIC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; :- &nbsp; <?= htmlspecialchars($admin['NIC']); ?></h2>
-                    <?php endif; ?>
-                </div>
-            </div>
+    <div class="delete-profile">
+        <div class="delete-profile-inside">
+            <h1>Admin Account Delete Page</h1>
         </div>
-        <div class="profile_down">
-            <button onclick="window.location.href='editProfile.php?email=<?= urlencode($admin['email']); ?>'">Edit Profile</button>
-            <button onclick="window.location.href='deleteAccount.php'">Delete Profile</button>
+        <form action="">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <label for="cpassword">Confirm Password</label>
+        <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" required>
+
+        <div class="delete-profile-outside">
+            <button type="submit" name="submit">Delete Profile</button>
         </div>
+        </form>
     </div>
 </div>
 <div id="modal" class="modalbackground" style="display: none;">
@@ -101,6 +90,5 @@ include ( __DIR__ . '/../../../server/controllers/Owner/selectAdmin.php');
     </div>
 </div>
 <script src="../../assets/jsFIles/Admin/logout.js"></script> 
-
 </body>
 </html>

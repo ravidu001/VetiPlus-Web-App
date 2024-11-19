@@ -3,29 +3,7 @@
 $current_page = basename($_SERVER['PHP_SELF']);
 
 include ( __DIR__ . '/../../../server/config/backendConfig.php');
-
-$message = '';
-
-if($_SERVER['REQUEST_METHOD']=='POST'){
-
-    $name = $_POST['name'];
-    $phone_number = $_POST['phone_number'];
-    $email = $_POST['email'];
-    $password = password_hash($_POST['password'],PASSWORD_BCRYPT);
-    $address = $_POST['address'];  
-    $gender = $_POST['gender'];
-    $dob = $_POST['dob'];
-    $nic = $_POST['nic'];
-
-        $sql = "INSERT INTO systemadmin(email,password,name,contactNumber,address,gender,NIC) VALUES ('$email','$password','$name','$phone_number','$address','$gender','$nic')";
-
-        if ($conn->query($sql) === TRUE) {
-            $message = "Registration successful! ";
-        } else {
-           $message = "Error: " . $sql . "<br>" . $conn->error;
-        }
-        $conn->close();
-    } 
+include ( __DIR__ . '/../../../server/controllers/Owner/createAdmin.php');
 
 ?>
 
@@ -109,8 +87,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     <div class="admin-regi-inside-left">
                         <label for="name"> Name</label>
                         <input type="text" id="name" name="name" placeholder="Name" required>
-                        <label for="phone">Phone Number</label>
-                        <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required>
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Email" required>
                         <label for="password">Password</label>
@@ -123,14 +99,14 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                         <input type="text" id="address" name="address" placeholder="Address" required>
                         <label for="city">Gender</label>
                         <input type="text" id="gender" name="gender" placeholder="Gender" required>
-                        <label for="state">Date of Birth</label>
-                        <input type="text" id="dob" name="dob" placeholder="Date of Birth" required>
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required>
                         <label for="state">NIC</label>
                         <input type="text" id="nic" name="nic" placeholder="NIC" required>
                     </div>
                 </div>
                 <div class="admin-regi-bottom">
-                    <button type="submit" name="submit">Register</button>
+                    <button type="submit" name="submit" >Register</button>
                 </div>
             </form>
         </div>
