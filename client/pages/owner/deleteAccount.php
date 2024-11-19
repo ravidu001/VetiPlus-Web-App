@@ -1,6 +1,64 @@
 <?php
 // Get the current filename
 $current_page = basename($_SERVER['PHP_SELF']);
+
+session_start();
+
+include( __DIR__ . '../../../../server/config/backendConfig.php');
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Get the entered passwords
+    $password = trim($_POST['password']);
+    $cpassword = trim($_POST['cpassword']);
+
+    // Check if passwords match
+    if ($password !== $cpassword) {
+        echo "<script>alert('Passwords do not match!');</script>";
+        exit;
+    }
+
+    // Retrieve owner ID from session
+    $ownerId = $_SESSION['owner_id'];
+
+    // Fetch the user details from the database
+    $query = "SELECT * FROM user WHERE id = ? AND type = 'Owner'";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $ownerId);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows === 1) {
+        $user = $result->fetch_assoc();
+
+        // Verify the password
+        if (password_verify($password, $user['password'])) {
+            // Delete the user from the database
+            $deleteQuery = "DELETE FROM user WHERE id = ?";
+            $deleteStmt = $conn->prepare($deleteQuery);
+            $deleteStmt->bind_param("i", $ownerId);
+
+            if ($deleteStmt->execute()) {
+                echo "<script>alert('Account deleted successfully!');</script>";
+
+                // Destroy the session and redirect
+                session_destroy();
+                header("Location: ../../index.php");
+                exit;
+            } else {
+                echo "<script>alert('Error deleting account. Please try again later.');</script>";
+            }
+        } else {
+            echo "<script>alert('Invalid password!');</script>";
+        }
+    } else {
+        echo "<script>alert('User not found!');</script>";
+    }
+
+    // Close the database connections
+    $stmt->close();
+    $conn->close();
+}
+
 ?>
 
 <!DOCTYPE html>
