@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             document.querySelector('.blurred-background').style.display = 'none';
             message.style.display = 'none';
-            window.location.href = 'adminProfile.php'
+            window.location.href='addAdmin.php';
         }, 3000);
     }
 });

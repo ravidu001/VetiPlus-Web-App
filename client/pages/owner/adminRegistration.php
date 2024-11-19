@@ -106,7 +106,7 @@ include ( __DIR__ . '/../../../server/controllers/Owner/createAdmin.php');
                     </div>
                 </div>
                 <div class="admin-regi-bottom">
-                    <button type="submit" name="submit">Register</button>
+                    <button type="submit" name="submit" >Register</button>
                 </div>
             </form>
         </div>
