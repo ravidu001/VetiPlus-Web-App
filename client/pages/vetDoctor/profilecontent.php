@@ -23,11 +23,6 @@
                 $query = "SELECT * FROM vetDoctor WHERE doctorID = '$user_id'";
                 $result = mysqli_query($conn, $query);
 
-                $passwordquery = "SELECT password FROM User WHERE email = '$user_id'";
-                $passwordresult = mysqli_query($conn, $passwordquery);
-                $passwordrow = mysqli_fetch_assoc($passwordresult);
-                $password = $passwordrow['password'];
-
                 // Check if the query was successful
                 if ($result) {
                     if (mysqli_num_rows($result) > 0) {
@@ -241,6 +236,11 @@
                             <button type="button" class="toggle-password" onclick="togglePassword('newPassword')">👁️</button>
                         </div>
                     </td>
+                <tr id="password-message">
+                    <td colspan="2" style="text-align:right; margin-right: 10px; margin-top:0px; ">
+                        <div id="passwordMessage" style="color: red;"></div>
+                    </td>
+                </tr>
                 </tr>
                 <tr id="confirm-password">
                     <td><label for="confirmPassword">Confirm Password</label></td>
@@ -315,7 +315,7 @@
             $result = mysqli_query($conn, $query);
             $row = mysqli_fetch_assoc($result);
             $password = $row['password'];
-            echo "<script>alert('mama methana');</script>";
+            
 
             if (password_verify($newCurrentPassword, $password)) {
                 if ($newPassword == $confirmPassword) {

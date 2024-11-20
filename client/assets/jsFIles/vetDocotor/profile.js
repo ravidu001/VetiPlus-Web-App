@@ -2,6 +2,7 @@
 function changePassword() {
     document.getElementById('current-password').style.display = 'table-row';
     document.getElementById('new-password').style.display = 'table-row';
+    document.getElementById('password-message').style.display = 'table-row';
     document.getElementById('confirm-password').style.display = 'table-row';
     document.getElementById('cancel-password').style.display = 'table-row';
 }
@@ -26,12 +27,14 @@ function addSpecialization() {
 function resetPassword() {
     document.getElementById('current-password').style.display = 'none';
     document.getElementById('new-password').style.display = 'none';
+    document.getElementById('password-message').style.display = 'none';
     document.getElementById('confirm-password').style.display = 'none';
     document.getElementById('cancel-password').style.display = 'none';
 
     document.getElementById('newCurrentPassword').value = '';
     document.getElementById('newPassword').value = '';
     document.getElementById('confirmPassword').value = '';
+    document.getElementById('passwordMessage').textContent = '';
 }
 
 function togglePassword(fieldId) {
@@ -94,6 +97,38 @@ document.getElementById('box').addEventListener('change', function(event) {
   }
 });
 
+
+// password check
+document.addEventListener('DOMContentLoaded', function() {
+    const newPasswordInput = document.getElementById('newPassword');
+    const passwordMessage = document.getElementById('passwordMessage');
+
+    newPasswordInput.addEventListener('input', function() {
+        const password = newPasswordInput.value;
+        let message = '';
+        let color = 'red';
+
+        if (password.length < 4) {
+            message = 'Very poor password';
+        } else if (password.length < 8) {
+            message = 'Poor password';
+        } else if (password.length >= 8) {
+            const hasLetters = /[a-zA-Z]/.test(password);
+            const hasNumbers = /[0-9]/.test(password);
+            const hasSymbols = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+            if (hasLetters && hasNumbers && hasSymbols) {
+                message = 'Good password';
+                color = 'green';
+            } else {
+                message = 'Password should contain letters, numbers, and symbols';
+            }
+        }
+
+        passwordMessage.textContent = message;
+        passwordMessage.style.color = color;
+    });
+});
 
 
       
