@@ -17,10 +17,10 @@
     --list-item: #ffecff;
 }
 
-* {
+/* * {
     margin: 0;
     padding: 0;
-}
+} */
 
 html{
     font-family:'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -67,7 +67,6 @@ body {
     margin-left: -10px;
     color: white;
 }
-
 
 #sidebar .nav-link.active  a {
     color: white;
@@ -125,8 +124,8 @@ body {
 
 #sidebar .logo{
     margin-left: 10px;
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
 }
 
@@ -134,7 +133,7 @@ body {
     display: flex;
     margin-bottom: 15px;
     padding-bottom: 5px;
-    border-bottom: #700392 3px solid;
+    /* border-bottom: #700392 3px solid; */
 }
 
 #sidebar .logoname {
@@ -150,7 +149,7 @@ body {
     }
 }
 
-.icon {
+#sidebar .icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -177,7 +176,7 @@ body {
     color: var(--primary-color-light);
 }
 
-.dropdown-btn {
+#sidebar .dropdown-btn {
     width:100%;
     justify-content: space-between;
     text-align: left;
@@ -192,13 +191,13 @@ body {
     transition: transform 0.2s ease;
 }
 
-.rotate i {
+#sidebar .rotate i {
     transform: rotate(180deg);
 }
 
 
 
-.sub-menu {
+#sidebar .sub-menu {
     overflow: hidden;
     display: none;
     padding-left: 1.5em;
@@ -206,11 +205,11 @@ body {
     transition: 300ms ease-in-out;
 }
 
-.sub-menu.show {
+#sidebar .sub-menu.show {
     display: flex;
 }
 
-.bottomcontent{
+#sidebar .bottomcontent{
     margin-top: auto;
     padding-top: 60px;
 }
@@ -225,15 +224,19 @@ body {
     cursor: pointer; 
 }
 
-body.dark .sidebar header .toggle {
+#sidebar body.dark .sidebar header .toggle {
     transform: rotate(180deg);
     color: var(--text-color);
 }
 
-.rotate i{
+#sidebar .rotate i{
     transform: 180deg;
 }
 
+/* Optional: Add smooth scrolling for the whole page */
+#sidebar html {
+    scroll-behavior: smooth;
+}
 
 /* @media (max-width: 800px) {
     body {

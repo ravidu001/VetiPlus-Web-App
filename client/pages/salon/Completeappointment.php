@@ -34,7 +34,7 @@
 
             <div class="calendar">
                 <?php
-                    require "../../components/salon/booking-calendar-compact.php";
+                    require "../../components/salon/Calendar.php";
                 ?>
             </div>
         </div>

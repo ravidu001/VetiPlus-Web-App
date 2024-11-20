@@ -1,5 +1,4 @@
 .selectdatebox {
-
     background-color: #fff;
     padding: 10px;
     align-items: center;
@@ -22,7 +21,6 @@
         box-shadow: 0 0 15px rgba(197, 62, 224, 0.3);
 
     */
-
 }
 
 .selectdateboxname {
@@ -34,7 +32,6 @@
 }
 
 .enterdate input[type="date"] {
-
     align-items: center;
     margin: 10px;
     padding: 13px;
@@ -44,11 +41,8 @@
     margin-left: 20%;
 }
 
+
 button.cancel, button.ok {
-    position: relative;
-    left: 55%;
-
-
     padding: 5px 10px;
     border-radius: 5px;
     border: none;
@@ -74,12 +68,9 @@ button.ok {
 button.ok:hover {
     background-color: #e0bdf9;
     color: black;
-
 }
 
 /* Optional: Add smooth scrolling for the whole page */
 html {
     scroll-behavior: smooth;
-
-
 }

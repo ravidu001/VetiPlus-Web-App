@@ -128,3 +128,8 @@ button.reply {
 button.reply:hover {
     background-color: #551A8B;
 }
+
+/* Optional: Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}

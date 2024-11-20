@@ -105,3 +105,8 @@ button.save {
 button.save:hover {
     background-color: #b76feb;
 }
+
+/* Optional: Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}

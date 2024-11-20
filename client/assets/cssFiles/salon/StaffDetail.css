@@ -135,3 +135,9 @@ button.edit:hover {
         padding: 10px;
     }
 }
+
+
+/* Optional: Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
