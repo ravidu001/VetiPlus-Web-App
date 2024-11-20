@@ -306,7 +306,34 @@
 
         $specialization1 = $_POST['specialization1'];
 
-        
+        $newCurrentPassword = $_POST['newCurrentPassword'];
+        $newPassword = $_POST['newPassword'];
+        $confirmPassword = $_POST['confirmPassword'];
+
+        if (isset($newCurrentPassword) && isset($newPassword) && isset($confirmPassword) && !empty($newCurrentPassword) && !empty($newPassword) && !empty($confirmPassword)) {
+            $query = "SELECT password FROM User WHERE email = '$user_id'";
+            $result = mysqli_query($conn, $query);
+            $row = mysqli_fetch_assoc($result);
+            $password = $row['password'];
+            echo "<script>alert('mama methana');</script>";
+
+            if (password_verify($newCurrentPassword, $password)) {
+                if ($newPassword == $confirmPassword) {
+                    $newPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+                    $query = "UPDATE User SET password = '$newPassword' WHERE email = '$user_id'";
+                    $result = mysqli_query($conn, $query);
+                    if ($result) {
+                        echo "<script>alert('Password changed successfully');</script>";
+                    } else {
+                        echo "<script>alert('Password not changed');</script>";
+                    }
+                } else {
+                    echo "<script>alert('Passwords do not match');</script>";
+                }
+            } else {
+                echo "<script>alert('Current password is incorrect');</script>";
+            }
+        }
         
 
         // check up {{{{{{}}}}}}
