@@ -20,6 +20,7 @@
             <button class="edit">
                 <a href="./SalonProfileEdit.php">Edit</a>
             </button>
+
             <div class="salon-header">
                 <div class="images">
                     <img src="../../assets/images/salonwomen.jpg" alt="Salon Image" class="salon-image">

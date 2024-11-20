@@ -1,5 +1,4 @@
-
-/* Add Service Css */
+/* Salon Profile Edit Css */
 * {
     margin: 0;
     padding: 0;
@@ -29,10 +28,14 @@ body {
 }
 
 .form-wrapper {
-    background: white;
-    padding: 40px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper p {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* Form Title */
@@ -53,10 +56,24 @@ body {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
-    color: #4a5568;
 }
 
 .form-group label i {
+    margin-right: 8px;
+    color: #6A0DAD;
+}
+
+.tableform {
+    width: 30%;
+    margin-bottom: 25px;
+}
+
+.tableform label {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.tableform label i {
     margin-right: 8px;
     color: #6A0DAD;
 }
@@ -69,10 +86,13 @@ body {
 /* Input Styles */
 input[type="text"],
 input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
 textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid #6A0DAD;
     border-radius: 8px;
     font-size: 16px;
     transition: all 0.3s ease;
@@ -80,28 +100,13 @@ textarea {
 
 input[type="text"]:focus,
 input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
 textarea:focus {
     outline: none;
     border-color: #6A0DAD;
     box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
-}
-
-/* Price Input Wrapper */
-.price-input-wrapper {
-    position: relative;
-}
-
-.price-input-wrapper::before {
-    content: '$';
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #4a5568;
-}
-
-.price-input-wrapper input {
-    padding-left: 25px;
 }
 
 /* Textarea Styles */
@@ -164,6 +169,35 @@ textarea {
     cursor: pointer;
 }
 
+/* Day Table */
+.day-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.day-table td {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f5f7fa;
+    border: 10px solid #ffffff;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(207, 154, 243, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.day-table td.selected {
+    background-color: #6A0DAD;
+    color: white;
+}
+
+.day-table td:hover {
+    background-color: #e4e7ea;
+}
+
+
+
 /* Submit Button */
 .submit-button {
     width: 100%;
@@ -190,6 +224,36 @@ textarea {
     font-size: 18px;
 }
 
+/* Dropdown and Select Box */
+select {
+    text-decoration: none;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: #6A0DAD;
+}
+
+/* Error States */
+input:invalid,
+textarea:invalid,
+select:invalid {
+    border-color: #6A0DAD;
+}
+
+input:invalid:focus,
+textarea:invalid:focus,
+select:invalid:focus {
+    border-color: #6A0DAD;
+    box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.1);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .form-wrapper {
@@ -210,16 +274,47 @@ textarea {
     color: #a0aec0;
 }
 
-/* Error States */
-input:invalid,
-textarea:invalid {
-    border-color:#6A0DAD;
+/* Focused Placeholder Styles */
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: #fff;
 }
 
-/* Success States */
-input:valid,
-textarea:valid {
+/* Custom Day Selection Table */
+#dayTable {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.day {
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.day:hover {
+    background-color: #f7fafc;
+}
+
+#toggleDays {
+    padding: 12px;
+    cursor: pointer;
+    border: 2px solid #6A0DAD;
+    background-color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+}
+
+#toggleDays:focus {
+    outline: none;
     border-color: #6A0DAD;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
 }
 
 /* Optional: Add smooth scrolling for the whole page */

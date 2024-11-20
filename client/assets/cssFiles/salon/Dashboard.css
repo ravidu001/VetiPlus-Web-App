@@ -9,6 +9,7 @@ body {
 
 /* Header Styling */
 .dashbardheader {
+    margin: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,11 +68,11 @@ body {
 }
 
 .dashcontent .part1{
-    margin-left: 20px;
+    margin-left: 3%;
+    margin-right: 3%;
 }
-
 .dashcontent .part1, .part2{
-    background-color: #e0bdf9;
+    background-color: #eeddfa;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
@@ -103,7 +104,7 @@ body {
     margin: 0;
     font-weight: bold;
     font-size: 30px;
-    
+
 }
 
 .appointmentno {
@@ -154,59 +155,6 @@ body {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-.selectdatebox {
-    background-color: #eed9fe;
-    padding: 10px;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-}
-
-.selectdateboxname {
-    font-size: 25px;
-    padding: 5px;
-    font-weight: bold;
-    border-bottom: 3px solid #6A0DAD;
-}
-
-.enterdate input[type="date"] {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #6A0DAD;
-    border-radius: 5px;
-    color: black;
-}
-
-button.cancel, button.ok {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button.cancel {
-    background-color: #e0bdf9;
-    color: black;
-}
-
-button.cancel:hover {
-    background-color: #6A0DAD;
-    color: white;
-}
-
-button.ok {
-    background-color: #6A0DAD;
-    color: white;
-}
-
-button.ok:hover {
-    background-color: #e0bdf9;
-    color: black;
-}
-
 /* Upcoming Appointments Styling */
 .upcominappointments {
     display: flex;
@@ -217,7 +165,7 @@ button.ok:hover {
 .appointmentbox {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     background-color: white;
     padding: 10px;
     border-radius: 8px;
@@ -237,9 +185,24 @@ button.ok:hover {
     margin-bottom: 5px;
 }
 
-.appointmentbox h4 {
+.appointmentbox .username {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
     margin: 0;
-    color: black;
+    font-size: 18px;
+}
+
+.appointmentbox .servicename {
+    font-size: 16px;
+    color: rgb(120, 120, 120);
+    text-align: center;
+}
+
+.appointmentbox .time {
+    margin: 2px;
+    font-size: 14px;
+    color: rgb(120, 120, 120);
+    text-align: center;
 }
 
 .appointmentbox button {
@@ -255,4 +218,10 @@ button.ok:hover {
 .appointmentbox button:hover{
         background-color: #eed9fe;
         color: black;
+
+}
+
+/* Optional: Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
 }

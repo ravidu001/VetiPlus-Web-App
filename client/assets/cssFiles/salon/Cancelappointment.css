@@ -151,3 +151,8 @@ button.ok:hover {
     border-radius: 50%;
     margin-right: 10px;
 }
+
+/* Optional: Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
