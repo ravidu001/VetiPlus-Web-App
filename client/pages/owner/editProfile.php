@@ -17,14 +17,7 @@ include ( __DIR__ . '../../../../server/controllers/Owner/updateAdmin.php');
    <title>Edit Profile</title>
 </head>
 <body>
-
-<?php if (!empty($message)) : ?>
-    <div class="blurred-background"></div>
-    <div class="message">
-        <?= htmlspecialchars($message) ?>
-    </div>
-<?php endif; ?>
-
+<?php include_once "../../components/common/admin/message.php" ?>
 <div class="admin-navbar"> 
     <div class="admin-navbar-inside-left-inner">
         <img src="../../assets/images/admin_logo.png" alt="">

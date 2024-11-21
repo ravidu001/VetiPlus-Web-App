@@ -63,7 +63,7 @@
     justify-content:right;
     width: 50%;
 }
-.admin-outside-right button{
+.admin-outside-right a{
     padding: 10px;
     font-size: 20px;
     background-color: #B89ACB;
@@ -72,8 +72,11 @@
     width: 50%;
     cursor: pointer;
     align-items: center;
+    text-decoration: none;
+    color: black;
+    text-align: center;
 }
-.admin-outside-right button:hover{
+.admin-outside-right a:hover{
     background-color: #8F53B4;
     color: white;
 }
