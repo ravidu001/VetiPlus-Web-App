@@ -1,5 +1,5 @@
 .Appoinment{
-    width: 80%;
+    width: 100%;
 }
 .Appoinment-inside{
     display: flex;
@@ -55,7 +55,7 @@
     flex-direction: column;
     margin: 0px 100px;
 }
-.Appoinment-outside form .Appoinment-outside-down  button{
+.Appoinment-outside form .Appoinment-outside-down  a{
     padding: 10px;
     font-size: 20px;
     background-color: #B89ACB;
@@ -64,12 +64,15 @@
     width: 200px;
     cursor: pointer;
     align-items: center;
+    text-decoration: none;
+    text-align: center;
+    color: black;
 }
-.Appoinment-outside form .Appoinment-outside-down  button:hover{
+.Appoinment-outside form .Appoinment-outside-down  a:hover{
     background-color: #8F53B4;
     color: white;
 }
-.Appoinment-outside-down  button:hover{
+.Appoinment-outside-down  a:hover{
     background-color: #F1DBFF;
     color: white;
 }

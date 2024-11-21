@@ -1,173 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   
+   font-family: 'Poppins', sans-serif;  
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 
-.admin-navbar{
-   
-    width: 100%;
-    height: 77px;
-    background-color: #3E244E;
-   
-}
-.admin-navbar-inside{
-    display: flex;
-    width: 100%; 
-  
-}
-.admin-navbar-inside-left{
-   
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    background: linear-gradient( #3E244E 0%, #8F53B4 100%);
-    align-items: center;
-   
-}
-.admin-navbar-inside-left button{
-   
-    cursor: pointer;
-    margin-bottom: 30px;
-    width: 250px;
-    padding: 10px 50px;
-    font-size: 15px;
-    border-radius: 10px;
-    background-color:#B89ACB;
-    color: white;
-}
-.admin-navbar-inside-left button:hover{
-    background-color: #c080e8;
-    color: black;
-}
-.admin-navbar-inside-left-inner{
-    display: flex;
-    flex-direction: row;
-   
-}
-.admin-navbar-inside-left-inner img{
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    border-radius: 50%;
-   
-}
-.admin-navbar-inside-left-inner h1{
-    margin-top: 15px;
-    color: white;
-    font-weight: 600;
-    
-}
-.admin-navbar-inside-left-inner-1{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-.admin-navbar-inside-left-inner-1 a{
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-
-   
-}
-.admin-navbar-inside-left-inner-1 ul li{
-    list-style: none;
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    height: 43px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 25px;
+:root{
+   --body-color: #E4E9F7;
+   --sidebar-color: #FFF;
+   --primary-color: #6a0dad;
+   --primary-color-light: #f6f5ff;
+   --toggle-color: #ddd;
+   --text-color: #707070;
+   --background-light: #c8a2c8;
+   --background-primary: #6a0dad ;
+   --background-white: #fff;
+   --text-black: black;
+   --text-primary: #6a0dad;
+   --text-white: #fff;
+   --shadow-color: slategray;
+   --list-item: #ffecff;
  
- 
-}
-.dropdown {
-    display: none;
-    position: absolute; 
-    background-color: #B89ACB;
-    min-width: 230px;
-    z-index: 1;
-    margin-top: 50px;
-    margin-left: 228px;
-    border-radius: 5px;
-  }
-  
-  .dropdown a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown a:hover {
-    background-color: #8F53B4;
-  }
-  
-  
-  li:hover .dropdown {
-    display: block;
-  }
-  
-  li {
-    position: relative;
-  }
-  
-.admin-navbar-inside-left-inner-1 ul li:hover{
-    background-color: rgba(255, 255, 255, 0.50);;
-}
-.admin-navbar-inside-left-inner-1 ul li img{
-    margin-top: 10px;
-    display: flex;
    
-}
-.admin-navbar-inside-left-inner-1 ul li.active {
-    background-color: #F8ECFF; /* Active background color */
+   --tran-02: all 0.2s ease;
+   --tran-03: all 0.3s ease;
+   --tran-04: all 0.4s ease;
+   --tran-05: all 0.5s ease;
 }
 
-.admin-navbar-inside-left-inner-1 ul li.active a {
-    color: #000000; /* Text color for the active link */
-}
-.modalbackground {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-       }
-
-.modalcontent {
-    background-color: #F1DBFF;
-    padding: 30px;
-    border-radius: 8px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   body {
+       background-color: var(--body-color);
+       height: 100vh;
+       transition: var(--tran-02);
    }
-.modalcontent p{
-   font-size: 20px;
-   color: #000000;
+
+body.dark {
+   --body-color: #18191A;
+   --sidebar-color: #242526;
+   --primary-color: #3a3b3c;
+   --primary-color-light: #3a3b3c;
+   --toggle-color: #fff;
+   --text-color: #ccc;
+   --background-light: #646464; /* A medium-dark gray for a softer container background */
+   --background-primary: #2b2b2b; /* A dark, muted purple to maintain the purple tone */
+   --background-white: #18191A; /* Dark background replacing white for containers */
+   --text-black: #e6e6e6; /* A light gray for replacing black text */
+   --text-primary: #9a87db; /* A lighter, muted purple for primary text */
+   --text-white: #fff; /* Keep white text for contrast */
+   --shadow-color: #424242;
+   --list-item: #ccc;
 }
-.modalbuttons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+
+.sidebar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 250px;
+   padding: 10px 14px;
+   background-color: var(--sidebar-color);
+   transition: var(--tran-05);
+   z-index: 100;
+}
+
+.sidebar.close {
+   width:88px;
+}
+
+.sidebar .text{
+   font-size:16px;
+   font-weight: 500;
+   color: var(--text-color);
+   transition: var(--tran-03);
+   white-space: nowrap;
+   opacity: 1;
+
+}
+
+.sidebar.close .text {
+   opacity: 0;
+}
+
+.sidebar .image {
+   min-width: 60px;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.sidebar li {
+   height: 50px;
+   margin-top: 10px;
+   list-style: none;
+   display: flex;
+   align-items: center;
+}
+
+.sidebar li .icon {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 20px;
+   min-width: 60px;
    
 }
-.modalbuttons button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+.sidebar li .icon,
+.sidebar li .text {
+   color: var(--text-color);
+   transition: var(--tran-02);
 }
-.modalbuttons button:hover {
-    background-color: #B89ACB;
-    color: #000000;
+
+.sidebar header {
+   position: relative;
+}
+
+.sidebar .image-text img {
+   width: 40px;
+   border-radius: 6px;
+}
+
+.sidebar header .image-text {
+   display: flex;
+   align-items: center;
+}
+
+header .image-text .header-text {
+   display: flex;
+   flex-direction: column;
+}
+
+.header-text .name {
+   font-weight: 600;
+}
+
+.header-text .profession {
+   margin-top: -2px;
+}
+
+.sidebar header .toggle {
+   position: absolute;
+   top: 50%;
+   right: -25px;
+   
+   height: 25px;
+   width: 25px;
+   transform: translateY(-50%) rotate(180deg);
+   background: var(--primary-color);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   color: var(--sidebar-color);
+   font-size: 22px;
+}
+
+.sidebar.close header .toggle {
+   transform: translateY(-50%);
+}
+
+body.dark .sidebar header .toggle {
+   transform: rotate(180deg);
+   color: var(--text-color);
+}
+
+.sidebar .menu-bar{
+   overflow-y: auto;
+   margin-top: 10px;
+   overflow-x: hidden;
+}
+
+.sidebar .menu{
+   margin-top: 35px;
+}
+
+.sidebar .search-box {
+   background-color: var(--primary-color-light);
+   border-radius: 6px;
+}
+
+.search-box input {
+   height: 100%;
+   width: 100%;
+   outline: none;
+   border: none;
+   font-size: 16px;
+   font-weight: 500;
+   background-color: var(--primary-color-light);
+   border-radius: 6px;    
+}
+
+.sidebar li a {
+   text-decoration: none;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   transition: var(--tran-04);
+}
+
+.sidebar li a:hover {
+   background-color: var(--primary-color);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+   color: var(--sidebar-color);
+}
+
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text {
+   color: var(--text-color);
+}
+
+.sidebar .menu-bar {
+   height: calc(100% - 50px); 
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.menu-bar .mode {
+   position: relative;
+   border-radius: 6px;
+   background: var(--primary-color-light);
+}
+
+.menu-bar .mode .moon-sun {
+   height: 50px;
+   width: 60px;
+   display: flex;
+   align-items: center;
+}
+
+.menu-bar .mode i{
+   position: absolute;
+   transition: var(--tran-03);
+}
+
+.menu-bar .mode i.sun {
+   opacity: 0;
+}
+
+body.dark .menu-bar .mode i.sun {
+   opacity: 1;
+}
+
+body.dark .menu-bar .mode i.moon {
+   opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch {
+   position: absolute;
+   right: 0px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   min-width: 60px;
+   cursor: pointer;
+   border-radius: 6px;
+   background: var(--primary-color-light);
+   transition: var(--tran-05);
+}
+
+.toggle-switch .switch{
+   position: relative;
+   height: 22px;
+   width: 44px;
+   border-radius: 25px;
+   background-color: var(--toggle-color); 
+}
+
+.switch::before {
+   content: '';
+   position: absolute;
+   height: 15px;
+   width: 15px;
+   border-radius: 50%;
+   top: 50%;
+   left: 5px;
+   transform: translateY(-50%);
+   background: var(--sidebar-color);
+   transition: var(--tran-03);
+}
+
+body.dark .switch::before {
+   left: 24px;
+}
+
+.home {
+   position: relative;
+   left: 250px;
+   height: 100vh;
+   width: calc(100% - 250px);
+   background: var(--body-color);
+   transition: var(--tran-05);
+}
+
+.home .text {
+   font-size: 24px;
+   font-weight: 500;
+   color: var(--text-color);
+   padding: 8px 40px;
+}
+
+.sidebar.close ~ .home {
+   left: 88px;
+   width: calc(100% - 88px);
+}
+
+/* Hide the submenu by default */
+.sub-menu{
+   display: none;
+   list-style: none;
+   padding-left: 20px;
+   font-size: 12px;
+}
+
+/* Style for submenu items */
+.sub-menu-link a {
+   color: var(--text-color);
+   padding-left: 30px;
+   display: block;
+   transition: var(--tran-02);
+}
+
+/* Display the submenu when parent is open */
+.nav-link.open .sub-menu {
+   display: block;
+}
+
+.sub-menu-link a:hover {
+   background-color: var(--primary-color);
+   color: var(--sidebar-color);
+}
+
+
+.sidebar .bottom-content .profile img {
+   border-radius:100px; 
+   width:40px; 
+   height:40px; 
+   margin-left:10px; 
+   margin-right:15px;
+   margin-top: 5px;
+}
+
+.sidebar .nav-link .arrow{
+   margin-left: auto;
+   font-size: 12px;
+   color: var(--text-color);
+   transition: var(--tran-02);
+}
+
+.sidebar .nav-link.open .arrow {
+   transform: rotate(180deg);
+}
+
+
+.nav-link.active {
+   background-color: var(--primary-color); /* or any other style to indicate active state */
+   color: var(--sidebar-color);
+}
+
+.nav-link.active i {
+   color: white;
+}
+
+.nav-link.active  .text {
+   color: white;
 }

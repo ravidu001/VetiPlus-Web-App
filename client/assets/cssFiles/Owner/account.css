@@ -1,5 +1,5 @@
 .accounts{
-    width: 80%;
+    width: 100%;
 }
 .accounts-inside{
     display: flex;
@@ -25,6 +25,7 @@
 .account-inside-upper{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     margin: 50px 100px;
     gap: 500px;
 
@@ -34,12 +35,14 @@
     background-color: #F1DBFF;
     font-size: 15px;
     font-weight: 700;
+    
 }
 .account-inside-lower{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     gap: 450px;
-    margin: 40px 60px;
+    margin: 50px 70px;
 }
 .account-inside-lower-left form{
     display: flex;
@@ -47,7 +50,7 @@
     gap: 20px;
     padding: 15px;
     border-radius: 10px;
-    height: 200px;
+    height: 250px;
     background-color: #F1DBFF;
 }
 .account-inside-lower-left form input{
@@ -74,7 +77,7 @@
     flex-direction: column;
     gap: 20px;
     padding: 15px;
-    height: 200px;
+    height: 250px;
     border-radius: 10px;
     background-color: #F1DBFF;
 }
