@@ -13,6 +13,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
    <title>Account</title>
 </head>
 <body>
+<?php include_once "../../components/common/admin/message.php" ?>
 <div class="admin-navbar"> 
     <div class="admin-navbar-inside-left-inner">
         <img src="../../assets/images/admin_logo.png" alt="">
@@ -94,7 +95,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <label for="searchInput"></label>
                         <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
                         <label for="searchInput"></label>
-                        <button type="button" title="Click me" onclick="window.location.href='userAccount.php'">Search</button>
+                        <a href="./userAccount.php">Search</a>
                     </form>   
                 </div>
                 <div class="account-inside-lower-right">
@@ -102,7 +103,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <label for="searchInput"></label>
                         <input type="text" id="searchInput" title="Search Input" placeholder="Enter User ID">
                         <label for="searchInput"></label>
-                        <button type="button" title="Click me" onclick="window.location.href='petAccount.php'">Search</button>
+                        <a href="./petAccount.php">Search</a> 
                     </form>
                 </div>
             </div>

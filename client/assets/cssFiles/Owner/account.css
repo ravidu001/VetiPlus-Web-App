@@ -55,14 +55,17 @@
     font-size: 20px;
     border-radius: 10px;
 }
-.account-inside-lower-left form button{
+.account-inside-lower-left form a{
     padding: 10px;
     font-size: 20px;
     background-color: #B89ACB;
     border-radius: 10px;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+    text-align: center;
 }
-.account-inside-lower-left form button:hover{
+.account-inside-lower-left form a:hover{
     background-color: #8F53B4;
     color: white;
 }
@@ -80,14 +83,17 @@
     font-size: 20px;
     border-radius: 10px;
 }
-.account-inside-lower-right form button{
+.account-inside-lower-right form a{
     padding: 10px ;
     border-radius: 10px;
     font-size: 20px;
     background-color: #B89ACB;
     cursor: pointer;
+     text-decoration: none;
+    color: black;
+    text-align: center;
 }
-.account-inside-lower-right form button:hover{
+.account-inside-lower-right form a:hover{
     background-color: #8F53B4;
     color: white;
 }

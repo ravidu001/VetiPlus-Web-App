@@ -12,7 +12,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $password = password_hash($_POST['password'],PASSWORD_BCRYPT);
     $address = $_POST['address'];  
     $gender = $_POST['gender'];
-    $dob = $_POST['dob'];
     $nic = $_POST['nic'];
 
         $sql = "INSERT INTO systemadmin(email,password,name,contactNumber,address,gender,NIC) VALUES ('$email','$password','$name','$phone_number','$address','$gender','$nic')";
