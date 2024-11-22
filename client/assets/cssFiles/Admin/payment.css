@@ -1,13 +1,15 @@
-.payment{
-    width: 80%;
+.payment {
+    width: 100%;
 }
-.payment-inside{
+
+.payment-inside {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 20px 100px;
 }
-.payment-inside-top{
+
+.payment-inside-top {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,21 +18,25 @@
     gap: 20px;
     background-color: #F1DBFF;
     box-shadow: 5px 10px 18px #888888;
+    width: 30%;
 }
-.Payment-outside{
+
+.Payment-outside {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
-.Payment-outside-top{
+
+.Payment-outside-top {
     display: flex;
     flex-direction: row;
     gap: 50px;
-  
+
 }
-.Payment-outside form .Payment-outside-top{
-    
+
+.Payment-outside form .Payment-outside-top {
+
     display: flex;
     flex-direction: row;
     gap: 200px;
@@ -38,20 +44,23 @@
     border-radius: 10px;
     margin: 20px;
     background-color: #F1DBFF;
-    
+
 }
-.Payment-outside form .Payment-outside-top  input{
+
+.Payment-outside form .Payment-outside-top input {
     padding: 10px;
     font-size: 20px;
     border-radius: 10px;
 }
-.Payment-outside form .Payment-outside-down{
+
+.Payment-outside form .Payment-outside-down {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 0px 100px;
 }
-.Payment-outside form .Payment-outside-down  button{
+
+.Payment-outside form .Payment-outside-down button {
     padding: 10px;
     font-size: 20px;
     background-color: #B89ACB;
@@ -62,14 +71,18 @@
     cursor: pointer;
     align-items: center;
 }
-.Payment-outside form .Payment-outside-down button:hover{
+
+.Payment-outside form .Payment-outside-down button:hover {
     background-color: #8F53B4;
     color: white;
 }
+
 .admin-navbar-inside-left-inner-1 ul li.active {
-    background-color: #F8ECFF; /* Active background color */
+    background-color: #F8ECFF;
+    /* Active background color */
 }
 
 .admin-navbar-inside-left-inner-1 ul li.active a {
-    color: #000000; /* Text color for the active link */
+    color: #000000;
+    /* Text color for the active link */
 }

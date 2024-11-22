@@ -1,6 +1,7 @@
-.doctor_system{
-    width: 80%;
+.doctor_system {
+    width: 100%;
 }
+
 table {
     width: 80%;
     border-collapse: collapse;
@@ -9,7 +10,8 @@ table {
     margin: 30px 100px;
 }
 
-th, td {
+th,
+td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
@@ -18,18 +20,19 @@ th, td {
 th {
     background-color: #f0f0f0;
     font-weight: bold;
-   
-   
+
+
 }
 
 td:last-child {
     text-align: center;
     text-align: right;
 }
-td img{
+
+td img {
     width: 32px;
     height: 32px;
-   
+
 }
 
 button {
@@ -45,6 +48,7 @@ button {
     color: black;
     margin-right: 5px;
 }
+
 .accept-btn:hover {
     background-color: hsl(267, 54%, 54%);
     color: white;
@@ -54,19 +58,23 @@ button {
     background-color: #bb86fc;
     color: white;
 }
+
 .decline-btn:hover {
     background-color: hsl(267, 54%, 54%);
     color: black;
 }
+
 .admin-navbar-inside-left-inner-1 ul li.active {
-    background-color: #F8ECFF; /* Active background color */
+    background-color: #F8ECFF;
+    /* Active background color */
 }
 
 .admin-navbar-inside-left-inner-1 ul li.active a {
-    color: #000000; 
+    color: #000000;
 }
+
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -76,6 +84,7 @@ button {
     justify-content: center;
     align-items: center;
 }
+
 .modal-content {
     background-color: #fff;
     padding: 20px;
@@ -83,6 +92,7 @@ button {
     text-align: center;
     width: 300px;
 }
+
 .modal button {
     margin: 5px;
     padding: 10px 20px;
@@ -91,6 +101,7 @@ button {
     cursor: pointer;
     background-color: #F8ECFF;
 }
+
 .modal button:hover {
-    background-color:#d8b4f3;
+    background-color: #d8b4f3;
 }

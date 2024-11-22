@@ -1,62 +1,75 @@
-.complain{
-    width: 80%;
+.complain {
+    width: 100%;
+
 }
+
 table {
-    
+
     margin: 20px 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
+
 table thead {
 
     width: 100%;
     padding: 30px 60px;
 }
-table thead tr{
+
+table thead tr {
     display: flex;
     justify-content: space-between;
 }
-table thead tr th{
+
+table thead tr th {
     font-size: 20px;
 }
-table tbody{
-   
+
+table tbody {
+
     width: 100%;
     cursor: pointer;
 }
-table tbody tr{
+
+table tbody tr {
     display: flex;
     justify-content: space-between;
     background-color: #F8ECFF;
-  
+
 }
-table tbody tr:hover{
+
+table tbody tr:hover {
     background-color: #E6E6E6;
 }
-table tbody tr td{
+
+table tbody tr td {
     font-size: 20px;
     padding: 20px 30px;
 }
-table tbody tr td a{
-    
+
+table tbody tr td a {
+
     color: black;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     text-decoration: none;
 }
-table tbody tr td a img{
+
+table tbody tr td a img {
     width: 30px;
     height: 30px;
-    
+
 }
+
 .admin-navbar-inside-left-inner-1 ul li.active {
-    background-color: #F8ECFF; /* Active background color */
+    background-color: #F8ECFF;
+    /* Active background color */
 }
 
 .admin-navbar-inside-left-inner-1 ul li.active a {
-    color: #000000; /* Text color for the active link */
+    color: #000000;
+    /* Text color for the active link */
 }
-

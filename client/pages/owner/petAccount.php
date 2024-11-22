@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
     <title>Profile </title>
-    <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">4
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/navbar.css" type="text/css">4
     <link rel="stylesheet" href="../../assets/cssFiles/Owner/petAccount.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -22,7 +22,7 @@
     <?php include_once "../../components/common/admin/message.php" ?>
 
     <!-- Include navbar -->
-    <?php include '../../components/common/admin/navbar.php'; ?>
+    <?php include '../../components/common/owner/navbar.php'; ?>
 
     <section class="home">
     <div class="pet-account">

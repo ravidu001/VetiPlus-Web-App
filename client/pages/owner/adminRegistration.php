@@ -16,7 +16,7 @@ include ( __DIR__ . '/../../../server/controllers/Owner/createAdmin.php');
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="icon" href="../../assets/images/logo.png" type="image/png">
    <title>Profile </title>
-   <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">4
+   <link rel="stylesheet" href="../../assets/cssFiles/Owner/navbar.css" type="text/css">4
    <link rel="stylesheet" href="../../assets/cssFiles/Owner/adminRegistration.css">
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -30,7 +30,7 @@ include ( __DIR__ . '/../../../server/controllers/Owner/createAdmin.php');
 <?php endif; ?>
 
    <!-- Include navbar -->
-   <?php include '../../components/common/admin/navbar.php'; ?>
+   <?php include '../../components/common/owner/navbar.php'; ?>
 
    <section class="home">
    <div class="admin-regi">
