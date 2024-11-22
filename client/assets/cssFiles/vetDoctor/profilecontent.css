@@ -283,3 +283,23 @@ form .toggle-password {
         scroll-behavior: auto;
         margin-left: 60px;
 }
+
+.logoutBtn, .deleteBtn {
+        background: var(--background-light);
+        color: var(--text-black);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 100%;
+        margin-bottom: 15px;
+}
+
+.logoutBtn:hover, .deleteBtn:hover {
+        background: var(--text-primary);
+        color: var(--background-white);
+        box-shadow: var(--box-shadow);
+}

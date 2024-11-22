@@ -109,16 +109,16 @@ document.addEventListener('DOMContentLoaded', function() {
         let color = 'red';
 
         if (password.length < 4) {
-            message = 'Very poor password';
-        } else if (password.length < 8) {
             message = 'Poor password';
+        } else if (password.length < 8) {
+            message = 'Good password';
         } else if (password.length >= 8) {
             const hasLetters = /[a-zA-Z]/.test(password);
             const hasNumbers = /[0-9]/.test(password);
             const hasSymbols = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
             if (hasLetters && hasNumbers && hasSymbols) {
-                message = 'Good password';
+                message = 'Strong password';
                 color = 'green';
             } else {
                 message = 'Password should contain letters, numbers, and symbols';
@@ -129,6 +129,51 @@ document.addEventListener('DOMContentLoaded', function() {
         passwordMessage.style.color = color;
     });
 });
+
+// function to validate date of birth
+document.addEventListener('DOMContentLoaded', function() {
+    const dobInput = document.getElementById('DOB');
+    const today = new Date();
+    const maxDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+    const maxDateString = maxDate.toISOString().split('T')[0];
+    dobInput.setAttribute('max', maxDateString);
+});
+
+// fuction to validate phone number
+document.addEventListener('DOMContentLoaded', function() {
+    const phoneInput = document.getElementById('contactNumber');
+    const phoneMessage = document.getElementById('phoneMessage');
+
+    phoneInput.addEventListener('input', function() {
+        const phoneNumber = phoneInput.value;
+        let message = '';
+        let color = 'red';
+
+        const phonePattern = /^0\d{9}$/;
+
+        if (phonePattern.test(phoneNumber)) {
+            message = 'Valid phone number';
+            color = 'green';
+        } else {
+            if (phoneNumber.length ==0) {
+                message = '';
+            } else if (phoneNumber.length !== 10) {
+                message = 'Phone number must be exactly 10 digits';
+            } else if (!phoneNumber.startsWith('0')) {
+                message = 'Phone number must start with 0';
+            } else if (!/^\d+$/.test(phoneNumber)) {
+                message = 'Phone number must contain only numbers';
+            }
+            else  {
+                message = 'Invalid phone number';
+            }
+        }
+
+        phoneMessage.textContent = message;
+        phoneMessage.style.color = color;
+    });
+});
+
 
 
       

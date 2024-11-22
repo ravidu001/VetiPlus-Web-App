@@ -1,7 +1,6 @@
-
 <div class="main-container1">
     <div class="profile-pic">
-    <?php
+        <?php
         /*if(!isset($_SESSION['user_id'])) {
             die("User ID not set in session");
         } else {
@@ -28,6 +27,7 @@
                     if (mysqli_num_rows($result) > 0) {
                         $row = mysqli_fetch_assoc($result);
                         $image = $row['profilePicture'];
+                        
                         if (empty($image)) {
                             echo "<img src='../../assets/images/vetDoctor/profile/defaultProfile.png' alt='defaul' class='picture'>";
                         } else {
@@ -48,7 +48,7 @@
                         $timeSlot = $row['timeSlot']; 
 
                     } else {
-                        // echo "<img src='../../assets/images/vetDoctor/profile/defaultProfile.png' alt='profile pictu'>";
+                        echo "<img src='../../assets/images/vetDoctor/profile/defaultProfile.png' alt='profile pictu' class='picture'>";
                     }
                 } else {
                     // Handle query error
@@ -66,15 +66,16 @@
     </div>
 
     <div class="form-container">
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" name="doctorProfile" enctype="multipart/form-data">
-            
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" name="doctorProfile"
+            enctype="multipart/form-data">
+
             <input type="file" class="box" id="box" name="image" accept="image/jpg, image/jpeg, image/png">
 
             <div class="sub-heading">
-            <?php echo isset($user_id) ? htmlspecialchars($user_id) : ''; ?></br>
+                <?php echo isset($user_id) ? htmlspecialchars($user_id) : ''; ?></br>
                 Veterinarian
             </div>
-    
+
             <table class="form-group">
                 <tr>
                     <td colspan="2">
@@ -88,7 +89,8 @@
                         <label for="name">Name</label>
                     </td>
                     <td>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" value="<?php echo isset($fullName) ? htmlspecialchars($fullName) : ''; ?>">
+                        <input type="text" id="name" name="name" placeholder="Enter your name"
+                            value="<?php echo isset($fullName) ? htmlspecialchars($fullName) : ''; ?>">
                     </td>
                 </tr>
                 <tr>
@@ -96,7 +98,9 @@
                         <label for="DOB">Date of birth</label>
                     </td>
                     <td>
-                        <input type="date" id="DOB" name="DOB" value="<?php echo isset($DOB) ? htmlspecialchars($DOB) : ''; ?>" <?php echo isset($DOB) ? 'readonly' : ''; ?>>
+                        <input type="date" id="DOB" name="DOB"
+                            value="<?php echo isset($DOB) ? htmlspecialchars($DOB) : ''; ?>"
+                            <?php echo isset($DOB) ? 'readonly' : ''; ?>>
                     </td>
                 </tr>
                 <tr>
@@ -104,7 +108,9 @@
                         <label for="NIC">NIC</label>
                     </td>
                     <td>
-                        <input type="text" id="NIC" name="NIC" placeholder="Enter your NIC number" value="<?php echo isset($NIC) ? htmlspecialchars($NIC) : ''; ?>"<?php echo isset($NIC) ? 'readonly' : ''; ?>>
+                        <input type="text" id="NIC" name="NIC" placeholder="Enter your NIC number"
+                            value="<?php echo isset($NIC) ? htmlspecialchars($NIC) : ''; ?>"
+                            <?php echo isset($NIC) ? 'readonly' : ''; ?>>
                     </td>
                 </tr>
                 <tr>
@@ -112,7 +118,14 @@
                         <label for="contactNumber">Phone number</label>
                     </td>
                     <td>
-                        <input type="text" id="contactNumber" name="contactNumber" placeholder="Enter your phone number" value="<?php echo isset($contactNumber) ? htmlspecialchars($contactNumber) : ''; ?>">
+                        <input type="text" id="contactNumber" name="contactNumber" maxlength="10"
+                            placeholder="Enter your phone number"
+                            value="<?php echo isset($contactNumber) ? htmlspecialchars($contactNumber) : ''; ?>">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:right; margin-right: 10px; margin-top:0px; ">
+                        <div id="phoneMessage" style="color: red;"></div>
                     </td>
                 </tr>
                 <tr>
@@ -120,16 +133,20 @@
                         <label for="address">Address</label>
                     </td>
                     <td>
-                        <input type="text" id="address" name="address" placeholder="Enter your permanent address" value="<?php echo isset($address) ? htmlspecialchars($address) : ''; ?>">
+                        <input type="text" id="address" name="address" placeholder="Enter your permanent address"
+                            value="<?php echo isset($address) ? htmlspecialchars($address) : ''; ?>">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="gender">Gender</label>   
+                        <label for="gender">Gender</label>
                     </td>
                     <td>
-                        <input type="radio" id="gender1" name="gender" value="male" <?php echo (isset($gender) && $gender == 'male') ? 'checked' : ''; ?><?php echo isset($gender) && $gender == 'male' ? 'readonly' : ''; ?>>Male
-                        <input type="radio" id="gender2" name="gender" value="female" class="female" <?php echo (isset($gender) && $gender == 'female') ? 'checked' : ''; ?> <?php echo isset($gender) && $gender == 'female' ? 'readonly' : ''; ?>>Female
+                        <input type="radio" id="gender1" name="gender" value="male"
+                            <?php echo (isset($gender) && $gender == 'male') ? 'checked' : ''; ?><?php echo isset($gender) && $gender == 'male' ? 'readonly' : ''; ?>>Male
+                        <input type="radio" id="gender2" name="gender" value="female" class="female"
+                            <?php echo (isset($gender) && $gender == 'female') ? 'checked' : ''; ?>
+                            <?php echo isset($gender) && $gender == 'female' ? 'readonly' : ''; ?>>Female
                     </td>
                 </tr>
                 <tr>
@@ -157,7 +174,7 @@
                         <label for="certificate">Veterianary doctor certificate</label>
                     </td>
                     <td>
-                    <?php 
+                        <?php 
                         if(isset($doctorCertificate) || !empty($doctorCertificate)) {
                             echo "<img src='../../assets/images/vetDoctor/certificate/$doctorCertificate' alt='certificate' class='doc-certificate'>";
                         } else {
@@ -171,7 +188,9 @@
                         <label for="experience">Year of Experience</label>
                     </td>
                     <td>
-                        <input type="number" id="experience" name="experience" placeholder="Enter your years of experience" value="<?php echo isset($experience) ? htmlspecialchars($experience) : ''; ?>">
+                        <input type="number" id="experience" name="experience"
+                            placeholder="Enter your years of experience"
+                            value="<?php echo isset($experience) ? htmlspecialchars($experience) : ''; ?>">
                     </td>
                 </tr>
                 <tr>
@@ -179,7 +198,9 @@
                         <label for="treatmentTime">Time Taken to Treat (in minutes)</label>
                     </td>
                     <td>
-                        <input type="number" id="treatmentTime" name="treatmentTime" placeholder="Enter time taken to treat" value="<?php echo isset($timeSlot) ? htmlspecialchars($timeSlot) : ''; ?>">
+                        <input type="number" id="treatmentTime" name="treatmentTime"
+                            placeholder="Enter time taken to treat"
+                            value="<?php echo isset($timeSlot) ? htmlspecialchars($timeSlot) : ''; ?>">
                     </td>
                 </tr>
                 <tr id="special1" style="display: table-row;">
@@ -187,14 +208,22 @@
                         <label for="specialization1">Specialization </label>
                     </td>
                     <td>
-                        <input type="text" id="specialization1" name="specialization1" placeholder="Enter your specialization">
-                        
+                        <input type="text" id="specialization1" name="specialization1"
+                            placeholder="Enter your specialization">
+
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="2" style="text-align:right;">
+                        <button type="submit" class="submitBtn" name="submit">Edit Profile</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
 
-                
 
-
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" name="changePasswordform">
+            <table class="form-group">
 
 
                 <!-- Change Password -->
@@ -208,10 +237,11 @@
                 <tr>
                     <td><label for="currentPassword">Current Password</label></td>
                     <td>
-                    <div class="password-field">
-                        <input type="password" id="currentPassword" name="currentPassword" placeholder="* * * * * * * *" readonly >
-                        <button type="button" class="toggle-password" ></button>
-                    </div>
+                        <div class="password-field">
+                            <input type="password" id="currentPassword" name="currentPassword"
+                                placeholder="* * * * * * * *" readonly>
+                            <button type="button" class="toggle-password"></button>
+                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -223,8 +253,10 @@
                     <td><label for="newCurrentPassword">Current Password</label></td>
                     <td>
                         <div class="password-field">
-                            <input type="password" id="newCurrentPassword" name="newCurrentPassword" placeholder="Enter your password">
-                            <button type="button" class="toggle-password" onclick="togglePassword('newCurrentPassword')">👁️</button>
+                            <input type="password" id="newCurrentPassword" name="newCurrentPassword"
+                                placeholder="Enter your password">
+                            <button type="button" class="toggle-password"
+                                onclick="togglePassword('newCurrentPassword')">👁️</button>
                         </div>
                     </td>
                 </tr>
@@ -232,8 +264,10 @@
                     <td><label for="newPassword">New Password</label></td>
                     <td>
                         <div class="password-field">
-                            <input type="password" id="newPassword" name="newPassword" placeholder="Enter your new password">
-                            <button type="button" class="toggle-password" onclick="togglePassword('newPassword')">👁️</button>
+                            <input type="password" id="newPassword" name="newPassword"
+                                placeholder="Enter your new password">
+                            <button type="button" class="toggle-password"
+                                onclick="togglePassword('newPassword')">👁️</button>
                         </div>
                     </td>
                 <tr id="password-message">
@@ -246,30 +280,37 @@
                     <td><label for="confirmPassword">Confirm Password</label></td>
                     <td>
                         <div class="password-field">
-                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
-                            <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">👁️</button>
+                            <input type="password" id="confirmPassword" name="confirmPassword"
+                                placeholder="Confirm your password">
+                            <button type="button" class="toggle-password"
+                                onclick="togglePassword('confirmPassword')">👁️</button>
                         </div>
                     </td>
                 </tr>
                 <tr id="cancel-password" style="text-align:right;">
-                    <td colspan="2">
+                    <td style="text-align:left;">
                         <button type="button" class="cancelBtn" onclick="resetPassword()">Cancel</button>
                     </td>
-                </tr>
-                <tr>
-                    <td> 
-                        <button type="submit" class="submitBtn" name="submit" >Save Changes</button>
+                    <td>
+                        <button type="submit" class="cancelBtn" name="passwordChange">Save</button>
                     </td>
                 </tr>
+
             </table>
         </form>
+        <button type="button" class="logoutBtn">
+            Logout
+        </button>
+        <button type="button" class="deleteBtn">
+            Delete Account
+        </button>
     </div>
 </div>
 
-     
 
 
-<script src="../../assets/jsFIles/vetDocotor/profile.js"></script> 
+
+<script src="../../assets/jsFIles/vetDocotor/profile.js"></script>
 
 
 
@@ -306,34 +347,7 @@
 
         $specialization1 = $_POST['specialization1'];
 
-        $newCurrentPassword = $_POST['newCurrentPassword'];
-        $newPassword = $_POST['newPassword'];
-        $confirmPassword = $_POST['confirmPassword'];
-
-        if (isset($newCurrentPassword) && isset($newPassword) && isset($confirmPassword) && !empty($newCurrentPassword) && !empty($newPassword) && !empty($confirmPassword)) {
-            $query = "SELECT password FROM User WHERE email = '$user_id'";
-            $result = mysqli_query($conn, $query);
-            $row = mysqli_fetch_assoc($result);
-            $password = $row['password'];
-            
-
-            if (password_verify($newCurrentPassword, $password)) {
-                if ($newPassword == $confirmPassword) {
-                    $newPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-                    $query = "UPDATE User SET password = '$newPassword' WHERE email = '$user_id'";
-                    $result = mysqli_query($conn, $query);
-                    if ($result) {
-                        echo "<script>alert('Password changed successfully');</script>";
-                    } else {
-                        echo "<script>alert('Password not changed');</script>";
-                    }
-                } else {
-                    echo "<script>alert('Passwords do not match');</script>";
-                }
-            } else {
-                echo "<script>alert('Current password is incorrect');</script>";
-            }
-        }
+        
         
 
         // check up {{{{{{}}}}}}
@@ -494,7 +508,40 @@
                 }
             } 
         }
+    }
 
-        
+
+    // Change password
+    if(isset($_POST['passwordChange'])) {
+        $newCurrentPassword = $_POST['newCurrentPassword'];
+        $newPassword = $_POST['newPassword'];
+        $confirmPassword = $_POST['confirmPassword'];
+
+        if (isset($newCurrentPassword) && isset($newPassword) && isset($confirmPassword) && !empty($newCurrentPassword) && !empty($newPassword) && !empty($confirmPassword)) {
+            $query = "SELECT password FROM User WHERE email = '$user_id'";
+            $result = mysqli_query($conn, $query);
+            $row = mysqli_fetch_assoc($result);
+            $password = $row['password'];
+            
+
+            if (password_verify($newCurrentPassword, $password)) {
+                if ($newPassword == $confirmPassword) {
+                    $newPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+                    $query = "UPDATE User SET password = '$newPassword' WHERE email = '$user_id'";
+                    $result = mysqli_query($conn, $query);
+                    if ($result) {
+                        echo "<script>alert('Password changed successfully');</script>";
+                    } else {
+                        echo "<script>alert('Password not changed');</script>";
+                    }
+                } else {
+                    echo "<script>alert('Passwords do not match');</script>";
+                }
+            } else {
+                echo "<script>alert('Current password is incorrect');</script>";
+            }
+        } else {
+            echo "<script>alert('Please fill all fields');</script>";
+        }   
     }
 ?>
