@@ -1,49 +1,56 @@
-.payment-profile{
-    width: 80%;
+.payment-profile {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
-.payment-profile-inside{
+
+.payment-profile-inside {
     display: flex;
     flex-direction: row;
-   justify-content:center;
-   align-items: center;
-   margin: 20px 100px;
-   border-radius: 40px;
-   background-color: #F1DBFF;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 100px;
+    border-radius: 40px;
+    background-color: #F1DBFF;
 
 }
-.payment-profile-inside-left{
+
+.payment-profile-inside-left {
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.payment-profile-inside-left img{
+
+.payment-profile-inside-left img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-   
+
 }
-.payment-profile-inside-right{
+
+.payment-profile-inside-right {
     width: 60%;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-.payment-profile-inside-right-top{
+
+.payment-profile-inside-right-top {
     display: flex;
     flex-direction: column;
     gap: 30px;
     margin-top: 40px;
     height: 250px;
 }
-.payment-profile-inside-right-down{
+
+.payment-profile-inside-right-down {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.payment-profile-inside-right-down button{
+
+.payment-profile-inside-right-down button {
     padding: 10px;
     font-size: 20px;
     background-color: #B89ACB;
@@ -53,36 +60,44 @@
     cursor: pointer;
     margin-bottom: 20px;
 }
-.payment-profile-inside-right-down button:hover{
+
+.payment-profile-inside-right-down button:hover {
     background-color: #F1DBFF;
 }
+
 .container {
     width: 80%;
     margin: 0 auto;
-  }
-  table {
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-  }
-  thead {
+}
+
+thead {
     background-color: #f0f0f0;
-  }
-  
-  th, td {
+}
+
+th,
+td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-  }
-  
-  th {
+}
+
+th {
     font-weight: bold;
     color: #333;
-  }
-  .admin-navbar-inside-left-inner-1 ul li.active {
-    background-color: #F8ECFF; /* Active background color */
+}
+
+.admin-navbar-inside-left-inner-1 ul li.active {
+    background-color: #F8ECFF;
+    /* Active background color */
 }
 
 .admin-navbar-inside-left-inner-1 ul li.active a {
-    color: #000000; /* Text color for the active link */
+    color: #000000;
+    /* Text color for the active link */
 }

@@ -1,35 +1,41 @@
-.account{
+.account {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 100%;
     gap: 70px;
+    margin: 20px 0px;
 }
-.account-inside{
+
+.account-inside {
     margin: 30px;
     padding: 20px 100px;
-    background-color:#F1DBFF ;
+    background-color: #F1DBFF;
 }
-.account-inside-upper{
+
+.account-inside-upper {
     display: flex;
     flex-direction: row;
     gap: 500px;
 
 }
-.account-inside-upper-1{
- 
-   
+
+.account-inside-upper-1 {
+
+
     padding: 10px 60px;
     background-color: #F1DBFF;
     font-size: 20px;
     font-weight: 700;
 }
-.account-inside-lower{
+
+.account-inside-lower {
     display: flex;
     flex-direction: row;
-    gap: 450px;
+    gap: 500px;
 }
-.account-inside-lower-left form{
+
+.account-inside-lower-left form {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -37,24 +43,29 @@
     border-radius: 10px;
     height: 300px;
     background-color: #F1DBFF;
+
 }
-.account-inside-lower-left form input{
+
+.account-inside-lower-left form input {
     padding: 10px;
     font-size: 20px;
     border-radius: 10px;
 }
-.account-inside-lower-left form button{
+
+.account-inside-lower-left form button {
     padding: 10px;
     font-size: 20px;
     background-color: #B89ACB;
     border-radius: 10px;
     cursor: pointer;
 }
-.account-inside-lower-left form button:hover{
+
+.account-inside-lower-left form button:hover {
     background-color: #8F53B4;
     color: white;
 }
-.account-inside-lower-right form{
+
+.account-inside-lower-right form {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -63,27 +74,32 @@
     border-radius: 10px;
     background-color: #F1DBFF;
 }
-.account-inside-lower-right form input{
+
+.account-inside-lower-right form input {
     padding: 10px;
     font-size: 20px;
     border-radius: 10px;
 }
-.account-inside-lower-right form button{
-    padding: 10px ;
+
+.account-inside-lower-right form button {
+    padding: 10px;
     border-radius: 10px;
     font-size: 20px;
     background-color: #B89ACB;
     cursor: pointer;
 }
-.account-inside-lower-right form button:hover{
+
+.account-inside-lower-right form button:hover {
     background-color: #8F53B4;
     color: white;
 }
+
 .admin-navbar-inside-left-inner-1 ul li.active {
-    background-color: #F8ECFF; /* Active background color */
+    background-color: #F8ECFF;
+    /* Active background color */
 }
 
 .admin-navbar-inside-left-inner-1 ul li.active a {
-    color: #000000; /* Text color for the active link */
+    color: #000000;
+    /* Text color for the active link */
 }
-

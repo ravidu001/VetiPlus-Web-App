@@ -1,7 +1,8 @@
-.pet-account{
-    width: 80%;
+.pet-account {
+    width: 100%;
 }
-.pet-account-inside{
+
+.pet-account-inside {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -12,19 +13,22 @@
     box-shadow: 5px 10px 18px #888888;
 
 }
-.pet-account-inside-left{
-    width: 40%;  
+
+.pet-account-inside-left {
+    width: 40%;
     margin: 10px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.pet-account-inside-left img{
+
+.pet-account-inside-left img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
 }
-.pet-account-inside-right{
+
+.pet-account-inside-right {
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -32,10 +36,13 @@
     gap: 70px;
     padding: 30px;
 }
+
 .admin-navbar-inside-left-inner-1 ul li.active {
-    background-color: #F8ECFF; /* Active background color */
+    background-color: #F8ECFF;
+    /* Active background color */
 }
 
 .admin-navbar-inside-left-inner-1 ul li.active a {
-    color: #000000; /* Text color for the active link */
+    color: #000000;
+    /* Text color for the active link */
 }

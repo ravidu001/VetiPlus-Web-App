@@ -1,36 +1,41 @@
-.doctor_profile{
-    width: 80%;
+.doctor_profile {
+    width: 100%;
 }
-.doctor_profile_top{
+
+.doctor_profile_top {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin: 10px 100px;
-    height: 50%;  
+    height: 50%;
     background-color: #F1DBFF;
     border-radius: 10px;
 }
-.doctor_profile_top_left{
+
+.doctor_profile_top_left {
     width: 35%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.doctor_profile_top_left img{
+
+.doctor_profile_top_left img {
     width: 250px;
     height: 250px;
 }
-.doctor_profile_top_right{
+
+.doctor_profile_top_right {
     width: 65%;
     height: 100%;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     gap: 30px;
 }
-.doctor_profile_down button{
+
+.doctor_profile_down button {
     width: 250px;
     height: 40px;
     background-color: #B89ACB;
@@ -44,7 +49,8 @@
     align-items: center;
     justify-content: center;
 }
-.doctor_profile_down button:hover{
+
+.doctor_profile_down button:hover {
     background-color: #8F53B4;
     color: white;
 }

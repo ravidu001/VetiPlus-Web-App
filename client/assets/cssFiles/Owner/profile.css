@@ -1,5 +1,5 @@
 .profile{
-    width: 80%;
+    width: 100%;
 }
 .profile_top{
     display: flex;
@@ -30,7 +30,7 @@
 }
 .profile_top_inside_right{
     width: 65%;
-    height: 100%;
+    height: 450px;
     display: flex;
     flex-direction:column;
     justify-content: center;

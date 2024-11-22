@@ -1,96 +1,118 @@
 <?php
-// Get the current filename
+// Get the current file name (without query parameters)
 $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../assets/cssFiles/Admin/navbar.css">
-    
-   <title>Navbar</title>
-</head>
-<body>
-<div class="admin-navbar"> 
-    <div class="admin-navbar-inside-left-inner">
-        <img src="../../../assets/images/admin_logo.png" alt="">
-        <h1>VETIPLUS</h1>
-    </div>
-</div>
-<div class="admin-navbar-inside">
-    <div class="admin-navbar-inside-left">
-        <div>
-            <div class="admin-navbar-inside-left-inner-1">
-                <ul>
-                    <li class="<?= ($current_page == 'home.php') ? 'active' : '' ?>">
-                        <img src="../../../assets/images/image_1.png" alt="">
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="home.php">Dashboard</a>
-                    </li>
+<nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../../assets/images/admin_logo.png" alt="logo">
+                </span>
 
-                    <li class="<?= ($current_page == 'accountDashboard.php') ? 'active' : '' ?>">
-                    <img src="../../../assets/images/image_2.png" alt="">
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="accountDashboard.php">Accounts</a>
-                    </li>
+                <div class="text header-text">
+                    <span class="name">VetiPlus</span>
+                    <span class="profession">Pet Care</span>
+                </div>
+            </div>
 
-                    <li class="<?= ($current_page == 'appointment.php') ? 'active' : '' ?>">
-                    <img src="../../../assets/images/image_3.png" alt="">
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="appointment.php">Appointment</a>
-                    </li>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
 
-                    <li class="<?= ($current_page == 'payment.php') ? 'active' : '' ?>">
-                    <img src="../../../assets/images/image_4.png" alt="">
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="payment.php">Payment Transactions</a>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link <?= $current_page == 'home.php' ? 'active' : '' ?>">                        
+                        <a href="home.php">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Dashbord</span>
+                        </a>
                     </li>
+                    <li class="nav-link <?= $current_page == 'accountDashboard.php' ? 'active' : '' ?>">
+                        <a href="accountDashboard.php">
+                            <i class='bx bx-group icon'></i>
+                            <span class="text nav-text"> Account</span>
+                        </a>
+                    </li>
+                    <li class="nav-link <?= $current_page == 'appointment.php' ? 'active' : '' ?>">
+                        <a href="appointment.php">
+                            <i class='bx bx-group icon'></i>
+                            <span class="text nav-text"> Appointment</span>
+                        </a>
+                    </li>
+                    <li class="nav-link <?= $current_page == 'payment.php' ? 'active' : '' ?>">
+                        <a href="payment.php">
+                            <i class='bx bx-group icon'></i>
+                            <span class="text nav-text">Payment</span>
+                        </a>
+                    </li>
+                    <li class="nav-link <?= $current_page == 'feedback.php' ? 'active' : '' ?>">
+                        <a href="feedback.php">
+                            <i class='bx bx-group icon'></i>
+                            <span class="text nav-text">Feedback</span>
+                        </a>
+                    </li>
+                    <li class="nav-link <?= $current_page == 'complain.php' ? 'active' : '' ?>">
+                        <a href="complain.php">
+                            <i class='bx bx-group icon'></i>
+                            <span class="text nav-text">Complain</span>
+                        </a>
+                    </li>
+                    <li class="nav-link" style="display:block">
+                        <a href="#" class="appointment-link">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">System</span>
+                            <i class='bx bxs-down-arrow arrow first icon'></i>
+                        </a>
+                        <!-- Sub-menu should be inside the parent li -->
 
-                    <li class="<?= ($current_page == 'feedback.php') ? 'active' : '' ?>">
-                    <img src="../../../assets/images/image_5.png" alt="">
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="feedback.php">Feedback</a>
-                    </li>
+                        <ul class="sub-menu" >
+                            <li class="nav-link <?= $current_page == 'salonSystem.php' ? 'active' : '' ?>">
+                                <a href="salonSystem.php">
+                                <i class='bx bx-calendar-plus icon' ></i>
+                                    <span class="text nav-text" style="font-size:14px;">Salon System</span>
+                                </a>
+                            </li>
+                            <li class="nav-link <?= $current_page == 'DoctorSystem.php' ? 'active' : '' ?>">
+                                <a href="DoctorSystem.php">
+                                <i class='bx bx-calendar-event icon' ></i>
+                                    <span class="text nav-text" style="font-size:14px;">Doctor System</span>
+                                </a>
+                            </li>
+                        </ul>
 
-                    <li class="<?= ($current_page == 'complain.php') ? 'active' : '' ?>">
-                    <img src="../../../assets/images/image_6.png" alt="">
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="complain.php">Complain & Issues</a>
                     </li>
-
-                    <li class="<?= ($current_page == '') ? 'active' : '' ?>">
-                    <img src="../../../assets/images/image_7.png" alt="">
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="">System</a>
-                        <div class="dropdown">
-                            <a href="salonSystem.php">Salon System</a>
-                            <a href="doctorSystem.php">Doctor System</a>
-                        </div>
-                    </li>
-
-                    <li class="<?= ($current_page == 'profile.php') ? 'active' : '' ?>">
-                    <img src="../../../assets/images/image_11.png" alt="">
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="profile.php">Profile</a>
-                    </li>
+                    <div style="display:none;" id="hiddenListItems-Appointment">
+                        <li style="display:block"></li>
+                        <li style="display:block"></li>
+                    </div>
                 </ul>
             </div>
-        </div>
-        <br><br>
-        <button type="button" title="Click me" onclick="openLogout()">Logout</button>
-    </div>
-</div>
-<div id="modal" class="modalbackground" style="display: none;">
-        <div class="modalcontent">
-            <p>Do you want to Logout?</p>
-            <div class="modalbuttons">
-                <button onclick="confirmLogout()">Yes</button>
-                <button onclick="closeLogout()">No</button>
+
+            <div class="bottom-content">
+                <li class="nav-link <?= $current_page == 'profile.php' ? 'active' : '' ?>">
+                    <a href="profile.php">
+                        <!--<i class='bx bx-log-out icon'></i>-->
+                        <div class="profile">
+                             <img src="../../assets/images/image_8.jpg" alt="">
+                        </div>
+                        <span class="text nav-text"> Profile</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
             </div>
         </div>
-    </div>
-    <script src="../../../assets/jsFIles/Admin/logout.js"></script>
-</body>
-</html>
+    </nav>
+
+    <script src="../../assets/jsFIles/Admin/navbar.js"></script>

@@ -1,64 +1,71 @@
-.home{
+.home-1 {
     background-color: #F8ECFF;
     padding: 20px;
     margin: 30px 100px;
     border-radius: 10px;
-    width: 80%;
-    height: 133px;
+    height: 150px;
     display: flex;
     justify-content: space-between;
 }
-.home-inside{
+
+.home-inside {
     display: flex;
     flex-direction: row;
     gap: 20px;
     align-items: center;
 }
-.home-inside img{
+
+.home-inside img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
-.home-inside-right{
+
+.home-inside-right {
     margin-top: 0px;
     margin-right: 30px;
 }
-.home-inside-right img{
+
+.home-inside-right img {
     width: 100px;
     height: 100px;
 }
-.home-before{
+
+.home-before {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 80%;
+    width: 100%;
 }
-.home-after{
+
+.home-after {
     display: flex;
     flex-direction: row;
-   justify-content: space-between;
-   margin: 0 40px;
+    justify-content: space-between;
+    margin: 0 40px;
 
 }
-.home-after-inside{
-  
-    width: 300px;
-    height: 190px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   padding: 40px;
-    margin: 30px ;
+
+.home-after-inside {
+
+    width: 400px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    margin: 30px;
     border-radius: 20px;
     gap: 20px;
     background-color: #F8ECFF;
     box-shadow: 5px 10px 18px #888888;
 
-    
+
 }
-.home-after-outer{
-    width: 300px;
-    height: 190px;
+
+.home-after-outer {
+    width: 400px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,35 +77,41 @@
     box-shadow: 5px 10px 18px #888888;
 
 }
-.home-after-inside-upper{
+
+.home-after-inside-upper {
     display: flex;
     flex-direction: row;
     gap: 150px;
 }
-.home-below{
+
+.home-below {
     display: flex;
     flex-direction: row;
     gap: 20px;
     justify-content: space-between;
     margin: 0px 70px;
 }
-.home-below-inside{
+
+.home-below-inside {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 300px;
-    height: 190px;
+    width: 400px;
+    height: 250px;
     padding: 40px;
     border-radius: 20px;
     background-color: #F8ECFF;
     box-shadow: 5px 10px 18px #888888;
 
 }
+
 .admin-navbar-inside-left-inner-1 ul li.active {
-    background-color: #F8ECFF; /* Active background color */
+    background-color: #F8ECFF;
+    /* Active background color */
 }
 
 .admin-navbar-inside-left-inner-1 ul li.active a {
-    color: #000000; /* Text color for the active link */
+    color: #000000;
+    /* Text color for the active link */
 }
