@@ -220,9 +220,8 @@
                 </tr>
             </table>
         </form>
-
-
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" name="changePasswordform">
+        
+        <form action="../../../server/controllers/vetDoctor/passwordChange.php" method="post" name="changePasswordform" enctype="multipart/form-data">
             <table class="form-group">
 
 
@@ -311,7 +310,6 @@
 
 
 <script src="../../assets/jsFIles/vetDocotor/profile.js"></script>
-
 
 
 
@@ -511,37 +509,5 @@
     }
 
 
-    // Change password
-    if(isset($_POST['passwordChange'])) {
-        $newCurrentPassword = $_POST['newCurrentPassword'];
-        $newPassword = $_POST['newPassword'];
-        $confirmPassword = $_POST['confirmPassword'];
-
-        if (isset($newCurrentPassword) && isset($newPassword) && isset($confirmPassword) && !empty($newCurrentPassword) && !empty($newPassword) && !empty($confirmPassword)) {
-            $query = "SELECT password FROM User WHERE email = '$user_id'";
-            $result = mysqli_query($conn, $query);
-            $row = mysqli_fetch_assoc($result);
-            $password = $row['password'];
-            
-
-            if (password_verify($newCurrentPassword, $password)) {
-                if ($newPassword == $confirmPassword) {
-                    $newPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-                    $query = "UPDATE User SET password = '$newPassword' WHERE email = '$user_id'";
-                    $result = mysqli_query($conn, $query);
-                    if ($result) {
-                        echo "<script>alert('Password changed successfully');</script>";
-                    } else {
-                        echo "<script>alert('Password not changed');</script>";
-                    }
-                } else {
-                    echo "<script>alert('Passwords do not match');</script>";
-                }
-            } else {
-                echo "<script>alert('Current password is incorrect');</script>";
-            }
-        } else {
-            echo "<script>alert('Please fill all fields');</script>";
-        }   
-    }
+    
 ?>
