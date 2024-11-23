@@ -1,0 +1,82 @@
+.admin{
+    width: 100%;
+}
+.admin-inside{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 100px;
+    justify-content: space-between;
+}
+.admin-inside-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    gap: 20px;
+    width: 32%;
+    background-color: #F1DBFF;
+    box-shadow: 5px 10px 18px #888888;
+}
+.admin-outside{
+    margin: 100px 100px;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    background-color: #F1DBFF;
+}
+.admin-outside-left{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    gap: 20px;
+}
+.admin-outside-left form{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.admin-outside-left input{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.admin-outside-left button{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #B89ACB;
+    color: black;
+    border-radius: 10px;
+    width: 30%;
+    cursor: pointer;
+    align-items: center;
+}
+.admin-outside-left button:hover{
+    background-color: #8F53B4;
+    color: white;
+}
+.admin-outside-right{
+    display: flex;
+    align-items:center;
+    justify-content:right;
+    width: 50%;
+}
+.admin-outside-right a{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #B89ACB;
+    color: black;
+    border-radius: 10px;
+    width: 50%;
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+.admin-outside-right a:hover{
+    background-color: #8F53B4;
+    color: white;
+}

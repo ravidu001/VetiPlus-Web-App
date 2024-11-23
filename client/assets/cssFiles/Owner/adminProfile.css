@@ -1,0 +1,84 @@
+.profile{
+    width: 100%;
+}
+.profile-top-head {
+    margin: 10px 100px;
+    height: 80px;
+    background-color: #E9C5FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-top-head h1{
+    font-size: 35px;
+}
+.profile_top{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+
+}
+.profile_top_inside{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 100px;
+    height: 100%;  
+    background-color: #F1DBFF;
+    border-radius: 10px;
+}
+.profile_top_inside_left{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile_top_inside_left img{
+    width: 250px;
+    height: 250px;
+}
+.profile_top_inside_right{
+    width: 65%;
+    height: 450px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    gap: 20px;
+}
+.profile_down{
+    margin: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
+}
+.profile_down button{
+    width: 250px;
+    height: 40px;
+    background-color: #B89ACB;
+    border-radius: 5px;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+}
+.profile_down button:hover{
+    background-color: #8F53B4;
+    color: white;
+}
+.delete-form{
+    padding: 20px;
+}
+.delete-form input{
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: #B89ACB;
+    padding: 5px;
+}
+.delete-form input:hover{
+    background-color: #8F53B4;
+    color: white;
+}

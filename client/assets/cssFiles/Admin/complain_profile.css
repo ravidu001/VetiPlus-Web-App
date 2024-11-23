@@ -1,10 +1,11 @@
-.complain_profile{
-    width: 80%;
+.complain_profile {
+    width: 100%;
     display: flex;
     flex-direction: column;
-   
+
 }
-.complain_profile_top{
+
+.complain_profile_top {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -13,14 +14,17 @@
     border-radius: 20px;
     background-color: #F8ECFF;
     box-shadow: 5px 10px 18px #888888;
+    height: 350px;
 }
-.complain_profile_top_left img{
+
+.complain_profile_top_left img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin: 10px;
+    margin-top: 70px;
 }
-.complain_profile_top_right{
+
+.complain_profile_top_right {
     display: flex;
     flex-direction: row;
     margin: 10px;
@@ -28,44 +32,50 @@
     justify-content: center;
     gap: 30px;
 }
-.complain_profile_top_right_inner{
-   
-    margin: 10px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.complain_profile_down{
-    display: flex;
-    flex-direction: column;
 
+.complain_profile_top_right_inner {
+
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.complain_profile_down {
+    display: flex;
+    flex-direction: column;
     margin: 10px 100px;
     height: 60%;
     gap: 20px;
 }
-.complain_profile_down_inner{
+
+.complain_profile_down_inner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    box-shadow: 5px 10px 18px #888888;
     border-radius: 10px;
     background-color: #F8ECFF;
-    height: 50%;
+    height: 250px;
 }
-.complain_profile_down_inner img{
+
+.complain_profile_down_inner h1 {
+    margin: 10px;
+}
+
+.complain_profile_down_inner img {
     width: 150px;
     height: 150px;
     border-radius: 5%;
 }
+
 .admin-navbar-inside-left-inner-1 ul li.active {
-    background-color: #F8ECFF; /* Active background color */
+    background-color: #F8ECFF;
+    /* Active background color */
 }
 
 .admin-navbar-inside-left-inner-1 ul li.active a {
-    color: #000000; /* Text color for the active link */
+    color: #000000;
+    /* Text color for the active link */
 }
-
-

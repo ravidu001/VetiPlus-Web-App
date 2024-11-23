@@ -1,50 +1,58 @@
-.appointment-list{
-    width: 80%;
+.appointment-list {
+  width: 100%;
 }
+
 .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  thead {
-    background-color: #f0f0f0;
-  }
-  
-  th, td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  th {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .accept {
-    background-color: #e4d1ff;
-    color: #000;
-  }
-  .cancel {
-    background-color: #ae5df2;
-    color: #fff;
-  }
-  .admin-navbar-inside-left-inner-1 ul li.active {
-    background-color: #F8ECFF; /* Active background color */
+  width: 80%;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background-color: #f0f0f0;
+
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-weight: bold;
+  color: #333;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.accept {
+  background-color: #e4d1ff;
+  color: #000;
+}
+
+.cancel {
+  background-color: #ae5df2;
+  color: #fff;
+}
+
+.admin-navbar-inside-left-inner-1 ul li.active {
+  background-color: #F8ECFF;
+  /* Active background color */
 }
 
 .admin-navbar-inside-left-inner-1 ul li.active a {
-    color: #000000; /* Text color for the active link */
+  color: #000000;
+  /* Text color for the active link */
 }

@@ -1,0 +1,141 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+.calendar-container {
+    min-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-header button {
+    padding: 5px 10px;
+    background: #6A0DAD;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.calendar-day {
+    border: 1px solid #e0e0e0;
+    padding: 8px;
+    min-height: 40px;
+    background: white;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.calendar-day.closed {
+    background: #ead1fc;
+    color: black;
+    cursor: not-allowed;
+}
+
+.calendar-day.open {
+    background: #fff;
+    color: black;
+    border: 1px solid #e0bdf9;
+}
+
+.day-header {
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    background: #f8f9fa;
+    font-size: 0.9em;
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 15px 0;
+}
+
+.time-slot {
+    padding: 8px;
+    background: #6A0DAD;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s;
+    font-size: 0.9em;
+}
+
+.time-slot:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.time-slot.blocked {
+    background:#e0bdf9;
+    color: #6A0DAD;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.time-slot.available {
+    background: #6A0DAD;
+}
+
+.selected-date {
+    background: #e0bdf9 !important;
+    border: 2px solid #6A0DAD !important;
+}
+
+.status-indicators {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot-available { background: #e0bdf9; }
+.dot-blocked { background: #ff5252; }
+.dot-closed { background: #ffebee; }
+
+/* Optional: Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
