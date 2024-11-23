@@ -1,0 +1,1 @@
+vet docotor kenek accept kre nthnm mokada wenne??
