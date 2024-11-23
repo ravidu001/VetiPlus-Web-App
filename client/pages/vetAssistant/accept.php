@@ -20,10 +20,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
-    <title>Home Page</title>
+    <title>Accept Page</title>
     <link rel="stylesheet" href="../../../client/assets/cssFiles/common/navbarHorizontal.css" type="text/css">
-    <link rel="stylesheet" href="../../../client/assets/cssFiles/vetDoctor/homecontent.css" type="text/css">
-    <link rel="stylesheet" href="../../../client/assets/cssFiles/vetDoctor/myReviewContent.css" type="text/css">
+    <link rel="stylesheet" href="../../../client/assets/cssFiles/vetAssitant/acceptcontent.css" type="text/css">
+    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -33,7 +33,7 @@
     <?php include 'navbar.php'; ?>
 
     <section class="home">
-       <?php include 'homecontent.php'; ?>
+       <?php include 'acceptcontent.php'; ?>
     </section>
 
 </body>

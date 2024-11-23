@@ -28,37 +28,37 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </li>
 
                 <ul class="menu-links">
-                    <li class="nav-link <?= $current_page == 'homeNew.php' ? 'active' : '' ?>">                        
-                        <a href="homeNew.php">
+                    <li class="nav-link <?= $current_page == 'home.php' ? 'active' : '' ?>">                        
+                        <a href="home.php">
                             <i class='bx bx-home icon'></i>
                             <span class="text nav-text"> Home</span>
                         </a>
                     </li>
                     <li class="nav-link" style="display:block">
-                        <a href="appointment.php" class="appointment-link">
+                        <a href="#" class="appointment-link">
                             <i class='bx bx-calendar icon'></i>
-                            <span class="text nav-text">Appointment</span>
+                            <span class="text nav-text">Doctor Request</span>
                             <i class='bx bxs-down-arrow arrow first icon'></i>
                         </a>
                         <!-- Sub-menu should be inside the parent li -->
 
                         <ul class="sub-menu" >
-                            <li class="nav-link <?= $current_page == 'newAppointment.php' ? 'active' : '' ?>">
-                                <a href="newAppointment.php">
+                            <li class="nav-link <?= $current_page == 'doctorRequest.php' ? 'active' : '' ?>">
+                                <a href="doctorRequest.php">
                                 <i class='bx bx-calendar-plus icon' ></i>
-                                    <span class="text nav-text" style="font-size:14px;">New Appointment</span>
+                                    <span class="text nav-text" style="font-size:14px;">Request</span>
                                 </a>
                             </li>
-                            <li class="nav-link <?= $current_page == 'viewAppointment.php' ? 'active' : '' ?>">
-                                <a href="viewAppointment.php">
+                            <li class="nav-link <?= $current_page == 'accept.php' ? 'active' : '' ?>">
+                                <a href="accept.php">
                                 <i class='bx bx-calendar-event icon' ></i>
-                                    <span class="text nav-text" style="font-size:14px;">View Appointment</span>
+                                    <span class="text nav-text" style="font-size:14px;">Accept Request</span>
                                 </a>
                             </li>
-                            <li class="nav-link <?= $current_page == 'historyAppointment.php' ? 'active' : '' ?>">
-                                <a href="historyAppointment.php">
+                            <li class="nav-link <?= $current_page == 'requestHistory.php' ? 'active' : '' ?>">
+                                <a href="requestHistory.php">
                                 <i class='bx bx-calendar-check icon' ></i>
-                                    <span class="text nav-text" style="font-size:14px;"> History</span>
+                                    <span class="text nav-text" style="font-size:14px;">Request History</span>
                                 </a>
                             </li>
                         </ul>

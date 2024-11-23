@@ -11,16 +11,16 @@
 -->
     <div class="field-container">
         <div class="field-name">Start Date and Time</div>
-        <div class="field-value">2024-08-10, 15:00</div>  
+        <div class="field-value">2024-11-30, 15:00</div>  
 
         <div class="field-name">End Date and Time</div>
-        <div class="field-value">2024-08-10, 17:00</div>
+        <div class="field-value">2024-11-30, 18:00</div>
     </div>
 
     <div class="field-name">Address</div>
     <div class="field-value">147, Galthude, Panadura</div>
 
-    <div class="field-name">Assistant Details</div>
+    <div class="field-name">Doctor Details</div>
     <table class="assistant-details">
         <tr>
             <td> <div class="assistant-profile"><img src="../../assets/images/doctorprofile.jpg" alt="assistant1" class="assistant-pic"> </div></td>
@@ -33,10 +33,10 @@
 
             </td>
             <td> 
-                <p>  John Doe </p>
-                <p> 27 </p>
-                <p>  None </p>
-                <p>  3 </p>
+                <p>  Dr. Kasun Perera </p>
+                <p> 30 </p>
+                <p>  Surgery Specialist </p>
+                <p>  5 </p>
                 <p>  4.5 </p>
             </td>
         </tr>
@@ -122,7 +122,7 @@
                 <p> 2 years </p>
              </td>
             <td>  0771234567 </td>
-            <td>  15:00 </td>
+            <td>  15:40 </td>
         </tr>
         <tr>
             <td> 2 </td>
@@ -135,7 +135,7 @@
                 <p> 1 year </p>
              </td>
             <td>  0777654321 </td>
-            <td>  16:30 </td>
+            <td>  16:20 </td>
         </tr>
     </table>
 
@@ -160,7 +160,7 @@
                 <p> 2 years </p>
              </td>
             <td>  0771234567 </td>
-            <td>  15:00 </td>
+            <td>  15:20 </td>
         </tr>
         <tr>
             <td> 2 </td>
@@ -173,7 +173,7 @@
                 <p> 1 year </p>
              </td>
             <td>  0777654321 </td>
-            <td>  16:30 </td>
+            <td>  16:00 </td>
             <td> 
             </td>
         </tr>

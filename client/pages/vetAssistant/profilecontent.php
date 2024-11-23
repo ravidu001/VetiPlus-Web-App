@@ -2,6 +2,18 @@
 <div class="main-container1">
     <div class="profile-pic">
     <?php
+        /*if(!isset($_SESSION['user_id'])) {
+            die("User ID not set in session");
+        } else {
+            echo "<script>alert('".$_SESSION['user_id']."');</script>";
+        }
+
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        } else {
+            echo "<script>alert('Connection successful');</script>";
+        }
+        */
             // Ensure $conn and $user_id are defined
             if (isset($conn) && isset($user_id)) {
                 // Sanitize the user ID to prevent SQL injection
@@ -15,10 +27,30 @@
                 if ($result) {
                     if (mysqli_num_rows($result) > 0) {
                         $row = mysqli_fetch_assoc($result);
-                        $image = $row['profilePicture'];
-                        echo "<img src='../../assets/images/vetDoctor/profile/$image' alt='profile pict'>";
+                        // $image = $row['profilePicture'];
+                        
+                        if (empty($image)) {
+                            echo "<img src='../../assets/images/vetDoctor/profile/defaultProfile.png' alt='defaul' class='picture'>";
+                        } else {
+                            echo "<img src='../../assets/images/vetDoctor/profile/$image' alt='profile' class='picture'>";
+                        }
+                        // echo "<img src='../../assets/images/vetDoctor/profile/defaultProfile.png' alt='profile pictu'>";
+
+                        // Pre-fill form fields with existing data
+                        // $fullName = $row['fullName'];
+                        // $contactNumber = $row['contactNumber'];
+                        // $address = $row['address'];
+                        // $NIC = $row['NIC'];
+                        // $DOB = $row['DOB'];
+                        // $gender = $row['gender'];
+                        // $experience = $row['experience'];
+                        // $bio = $row['bio'];
+                        // $doctorCertificate = $row['doctorCertificate'];
+                        // $timeSlot = $row['timeSlot']; 
+                        // $specialization = $row['specialization'];
+
                     } else {
-                        echo "<img src='../../assets/images/vetDoctor/profile/defaultProfile.png' alt='profile pictu'>";
+                        echo "<img src='../../assets/images/vetDoctor/profile/defaultProfile.png' alt='profile pictu' class='picture'>";
                     }
                 } else {
                     // Handle query error
@@ -34,15 +66,15 @@
         <!--<i class='bx bx-edit-alt'></i>-->
 
     </div>
-    <input type="file" class="box" id="box" accept="image/jpg, image/jpeg, image/png">
-
-    <div class="sub-heading">
-        johndoe@gmail.com </br>
-        Veterinary Assistant
-    </div>
 
     <div class="form-container">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" name="doctorProfile">
+            <input type="file" class="box" id="box" name="image" accept="image/jpg, image/jpeg, image/png">
+
+            <div class="sub-heading">
+                <?php echo isset($user_id) ? htmlspecialchars($user_id) : ''; ?></br>
+                Veterinarian
+            </div>
             <table class="form-group">
                 <tr>
                     <td colspan="2">
@@ -134,45 +166,18 @@
                         <input type="number" id="experience" name="experience" placeholder="Enter your years of experience">
                     </td>
                 </tr>
+                
+                <!-- Specialization -->
                 <tr id="special1" style="display: table-row;">
                     <td>
-                        <label for="specialization1">Specialization 1</label>
+                        <label for="specialization1">Specialization </label>
                     </td>
                     <td>
-                        <input type="text" id="specialization1" name="specialization1" placeholder="Enter your specialization">
-                        <input type="file" id="certificate1" name="certificate1" accept=".jpeg, .jpg">
+                        <input type="text" id="specialization1" name="specialization1"
+                            placeholder="Enter your specialization" value="<?php echo isset($specialization) ? htmlspecialchars($specialization) : ''; ?>">
+
                     </td>
                 </tr>
-
-                <tr id="special2" style="display: none;">
-                    <td>
-                        <label for="specialization2">Specialization 2</label>
-                    </td>
-                    <td>
-                        <input type="text" id="specialization2" name="specialization2" placeholder="Enter your specialization">
-                        <input type="file" id="certificate2" name="certificate2" accept=".jpeg, .jpg">
-                    </td>
-                </tr>
-
-                <tr id="special3" style="display: none;">
-                    <td>
-                        <label for="specialization3">Specialization 3</label>
-                    </td>
-                    <td>
-                        <input type="text" id="specialization3" name="specialization3" placeholder="Enter your specialization">
-                        <input type="file" id="certificate3" name="certificate3" accept=".jpeg, .jpg">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2" style="text-align:right;">
-                            <button type="button" class="addBtn" onclick="addSpecialization()">Add more...</button>
-                    </td>
-                </tr>
-
-
-
-
 
                 <!-- other details -->
                 <tr>
@@ -200,10 +205,20 @@
                         <input type="number" id="chargePerHour" name="chargePerHour" placeholder="Enter your charge per hour">
                     </td>
                 </tr>
-                
+                <tr>
+                    <td colspan="2" style="text-align:right;">
+                        <button type="submit" class="submitBtn" name="submit">Edit Profile</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
 
 
 
+
+
+        <form action="../../../server/controllers/vetAssistant/passwordChange.php" method="post" name="changePasswordform" enctype="multipart/form-data">
+            <table class="form-group">
 
 
                 <!-- Change Password -->
@@ -217,10 +232,11 @@
                 <tr>
                     <td><label for="currentPassword">Current Password</label></td>
                     <td>
-                    <div class="password-field">
-                        <input type="password" id="currentPassword" name="currentPassword" placeholder="Enter your password">
-                        <button type="button" class="toggle-password" onclick="togglePassword('currentPassword')">👁️</button>
-                    </div>
+                        <div class="password-field">
+                            <input type="password" id="currentPassword" name="currentPassword"
+                                placeholder="* * * * * * * *" readonly>
+                            <button type="button" class="toggle-password"></button>
+                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -232,8 +248,10 @@
                     <td><label for="newCurrentPassword">Current Password</label></td>
                     <td>
                         <div class="password-field">
-                            <input type="password" id="newCurrentPassword" name="newCurrentPassword" placeholder="Enter your password">
-                            <button type="button" class="toggle-password" onclick="togglePassword('newCurrentPassword')">👁️</button>
+                            <input type="password" id="newCurrentPassword" name="newCurrentPassword"
+                                placeholder="Enter your password">
+                            <button type="button" class="toggle-password"
+                                onclick="togglePassword('newCurrentPassword')">👁️</button>
                         </div>
                     </td>
                 </tr>
@@ -241,32 +259,48 @@
                     <td><label for="newPassword">New Password</label></td>
                     <td>
                         <div class="password-field">
-                            <input type="password" id="newPassword" name="newPassword" placeholder="Enter your new password">
-                            <button type="button" class="toggle-password" onclick="togglePassword('newPassword')">👁️</button>
+                            <input type="password" id="newPassword" name="newPassword"
+                                placeholder="Enter your new password">
+                            <button type="button" class="toggle-password"
+                                onclick="togglePassword('newPassword')">👁️</button>
                         </div>
                     </td>
+                <tr id="password-message">
+                    <td colspan="2" style="text-align:right; margin-right: 10px; margin-top:0px; ">
+                        <div id="passwordMessage" style="color: red;"></div>
+                    </td>
+                </tr>
                 </tr>
                 <tr id="confirm-password">
                     <td><label for="confirmPassword">Confirm Password</label></td>
                     <td>
                         <div class="password-field">
-                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
-                            <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">👁️</button>
+                            <input type="password" id="confirmPassword" name="confirmPassword"
+                                placeholder="Confirm your password">
+                            <button type="button" class="toggle-password"
+                                onclick="togglePassword('confirmPassword')">👁️</button>
                         </div>
                     </td>
                 </tr>
                 <tr id="cancel-password" style="text-align:right;">
-                    <td colspan="2">
+                    <td style="text-align:left;">
                         <button type="button" class="cancelBtn" onclick="resetPassword()">Cancel</button>
                     </td>
-                </tr>
-                <tr>
                     <td>
-                        <button type="submit" class="submitBtn" name="submit">Save Changes</button>
+                        <button type="submit" class="cancelBtn" name="passwordChange">Save</button>
                     </td>
                 </tr>
+
             </table>
         </form>
+        <button type="button" class="logoutBtn" onclick="window.location.href='../../../client/pages/login-singup/logout.php'">
+            Logout
+        </button>
+        <a href="../../../server/controllers/vetAssistant/deleteProfile.php?user_id=<?php echo urlencode($user_id); ?>">
+            <button type="button" class="deleteBtn">
+                Delete Account
+            </button>
+        </a>
     </div>
 </div>
 

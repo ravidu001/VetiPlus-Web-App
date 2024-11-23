@@ -23,6 +23,7 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="../../../client/assets/cssFiles/common/navbarHorizontal.css" type="text/css">
     <link rel="stylesheet" href="../../../client/assets/cssFiles/vetDoctor/homecontent.css" type="text/css">
+    <link rel="stylesheet" href="../../../client/assets/cssFiles/vetDoctor/myReviewContent.css" type="text/css">`
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
