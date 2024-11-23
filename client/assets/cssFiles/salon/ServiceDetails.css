@@ -1,18 +1,20 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
-.sidebarandsevice{
+.sidebarandsevice {
     display: flex;
+    gap: 1rem;
 }
 
 .Service-details {
     width: 90%;
-    margin: 20px auto;
+    margin: 25px auto;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
@@ -20,101 +22,51 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Topic Styles */
-.Service-details .service-topic {
-    color: rebeccapurple;
-    text-align: center;
-    padding: 30px;
+/* Header and Content Section */
+.header-name {
+    color: #6A0DAD;
+    /* margin-bottom: 1.5rem; */
 }
 
-.Service-details .content-1{
-    display:flex;
+.Service-details .content-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 1.5rem; */
 }
 
-.Service-details a{
-    text-decoration: none;
-    color: #f2f2f2;
-}
-/* Add Button */
+/* Preserve Original Button Styles */
 .Service-details .add {
-    display:table-column;
+    display: table-column;
     margin: 10px 0;
     margin-right: auto;
     padding: 8px 12px;
     width: 70px;
     font-size: 16px;
-    color: #ffffff;
+    color: #6A0DAD;
+    background-color: white;
     background-color: #3d0466;
-    border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-
 .Service-details .add:hover {
-    background-color: #b76feb;
-    color: black;
+    background-color: #6A0DAD;
+    color: #fff;
 }
 
-/* Table Styles */
-.Service-details table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-.Service-details table th, table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.Service-details table th {
-    font-size: 18px;
-    background-color: #f8f9fa;
-    color: #333;
-    align-items: center;
-    justify-content: center;
-}
-
-.Service-details table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-/* Image Styles */
-.Service-details .service-photo {
-    width: 300px;
-    height: auto;
-    border-radius: 4px;
-    display: grid;
-    padding: 1rem;
-    border: 3px solid black;
-}
-
-/* Description Styles */
-.Service-details td {
-    vertical-align: top;
-}
-
-.Service-details td img {
-    max-width: 300px;
-    height: auto;
-    border-radius: 4px;
-}
-
-/* Action Buttons */
 .Service-details button {
+    margin-left: 3rem;
     display: grid;
     padding: 8px 12px;
     font-size: 14px;
-    color: #ffffff;
+    color: #6A0DAD;
     width: 70px;
-    background-color: #3d0466;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 0.5rem;
     transition: background-color 0.3s ease;
 }
 
@@ -125,33 +77,155 @@ body {
 
 .Service-details button.delete:hover {
     background-color: #ab5fe1;
-    color:black;
+    color: black;
 }
 
 .Service-details button.edit {
+    margin-bottom: 5px;
     background-color: #3d0466;
 }
 
 .Service-details button.edit:hover {
     background-color: #ab5fe1;
-    color:black;
+    color: black;
+}
+
+/* Enhanced Table Styles */
+.Service-details table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+}
+
+.Service-details table th {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 1rem;
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 2px solid #6A0DAD;
+}
+
+.Service-details table td {
+    padding: 1rem;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Nested Table Styles */
+.Service-details table td table {
+    margin: 0;
+    width: 100%;
+}
+
+.Service-details table td table td {
+    padding: 0.5rem;
+    border: none;
+    vertical-align: middle;
+}
+
+.Service-details table td table tr:first-child td {
+    padding-top: 0;
+}
+
+/* Image Styles */
+.Service-details .service-photo {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #292929;
+    transition: transform 0.3s ease;
+    margin: 0.2rem;
+}
+
+.Service-details .service-photo:hover {
+    transform: scale(2.05);
+}
+
+/* service details name ,description and charge css */
+
+/* Service Name styling */
+.ServiceName {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+/* Service Price styling */
+.ServicePrice {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* charge */
+.charge {
+    text-align: center;
+}
+
+/* Service Description styling */
+.ServiceDescription {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a5568;
+    max-width: 500px; /* Limit width for better readability */
+    margin: 0;
+    padding: 10px 0;
+    /* In case of long descriptions, add ellipsis */
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Show only 4 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Optional: Add hover effect to see full description */
+.ServiceDescription:hover {
+    -webkit-line-clamp: unset; /* Show full text on hover */
+    cursor: pointer;
+}
+
+/* Links */
+.Service-details a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Description Column */
+.Service-details td[colspan="4"] {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Even Row Background */
+.Service-details table tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    body{
-        border: #6A0DAD;
-    }
-    table {
-        display:table;
-        width: 100%;
-        box-sizing: border-box;
+    .Service-details {
+        width: 95%;
+        padding: 15px;
     }
 
-    th, td {
-        text-align: right;
+    .Service-details table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .Service-details .content-1 {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    table th, table td {
+        text-align: left;
         padding: 10px;
-        border-bottom: 1px solid #ddd;
     }
 
     th::before, td::before {
@@ -160,17 +234,12 @@ body {
         font-weight: bold;
     }
 
-    td::before {
-        content: "";
-    }
-
-    button{
-        padding: 5px;
-        margin:5px;
+    .Service-details .service-photo {
+        width: 120px;
     }
 }
 
-/* Optional: Add smooth scrolling for the whole page */
+/* Optional: Smooth Scrolling */
 html {
     scroll-behavior: smooth;
 }
