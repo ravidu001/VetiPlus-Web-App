@@ -113,8 +113,6 @@
     padding: 20px;
 }
 canvas {
-    max-width: 600px;
-    margin: 0 auto;
     height: 400px;
     border: 3px solid var(--background-primary);
     box-shadow: 20px 20px 25px rgba(213, 212, 212, 0.3);
@@ -125,7 +123,7 @@ table {
     font-size: 12px; /* Smaller font size */
     box-shadow: 10px 10px 15px rgba(163, 161, 161, 0.3);
     height: 240px;
-    padding: 30px;
+    padding: 20px;
 }
 
 th, td {
