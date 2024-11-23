@@ -1,3 +1,13 @@
+
+<?php
+
+include __DIR__ . '/../../../server/controllers/salon/AddSalonService.php';
+// include (__DIR__ . '../../../server/config/phpConfig.php');
+// require ('../../../server/config/phpConfig.php')
+// require ("../../../server/controllers/salon/AddSalonService.php")
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,16 +22,16 @@
         <div class="form-wrapper">
             <a href="./ServiceDetails.php"><i class="fa-solid fa-circle-xmark pageclose"></i></a>
                 <h1 class="form-title">Add New Pet Salon Service</h1>
-            
-            <form id="serviceForum" class="service-form" action="../../../server/controllers/AddSalonService.php" method="POST">
+
+            <form id="serviceForum" class="service-form" action= "../../../server/controllers/salon/AddSalonService.php" method="POST" enctype="multipart/form-data">
                 <!-- Service Name -->
                 <div class="form-group">
                     <label for="serviceName">
                         <i class="fas fa-paw"></i> Service Name <span class="required">*</span>
                     </label>
-                    <input type="text" 
-                           id="serviceName" 
-                           name="serviceName" 
+                    <input type="text"
+                           id="serviceName"
+                           name="serviceName"
                            placeholder="e.g., Premium Dog Grooming"
                            required>
                 </div>
@@ -29,12 +39,12 @@
                 <!-- Service Charge -->
                 <div class="form-group">
                     <label for="serviceCharge">
-                        <i class="fas fa-dollar-sign"></i> Service Charge <span class="required">*</span>
+                        <i class="fa-solid fa-rupee-sign"></i> Service Charge <span class="required">*</span>
                     </label>
                     <div class="price-input-wrapper">
-                        <input type="number" 
-                               id="serviceCharge" 
-                               name="serviceCharge" 
+                        <input type="number"
+                               id="serviceCharge"
+                               name="serviceCharge"
                                placeholder="0.00"
                                step="0.01"
                                min="0"
@@ -47,9 +57,9 @@
                     <label for="serviceTime">
                         <i class="fas fa-clock"></i> Service Time (minutes) <span class="required">*</span>
                     </label>
-                    <input type="number" 
-                           id="serviceTime" 
-                           name="serviceTime" 
+                    <input type="number"
+                           id="serviceTime"
+                           name="serviceTime"
                            placeholder="30"
                            min="0"
                            required>
@@ -60,8 +70,8 @@
                     <label for="serviceDescription">
                         <i class="fas fa-info-circle"></i> Description
                     </label>
-                    <textarea id="serviceDescription" 
-                              name="serviceDescription" 
+                    <textarea id="serviceDescription"
+                              name="serviceDescription"
                               placeholder="Enter service description..."
                               rows="4"></textarea>
                 </div>
@@ -80,13 +90,13 @@
                             <div class="upload-button">
                                 <i class="fas fa-upload"></i>
                                 <span>Upload Image 1</span>
-                                <input type="file" 
-                                       id="photo1" 
-                                       name="photo1" 
+                                <input type="file"
+                                       id="image1"
+                                       name="photo1"
                                        accept="image/*"
                                        class="file-input">
                             </div>
-                        </div> 
+                        </div>
 
                         <!-- Second Image Upload -->
                          <div class="image-upload-box">
@@ -96,9 +106,9 @@
                             <div class="upload-button">
                                 <i class="fas fa-upload"></i>
                                 <span>Upload Image 2</span>
-                                <input type="file" 
-                                       id="photo2" 
-                                       name="photo2" 
+                                <input type="file"
+                                       id="image2"
+                                       name="photo2"
                                        accept="image/*"
                                        class="file-input">
                             </div>
@@ -107,11 +117,12 @@
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="submit-button">
+                <button type="submit" name="submit" class="submit-button">
                     <i class="fas fa-plus-circle"></i> Add Service
                 </button>
             </form>
         </div>
     </div>
 </body>
+    <script src="../../assets/jsFIles/salon/UploadImage.js"></script> 
 </html>
