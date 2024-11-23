@@ -176,3 +176,77 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+
+/* Mobile Responsive Design */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .calendar-container {
+        min-width: 100%;
+        padding: 10px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .date-selector {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .date-input,
+    .date-button,
+    .selectdate {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .calendar-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .calendar-header button {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .calendar-grid {
+        grid-template-columns: repeat(3, 1fr); /* Reduce columns for better visibility */
+        gap: 10px;
+    }
+
+    .calendar-day {
+        padding: 5px;
+        font-size: 0.8em;
+        min-height: 50px; /* Adjust for better touch targets */
+    }
+
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr); /* Adjust for smaller screens */
+        gap: 10px;
+    }
+
+    .time-slot {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+
+    .status-indicators {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 0.7em;
+    }
+
+    .status-indicator {
+        gap: 3px;
+    }
+
+    .status-dot {
+        width: 8px;
+        height: 8px;
+    }
+}

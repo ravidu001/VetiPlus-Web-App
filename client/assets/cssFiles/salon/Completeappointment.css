@@ -155,3 +155,100 @@ button.ok:hover {
 html {
     scroll-behavior: smooth;
 }
+
+
+/* Mobile Responsive Design */
+@media (max-width: 480px) {
+    .sidebarandappointmentcontent {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .appointmentcontent {
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .calendarpart {
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: none;
+        border-radius: 5px;
+    }
+
+    .selectdatebox {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .selectdateboxname {
+        font-size: 1rem;
+    }
+
+    .selectdateboxname .icon {
+        margin-left: 5px;
+    }
+
+    .enterdate input[type="date"] {
+        width: 100%;
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+
+    button.cancel,
+    button.ok {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 8px;
+        margin-top: 10px;
+    }
+
+    .calendar {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .appointmentdetailpart {
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
+
+    .upcomingappointmentdetails h3 {
+        font-size: 1.5rem;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .userdetail table {
+        font-size: 0.9rem;
+        box-shadow: none;
+        padding: 5px;
+    }
+
+    .userdetail th,
+    .userdetail td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    .userdetail td button {
+        padding: 5px;
+    }
+
+    .user {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .user img {
+        width: 25px;
+        height: 25px;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
