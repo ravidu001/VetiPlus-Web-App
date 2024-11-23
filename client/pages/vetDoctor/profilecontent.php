@@ -301,7 +301,7 @@
         <button type="button" class="logoutBtn">
             Logout
         </button>
-        <a href="deleteAccount.php">
+        <a href="../../../server/controllers/vetDoctor/deleteProfile.php?user_id=<?php echo urlencode($user_id); ?>">
             <button type="button" class="deleteBtn">
                 Delete Account
             </button>
