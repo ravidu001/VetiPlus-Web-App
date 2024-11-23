@@ -13,7 +13,7 @@
         $password = mysqli_real_escape_string($conn, $_POST['password']);
         $repassword = mysqli_real_escape_string($conn, $_POST['repassword']);
 
-        $select = mysqli_query($conn, "SELECT * FROM `User` WHERE email='$email' AND password='$password'") or die('query failed');
+        $select = mysqli_query($conn, "SELECT * FROM `User` WHERE email='$email'") or die('query failed');
 
         if (mysqli_num_rows($select) > 0) {
             $message[] = 'User already exists';
@@ -26,8 +26,9 @@
 
                 if ($insert) {
                     $message[] = 'Registered successfully!';
-                    header('Location: login.php');
-                    exit();
+                    echo "<script>
+                    window.location.href = './login.php';
+                    </script>";
                 } else {
                     $message[] = 'Registration failed!';
                 }
