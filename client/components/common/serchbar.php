@@ -45,9 +45,10 @@
 </head>
 <body>
     <div class="searchbar">
-        <input class="search" type="text" placeholder="Search...">
+        <input class="search" type="text" placeholder="Search..."> 
         <i class="fas fa-search search-icon"></i>
         <h3 class="A">A</h3>
     </div>
 </body>
+    <script src="../../assets/jsFIles/salon/SearchService.js"></script>
 </html>
