@@ -79,12 +79,11 @@ body {
 
 /* Image Styles */
 .SpecialOffers .OfferImage {
-    width: 300px;
+    width: 120px;
     height: auto;
     border-radius: 4px;
     display: grid;
-    padding: 1rem;
-    border: 3px solid black;
+    border: 3px solid rgb(60, 60, 60);
 }
 
 /* Description Styles */
