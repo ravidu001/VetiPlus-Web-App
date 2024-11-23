@@ -1,25 +1,30 @@
 <?php
+session_start(); // Start the session if not already started
+include '../../../server/config/config.php'; // Include your database connection file
+
 if (isset($_GET['user_id'])) {
     $user_id = urldecode($_GET['user_id']);
+    $user_id = mysqli_real_escape_string($conn, $user_id); // Sanitize the user_id
+
     // Proceed with deleting the profile using $user_id
-    // Example:
-    // $query = "DELETE FROM vetDoctor WHERE doctorID = '$user_id'";
-    // mysqli_query($conn, $query);
-    echo "<script>alert('User ID: .$user_id. will be deleted');</script>";
-} else {
-    echo "<script>alert('User ID not found');</script>";
-}
+    $query = "DELETE FROM vetDoctor WHERE doctorID = '$user_id'";
+    $result = mysqli_query($conn, $query);
 
-$query = "DELETE FROM vetDoctor WHERE doctorID = '$user_id'";
-$result= mysqli_query($conn, $query);
-if ($result) {
-    echo "<script>alert('Profile deleted successfully');
-        window.location.href = '../../../client/pages/login-signup/login.php';
+    if ($result) {
+        echo "<script>
+            alert('Profile deleted successfully');
+            window.location.href = '../../../client/pages/login-singup/login.php';
         </script>";
+    } else {
+        echo "<script>
+            alert('Profile not deleted');
+            window.location.href = '../../../client/pages/vetDoctor/profile.php';
+        </script>";
+    }
 } else {
-    echo "<script>alert('Profile not deleted');
+    echo "<script>
+        alert('User ID not found');
         window.location.href = '../../../client/pages/vetDoctor/profile.php';
-        </script>";
+    </script>";
 }
-
 ?>

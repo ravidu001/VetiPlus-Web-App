@@ -191,6 +191,7 @@
                     </script>";
                 }
             } else {
+                $gender = $_POST['gender'];
                 echo "<script>alert('User ID: $user_id" .
                 "Image: $image" .
                 "Contact Number: $contactNumber" .
@@ -232,17 +233,9 @@
                     $timeSlot,
                     '$specialization1'
                 )";
-
+               
                echo "<script>alert('hello');</script>";
                if(mysqli_query($conn, $query)) {
-                    echo "<script>alert('Profile added successfully');</script>";
-                } else {
-                    echo "<script>alert('Profile not Added');</script>";
-                }
-                
-
-                echo "<script>alert('$result ekata psse');</script>";
-                if($result) {
                     echo "<script>alert('Profile added successfully');</script>";
                 } else {
                     echo "<script>alert('Profile not Added');</script>";

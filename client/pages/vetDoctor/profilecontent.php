@@ -67,6 +67,9 @@
     </div>
 
     <div class="form-container">
+        <?php
+            // echo "<script>alert('".$gender."');</script>";
+        ?>
         <form action="../../../server/controllers/vetDoctor/profile.php" method="post" name="doctorProfile"
         enctype="multipart/form-data">
 
@@ -91,7 +94,7 @@
                     </td>
                     <td>
                         <input type="text" id="name" name="name" placeholder="Enter your name"
-                            value="<?php echo isset($fullName) ? htmlspecialchars($fullName) : ''; ?>">
+                            value="<?php echo isset($fullName) ? htmlspecialchars($fullName) : ''; ?>" required>
                     </td>
                 </tr>
                 <tr>
@@ -101,7 +104,7 @@
                     <td>
                         <input type="date" id="DOB" name="DOB"
                             value="<?php echo isset($DOB) ? htmlspecialchars($DOB) : ''; ?>"
-                            <?php echo isset($DOB) ? 'readonly' : ''; ?>>
+                            <?php echo isset($DOB) ? 'readonly' : ''; ?> required>
                     </td>
                 </tr>
                 <tr>
@@ -111,7 +114,7 @@
                     <td>
                         <input type="text" id="NIC" name="NIC" placeholder="Enter your NIC number"
                             value="<?php echo isset($NIC) ? htmlspecialchars($NIC) : ''; ?>"
-                            <?php echo isset($NIC) ? 'readonly' : ''; ?>>
+                            <?php echo isset($NIC) ? 'readonly' : ''; ?> required>
                     </td>
                 </tr>
                 <tr>
@@ -121,7 +124,7 @@
                     <td>
                         <input type="text" id="contactNumber" name="contactNumber" maxlength="10"
                             placeholder="Enter your phone number"
-                            value="<?php echo isset($contactNumber) ? htmlspecialchars($contactNumber) : ''; ?>">
+                            value="<?php echo isset($contactNumber) ? htmlspecialchars($contactNumber) : ''; ?>" required>
                     </td>
                 </tr>
                 <tr>
@@ -135,7 +138,7 @@
                     </td>
                     <td>
                         <input type="text" id="address" name="address" placeholder="Enter your permanent address"
-                            value="<?php echo isset($address) ? htmlspecialchars($address) : ''; ?>">
+                            value="<?php echo isset($address) ? htmlspecialchars($address) : ''; ?>" required>
                     </td>
                 </tr>
                 <tr>
@@ -143,11 +146,24 @@
                         <label for="gender">Gender</label>
                     </td>
                     <td>
-                        <input type="radio" id="gender1" name="gender" value="male"
-                            <?php echo (isset($gender) && $gender == 'male') ? 'checked' : ''; ?><?php echo isset($gender) && $gender == 'male' ? 'disabled' : ''; ?>>Male
-                        <input type="radio" id="gender2" name="gender" value="female" class="female"
-                            <?php echo (isset($gender) && $gender == 'female') ? 'checked' : ''; ?>
-                            <?php echo isset($gender) && $gender == 'female' ? 'disabled' : ''; ?>>Female
+                    <input type="radio" id="gender1" name="gender" value="male"
+                        <?php
+                        if ($gender == '') {
+                            echo 'checked';
+                        } elseif ($gender == 'male') {
+                            echo 'checked';
+                        } elseif ($gender == 'female') {
+                            echo 'disabled';
+                        }
+                        ?>>Male
+                    <input type="radio" id="gender2" name="gender" value="female" class="female"
+                        <?php
+                        if ($gender == 'female') {
+                            echo 'checked';
+                        } elseif ($gender == 'male') {
+                            echo 'disabled';
+                        }
+                        ?>>Female
                     </td>
                 </tr>
                 <tr>
@@ -191,7 +207,7 @@
                     <td>
                         <input type="number" id="experience" name="experience"
                             placeholder="Enter your years of experience"
-                            value="<?php echo isset($experience) ? htmlspecialchars($experience) : ''; ?>">
+                            value="<?php echo isset($experience) ? htmlspecialchars($experience) : ''; ?>" required>
                     </td>
                 </tr>
                 <tr>
@@ -201,7 +217,7 @@
                     <td>
                         <input type="number" id="treatmentTime" name="treatmentTime"
                             placeholder="Enter time taken to treat"
-                            value="<?php echo isset($timeSlot) ? htmlspecialchars($timeSlot) : ''; ?>">
+                            value="<?php echo isset($timeSlot) ? htmlspecialchars($timeSlot) : ''; ?>" required>
                     </td>
                 </tr>
                 <tr id="special1" style="display: table-row;">
