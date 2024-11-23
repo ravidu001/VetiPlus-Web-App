@@ -27,9 +27,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <h2>Daily Appointment</h2>
                 <h2>345</h2>
             </div>
-            <div class="Appoinment-inside-right">
+            <div class="Appoinment-inside-left">
                 <h2>Daily Cancel Appointment</h2>
                 <h2>23</h2>
+            </div>
+            <div class="Appoinment-inside-left">
+                <h2>Total Appointment</h2>
+                <h2>2356</h2>
             </div>
         </div>
         <div class="Appoinment-outside">

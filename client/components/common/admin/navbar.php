@@ -36,31 +36,31 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     </li>
                     <li class="nav-link <?= $current_page == 'appointment.php' ? 'active' : '' ?>">
                         <a href="appointment.php">
-                            <i class='bx bx-group icon'></i>
+                        <i class='bx bx-calendar icon'></i>
                             <span class="text nav-text"> Appointment</span>
                         </a>
                     </li>
                     <li class="nav-link <?= $current_page == 'payment.php' ? 'active' : '' ?>">
                         <a href="payment.php">
-                            <i class='bx bx-group icon'></i>
+                        <i class='bx bx-dollar icon'></i>
                             <span class="text nav-text">Payment</span>
                         </a>
                     </li>
                     <li class="nav-link <?= $current_page == 'feedback.php' ? 'active' : '' ?>">
                         <a href="feedback.php">
-                            <i class='bx bx-group icon'></i>
+                        <i class='bx bx-message-dots icon'></i>
                             <span class="text nav-text">Feedback</span>
                         </a>
                     </li>
                     <li class="nav-link <?= $current_page == 'complain.php' ? 'active' : '' ?>">
                         <a href="complain.php">
-                            <i class='bx bx-group icon'></i>
+                        <i class='bx bx-shield-quarter icon'></i>
                             <span class="text nav-text">Complain</span>
                         </a>
                     </li>
                     <li class="nav-link" style="display:block">
                         <a href="#" class="appointment-link">
-                            <i class='bx bx-calendar icon'></i>
+                        <i class='bx bx-cog icon'></i>
                             <span class="text nav-text">System</span>
                             <i class='bx bxs-down-arrow arrow first icon'></i>
                         </a>
@@ -69,13 +69,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <ul class="sub-menu" >
                             <li class="nav-link <?= $current_page == 'salonSystem.php' ? 'active' : '' ?>">
                                 <a href="salonSystem.php">
-                                <i class='bx bx-calendar-plus icon' ></i>
+                                <i class='bx bx-home-heart icon'></i>
                                     <span class="text nav-text" style="font-size:14px;">Salon System</span>
                                 </a>
                             </li>
                             <li class="nav-link <?= $current_page == 'DoctorSystem.php' ? 'active' : '' ?>">
                                 <a href="DoctorSystem.php">
-                                <i class='bx bx-calendar-event icon' ></i>
+                                <i class='bx bx-plus-medical icon'></i>
                                     <span class="text nav-text" style="font-size:14px;">Doctor System</span>
                                 </a>
                             </li>

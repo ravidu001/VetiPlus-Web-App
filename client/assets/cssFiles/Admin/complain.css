@@ -10,6 +10,8 @@ table {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border-collapse: collapse;
+
 }
 
 table thead {
@@ -36,7 +38,8 @@ table tbody {
 table tbody tr {
     display: flex;
     justify-content: space-between;
-    background-color: #F8ECFF;
+    /* border: 2px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3); */
 
 }
 
@@ -45,8 +48,8 @@ table tbody tr:hover {
 }
 
 table tbody tr td {
-    font-size: 20px;
-    padding: 20px 30px;
+    font-size: 15px;
+    padding: 10px 20px;
 }
 
 table tbody tr td a {

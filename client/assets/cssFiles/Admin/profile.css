@@ -16,7 +16,8 @@
     justify-content: space-between;
     margin: 10px 100px;
     height: 100%;
-    background-color: #F1DBFF;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     border-radius: 10px;
 }
 

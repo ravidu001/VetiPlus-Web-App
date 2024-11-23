@@ -41,6 +41,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <td>Ramesh Peshala</td>
             <td>It is a long established fact that a reader will be...</td>
             <td><a href="#"><img src="../../assets/images/mail.png" alt="View Message"></a></td>
+           
           </tr>
           <tr>
             <td>Ramesh Peshala</td>
@@ -67,6 +68,17 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <td>It is a long established fact that a reader will be...</td>
             <td><a href="#"><img src="../../assets/images/mail.png" alt="View Message"></a></td>
           </tr>
+          <tr>
+            <td>Ramesh Peshala</td>
+            <td>It is a long established fact that a reader will be...</td>
+            <td><a href="#"><img src="../../assets/images/mail.png" alt="View Message"></a></td>
+          </tr>
+          <tr>
+            <td>Ramesh Peshala</td>
+            <td>It is a long established fact that a reader will be...</td>
+            <td><a href="#"><img src="../../assets/images/mail.png" alt="View Message"></a></td>
+          </tr>
+         
         </tbody>
       </table>
     </div>

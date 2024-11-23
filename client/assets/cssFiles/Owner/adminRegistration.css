@@ -4,7 +4,8 @@
 .admin-regi-top {
     margin: 10px 100px;
     height: 80px;
-    background-color: #E9C5FF;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,7 +24,8 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
-    background-color: #f1e0fb;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     height: 400px;
 
 }
@@ -44,7 +46,8 @@
     align-items: center;
     justify-content: space-between;
     margin: 10px 100px;
-    background-color: #f1e0fb;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 }
 .admin-regi-bottom{
     display: flex;
@@ -57,6 +60,7 @@
     padding: 10px;
     font-size: 20px;
     background-color: #B89ACB;
+    border: 3px solid var(--background-primary);
     color: black;
     border-radius: 10px;
     width: 30%;
@@ -92,6 +96,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #B89ACB;
+    border: 3px solid var(--background-primary);
     color: white;
     padding: 20px;
     border-radius: 10px;

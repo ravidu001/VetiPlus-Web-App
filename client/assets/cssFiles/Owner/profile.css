@@ -14,7 +14,8 @@
     justify-content: space-between;
     margin: 10px 100px;
     height: 100%;  
-    background-color: #F1DBFF;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     border-radius: 10px;
 }
 .profile_top_inside_left{
@@ -46,6 +47,7 @@
     width: 250px;
     height: 40px;
     background-color: #B89ACB;
+    border: 3px solid var(--background-primary);
     border-radius: 5px;
     color: black;
     font-size: 15px;

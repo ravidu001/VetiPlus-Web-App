@@ -15,15 +15,16 @@
     padding: 60px;
     gap: 20px;
     width: 32%;
-    background-color: #F1DBFF;
-    box-shadow: 5px 10px 18px #888888;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 }
 .admin-outside{
     margin: 100px 100px;
     display: flex;
     flex-direction: row;
     padding: 30px;
-    background-color: #F1DBFF;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 }
 .admin-outside-left{
     display: flex;
@@ -47,6 +48,7 @@
     padding: 10px;
     font-size: 20px;
     background-color: #B89ACB;
+    border: 3px solid var(--background-primary);
     color: black;
     border-radius: 10px;
     width: 30%;
@@ -67,6 +69,7 @@
     padding: 10px;
     font-size: 20px;
     background-color: #B89ACB;
+    border: 3px solid var(--background-primary);
     color: black;
     border-radius: 10px;
     width: 50%;

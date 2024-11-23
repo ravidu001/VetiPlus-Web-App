@@ -20,6 +20,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <body>
     <!-- Include navbar -->
     <?php include '../../components/common/admin/navbar.php'; ?>
+
+    <section class="home">
     <div class="doctor_profile">
         <div class="doctor_profile_top">
             <div class="doctor_profile_top_left">
@@ -41,8 +43,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
     </div>
-    <section class="home">
-
     </section>
 </body>
 

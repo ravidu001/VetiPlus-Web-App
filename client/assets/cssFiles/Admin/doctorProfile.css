@@ -8,8 +8,9 @@
     align-items: center;
     justify-content: space-between;
     margin: 10px 100px;
-    height: 50%;
-    background-color: #F1DBFF;
+    height: 400px;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     border-radius: 10px;
 }
 
@@ -34,11 +35,17 @@
     justify-content: center;
     gap: 30px;
 }
+.doctor_profile_top_right h2{
+    font-size: 17px;
+    font-weight: 500;
+}
 
 .doctor_profile_down button {
     width: 250px;
     height: 40px;
     background-color: #B89ACB;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     border-radius: 5px;
     color: black;
     font-size: 15px;

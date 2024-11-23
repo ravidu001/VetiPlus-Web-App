@@ -16,8 +16,8 @@
     justify-content: space-between;
     margin: 20px 100px;
     height: 30%;
-    background-color: #F1DBFF;
-    box-shadow: 15px 15px 20px rgba(202, 143, 225, 0.3);
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     padding: 40px;
 
 }
@@ -27,7 +27,7 @@
     align-items: center;
     gap: 10px;
     margin-left: 10px;
-    background-color: #F1DBFF;
+    
 }
 .home-inside-left h1{
     font-size: 50px;
@@ -45,7 +45,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F1DBFF;
+    
 }
 .home-inside-right img{
     width: 160px;
@@ -62,8 +62,8 @@
     width: 30%;
     border-radius: 10px;
     padding: 40px;
-    background-color: #F1DBFF;
-    box-shadow: 15px 15px 20px rgba(202, 143, 225, 0.3);
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 }
 .home-inside-outer{
     display: flex;
@@ -73,11 +73,12 @@
     
 }
 .home-inside-down{
-    background-color: #F1DBFF;
+    
     padding: 10px;
     border-radius: 10px;
     width: 45%;
-    box-shadow: 15px 15px 20px rgba(202, 143, 225, 0.3);
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     padding: 30px;
 
 }
@@ -86,12 +87,13 @@
     margin-bottom: 10px;
 }
 .home-inside-top{
-    background-color: #F1DBFF;
+    
     padding: 10px;
     border-radius: 10px;
     width: 45%;
-    box-shadow: 15px 15px 20px rgba(202, 143, 225, 0.3);
-    padding: 30px;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+     padding: 30px;
 }
 
 .bar {
