@@ -49,14 +49,14 @@ $current_page = basename($_SERVER['PHP_SELF']);
                                     <span class="text nav-text" style="font-size:14px;">Request</span>
                                 </a>
                             </li>
-                            <li class="nav-link <?= $current_page == 'viewAppointment.php' ? 'active' : '' ?>">
-                                <a href="viewAppointment.php">
+                            <li class="nav-link <?= $current_page == 'accept.php' ? 'active' : '' ?>">
+                                <a href="accept.php">
                                 <i class='bx bx-calendar-event icon' ></i>
                                     <span class="text nav-text" style="font-size:14px;">Accept Request</span>
                                 </a>
                             </li>
-                            <li class="nav-link <?= $current_page == 'historyAppointment.php' ? 'active' : '' ?>">
-                                <a href="historyAppointment.php">
+                            <li class="nav-link <?= $current_page == 'requestHistory.php' ? 'active' : '' ?>">
+                                <a href="requestHistory.php">
                                 <i class='bx bx-calendar-check icon' ></i>
                                     <span class="text nav-text" style="font-size:14px;">Request History</span>
                                 </a>
