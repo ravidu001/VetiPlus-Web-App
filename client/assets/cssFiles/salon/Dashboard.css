@@ -9,7 +9,9 @@ body {
 
 /* Header Styling */
 .dashbardheader {
-    margin: 15px;
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -224,4 +226,176 @@ body {
 /* Optional: Add smooth scrolling for the whole page */
 html {
     scroll-behavior: smooth;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashbardheader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .dashbardheader h3 {
+        font-size: 20px;
+    }
+
+    .profile {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .profile img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .dashcontent {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .dashcontent .part1,
+    .dashcontent .part2 {
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    .appointmentCount {
+        padding: 10px;
+        grid-template-rows: auto 1fr;
+    }
+
+    .appointmentname {
+        font-size: 22px;
+    }
+
+    .appointmentno {
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    .calendar .calandercolor {
+        margin-top: 10px;
+    }
+
+    .calandercolor .coloricon1 {
+        font-size: 8px;
+    }
+
+    .part2header h2 {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .upcominappointments {
+        gap: 5px;
+    }
+
+    .appointmentbox {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .appointmentbox .imageandview {
+        margin-left: 0;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .appointmentbox img.image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .appointmentbox .username {
+        font-size: 16px;
+    }
+
+    .appointmentbox .servicename,
+    .appointmentbox .time {
+        font-size: 14px;
+    }
+
+    .appointmentbox button {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashbardheader {
+        padding: 5px;
+    }
+
+    .dashbardheader h3 {
+        font-size: 18px;
+    }
+
+    .profile {
+        gap: 5px;
+    }
+
+    .dashcontent .part1,
+    .dashcontent .part2 {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .appointmentCount {
+        padding: 8px;
+    }
+
+    .appointmentname {
+        font-size: 20px;
+    }
+
+    .appointmentno {
+        font-size: 18px;
+    }
+
+    .calendar .calandercolor {
+        gap: 5px;
+    }
+
+    .calandercolor .coloricon1 {
+        font-size: 6px;
+    }
+
+    .part2header h2 {
+        font-size: 16px;
+    }
+
+    .upcominappointments {
+        gap: 5px;
+    }
+
+    .appointmentbox {
+        padding: 8px;
+        border-radius: 5px;
+        box-shadow: none;
+    }
+
+    .appointmentbox img.image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .appointmentbox .username {
+        font-size: 14px;
+    }
+
+    .appointmentbox .servicename,
+    .appointmentbox .time {
+        font-size: 12px;
+    }
+
+    .appointmentbox button {
+        font-size: 12px;
+    }
 }

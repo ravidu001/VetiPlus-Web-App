@@ -94,7 +94,6 @@ textarea:focus {
 }
 
 .price-input-wrapper::before {
-    content: '$';
     position: absolute;
     left: 12px;
     top: 50%;
@@ -103,7 +102,6 @@ textarea:focus {
 }
 
 .input[type= "date"]::before {
-    content: '$';
     position: absolute;
     left: 12px;
     top: 50%;
@@ -236,4 +234,71 @@ textarea:valid {
 /* Optional: Add smooth scrolling for the whole page */
 html {
     scroll-behavior: smooth;
+}
+
+
+
+/* Mobile Responsive Design */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .form-wrapper {
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .price-input-wrapper::before {
+        left: 10px;
+    }
+
+    .price-input-wrapper input {
+        padding-left: 20px;
+    }
+
+    textarea {
+        min-height: 80px;
+    }
+
+    .image-upload-container {
+        grid-template-columns: 1fr;
+    }
+
+    .image-preview {
+        width: 100px;
+        height: 100px;
+    }
+
+    .submit-button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .pageclose {
+        left: 95%;
+        font-size: 18px;
+    }
 }

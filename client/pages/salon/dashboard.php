@@ -55,11 +55,7 @@
                     Upcoming Appointments
                 </h2>
             </div>
-            <div>
-                <?php
-                    require "../../components/salon/Enterdatebox.php";
-                ?>
-            </div>
+            
             <div class="upcominappointments">
                 <div class="appointmentbox">
                     <img class="image" src="../../assets/images/boy.jpg" alt="boy">
@@ -121,12 +117,7 @@
                     Complete Appointments
                 </h2>
             </div>
-            <div>
-                <?php
-                    require "../../components/salon/Enterdatebox.php";
-                ?>
-            </div>
-
+            
             <div class="upcominappointments">
                     <div class="appointmentbox">
                         <img class="image" src="../../assets/images/boy.jpg" alt="boy">

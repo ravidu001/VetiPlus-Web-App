@@ -12,7 +12,7 @@
     <!-- I am not set the path yet because the login and sign up page is waiting -->
     <a href="#"><i class="fa-solid fa-circle-xmark pageclose"></i></a>
     <div class="rendarpart1">
-        <h2>Salon Registration</h2>
+        <h2>Pet Salon Registration</h2>
         <p>"Enhance your business effortlessly with our platform your ultimate partner for growth and success. "</p>
             <h3>What is your Salon Name ?</h3>
 
@@ -85,62 +85,24 @@
 
     </div>
     <div class="rendarpart2">
-            <h3>Login Information</h3>
+            <h3>BR Certificate(If you have)</h3>
             <form id="salonForum" class="salon-form">
-                <!-- Email -->
-                <div class="form-group">
-                    <label for="Email">
-                        <i class="fa-regular fa-envelope"></i> Email <span class="required">*</span>
-                    </label>
-                    <input type="email" 
-                        id="Email" 
-                        name="Email" 
-                        placeholder="e.g., VetiPlus@gmail.com" 
-                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
-                        title="Please enter a valid email address (e.g., VetiPlus@gmail.com)" 
-                        required>
-                </div>
-
-                <!-- Email -->
-                <div class="form-group">
-                    <label for="ConfirmEmail">
-                        <i class="fa-solid fa-envelope"></i>Confirm Email <span class="required">*</span>
-                    </label>
-                    <input type="email" 
-                        id="ConfirmEmail" 
-                        name="ConfirmEmail" 
-                        placeholder="e.g., VetiPlus@gmail.com" 
-                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
-                        title="Please enter a valid email address (e.g., VetiPlus@gmail.com)" 
-                        required>
-                </div>
-
-                 <!-- Password -->
-                <div class="form-group">
-                    <label for="password">
-                    <i class="fa-solid fa-key"></i>Password<span class="required">*</span>
-                    </label>
-                    <input type="text" 
-                        id="password" 
-                        name="password" 
-                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
-                        title="Password must be at least 8 characters, with at least one uppercase letter, one lowercase letter, one digit, and one special character (e.g., @$!%*?&)" 
-                        required>
-                </div>
-
                 
-                 <!-- Password -->
-                 <div class="form-group">
-                    <label for="Confirmpassword">
-                    <i class="fa-solid fa-key"></i>Confirm Password<span class="required">*</span>
-                    </label>
-                    <input type="text" 
-                        id="Confirmpassword" 
-                        name="Confirmpassword" 
-                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
-                        title="Password must be at least 8 characters, with at least one uppercase letter, one lowercase letter, one digit, and one special character (e.g., @$!%*?&)" 
-                        required>
-                </div>
+                        <div class="image-upload-box">
+                            <div class="image-preview">
+                                <img src="/api/placeholder/150/150" alt="Preview " id="preview1">
+                            </div>
+                            <div class="upload-button">
+                                <i class="fas fa-upload"></i>
+                                <span>Upload Image</span>
+                                <input type="file"
+                                       id="image1"
+                                       name="photo1"
+                                       accept="image/*"
+                                       class="file-input">
+                            </div>
+                        </div>
+                 
 
                  <input type="checkbox"><p>Check the integration and agree....</p>
                 <br>
@@ -160,9 +122,8 @@
 
                 <h2>Thank you once again for being a part of our community!</h2>
             </form>
-
-
     </div>
 </div>
 </body>
+    <script src="../../assets/jsFIles/salon/UploadImage.js"></script>   
 </html>

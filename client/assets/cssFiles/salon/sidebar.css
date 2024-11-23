@@ -17,10 +17,10 @@
     --list-item: #ffecff;
 }
 
-/* * {
+* {
     margin: 0;
     padding: 0;
-} */
+} 
 
 html{
     font-family:'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
