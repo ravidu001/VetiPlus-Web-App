@@ -1,8 +1,7 @@
- // Get the context of the canvas
- const ctx = document.getElementById('barChart').getContext('2d');
+ const chartCanvas = document.getElementById('barChart').getContext('2d');
 
  // Define the data for the bar chart
- const data = {
+ const appointmentData = {
      labels: ['January', 'February', 'March', 'April', 'May', 'June'],
      datasets: [{
          label: 'Number of Appointment',
@@ -28,9 +27,9 @@
  };
 
  // Define the configuration
- const config = {
+ const chartConfig = {
      type: 'bar',
-     data: data,
+     data: appointmentData,
      options: {
          responsive: true,
          plugins: {
@@ -53,4 +52,4 @@
  };
 
  // Render the chart
- new Chart(ctx, config);
+ new Chart(chartCanvas, chartConfig);

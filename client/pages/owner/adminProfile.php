@@ -53,12 +53,22 @@ include(__DIR__ . '/../../../server/controllers/Owner/deleteAdmin.php');
             </div>
             <div class="profile_down">
                 <button onclick="window.location.href='editProfile.php?email=<?= urlencode($admin['email']); ?>'">Edit Profile</button>
-                <form method="post" class="delete-form" action="../../../server/controllers/Owner/deleteAdmin.php">
-                    <input type="hidden" name="email" value="<?= htmlspecialchars($admin['email']); ?>">
-                    <button type="submit" name="delete" value="DELETE">Delete</button>
-                </form>
+                <button onclick="openDeleteModal()">delete</button>
             </div>
         </div>
+        <div id="deleteModal" class="modal-background" style="display: none;">
+            <div class="modal-content">
+                <p>Do you want to delete this account?</p>
+                <div class="modal-buttons">
+                    <form method="post" class="delete-form" action="../../../server/controllers/Owner/deleteAdmin.php">
+                        <input type="hidden" name="email" value="<?= htmlspecialchars($admin['email']); ?>">
+                        <button type="submit" name="delete" value="DELETE">Delete</button>
+                    </form>
+                    <button onclick="closeModal()">No</button>
+                </div>
+            </div>
+        </div>
+        <script src="../../assets/jsFIles/Owner/deleteAccount.js"></script>
     </section>
 </body>
 
