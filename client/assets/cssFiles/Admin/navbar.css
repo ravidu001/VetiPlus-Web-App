@@ -13,7 +13,7 @@
    --primary-color: #6a0dad;
    --primary-color-light: #f6f5ff;
    --toggle-color: #ddd;
-   --text-color: #707070;
+   --text-color: black;
    --background-light: #c8a2c8;
    --background-primary: #6a0dad;
    --background-white: #fff;
@@ -42,10 +42,10 @@ body.dark {
    --primary-color: #3a3b3c;
    --primary-color-light: #3a3b3c;
    --toggle-color: #fff;
-   --text-color: #ccc;
+   --text-color: white;
    --background-light: #646464;
    /* A medium-dark gray for a softer container background */
-   --background-primary: #c8a2c8;
+   --background-primary: white;
    /* A dark, muted purple to maintain the purple tone */
    --background-white: #18191A;
    /* Dark background replacing white for containers */

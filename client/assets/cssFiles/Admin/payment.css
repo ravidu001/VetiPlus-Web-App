@@ -20,6 +20,8 @@
     border: 3px solid var(--background-primary);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     width: 40%;
+    color: var(--text-color);
+
 }
 
 .Payment-outside {
@@ -46,7 +48,7 @@
     margin: 20px;
     border: 3px solid var(--background-primary);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
-
+    color: var(--text-color);
 }
 
 .Payment-outside form .Payment-outside-top input {

@@ -6,6 +6,7 @@
     height: 80px;
     border: 3px solid var(--background-primary);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,6 +29,7 @@
     height: 100%;  
     border: 3px solid var(--background-primary);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    color: var(--text-color);
     border-radius: 10px;
 }
 .profile_top_inside_left{

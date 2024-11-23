@@ -27,6 +27,7 @@ table thead tr {
 
 table thead tr th {
     font-size: 20px;
+    color: var(--text-color);
 }
 
 table tbody {
@@ -38,6 +39,7 @@ table tbody {
 table tbody tr {
     display: flex;
     justify-content: space-between;
+    color: var(--text-color);
     /* border: 2px solid var(--background-primary);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3); */
 
@@ -45,11 +47,15 @@ table tbody tr {
 
 table tbody tr:hover {
     background-color: #E6E6E6;
+    color: var(--text-color);
+
 }
 
 table tbody tr td {
     font-size: 15px;
     padding: 10px 20px;
+    color: var(--text-color);
+
 }
 
 table tbody tr td a {

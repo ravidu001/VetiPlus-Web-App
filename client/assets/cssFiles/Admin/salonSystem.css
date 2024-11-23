@@ -8,6 +8,7 @@ table {
     /* background-color: white; */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px 100px;
+    color: black;
 }
 
 th,
@@ -15,6 +16,8 @@ td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    color: var(--text-color);
+
 }
 
 th {

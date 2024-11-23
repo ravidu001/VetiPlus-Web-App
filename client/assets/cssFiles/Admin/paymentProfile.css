@@ -11,6 +11,7 @@
     align-items: center;
     margin: 20px 100px;
     border-radius: 40px;
+    color: var(--text-color);
     border: 3px solid var(--background-primary);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 
@@ -86,6 +87,8 @@ td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    color: var(--text-color);
+
 }
 
 th {

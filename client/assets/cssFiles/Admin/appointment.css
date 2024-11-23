@@ -19,6 +19,7 @@
     height: 200px;
     padding: 30px;
     gap: 50px;
+    color: var(--text-color);
     border: 3px solid var(--background-primary);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 }
@@ -44,6 +45,7 @@
     padding: 20px;
     border-radius: 10px;
     margin: 20px;
+    color: var(--text-color);
     border: 3px solid var(--background-primary);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 
