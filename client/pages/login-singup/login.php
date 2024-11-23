@@ -22,25 +22,54 @@
             // Verify the password with the hashed password stored in the database
             if (password_verify($password, $row['password'])) {
                 $_SESSION['user_id'] = $row['email'];
+                
+                if ($row['loginCount'] == 0) {
+                    // increase the login count
+                    $loginCount = $row['loginCount'] + 1;
+                    $update = mysqli_query($conn, "UPDATE `User` SET loginCount='$loginCount' WHERE email='$email'") or die('Query failed');
 
-                // Redirect based on user type
-                switch ($row['type']) {
-                    case 'Vet Doctor':
-                        header('Location: ../vetDoctor/homeNew.php');
-                        break;
-                    case 'Pet Owner':
-                        header('Location: ../petOwner/home.php');
-                        break;
-                    case 'Salon':
-                        header('Location: ../salon/home.php');
-                        break;
-                    case 'Vet Assistant':
-                        header('Location: ../vetAssistant/home.php');
-                        break;
-                    default:
-                        $message[] = 'User type not recognized!';
+                    // Redirect based on user type
+                    switch ($row['type']) {
+                        case 'Vet Doctor':
+                            header('Location: ../vetDoctor/profile.php');
+                            break;
+                        case 'Pet Owner':
+                            header('Location: ../petOwner/home.php');
+                            break;
+                        case 'Salon':
+                            header('Location: ../salon/home.php');
+                            break;
+                        case 'Vet Assistant':
+                            header('Location: ../vetAssistant/home.php');
+                            break;
+                        default:
+                            $message[] = 'User type not recognized!';
+                    }
+                    exit();
+                } else {
+                    // increase the login count
+                    $loginCount = $row['loginCount'] + 1;
+                    $update = mysqli_query($conn, "UPDATE `User` SET loginCount='$loginCount' WHERE email='$email'") or die('Query failed');
+
+                    // Redirect based on user type
+                    switch ($row['type']) {
+                        case 'Vet Doctor':
+                            header('Location: ../vetDoctor/homeNew.php');
+                            break;
+                        case 'Pet Owner':
+                            header('Location: ../petOwner/home.php');
+                            break;
+                        case 'Salon':
+                            header('Location: ../salon/home.php');
+                            break;
+                        case 'Vet Assistant':
+                            header('Location: ../vetAssistant/home.php');
+                            break;
+                        default:
+                            $message[] = 'User type not recognized!';
+                    }
+                    exit();
                 }
-                exit();
             } else {
                 $message[] = 'Incorrect email or password';
             }
