@@ -11,10 +11,11 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
-    <title>Profile </title>
+    <title>VetiPlus</title>
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">4
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/home.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -38,32 +39,60 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
             <div class="home-after">
                 <div class="home-after-inside">
-                    <h2>Total Account</h2>
-                    <h2>2345</h2>
-                    <div class="home-after-inside-upper">
-                        <div>
-                            <h3>Users</h3>
-                            <h3>234</h3>
-                        </div>
-                        <div>
-                            <h3>Pets</h3>
-                            <h3>231</h3>
-                        </div>
-                    </div>
+                    <h3>Total Account</h3>
+                    <h4>2345</h4>
                 </div>
                 <div class="home-after-outer">
-                    <h2>Total Appointment</h2>
-                    <h2>4561</h2>
+                    <h3>Total Appointment</h3>
+                    <h4>4561</h4>
+                </div>
+
+                <div class="home-below-inside">
+                    <h3>Total Transactions</h3>
+                    <h4>234</h4>
+                </div>
+                <div class="home-below-inside">
+                    <h3>Total Salon </h3>
+                    <h4>102</h4>
                 </div>
             </div>
-            <div class="home-below">
-                <div class="home-below-inside">
-                    <h2>Total Transactions</h2>
-                    <h2>234</h2>
+            <div class="home-down">
+                <div class="home-chart">
+                    <canvas id="barChart"></canvas>
+                    <script src="../../assets/jsFIles/Admin/barchart.js"></script>
                 </div>
-                <div class="home-below-inside">
-                    <h2>Total Salon </h2>
-                    <h2>102</h2>
+                <div class="home-down-message">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User's Name</th>
+                                <th>Complain Message</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr onclick="window.location.href='complain_profile.php'">
+                                <td>Ramesh Peshala</td>
+                                <td>It is a long established fact that a reader will be...</td>
+                                <td>2022/05/15</td>
+                            </tr>
+                            <tr>
+                                <td>Ramesh Peshala</td>
+                                <td>It is a long established fact that a reader will be...</td>
+                                <td>2022/05/15</td>
+                            </tr>
+                            <tr>
+                                <td>Ramesh Peshala</td>
+                                <td>It is a long established fact that a reader will be...</td>
+                                <td>2022/05/15</td>
+                            </tr>
+                            <tr>
+                                <td>Ramesh Peshala</td>
+                                <td>It is a long established fact that a reader will be...</td>
+                                <td>2022/05/15</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

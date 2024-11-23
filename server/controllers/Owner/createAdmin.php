@@ -1,27 +1,43 @@
 <?php
 
-include ( __DIR__ . '/../../../server/config/backendConfig.php');
+include(__DIR__ . '/../../../server/config/backendConfig.php');
 
 $message = '';
 
-if($_SERVER['REQUEST_METHOD']=='POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $name = $_POST['name'];
     $phone_number = $_POST['phone_number'];
     $email = $_POST['email'];
-    $password = password_hash($_POST['password'],PASSWORD_BCRYPT);
-    $address = $_POST['address'];  
-    $gender = $_POST['gender'];
+    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+    $address = $_POST['address'];
+    $gender = strtolower(trim($_POST['gender'])); // Normalize case for gender validation
     $nic = $_POST['nic'];
 
-        $sql = "INSERT INTO systemadmin(email,password,name,contactNumber,address,gender,NIC) VALUES ('$email','$password','$name','$phone_number','$address','$gender','$nic')";
+    // Validate email uniqueness
+    $checkEmailQuery = "SELECT * FROM systemadmin WHERE email = ?";
+    $stmt = $conn->prepare($checkEmailQuery);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-        if ($conn->query($sql) === TRUE) {
-            $message = "Registration successful! ";
+    if ($result->num_rows > 0) {
+        $message = "Email is already signed in. Please enter a new email.";
+    }else {
+        // Insert data into the database
+        $sql = "INSERT INTO systemadmin(email, password, name, contactNumber, address, gender, NIC) 
+                VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sssssss", $email, $password, $name, $phone_number, $address, $gender, $nic);
+
+        if ($stmt->execute()) {
+            $message = "Registration successful!";
         } else {
-           $message = "Error: " . $sql . "<br>" . $conn->error;
+            $message = "Error: " . $stmt->error;
         }
-        $conn->close();
-    } 
+    }
+
+    $conn->close();
+}
 
 ?>

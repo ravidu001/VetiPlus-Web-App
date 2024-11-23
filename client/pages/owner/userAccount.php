@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
-    <title>Profile </title>
+    <title>VetiPlus</title>
     <link rel="stylesheet" href="../../assets/cssFiles/Owner/navbar.css" type="text/css">4
     <link rel="stylesheet" href="../../assets/cssFiles/Owner/userAccount.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -29,7 +29,7 @@
     <div class="user-account">
             <div class="user-account-inside">
                 <div class="user-account-inside-left">
-                    <img src="../../assets/images/image_8.jpg" alt="">
+                    <img src="../../assets/images/user.png" alt="">
                 </div>
                 <div class="user-account-inside-right">
                     <h2>Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; Ramesh Peshala</h2>

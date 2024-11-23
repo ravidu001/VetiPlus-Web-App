@@ -12,8 +12,9 @@
     gap: 200px;
     margin: 20px 100px;
     border-radius: 20px;
-    background-color: #F8ECFF;
-    box-shadow: 5px 10px 18px #888888;
+    color: var(--text-color);
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     height: 350px;
 }
 
@@ -43,7 +44,7 @@
 
 .complain_profile_down {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 10px 100px;
     height: 60%;
     gap: 20px;
@@ -51,23 +52,35 @@
 
 .complain_profile_down_inner {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 30px;
     border-radius: 10px;
-    background-color: #F8ECFF;
-    height: 250px;
+    color: var(--text-color);
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    height: 300px;
+    width: 50%;
+}
+.complain_profile_down_inner h4{
+    font-weight: 500;
 }
 
 .complain_profile_down_inner h1 {
     margin: 10px;
 }
+.complain_profile_down_inner_img{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
 
-.complain_profile_down_inner img {
+.complain_profile_down_inner_img img {
     width: 150px;
     height: 150px;
     border-radius: 5%;
+   
 }
 
 .admin-navbar-inside-left-inner-1 ul li.active {

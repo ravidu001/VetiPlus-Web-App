@@ -16,7 +16,7 @@ include(__DIR__ . '/../../../server/controllers/Owner/deleteAdmin.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
-    <title>Profile </title>
+    <title>VetiPlus</title>
     <link rel="stylesheet" href="../../assets/cssFiles/Owner/navbar.css" type="text/css">4
     <link rel="stylesheet" href="../../assets/cssFiles/Owner/adminProfile.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -37,7 +37,7 @@ include(__DIR__ . '/../../../server/controllers/Owner/deleteAdmin.php');
             <div class="profile_top">
                 <div class="profile_top_inside">
                     <div class="profile_top_inside_left">
-                        <img src="../../assets/images/image_8.jpg" alt="">
+                        <img src="../../assets/images/user.png" alt="">
                     </div>
                     <div class="profile_top_inside_right">
                         <?php if (!empty($admin)): ?>
@@ -53,12 +53,22 @@ include(__DIR__ . '/../../../server/controllers/Owner/deleteAdmin.php');
             </div>
             <div class="profile_down">
                 <button onclick="window.location.href='editProfile.php?email=<?= urlencode($admin['email']); ?>'">Edit Profile</button>
-                <form method="post" class="delete-form" action="../../../server/controllers/Owner/deleteAdmin.php">
-                    <input type="hidden" name="email" value="<?= htmlspecialchars($admin['email']); ?>">
-                    <button type="submit" name="delete" value="DELETE">Delete</button>
-                </form>
+                <button onclick="openDeleteModal()">delete</button>
             </div>
         </div>
+        <div id="deleteModal" class="modal-background" style="display: none;">
+            <div class="modal-content">
+                <p>Do you want to delete this account?</p>
+                <div class="modal-buttons">
+                    <form method="post" class="delete-form" action="../../../server/controllers/Owner/deleteAdmin.php">
+                        <input type="hidden" name="email" value="<?= htmlspecialchars($admin['email']); ?>">
+                        <button type="submit" name="delete" value="DELETE">Delete</button>
+                    </form>
+                    <button onclick="closeModal()">No</button>
+                </div>
+            </div>
+        </div>
+        <script src="../../assets/jsFIles/Owner/deleteAccount.js"></script>
     </section>
 </body>
 

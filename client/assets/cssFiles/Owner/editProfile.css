@@ -4,7 +4,9 @@
 .admin-regi-top {
     margin: 10px 100px;
     height: 80px;
-    background-color: #E9C5FF;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,7 +27,9 @@
     align-items: center;
     justify-content: center;
     width: 50%;
-    background-color: #f1e0fb;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    color: var(--text-color);
     height: 400px;
 
 }
@@ -52,6 +56,7 @@
     padding: 10px;
     font-size: 20px;
     background-color: #B89ACB;
+    border: 3px solid var(--background-primary);
     color: black;
     border-radius: 10px;
     width: 30%;
@@ -74,7 +79,9 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
-    background-color: #f1e0fb;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    color: var(--text-color);
     height: 400px;
     
 }

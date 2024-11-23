@@ -15,9 +15,10 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 20px 100px;
-    height: 30%;
-    background-color: #F1DBFF;
-    box-shadow: 15px 15px 20px rgba(202, 143, 225, 0.3);
+    height: 200px;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    color: var(--text-color);
     padding: 40px;
 
 }
@@ -27,7 +28,7 @@
     align-items: center;
     gap: 10px;
     margin-left: 10px;
-    background-color: #F1DBFF;
+    
 }
 .home-inside-left h1{
     font-size: 50px;
@@ -45,7 +46,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F1DBFF;
+    
 }
 .home-inside-right img{
     width: 160px;
@@ -58,12 +59,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 30%;
+    height: 100px;
+    width: 300px;
     border-radius: 10px;
     padding: 40px;
-    background-color: #F1DBFF;
-    box-shadow: 15px 15px 20px rgba(202, 143, 225, 0.3);
+    border: 3px solid var(--background-primary);
+    color: var(--text-color);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 }
 .home-inside-outer{
     display: flex;
@@ -73,12 +75,15 @@
     
 }
 .home-inside-down{
-    background-color: #F1DBFF;
+    
     padding: 10px;
     border-radius: 10px;
-    width: 45%;
-    box-shadow: 15px 15px 20px rgba(202, 143, 225, 0.3);
+    width: 50%;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    color: var(--text-color);
     padding: 30px;
+    height: 400px;
 
 }
 .home-inside-down h4 {
@@ -86,26 +91,18 @@
     margin-bottom: 10px;
 }
 .home-inside-top{
-    background-color: #F1DBFF;
+    
     padding: 10px;
     border-radius: 10px;
-    width: 45%;
-    box-shadow: 15px 15px 20px rgba(202, 143, 225, 0.3);
-    padding: 30px;
-}
-
-.bar {
-    display: inline-block;
-    width: 80%;
-    height: 5px;
-    background-color: #4d2c91;
-    margin-left: 10px;
-}
-
-.bar.short {
-    width: 60%;
-}
-
-.bar.shorter {
     width: 40%;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    color: var(--text-color);
+    padding: 30px;
+    height: 500px;
+
+}
+
+canvas {
+    box-shadow: 20px 20px 25px rgba(213, 212, 212, 0.3);
 }

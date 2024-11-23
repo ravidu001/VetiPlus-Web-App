@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
-    <title>Profile </title>
+    <title>VetiPlus</title>
     <link rel="stylesheet" href="../../assets/cssFiles/Owner/navbar.css" type="text/css">4
     <link rel="stylesheet" href="../../assets/cssFiles/Owner/editProfile.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -37,7 +37,7 @@
             <form action="" method="POST">
                 <div class="admin-regi-inside">
                 <div class="admin-regi-inside-right">
-                  <img src="../../assets/images/image_8.jpg" alt="">
+                  <img src="../../assets/images/user.png" alt="">
                   <h3>Hello <?= htmlspecialchars($name); ?></h3>
                   <h3>Email :<?= htmlspecialchars($email); ?></h3>
                 </div>

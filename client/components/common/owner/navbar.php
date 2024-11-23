@@ -42,13 +42,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </li>
                 <li class="nav-link <?= $current_page == 'payment.php' ? 'active' : '' ?>">
                     <a href="payment.php">
-                        <i class='bx bx-group icon'></i>
-                        <span class="text nav-text"> Payment</span>
+                    <i class='bx bx-dollar icon'></i>
+                    <span class="text nav-text"> Payment</span>
                     </a>
                 </li>
                 <li class="nav-link <?= $current_page == 'addAdmin.php' ? 'active' : '' ?>">
                     <a href="addAdmin.php">
-                        <i class='bx bx-phone-call icon'></i>
+                    <i class='bx bxs-user-plus icon' ></i>
                         <span class="text nav-text">Add Admin</span>
                     </a>
                 </li>

@@ -11,7 +11,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
-    <title>Profile </title>
+    <title>VetiPlus</title>
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">4
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/appointment.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -27,9 +27,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <h2>Daily Appointment</h2>
                 <h2>345</h2>
             </div>
-            <div class="Appoinment-inside-right">
+            <div class="Appoinment-inside-left">
                 <h2>Daily Cancel Appointment</h2>
                 <h2>23</h2>
+            </div>
+            <div class="Appoinment-inside-left">
+                <h2>Total Appointment</h2>
+                <h2>2356</h2>
             </div>
         </div>
         <div class="Appoinment-outside">

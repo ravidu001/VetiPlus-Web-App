@@ -16,8 +16,9 @@
     padding: 60px;
     gap: 20px;
     width: 32%;
-    background-color: #F1DBFF;
-    box-shadow: 5px 10px 18px #888888;
+    border: 3px solid var(--background-primary);
+    color: var(--text-color);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 }
 .accounts-inside-left h2{
     font-size: 23px;
@@ -32,7 +33,9 @@
 }
 .account-inside-upper-1{
     padding: 10px 60px;
-    background-color: #F1DBFF;
+    border: 3px solid var(--background-primary);
+    color: var(--text-color);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     font-size: 15px;
     font-weight: 700;
     
@@ -51,7 +54,9 @@
     padding: 15px;
     border-radius: 10px;
     height: 250px;
-    background-color: #F1DBFF;
+    border: 3px solid var(--background-primary);
+    color: var(--text-color);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 }
 .account-inside-lower-left form input{
     padding: 10px;
@@ -62,6 +67,7 @@
     padding: 10px;
     font-size: 20px;
     background-color: #B89ACB;
+    border: 3px solid var(--background-primary);
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
@@ -79,7 +85,8 @@
     padding: 15px;
     height: 250px;
     border-radius: 10px;
-    background-color: #F1DBFF;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 }
 .account-inside-lower-right form input{
     padding: 10px;
@@ -91,6 +98,7 @@
     border-radius: 10px;
     font-size: 20px;
     background-color: #B89ACB;
+    border: 3px solid var(--background-primary);
     cursor: pointer;
      text-decoration: none;
     color: black;

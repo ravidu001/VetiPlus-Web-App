@@ -9,9 +9,10 @@
     justify-content: space-between;
     flex-direction: row;
     margin: 40px 100px;
-    background-color: #F1DBFF;
     border-radius: 50px;
-    box-shadow: 5px 10px 18px #888888;
+    border: 3px solid var(--background-primary);
+    color: var(--text-color);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 }
 
 .user-account-inside-left {
@@ -36,6 +37,10 @@
     justify-content: left;
     margin: 10px;
     gap: 30px;
+}
+.user-account-inside-right h2{
+    font-size: 17px;
+    font-weight: 500;
 }
 
 .user-account-outside {
@@ -65,6 +70,8 @@
     color: black;
     font-size: 15px;
     cursor: pointer;
+    border: 3px solid var(--background-primary);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 }
 
 .user-account-outside-left button:hover {
@@ -77,11 +84,17 @@
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    gap: 90px;
+    gap: 50px;
     padding: 10px;
     margin-left: 100px;
-    background-color: #F1DBFF;
+    border: 3px solid var(--background-primary);
+    color: var(--text-color);
+    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     border-radius: 30px;
+}
+.user-account-outside-right h2{
+    font-size: 17px;
+    font-weight: 500;
 }
 
 .admin-navbar-inside-left-inner-1 ul li.active {
