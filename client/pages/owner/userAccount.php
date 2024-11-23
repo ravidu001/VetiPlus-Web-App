@@ -29,7 +29,7 @@
     <div class="user-account">
             <div class="user-account-inside">
                 <div class="user-account-inside-left">
-                    <img src="../../assets/images/image_8.jpg" alt="">
+                    <img src="../../assets/images/user.png" alt="">
                 </div>
                 <div class="user-account-inside-right">
                     <h2>Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp; Ramesh Peshala</h2>

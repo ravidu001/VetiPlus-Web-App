@@ -37,7 +37,7 @@ include(__DIR__ . '/../../../server/controllers/Owner/deleteAdmin.php');
             <div class="profile_top">
                 <div class="profile_top_inside">
                     <div class="profile_top_inside_left">
-                        <img src="../../assets/images/image_8.jpg" alt="">
+                        <img src="../../assets/images/user.png" alt="">
                     </div>
                     <div class="profile_top_inside_right">
                         <?php if (!empty($admin)): ?>

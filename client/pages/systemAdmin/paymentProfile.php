@@ -25,7 +25,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="payment-profile">
       <div class="payment-profile-inside">
         <div class="payment-profile-inside-left">
-          <img src="../../assets/images/image_8.jpg" alt="">
+          <img src="../../assets/images/user.png" alt="">
         </div>
         <div class="payment-profile-inside-right">
           <div class="payment-profile-inside-right-top">

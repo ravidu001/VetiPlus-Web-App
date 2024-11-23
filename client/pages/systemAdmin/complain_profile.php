@@ -25,7 +25,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <div class="complain_profile">
             <div class="complain_profile_top">
                 <div class="complain_profile_top_left">
-                    <img src="../../assets/images/image_8.jpg" alt="">
+                    <img src="../../assets/images/user.png" alt="">
                 </div>
                 <div class="complain_profile_top_right">
                     <div class="complain_profile_top_right_inner">
@@ -48,15 +48,15 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam numquam perspiciatis quam dignissimos quas sint architecto consectetur, ducimus repudiandae quos corrupti deserunt libero delectus culpa consequatur nobis earum quod esse!
+                    <h4> Quibusdam numquam perspiciatis quam dignissimos quas sint architecto consectetur, ducimus repudiandae quos corrupti deserunt libero delectus culpa consequatur nobis earum quod esse!
                         Quod illum iusto excepturi, doloribus aliquam unde illo quae facere fugiat eius esse aut perspiciatis distinctio officiis modi delectus, nobis aspernatur repellat amet fuga quas iste adipisci vero earum? Voluptatem.</h4>
                 </div>
                 <div class="complain_profile_down_inner">
-                    <h1>Complain <br> Image</h1>
-                    <img src="../../assets/images/image_8.jpg" alt="">
-                    <img src="../../assets/images/image_8.jpg" alt="">
-                    <img src="../../assets/images/image_8.jpg" alt="">
-                    <img src="../../assets/images/image_8.jpg" alt="">
+                    <h1>Complain  Image</h1>
+                    <div class="complain_profile_down_inner_img">
+                    <img src="../../assets/images/Owner/complain_image.png" alt="">
+                    <img src="../../assets/images/Owner/complain_image.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>

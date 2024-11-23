@@ -33,6 +33,10 @@
     margin: 10px;
     gap: 30px;
 }
+.user-account-inside-right h2{
+    font-size: 17px;
+    font-weight: 500;
+}
 .user-account-outside{
     display: flex;
     flex-direction: row;
@@ -40,6 +44,7 @@
     justify-content: space-between;
     height: 40%;
 }
+
 .user-account-outside-left{
     display: flex;
     flex-direction: column;
@@ -54,7 +59,6 @@
     height: 40px;
     background-color: #B89ACB;
     border: 3px solid var(--background-primary);
-    border: none;
     border-radius: 5px;
     color: black;
     font-size: 15px;
@@ -96,6 +100,10 @@
     border: 3px solid var(--background-primary);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     border-radius: 30px;
+}
+.user-account-outside-right h2{
+    font-size: 17px;
+    font-weight: 500;
 }
 .admin-navbar-inside-left-inner-1 ul li.active {
     background-color: #F8ECFF; 

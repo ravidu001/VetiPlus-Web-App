@@ -25,34 +25,34 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <div class="feedback">
             <div class="feedback-inside">
                 <div class="feedback-inside-top">
-                    <img src="../../assets/images/image_8.jpg" alt="">
+                    <img src="../../assets/images/user.png" alt="">
                     <h2>Ramesh Peshala</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, facilis.</p>
                 </div>
                 <div class="feedback-inside-top">
-                    <img src="../../assets/images/image_8.jpg" alt="">
+                    <img src="../../assets/images/user.png" alt="">
                     <h2>Ramesh Peshala</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, facilis.</p>
                 </div>
                 <div class="feedback-inside-top">
-                    <img src="../../assets/images/image_8.jpg" alt="">
+                    <img src="../../assets/images/user.png" alt="">
                     <h2>Ramesh Peshala</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, facilis.</p>
                 </div>
             </div>
             <div class="feedback-inside">
                 <div class="feedback-inside-top">
-                    <img src="../../assets/images/image_8.jpg" alt="">
+                    <img src="../../assets/images/user.png" alt="">
                     <h2>Ramesh Peshala</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, facilis.</p>
                 </div>
                 <div class="feedback-inside-top">
-                    <img src="../../assets/images/image_8.jpg" alt="">
+                    <img src="../../assets/images/user.png" alt="">
                     <h2>Ramesh Peshala</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, facilis.</p>
                 </div>
                 <div class="feedback-inside-top">
-                    <img src="../../assets/images/image_8.jpg" alt="">
+                    <img src="../../assets/images/user.png" alt="">
                     <h2>Ramesh Peshala</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, facilis.</p>
                 </div>

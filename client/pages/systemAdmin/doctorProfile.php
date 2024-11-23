@@ -25,7 +25,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="doctor_profile">
         <div class="doctor_profile_top">
             <div class="doctor_profile_top_left">
-                <img src="../../assets/images/image_8.jpg" alt="">
+                <img src="../../assets/images/user.png" alt="">
             </div>
             <div class="doctor_profile_top_right">
                 <h2>Full Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp; Ramesh Peshala</h2>
@@ -38,11 +38,25 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </div>
         <div class="doctor_profile_down">
             <div>
-                <button>Change Email</button>
-                <button>Reset Password</button>
+                <button onclick="openConfirmModal()">Reset Password</button>
             </div>
         </div>
     </div>
+    <div id="modal" class="modal-background" style="display: none;">
+            <div class="modal-content">
+                <p>Do you want to reset your password?</p>
+                <div class="modal-buttons">
+                    <button onclick="confirmReset()">Yes</button>
+                    <button onclick="pcloseModal()">No</button>
+                </div>
+            </div>
+        </div>
+        <div id="confirmationModal" class="modal-background" style="display: none;">
+            <div class="modal-content">
+                <p class="confirmation-message">Password reset process initiated</p>
+            </div>
+        </div>
+        <script src="../../assets/jsFIles/Admin/passwordReset.js"></script>
     </section>
 </body>
 

@@ -95,6 +95,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
           </tbody>
         </table>
       </div>
+      <div class="appointment-btn">
+        <button>Report generator</button>
+      </div>
     </div>
   </section>
 </body>

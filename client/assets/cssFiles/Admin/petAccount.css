@@ -37,6 +37,10 @@
     gap: 70px;
     padding: 30px;
 }
+.pet-account-inside-right h2{
+    font-size: 17px;
+    font-weight: 500;
+}
 
 .admin-navbar-inside-left-inner-1 ul li.active {
     background-color: #F8ECFF;

@@ -37,7 +37,7 @@
             <form action="" method="POST">
                 <div class="admin-regi-inside">
                 <div class="admin-regi-inside-right">
-                  <img src="../../assets/images/image_8.jpg" alt="">
+                  <img src="../../assets/images/user.png" alt="">
                   <h3>Hello <?= htmlspecialchars($name); ?></h3>
                   <h3>Email :<?= htmlspecialchars($email); ?></h3>
                 </div>
