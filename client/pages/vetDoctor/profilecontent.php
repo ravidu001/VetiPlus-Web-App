@@ -298,7 +298,7 @@
 
             </table>
         </form>
-        <button type="button" class="logoutBtn">
+        <button type="button" class="logoutBtn" onclick="window.location.href='../../../client/pages/login-singup/logout.php'">
             Logout
         </button>
         <a href="../../../server/controllers/vetDoctor/deleteProfile.php?user_id=<?php echo urlencode($user_id); ?>">
