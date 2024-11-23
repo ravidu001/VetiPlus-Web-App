@@ -28,8 +28,6 @@
                     <thead>
                         <tr>
                             <th>
-                                Special Offer 
-                                <br>
                                 Details 
                             </th>
                             <th>Picture</th>
@@ -65,13 +63,15 @@
                                 <img class="OfferImage" src="../../assets/images/salonwomen.jpg" alt="OfferImage">
                             </td>
                             <td>
-                            reat your pet to a refreshing experience with our special pet bathing offer! This service 
-                            includes a gentle, deep-clean bath using pet-safe, hypoallergenic shampoos to leave your 
-                            pet's coat soft, shiny, and smelling fresh. Our team ensures a stress-free, pampering 
-                            session for your pet, with attention to every detail, from a soothing bath massage to 
-                            a complete towel dry and optional blowout. Book today and enjoy a discounted rate, plus
-                            complimentary ear cleaning and brushing to make your pet look and feel fantastic. Perfect
-                            for pets who need a little extra care and comfort during bath time!
+                             <p>  
+                                reat your pet to a refreshing experience with our special pet bathing offer! This service 
+                                includes a gentle, deep-clean bath using pet-safe, hypoallergenic shampoos to leave your 
+                                pet's coat soft, shiny, and smelling fresh. Our team ensures a stress-free, pampering 
+                                session for your pet, with attention to every detail, from a soothing bath massage to 
+                                a complete towel dry and optional blowout. Book today and enjoy a discounted rate, plus
+                                complimentary ear cleaning and brushing to make your pet look and feel fantastic. Perfect
+                                for pets who need a little extra care and comfort during bath time!
+                            </p> 
                             </td>
                             <td>
                                     <button class="delete" id="delete">Delete</button>

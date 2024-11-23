@@ -17,7 +17,7 @@
         <div class="sideanddashbord">
             <div>
                 <?php
-                    require "../../components/salon/sidebar.php";
+                    require "../../components/common/salon/sidebar.php";
                 ?>
             </div>
             <div class="dash">

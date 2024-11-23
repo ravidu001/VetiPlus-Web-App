@@ -1,12 +1,14 @@
 <?php
-// Include the ServiceModel file
-require_once '../../../server/controllers/ViewSalonService.php';
-session_start();
+include  ( __DIR__ . '/../../../server/controllers/salon/ViewSalonService.php');
+// include  ( __DIR__ . '/../../../server/controllers/salon/DeleteSalonService.php');
+// include ( __DIR__ . '/../../../server/config/phpConfig.php');
+
+
 
 $salon_id = 1; // Replace with dynamic salon ID when available
 
 // Get all services for the salon
-$services = getAllServices($salon_id);
+//$services = getAllServices($salon_id);
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +19,7 @@ $services = getAllServices($salon_id);
     <title>View Service Details</title>
     <link rel="stylesheet" href="../../assets/cssFiles/salon/ServiceDetails.css">
     <link rel="stylesheet" href="../../assets/cssFiles/salon/ToolContentMainTopic.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/salon/PopUp.css">
 </head>
 <body>
     <div class="sidebarandsevice">
@@ -39,9 +42,8 @@ $services = getAllServices($salon_id);
                         <thead>
                             <tr>
                                 <th>Service Details</th>
-
                                 <th>Photo</th>
-                                <th><th>Discription</th></th>
+                                <th>Discription</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -90,39 +92,46 @@ $services = getAllServices($salon_id);
                             </tr> -->
                             <?php
                     // Loop through the fetched services
-                    if (!empty($services)) {
-                        foreach ($services as $service) {
-                            echo "<tr>";
-                            // Service Details Column
-                            echo "<td>
-                                    <table>
-                                        <tbody>
-                                            <tr><td>Name:</td><td>{$service['ServiceName']}</td></tr>
-                                            <tr><td>Charge:</td><td>\${$service['ServiceCharge']}</td></tr>
-                                        </tbody>
-                                    </table>
-                                  </td>";
+                                if (!empty($services)) {
+                                    foreach ($services as $service) {
+                                        echo "<tr>";
+                                        // Service Details Column
+                                        echo "<td>
+                                                <h4 class= 'ServiceName'>{$service['serviceName']}</h4><br>
+                                                <h3 class= 'ServicePrice'></h3>Service Charge : <br> <p class= 'charge'>Rs .{$service['serviceCharge']}</p>
+                                            </td>";
 
-                            // Photo Column
-                            echo "<td><img src='../../assets/images/{$service['photo1']}' class='service-photo' alt='Service Image'></td>";
+                                        // Photo Column
+                                        echo "<td><img src='../../assets/images/{$service['photo1']}' class='service-photo' alt='Service Image'>";
 
-                            // Description Column
-                            echo "<td>{$service['description']}</td>";
+                                        echo "<img src='../../assets/images/{$service['photo2']}' class='service-photo' alt='Service Image'></td>";
 
-                            // Action Column
-                            echo "<td>
-                                <button class='edit'>
-                                     <a href='EditService.php?service_id={$service['serviceId']}'>Edit</a>  
-                                </button>
-                                <button class='delete'>
-                                <a href='DeleteService.php?service_id={$service['serviceId']}' class='delete'>Delete</a>  
-                                </button>  
-                                  </td>";
-                            echo "</tr>";
-                        }
-                    } else {
-                        echo "<tr><td colspan='4'>No services found</td></tr>";
-                    }
+                                        // Description Column
+                                        echo "<td>
+                                                <p class='ServiceDescription'>
+                                                    {$service['serviceDescription']}
+                                                </p>
+                                            </td>";
+
+                                        // Action Column
+                                        echo "<td>
+                                            <button class='edit'>
+                                                <a href='EditService.php?service_id={$service['serviceID']}'>Edit</a>  
+                                            </button>
+                                            <button class='delete'>
+                                            <a href='../../../server/controllers/salon/DeleteSalonService.php?service_id={$service['serviceID']}' class='delete'
+                                                onclick=\"return confirm('Are you sure you want to delete this?')\" >
+                                                Delete
+                                            </a>  
+                                            </button>  
+                                            </td>";
+                                        echo "</tr>";
+                                    }
+                                } else {
+                                    echo "<tr><td colspan='5'>No services found</td></tr>";
+                                }
+
+                                // require('../../../server/controllers/salon/DeleteSalonService.php');
                     ?>
                     
                         </tbody>
@@ -133,4 +142,6 @@ $services = getAllServices($salon_id);
     
     
 </body>
+    <script src= "../../assets/jsFIles/salon/SearchService.js"></script>
+    <script src= "../../assets/jsFIles/salon/PopUp.js"></script>
 </html>

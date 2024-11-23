@@ -40,8 +40,8 @@
                             <i class="fas fa-upload"></i>
                             <span>Upload Salon Profile Image</span>
                             <input type="file" 
-                                   id="image" 
-                                   name="image" 
+                                   id="image1" 
+                                   name="image1" 
                                    accept="image/*"
                                    class="file-input">
                         </div>
@@ -194,5 +194,6 @@
         </div>
     </div>
 </body>
-<script src="../../assets/jsFiles/salon/SalonProfileEdit.js"></script>
+    <script src="../../assets/jsFiles/salon/SalonProfileEdit.js"></script>
+    <script src="../../assets/jsFIles/salon/UploadImage.js"></script>
 </html>

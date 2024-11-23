@@ -107,4 +107,5 @@
         </div>
     </div>
 </body>
+    <script src="../../assets/jsFIles/salon/UploadImage.js"></script> 
 </html>
