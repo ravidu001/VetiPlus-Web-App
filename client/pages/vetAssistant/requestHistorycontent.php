@@ -1,8 +1,8 @@
-<div class="accept-container">
-    <div class="accept-header">
-        <h2>Accepted request</h2>
+<div class="request-container">
+    <div class="request-header">
+        <h2>Doctor's Request</h2>
     </div>
-    <table class="accept-table" id="accept">
+    <table class="request-table" id="request">
         <tr>
             <th> No. </th>
             <th> Starting time </th>
@@ -23,29 +23,28 @@
             <td>  077 0507520 </td>
             <td style="align:center;"> 
                 <div class="button-container">
-                    <a href="./acceptview.php">
-                        <button type="submit" class="viewBtn">View</button> 
+                    <button type="submit" class="acceptBtn">Accepted</button>
+                    <a href="./acceptview.php" >
+                        <button type="submit" class="viewBtn">View</button>
                     </a>
+                </div>
+            </td>
+
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td>  2024-12-02: 15.00 </td>
+            <td>  2024-12-02: 18.00 </td>
+            <td> <img src="../../../client/assets/images/doctorprofile.jpg" alt="Doctor's profile" class="doctor-profile"> </td>
+            <td>  Dr. Saman Perera </td>
+            <td>  147, Hirana, Panadura </td>
+            <td>  077 0501136 </td>
+            <td style="align:center;"> 
+                <div class="button-container">
+                    <button type="submit" class="rejectBtn">Rejected</button>
                 </div>
             </td>
         </tr>
 
-        <tr>
-            <td> 2 </td>
-            <td>  2024-12-01: 15.00 </td>
-            <td>  2024-12-01: 18.00 </td>
-            <td> <img src="../../../client/assets/images/doctorprofile.jpg" alt="Doctor's profile" class="doctor-profile"> </td>
-            <td>  Dr. Kasun Perera </td>
-            <td>  147, Walana, Panadura </td>
-            <td>  077 0114620 </td>
-            <td style="align:center;"> 
-                <div class="button-container">
-                    <a href="./acceptview.php">
-                        <button type="submit" class="viewBtn">View</button> 
-                    </a>
-                </div>
-            </td>
-        </tr>
     </table>
 </div>
-        
