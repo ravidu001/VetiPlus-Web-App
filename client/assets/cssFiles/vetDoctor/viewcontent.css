@@ -100,6 +100,18 @@
     box-shadow: var(--shadow-color) 0px 5px 15px;
 }
 
+.appoinment-table tr:hover .button-container .queue-completeBtn,
+.appoinment-table tr:hover .button-container .queue-cancelBtn {
+    background-color: var(--background-primary); /* Change background color */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.appoinment-table tr:hover .button-container .queue-completeBtn:hover,
+.appoinment-table tr:hover .button-container .queue-cancelBtn:hover {
+    background-color: var(--background-primary); /* Change background color */
+    transform: scale(1.1); /* Scale up the button */
+}
+
 .appoinment-table {
     width: 100%;
     border-collapse: collapse;

@@ -44,14 +44,67 @@
 
     <div class="button-container">
         <button type="submit" class="queueBtn">Queue</button>
+        <button type="submit" class="completeBtn">Completed</button>
         <button type="submit" class="cancelBtn">Cancelled</button>
-        <button type="submit" class="completeBtn">Rescheduled</button>
     </div>
 
     <table class="appoinment-table" id="queue">
         <tr>
             <th> </th>
-            <th> Owner's Profile </th>
+            <!--<th> Owner's Profile </th>-->
+            <th> Owner's Name </th>
+            <th> Pet's Profile </th>
+            <th> Pet's Detail </th>
+            <th> Contact Number </th>
+            <th> Session</th>
+            <th> Action</th>
+        </tr>
+        <tr>
+            <td> 1 </td>
+            <!--<td> <div class="owner-profile"><img src="../../assets/images/dog.jpg" alt="owner1" class="owner-pic"> </div></td>-->
+            <td>  John Doe </td>
+            <td> <div class="pet-profile"><img src="../../assets/images/dog.jpg" alt="pet1" class="pet-pic"> </div></td>
+            <td>  
+                <p> Roky </p>
+                <p> Labrador </p>
+                <p> 2 years </p>
+             </td>
+            <td>  0771234567 </td>
+            <td>  15:00 </td>
+            <td style="align:center;"> 
+                <div class="button-container">
+                    <button type="submit" class="queue-completeBtn">Completed</button> <br />
+                    <button type="submit" class="queue-cancelBtn">Cancelled</button>
+                </div>
+            </td>
+
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <!--<td> <div class="owner-profile"><img src="../../assets/images/dogProfileimage.jpg" alt="owner2" class="owner-pic"> </div></td>-->
+            <td>  Jane Doe </td>
+            <td> <div class="pet-profile"><img src="../../assets/images/dogProfileimage.jpg" alt="pet2" class="pet-pic"> </div></td>
+            <td>  
+                <p> Tom </p>
+                <p> Persian </p>
+                <p> 1 year </p>
+             </td>
+            <td>  0777654321 </td>
+            <td>  16:30 </td>
+            <td> 
+                <div class="button-container">
+                    <button type="submit" class="queue-completeBtn">Completed</button> <br />
+                    <button type="submit" class="queue-cancelBtn">Cancelled</button>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+
+    <table class="appoinment-table" id="rescheduled">
+        <tr>
+            <th> </th>
+            <!--<th> Owner's Profile </th>-->
             <th> Owner's Name </th>
             <th> Pet's Profile </th>
             <th> Pet's Detail </th>
@@ -60,9 +113,9 @@
         </tr>
         <tr>
             <td> 1 </td>
-            <td> <div class="owner-profile"><img src="../../assets/images/dog.jpg" alt="owner1" class="owner-pic"> </div></td>
+            <!--<td> <div class="owner-profile"><img src="../../assets/images/dog.jpg" alt="owner1" class="owner-pic"> </div></td>-->
             <td>  John Doe </td>
-            <td> <div class="pet-profile"><img src="../../assets/images/vetDoctor/profile/defaultProfile.png" alt="pet1" class="pet-pic"> </div></td>
+            <td> <div class="pet-profile"><img src="../../assets/images/dog.jpg" alt="pet1" class="pet-pic"> </div></td>
             <td>  
                 <p> Roky </p>
                 <p> Labrador </p>
@@ -73,9 +126,9 @@
         </tr>
         <tr>
             <td> 2 </td>
-            <td> <div class="owner-profile"><img src="../../assets/images/dogProfileimage.jpg" alt="owner2" class="owner-pic"> </div></td>
+            <!--<td> <div class="owner-profile"><img src="../../assets/images/dogProfileimage.jpg" alt="owner2" class="owner-pic"> </div></td>-->
             <td>  Jane Doe </td>
-            <td> <div class="pet-profile"><img src="../../assets/images/vetDoctor/profile/defaultProfile.png" alt="pet2" class="pet-pic"> </div></td>
+            <td> <div class="pet-profile"><img src="../../assets/images/dogProfileimage.jpg" alt="pet2" class="pet-pic"> </div></td>
             <td>  
                 <p> Tom </p>
                 <p> Persian </p>
@@ -89,7 +142,7 @@
     <table class="appoinment-table" id="cancelled">
         <tr>
             <th> </th>
-            <th> Owner's Profile </th>
+            <!--<th> Owner's Profile </th>-->
             <th> Owner's Name </th>
             <th> Pet's Profile </th>
             <th> Pet's Detail </th>
@@ -98,67 +151,31 @@
         </tr>
         <tr>
             <td> 1 </td>
-            <td> <div class="owner-profile"><img src="../../assets/images/dog.jpg" alt="owner1" class="owner-pic"> </div></td>
-            <td>   Doe </td>
-            <td> <div class="pet-profile"><img src="../../assets/images/vetDoctor/profile/defaultProfile.png" alt="pet1" class="pet-pic"> </div></td>
+            <!--<td> <div class="owner-profile"><img src="../../assets/images/dog.jpg" alt="owner1" class="owner-pic"> </div></td>-->
+            <td>  John Doe </td>
+            <td> <div class="pet-profile"><img src="../../assets/images/dog.jpg" alt="pet1" class="pet-pic"> </div></td>
             <td>  
-                <p> Puppy </p>
+                <p> Roky </p>
                 <p> Labrador </p>
                 <p> 2 years </p>
              </td>
             <td>  0771234567 </td>
-            <td>  15:30 </td>
+            <td>  15:00 </td>
         </tr>
         <tr>
             <td> 2 </td>
-            <td> <div class="owner-profile"><img src="../../assets/images/dogProfileimage.jpg" alt="owner2" class="owner-pic"> </div></td>
+            <!--<td> <div class="owner-profile"><img src="../../assets/images/dogProfileimage.jpg" alt="owner2" class="owner-pic"> </div></td>-->
             <td>  Jane Doe </td>
-            <td> <div class="pet-profile"><img src="../../assets/images/vetDoctor/profile/defaultProfile.png" alt="pet2" class="pet-pic"> </div></td>
+            <td> <div class="pet-profile"><img src="../../assets/images/dogProfileimage.jpg" alt="pet2" class="pet-pic"> </div></td>
             <td>  
                 <p> Tom </p>
                 <p> Persian </p>
                 <p> 1 year </p>
              </td>
             <td>  0777654321 </td>
-            <td>  17:00 </td>
-        </tr>
-    </table>
-
-    <table class="appoinment-table" id="rescheduled">
-        <tr>
-            <th> </th>
-            <th> Owner's Profile </th>
-            <th> Owner's Name </th>
-            <th> Pet's Profile </th>
-            <th> Pet's Detail </th>
-            <th> Contact Number </th>
-            <th> Session</th>
-        </tr>
-        <tr>
-            <td> 1 </td>
-            <td> <div class="owner-profile"><img src="../../assets/images/dog.jpg" alt="owner1" class="owner-pic"> </div></td>
-            <td>  John  </td>
-            <td> <div class="pet-profile"><img src="../../assets/images/vetDoctor/profile/defaultProfile.png" alt="pet1" class="pet-pic"> </div></td>
-            <td>  
-                <p> Tommy </p>
-                <p> Labrador </p>
-                <p> 2 years </p>
-             </td>
-            <td>  0771234567 </td>
-            <td>  16:00 </td>
-        </tr>
-        <tr>
-            <td> 2 </td>
-            <td> <div class="owner-profile"><img src="../../assets/images/dogProfileimage.jpg" alt="owner2" class="owner-pic"> </div></td>
-            <td>  Jane Doe </td>
-            <td> <div class="pet-profile"><img src="../../assets/images/vetDoctor/profile/defaultProfile.png" alt="pet2" class="pet-pic"> </div></td>
-            <td>  
-                <p> Tom </p>
-                <p> Persian </p>
-                <p> 1 year </p>
-             </td>
-            <td>  0777654321 </td>
-            <td>  16:15 </td>
+            <td>  16:30 </td>
+            <td> 
+            </td>
         </tr>
     </table>
 
