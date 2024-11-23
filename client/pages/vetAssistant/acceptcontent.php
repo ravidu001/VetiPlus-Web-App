@@ -23,7 +23,7 @@
             <td>  077 0507520 </td>
             <td style="align:center;"> 
             <div class="button-container">
-                    <a href="vetAssistant/acceptcontent.php">
+                    <a href="./acceptview.php">
                         <button type="submit" class="viewBtn">View</button> 
                     </a>
                 </div>
@@ -40,7 +40,7 @@
             <td>  077 0114620 </td>
             <td style="align:center;"> 
                 <div class="button-container">
-                    <a href="vetAssistant/acceptcontent.php">
+                    <a href="./acceptview.php">
                         <button type="submit" class="viewBtn">View</button> 
                     </a>
                 </div>

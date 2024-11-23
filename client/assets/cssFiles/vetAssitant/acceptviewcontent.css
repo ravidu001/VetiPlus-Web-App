@@ -1,0 +1,137 @@
+.view-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 20px 30px 20px 30px;
+    border: 4px solid var(--text-primary);
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    transition: 0.5s;
+    background: var(--background-white);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+.field-name {
+    color: var(--text-black);
+    font-size: 16x;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.field-value {
+    border: 2px solid var(--background-light); 
+    padding: 10px; 
+    border-radius: 5px;
+}
+
+.field-container .field-value {
+    width: 200px; 
+}
+
+.field-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.field-name, .field-value {
+    display: inline-block;
+    margin-right: 50px; /* Adjust spacing as needed */
+}
+
+.assistant-profile,
+.owner-profile,
+.pet-profile {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.assistant-profile img,
+.owner-profile img,
+.pet-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.assistant-details {
+    width:60%;
+    padding:10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: 20px;
+    column-gap: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: var(--background-light);
+    color: var(--text-white);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-container button:hover {
+    background: var(--background-primary);
+}
+
+.button-container .active {
+    transform: scale(0.95);
+    background: var(--background-primary);
+    box-shadow: var(--shadow-color) 0px 5px 15px;
+}
+
+.appoinment-table tr:hover .button-container .queue-completeBtn,
+.appoinment-table tr:hover .button-container .queue-cancelBtn {
+    background-color: var(--background-primary); /* Change background color */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.appoinment-table tr:hover .button-container .queue-completeBtn:hover,
+.appoinment-table tr:hover .button-container .queue-cancelBtn:hover {
+    background-color: var(--background-primary); /* Change background color */
+    transform: scale(1.1); /* Scale up the button */
+}
+
+.appoinment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.appoinment-table th {
+    background: var(--background-primary);
+    color: var(--text-white);
+    font-size: 16px;
+    padding: 10px;
+    font-weight: 400;
+}
+
+.appoinment-table td {
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 1px solid var(--background-light);
+}
+
+.appoinment-table tr:hover {
+    background: var(--background-light);
+}
