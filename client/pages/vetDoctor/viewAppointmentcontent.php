@@ -31,7 +31,7 @@
 
 
 
-    <h2 style="margin-top:40px;">My latst Appointments</h2>
+    <h2 style="margin-top:40px;">My next Appointments</h2>
     <table>
         <thead>
             <th> No.</th>
