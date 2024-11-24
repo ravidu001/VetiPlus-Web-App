@@ -26,12 +26,8 @@
             <label for="contactIcon" class="collapsable">Contact Us</label>
         </a>
     </div>
-    <a href="pages/login.php" class="loginBtn">
+    <a href="<?= BASE_PATH . '/client/pages/login-singup/login.php' ?>" class="loginBtn">
         <i class="bx bxs-user-circle bx-sm" id="loginIcon"></i>
         <label for="loginIcon">Login</label>
     </a>
 </nav>
-
-<!-- this  script is to adjust the hero section's height based on the navBar's -->
-<script>
-</script>
