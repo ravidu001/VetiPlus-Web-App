@@ -30,16 +30,40 @@
     <div class="Appoinment">
         <div class="Appoinment-inside">
             <div class="Appoinment-inside-left">
-                <h2>Daily Appointment</h2>
-                <h2>45</h2>
+            <div>
+            <i class='bx bx-calendar-check icon'></i>
+             </div>
+             <div>
+             <h2>Daily Appointment</h2>
+             <h3>45</h3>
+             </div>
             </div>
             <div class="Appoinment-inside-left">
-                <h2>Cancel Appointment</h2>
-                <h2>15</h2>
+            <div>
+            <i class='bx bx-calendar-check icon'></i>
+             </div>
+             <div>
+             <h2>Monthly Appointment</h2>
+             <h3>30</h3>
+             </div>
             </div>
             <div class="Appoinment-inside-left">
-                <h2>Total Appointment</h2>
-                <h2>523</h2>
+            <div>
+            <i class='bx bx-calendar-check icon'></i>
+             </div>
+             <div>
+             <h2>Monthly Cancel Appointment</h2>
+             <h3>567</h3>
+             </div>
+            </div>
+            <div class="Appoinment-inside-left">
+            <div>
+            <i class='bx bx-calendar-x icon'></i>
+             </div>
+             <div>
+             <h2>Cancel Appointment</h2>
+             <h3>45</h3>
+             </div>
             </div>
         </div>
         <div class="Appoinment-outside">
