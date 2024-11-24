@@ -29,10 +29,10 @@
             // hash the password
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-            $loginCredentials_stmt = $conn->prepare("INSERT INTO ? (email, password) VALUES (? ?)");
+            $loginCredentials_stmt = $conn->prepare("INSERT INTO petowner (email, password) VALUES (? ?)");
             $loginCredentials_stmt->bind_param("ss", $email, $hashed_password);
 
-            $userDetails_stmt = $conn->prepare("INSERT INTO ? (fname, lname, dob, mobile )
+            $userDetails_stmt = $conn->prepare("INSERT INTO petowner (fname, lname, dob, mobile )
                                     VALUES (? ? ? ? ? ? ?)");
             // $userDetails_stmt->bind_param("ss", );
         

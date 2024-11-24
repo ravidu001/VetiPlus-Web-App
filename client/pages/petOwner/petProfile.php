@@ -41,7 +41,6 @@
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/navBar.css" rel="stylesheet">
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/myFooter.css" rel="stylesheet">
 
-        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/poppinsFont.css" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/profilePage.css" rel="stylesheet">
@@ -87,7 +86,7 @@
 
                         <label for="dob">Date of Birth: </label>
                         <span class="display-field"><?= $data['DOB']; ?></span>
-                        <input type="text" id="dob" class="input-field" name="dob" value="<?= $data['DOB']; ?>" required>
+                        <input type="text" id="dob" class="input-field" name="dob" value="<?= $data['DOB']; ?>" max="<?= (new DateTime("now"))->format('Y-m-d') ?>" required>
                    
                         <label for="name">Name: </label>
                         <span class="display-field"><?= $data['name']; ?></span>
@@ -122,6 +121,12 @@
                     <span class="data"><?= $data['breed']; ?></span>
                 </div>
 
+                <form id="deletePet" method="post"
+                    action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+
+                    <input type="hidden" name="formName" value="deletePet">
+                    <button type="submit">Delete Pet Profile</button>
+                </form>
             </section>
 
             <section class="dashArea">
@@ -134,6 +139,13 @@
         <?php include INCLUDE_BASE.'/client/components/petOwner/userFooter.php'; ?>
 
         <script>
+            const deletePetForm = document.getElementById('deletePet')
+            deletePetForm.addEventListener('submit', (e) => {
+                e.preventDefault()
+                const deleteConfirm = confirm("Do you really want to remove this pet?\nYou cannot access its details hereafter!")
+                if(deleteConfirm) deletePetForm.submit()
+            })
+
             const breedingAvail = <?= $data['breedAvailable'] ?>;
             
             const breedText = document.getElementById('breedDescription')
@@ -188,11 +200,12 @@
                 $stmt->bind_param("ss", $fileName, $petID);
 
                 $execDone = $stmt->execute();
+                $stmt->close();
                 if ($execDone) { echo
-                "<script>
-                    alert('Image updated successfully!');
-                    window.location.assign(window.location.href); // refresh current page
-                </script>";
+                    "<script>
+                        alert('Image updated successfully!');
+                        window.location.assign(window.location.href); // refresh current page
+                    </script>";
                 } else {
                     echo "<script> 
                         alert('Database error: " . addslashes($conn->error) . "'); 
@@ -204,6 +217,22 @@
         }
         if (isset($_POST['formName']) && $_POST['formName'] == 'profileDetailsEdit') {
             
+        }
+        if (isset($_POST['formName']) && $_POST['formName'] == 'deletePet') {
+            $stmt = $conn->prepare("DELETE FROM pet where petID = ?");
+            $stmt->bind_param("i", $petID);
+
+            $execDone = $stmt->execute();
+            $stmt->close();
+            if ($execDone) { echo "
+                <script>
+                    console.log('Pet Profile deleted');
+                    alert('Pet profile deleted!');
+                    window.location.href = './dashboard.php';
+                </script>";
+                exit();
+            }
+            else echo "<script> alert('Error deleting pet profile!') </script>";
         }
     }
 

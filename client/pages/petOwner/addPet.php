@@ -22,7 +22,6 @@
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/navBar.css" rel="stylesheet">
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/myFooter.css" rel="stylesheet">
 
-        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/poppinsFont.css" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/formStyles.css" rel="stylesheet">
@@ -39,7 +38,7 @@
                 <label>Name:</label>
                     <input type="text" id="name" name="name" required> 
                 <label for="dob">Date of Birth:</label>
-                    <input type="date" id="dob" name="dob" required>
+                    <input type="date" id="dob" name="dob" max="<?= (new DateTime("now"))->format('Y-m-d') ?>" required>
                 <label>Gender:</label>
                     <span>
                         <label for="g_male">Male:</label>
@@ -124,16 +123,21 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        $name = $_POST['name'];
-        $dob = $_POST['dob'];
-        $gender = $_POST['gender'];
-        $weight = $_POST['weight'];
-        $species = $_POST['species'] ?? $_POST['otherSpecies'];
-        $breed = $_POST['breed'];
+        $name = htmlspecialchars($_POST['name']);
+        $dob = htmlspecialchars($_POST['dob']);
+        $gender = htmlspecialchars($_POST['gender']);
+        $weight = htmlspecialchars($_POST['weight']);
 
-        $breedAvailable = $_POST['breedAvailable'];
-        $breedDescription = $_POST['breedDescription'] || "";
-        echo "<script> alert($breedDescription) </script>";
+        htmlspecialchars($_POST['species']) == 'other'
+            ? $species = htmlspecialchars($_POST['otherSpecies'])
+            : $species = htmlspecialchars($_POST['species']);
+
+        $breed = htmlspecialchars($_POST['breed']);
+
+        $breedAvailable = htmlspecialchars($_POST['breedAvailable']);
+        ($breedAvailable == 1) 
+            ? $breedDescription = htmlspecialchars($_POST['breedDescription'])
+            : $breedDescription = null;
 
         $profilePicture = $_FILES['profilePicture'];
 
@@ -148,14 +152,18 @@
 
         if ($uploadDone) {
             $stmt->bind_param("ssssdssiss", $userID, $name, $dob, $gender, $weight, $species, $breed, $breedAvailable, $breedDescription, $fileName);
+            
             $insertDone = $stmt->execute();
-            $dashPath = BASE_PATH.'/client/pages/petOwner/dashboard.php';
-            if ($insertDone) echo "
-                        <script> 
-                            alert('Pet Successfully Added');
-                            window.location.assign($dashPath);
-                        </script>";
-            else echo "<script> alert('Unable to add pet!<br/>$conn->error') </script>";
+            $stmt->close();
+            
+            if ($insertDone) { echo "
+                <script> 
+                    console.log('Pet Profile created');
+                    alert('Pet Successfully Added');
+                    window.location.href = './dashboard.php';
+                </script>";
+                exit();
+            }else echo "<script> alert('Unable to add pet!<br/>$conn->error') </script>";
         }
         else echo "<script> alert('Error in uploading profile picture!<br/>$conn->error') </script>";
     }
