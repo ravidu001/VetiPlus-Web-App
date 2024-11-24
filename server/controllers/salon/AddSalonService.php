@@ -34,29 +34,88 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $image_folder2 = '../../../client/assets/images/salon/service/' . $image2;
     // require('../../../client/');
 
+    if (isset($image1) && isset($image2)){
+        move_uploaded_file($image_tmp_name1, $image_folder1) && move_uploaded_file($image_tmp_name2, $image_folder2);
+    }
+
+    else if (isset($image1) && !isset($image2)){
+        move_uploaded_file($image_tmp_name1, $image_folder1);
+    }
+
+    else if(!isset($image1) && isset($image2)){
+        move_uploaded_file($image_tmp_name2, $image_folder2);
+    }
+
+    // else {
+    //     $photo1 = $image1; // Default empty string or set the appropriate value
+    //     $photo2 = $image2; // Default empty string or set the appropriate value
+    // }
+
 
 
     // echo "<script>alert('man wada')</script>";
-     if (move_uploaded_file($image_tmp_name1, $image_folder1) && move_uploaded_file($image_tmp_name2, $image_folder2)) {
-    $insert_query = $conn->prepare("INSERT INTO salonservice (serviceName, serviceDescription, photo1, photo2, serviceCharge, salonID)
-            VALUES (?, ?, ?, ?, ?, ?)");
+
+    // move_uploaded_file($image_tmp_name1, $image_folder1) && move_uploaded_file($image_tmp_name2, $image_folder2);
+    
+    if ($image1_size < 1000000  && $image2_size < 1000000){
+        $insert_query = $conn->prepare("INSERT INTO salonservice (serviceName, serviceDescription, photo1, photo2, serviceCharge, salonID)
+                     VALUES (?, ?, ?, ?, ?, ?)");
+        $photo1 = ""; 
+        $photo2 = "";
+        
+        $insert_query->bind_param("ssssis", $ServiceName, $serviceDescription, $photo1, $photo2, $ServiceCharge, $salon_id);
+
+        if ($insert_query->execute()) {
+            // echo "<script>alert('Service added successfully!');</script>";
+            header('Location: ../../../client/pages/salon/ServiceDetails.php?status=success');
+            // require ('../../../client/pages/salon/ServiceDetails.php');
+            exit;
+        } else {
+            echo "<script>alert('Failed to add the service. " . $insert_query->error . "');</script>";
+        } 
+    }
+
+}
+    // $insert_query = $conn->prepare("INSERT INTO salonservice (serviceName, serviceDescription, photo1, photo2, serviceCharge, salonID)
+    //                  VALUES (?, ?, ?, ?, ?, ?)");
+
+
+
+    // $photo1 = $image1; // Default empty string or set the appropriate value
+    // $photo2 = $image2; // Default empty string or set the appropriate value  
+    
+//     $insert_query->bind_param("ssssis", $ServiceName, $serviceDescription, $photo1, $photo2, $ServiceCharge, $salon_id);
+
+//     if ($insert_query->execute()) {
+//         // echo "<script>alert('Service added successfully!');</script>";
+//         header('Location: ../../../client/pages/salon/ServiceDetails.php?status=success');
+//         // require ('../../../client/pages/salon/ServiceDetails.php');
+//         exit;
+//     } else {
+//         echo "<script>alert('Failed to add the service. " . $insert_query->error . "');</script>";
+//     }
+// }
+
+    //  if (move_uploaded_file($image_tmp_name1, $image_folder1) && move_uploaded_file($image_tmp_name2, $image_folder2)) {
+    // $insert_query = $conn->prepare("INSERT INTO salonservice (serviceName, serviceDescription, photo1, photo2, serviceCharge, salonID)
+    //         VALUES (?, ?, ?, ?, ?, ?)");
 
 // Assuming $photo1 and $photo2 are set or passed in, you should use variables.
-    $photo1 = $image1; // Default empty string or set the appropriate value
-    $photo2 = $image2; // Default empty string or set the appropriate value
+//     $photo1 = $image1; // Default empty string or set the appropriate value
+//     $photo2 = $image2; // Default empty string or set the appropriate value
 
-    $insert_query->bind_param("ssssis", $ServiceName, $serviceDescription, $photo1, $photo2, $ServiceCharge, $salon_id);
+//     $insert_query->bind_param("ssssis", $ServiceName, $serviceDescription, $photo1, $photo2, $ServiceCharge, $salon_id);
 
-    if ($insert_query->execute()) {
-        // echo "<script>alert('Service added successfully!');</script>";
-        header('Location: ../../../client/pages/salon/ServiceDetails.php?status=success');
-        // require ('../../../client/pages/salon/ServiceDetails.php');
-        exit;
-    } else {
-        echo "<script>alert('Failed to add the service. " . $insert_query->error . "');</script>";
-    }
-} else {
-    echo "<script>alert('Failed to upload images.');</script>";
-    header('Location: ../../../client/pages/salon/ServiceDetails.php?status=error');
-}
-}
+//     if ($insert_query->execute()) {
+//         // echo "<script>alert('Service added successfully!');</script>";
+//         header('Location: ../../../client/pages/salon/ServiceDetails.php?status=success');
+//         // require ('../../../client/pages/salon/ServiceDetails.php');
+//         exit;
+//     } else {
+//         echo "<script>alert('Failed to add the service. " . $insert_query->error . "');</script>";
+//     }
+// } else {
+//     echo "<script>alert('Failed to upload images.');</script>";
+//     header('Location: ../../../client/pages/salon/ServiceDetails.php?status=error');
+// }
+// }

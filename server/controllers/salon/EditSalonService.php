@@ -11,6 +11,7 @@ include __DIR__ . '/../../../server/config/phpConfig.php';
 
 
 
+
 // Process update
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $service_id = $_POST['Serviceid'];
@@ -40,9 +41,21 @@ $result = mysqli_query($conn, $query);
         $image_folder1 = '../../../client/assets/images/salon/service/' . $image1;
 
         if(move_uploaded_file($image_tmp_name1, $image_folder1)) {
-            $image1_to_store = $image1; // Update to the newly uploaded image
+            echo "<script>alert('Photo 1')</script>"; // Update to the newly uploaded image
+        } else {
+            echo "<script>alert('Not upload Photo 1')</script>";
         }
+    } else {
+        $query = "SELECT photo1 FROM salonservice WHERE serviceID = '$service_id'";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        $image1 = $row['photo1'];
+        $image1_size = 100000;
+        echo "<script>alert('database Photo 1')</script>";
     }
+
+
+
 
     //Check if the new images are uploaded and overwrite the defaults if present    
     if(isset($_FILES['photo2'])  && $_FILES['photo2']['error']  === UPLOAD_ERR_OK){
@@ -52,8 +65,19 @@ $result = mysqli_query($conn, $query);
         $image_folder2 = '../../../client/assets/images/salon/service/' . $image2;
 
         if(move_uploaded_file($image_tmp_name2, $image_folder2)) {
-            $image2_to_store = $image2; // Update to the newly uploaded image
+            // $image2_to_store = $image2; // Update to the newly uploaded image
+            echo "<script>alert('Photo 2')</script>";
+        } else {
+            echo "<script>alert('Not upload Photo 2')</script>";
         }
+    } else {
+        $query = "SELECT photo2 FROM salonservice WHERE serviceID = '$service_id'";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        $image2 = $row['photo2'];
+        $image2_size = 100000;
+        echo "<script>alert('database Photo 2')</script>";
+
     }
 
 
@@ -80,19 +104,27 @@ $result = mysqli_query($conn, $query);
     //     print_r($image1);
     // }
     
-    
+    if($image1_size < 1000000){
+        $sql = "UPDATE salonservice 
+        SET serviceName='$name', serviceCharge='$charge', serviceDescription='$description' ,  photo1 = '$image1',  photo2 = '$image2'
+        WHERE serviceID='$service_id'";
+        // print_r($service_id);
 
-    $sql = "UPDATE salonservice 
-            SET serviceName='$name', serviceCharge='$charge', serviceDescription='$description' ,  photo1 = '$image1',  photo2 = '$image2'
-            WHERE serviceID='$service_id'";
-    // print_r($service_id);
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "Service updated successfully";
-        header('Location: ../../../client/pages/salon/ServiceDetails.php?status=success');
+        if ($conn->query($sql) === TRUE) {
+            echo "Service updated successfully";
+            header('Location: ../../../client/pages/salon/ServiceDetails.php?status=success');
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+            header('Location: ../../../client/pages/salon/ServiceDetails.php?status=error');
+        }
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        // echo "Error: " . $sql . "<br>" . $conn->error;
+        // header('Location: ../../../client/pages/salon/ServiceDetails.php?status=error');
+        // echo "Image is too large ";
         header('Location: ../../../client/pages/salon/ServiceDetails.php?status=error');
+
     }
+
+    
 }
 ?>
