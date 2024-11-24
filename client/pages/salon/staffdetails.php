@@ -30,24 +30,24 @@
             <table class="table">
 
                 <thead>
-                    <th>Picture</th>
                     <th>Name</th>
+                    <th>Picture</th>
                     <th>Phone Number</th>
                     <th>NIC Number</th>
                     <th>Address</th>
-                    <th>Work Status</th>
+                    <th>Position</th>
                     <th>Action</th>
                 </thead>
 
                 <tbody>
+                    <td>J.W.D.Kapila</td>
                     <td>
                         <img src="../../assets/images/boy.jpg" class="staff-picture">
                     </td>
-                    <td>J.W.D.Kapila</td>
                     <td>07785663324</td>
                     <td>200178996325</td>
-                    <td>EMbilipitiya ,Udagampola</td>
-                    <td>nail polishing</td>
+                    <td>Embilipitiya ,Udagampola</td>
+                    <td>Nail polishing</td>
                     <td>
                         <button class="edit">Delete</button>
                         <button class="edit">
