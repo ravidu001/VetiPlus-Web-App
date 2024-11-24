@@ -76,7 +76,9 @@
                 <td style="width:200px"> Prescription </td>
                 <td>
                     <div class="input-container">
+                        <!--<input type="text" name="prescription" placeholder="Enter prescriptions">-->
                         <textarea name="prescription" placeholder="Enter prescriptions..." rows="4"></textarea>
+                        <!--<i class='bx bx-edit-alt'></i>-->
                     </div>
                 </td>
             </tr>
@@ -100,7 +102,7 @@
                     <input type="reset" value="Reset" class="btn btn-reset">
                 </td>
                 <td>
-                    <input type="submit" value="Submit" class="btn btn-submit">
+                    <input type="button" value="Submit" class="btn btn-submit" onclick="moveto()">
                 </td>
         </table>
     </form>
@@ -117,6 +119,11 @@
 
 
 <script>
+    function moveto() {
+        alert("Prescription added successfully");
+        window.location.href = '/VetiPlus/VetiPlus-Web-App/client/pages/vetAssistant/acceptview.php';
+    }
+
     function showPopup() {
         document.getElementById('popup-container').style.display = 'flex';
     }

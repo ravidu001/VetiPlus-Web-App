@@ -73,8 +73,10 @@
             <td>  15:00 </td>
             <td style="align:center;"> 
                 <div class="button-container">
-                    <button type="submit" class="queue-completeBtn">Completed</button> <br />
-                    <button type="submit" class="queue-cancelBtn">Cancelled</button>
+                    <a href="./assisPrescription.php">
+                        <button type="submit" class="queue-completeBtn">Complete</button> <br />
+                    </a>
+                    <button type="submit" class="queue-cancelBtn">Cancel</button>
                 </div>
             </td>
 
@@ -93,8 +95,10 @@
             <td>  16:30 </td>
             <td> 
                 <div class="button-container">
-                    <button type="submit" class="queue-completeBtn">Completed</button> <br />
-                    <button type="submit" class="queue-cancelBtn">Cancelled</button>
+                <a href="./assisPrescription.php">
+                        <button type="submit" class="queue-completeBtn">Complete</button> <br />
+                    </a>
+                    <button type="submit" class="queue-cancelBtn">Cancel</button>
                 </div>
             </td>
         </tr>
