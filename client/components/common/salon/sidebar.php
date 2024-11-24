@@ -102,8 +102,8 @@
                 </li>
 
                 <li>
-                <li class="nav-link <?= $current_page == 'FirstTimeRenderPage.php' ? 'active' : '' ?>"> 
-                    <a href="../../pages/salon/FirstTimeRenderPage.php">
+                <li class="nav-link <?= $current_page == 'ContactUs.php' ? 'active' : '' ?>"> 
+                    <a href="../../pages/salon/ContactUs.php">
                         <i class='bx bxs-phone-call icon' ></i>
                         <span>Contact Us</span>
                     </a>
