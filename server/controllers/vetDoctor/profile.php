@@ -235,10 +235,16 @@
                 )";
                
                echo "<script>alert('hello');</script>";
-               if(mysqli_query($conn, $query)) {
-                    echo "<script>alert('Profile added successfully');</script>";
+               $result = mysqli_query($conn, $query);
+               if($result ) {
+                echo "<script>alert('Profile added successfully');
+                        window.location.href = '../../../client/pages/vetDoctor/profile.php'; 
+                        </script>";
+                
                 } else {
-                    echo "<script>alert('Profile not Added');</script>";
+                    echo "<script>alert('Profile not added');
+                    window.location.href = '../../../client/pages/vetDoctor/profile.php'; 
+                    </script>";
                 }
             } 
         }

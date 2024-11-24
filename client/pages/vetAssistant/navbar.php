@@ -78,24 +78,19 @@ $current_page = basename($_SERVER['PHP_SELF']);
                             <i class='bx bxs-down-arrow arrow first icon'></i>
                         </a>
                         <ul class="sub-menu" >
-                            <li class="nav-link <?= $current_page == 'prescription.php' ? 'active' : '' ?>">
-                                <a href="prescription.php">
+                            <li class="nav-link <?= $current_page == 'assisPrescription.php' ? 'active' : '' ?>">
+                                <a href="assisPrescription.php">
                                 <i class='bx bx-book-add icon' ></i>
                                     <span class="text nav-text" style="font-size:14px;">Add Prescription</span>
                                 </a>
                             </li>
-                            <li class="nav-link <?= $current_page == 'medicalhistory.php' ? 'active' : '' ?>">
-                                <a href="medicalhistory.php">
+                            <li class="nav-link <?= $current_page == 'medicalHistroy.php' ? 'active' : '' ?>">
+                                <a href="medicalHistroy.php">
                                     <i class='bx bx-history icon' ></i>
                                     <span class="text nav-text" style="font-size:14px;">Medical History</span>
                                 </a>
                             </li>
-                            <li class="nav-link <?= $current_page == 'certificate.php' ? 'active' : '' ?>">
-                                <a href="certificate.php">
-                                    <i class='bx bx-certification icon' ></i>
-                                    <span class="text nav-text" style="font-size:14px;">Create Certificate</span>
-                                </a>
-                            </li>
+                            
                         </ul>
 
                     </li>
@@ -103,7 +98,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <div style="display:none;" id="hiddenListItems-Medical">
                         <li style="display:block"></li>
                         <li style="display:block"></li>
-                        <li style="display:block"></li>
+                        
                     </div>
                     
                     <li class="nav-link" style="display:block">
@@ -176,5 +171,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
     </nav>
 
     <script src="../../assets/jsFIles/vetDocotor/darkmode.js"></script>
+    <script src="../../assets/jsFIles/vetAssistant/appointmentnavbar.js"></script>
     <script src="../../assets/jsFIles/vetDocotor/medicalnavbar.js"></script>
     <script src="../../assets/jsFIles/vetDocotor/reviewnavbar.js"></script>
