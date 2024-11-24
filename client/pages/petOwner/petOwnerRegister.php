@@ -171,13 +171,6 @@
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    // $name = htmlspecialchars($_POST['name']);
-    // $dob = htmlspecialchars($_POST['dob']);
-    // $contact = htmlspecialchars($_POST['contact']);
-
-    // $houseNo = htmlspecialchars($_POST['houseNo']);
-    // $street = htmlspecialchars($_POST['street']);
-    // $city = htmlspecialchars($_POST['city']);
     function sanitizeInput($input) {
         return htmlspecialchars(trim($input));
     }
