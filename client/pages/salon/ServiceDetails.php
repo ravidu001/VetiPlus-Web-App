@@ -102,9 +102,9 @@ $salon_id = 1; // Replace with dynamic salon ID when available
                                             </td>";
 
                                         // Photo Column
-                                        echo "<td><img src='../../assets/images/{$service['photo1']}' class='service-photo' alt='Service Image'>";
+                                        echo "<td><img src='../../assets/images/{$service['photo1']}' class='service-photo' alt='No Image Uploaded'>";
 
-                                        echo "<img src='../../assets/images/{$service['photo2']}' class='service-photo' alt='Service Image'></td>";
+                                        echo "<img src='../../assets/images/{$service['photo2']}' class='service-photo' alt='No Image Uploaded'></td>";
 
                                         // Description Column
                                         echo "<td>

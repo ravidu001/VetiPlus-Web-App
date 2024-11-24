@@ -112,7 +112,7 @@
 
                 <li>
                 <li class="nav-link <?= $current_page == 'salonprofile.php' ? 'active' : '' ?>"> 
-                    <a href="../../pages/salon/salonprofile.php">
+                    <a href="../../pages/salon/CreateSalonProfile.php">
                         <i class='bx bx-user icon'></i>
                         <span>Profile</span>
                     </a>

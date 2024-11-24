@@ -29,7 +29,7 @@
                 <!-- Service Charge -->
                 <div class="form-group">
                     <label for="serviceCharge">
-                        <i class="fas fa-dollar-sign"></i> Discount <span class="required">*</span>
+                        <i class="fa-solid fa-rupee-sign"></i> Discount <span class="required">*</span>
                     </label>
                     <div class="price-input-wrapper">
                         <input type="number" 

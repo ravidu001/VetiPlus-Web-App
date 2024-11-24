@@ -107,8 +107,8 @@
                  <input type="checkbox"><p>Check the integration and agree....</p>
                 <br>
                 <!-- Submit Button -->
-                <button type="submit" class="submit-button">
-                     Submit
+                <input type="button" class="submit-button" onclick="redirect()" value="Submit">
+                    
                 </button> <br>
 
                 <p>
@@ -125,5 +125,5 @@
     </div>
 </div>
 </body>
-    <script src="../../assets/jsFIles/salon/UploadImage.js"></script>   
+    <script src="../../assets/jsFIles/salon/UploadImage.js"></script>  
 </html>

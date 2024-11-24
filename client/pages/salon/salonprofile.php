@@ -35,7 +35,7 @@
                     <i class="fa-solid fa-star" style="color: #8000ff;"></i>
                     </div>
                     <div class="reveiwdetail">
-                     <h3 class="rev"> 105 Google reviews</h3>
+                     <h3 class="rev"> 105 Reviews</h3>
                      </div>
                     </div>
                     <div class="salon-details">

@@ -50,7 +50,10 @@
                     <td>nail polishing</td>
                     <td>
                         <button class="edit">Delete</button>
-                        <button class="edit">Edit</button>
+                        <button class="edit">
+                            <a href="./EditStaff.php">
+                            Edit
+                        </button>
                     </td>
                 </tbody>
 

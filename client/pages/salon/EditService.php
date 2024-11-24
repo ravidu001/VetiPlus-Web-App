@@ -54,7 +54,7 @@ include __DIR__ . '/../../../server/config/phpConfig.php';
                 <!-- Service Charge -->
                 <div class="form-group">
                     <label for="serviceCharge">
-                        <i class="fas fa-dollar-sign"></i> Service Charge <span class="required">*</span>
+                        <i class="fa-solid fa-rupee-sign"></i> Service Charge <span class="required">*</span>
                     </label>
                     <div class="price-input-wrapper">
                         <input type="number" 

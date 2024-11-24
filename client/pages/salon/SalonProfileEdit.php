@@ -11,7 +11,7 @@
     <div class="container">
         <div class="form-wrapper">
             <a href="./salonprofile.php"><i class="fa-solid fa-circle-xmark pageclose"></i></a>
-            <h1 class="form-title">Your Salon Profile</h1>
+            <h1 class="form-title">Update Your Salon Profile</h1>
             <p>Make the profile more attractive to help improve your products.</p>
             
             <form id="profileForm" class="profile-form">
