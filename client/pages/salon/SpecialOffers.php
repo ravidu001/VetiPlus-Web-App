@@ -32,14 +32,20 @@
                             </th>
                             <th>Picture</th>
                             <th>Description</th>
+                            <th>Dates</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
-                                <table>
-                                    <tbody>
+
+                                <h2 class="name">Service Name </h2>
+                                <h3>Pet Bathing</h3>
+
+                                <h2 class="discount">Discount </h2>
+                                <h3>20%</h3>
+                                    <!-- 
                                         <tr>
                                             <td>Service Name </td>
                                             <td>Pet Bathing</td>
@@ -55,15 +61,19 @@
                                         <tr>
                                             <td>Close Date</td>
                                             <td>2024-12-08</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                        </tr> -->
                             </td>
+                           
                             <td>
-                                <img class="OfferImage" src="../../assets/images/salonwomen.jpg" alt="OfferImage">
+                                <div class="images" style="display: flex;">
+                                    <img class="OfferImage" src="../../assets/images/salonwomen.jpg" alt="OfferImage">
+                                    <img class="OfferImage" src="../../assets/images/salonwomen.jpg" alt="OfferImage">
+                                </div>
                             </td>
+                            
+
                             <td>
-                             <p>  
+                             <p class="ServiceDescription">  
                                 reat your pet to a refreshing experience with our special pet bathing offer! This service 
                                 includes a gentle, deep-clean bath using pet-safe, hypoallergenic shampoos to leave your 
                                 pet's coat soft, shiny, and smelling fresh. Our team ensures a stress-free, pampering 
@@ -72,6 +82,13 @@
                                 complimentary ear cleaning and brushing to make your pet look and feel fantastic. Perfect
                                 for pets who need a little extra care and comfort during bath time!
                             </p> 
+                            </td>
+                            <td>
+                                <h2 class="date">Open Date </h2>
+                                <h3>2024-10-08</h3>
+
+                                <h2 class="date">Close Date </h2>
+                                <h3>2024-10-20</h3>
                             </td>
                             <td>
                                     <button class="delete" id="delete">Delete</button>

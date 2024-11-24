@@ -40,3 +40,9 @@ fileInput2.addEventListener('change', function(event) {
         previewImage2.src = ''; // Reset the image if no file is selected
     }
 });
+
+function redirect() {
+    // alert('Registered Successfully');
+    // header('Location: ../../../client/pages/salon/ServiceDetails.php?status=success');
+    window.location.href = './?status=success';
+}

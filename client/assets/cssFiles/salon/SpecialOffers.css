@@ -6,7 +6,7 @@ body {
     background-color: #f4f4f4;
 }
 
-.SidebarandSpecialOffers{
+.SidebarandSpecialOffers {
     display: flex;
 }
 
@@ -20,19 +20,18 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-
-.SpecialOffers .content-1{
-    display:flex;
+.SpecialOffers .content-1 {
+    display: flex;
 }
 
-.SpecialOffers a{
+.SpecialOffers a {
     text-decoration: none;
     color: #f2f2f2;
 }
+
 /* Add Button */
 .SpecialOffers .add {
-    display:table-column;
+    display: table-column;
     margin: 10px 0;
     margin-right: auto;
     padding: 8px 12px;
@@ -46,7 +45,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-
 .SpecialOffers .add:hover {
     background-color: #b76feb;
     color: black;
@@ -59,7 +57,8 @@ body {
     margin: 20px 0;
 }
 
-.SpecialOffers table th, table td {
+.SpecialOffers table th,
+.SpecialOffers table td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
@@ -67,7 +66,7 @@ body {
 
 .SpecialOffers table th {
     font-size: 18px;
-    background-color: #f8f9fa;
+    background-color: #f8f3fb;
     color: #333;
     align-items: center;
     justify-content: center;
@@ -82,14 +81,22 @@ body {
     width: 120px;
     height: auto;
     border-radius: 4px;
+    margin: 0.5rem;
     display: grid;
     border: 3px solid rgb(60, 60, 60);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.SpecialOffers .OfferImage:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(106, 13, 173, 0.2);
+    cursor: pointer;
 }
 
 /* Description Styles */
-.SpecialOffers td {
+/* .SpecialOffers td {
     vertical-align: top;
-}
+} */
 
 .SpecialOffers td img {
     max-width: 300px;
@@ -109,7 +116,7 @@ body {
     border-radius: 4px;
     cursor: pointer;
     margin: 0 5px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .SpecialOffers button.delete {
@@ -119,7 +126,7 @@ body {
 
 .SpecialOffers button.delete:hover {
     background-color: #ab5fe1;
-    color:black;
+    color: black;
 }
 
 .SpecialOffers button.edit {
@@ -128,16 +135,57 @@ body {
 
 .SpecialOffers button.edit:hover {
     background-color: #ab5fe1;
-    color:black;
+    color: black;
+}
+
+/* Service Description styling */
+.ServiceDescription {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a5568;
+    max-width: 500px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+}
+
+.ServiceDescription:hover {
+    -webkit-line-clamp: unset;
+    cursor: pointer;
+}
+
+/* Name, Discount, and Date Styling */
+.name, .discount, .date {
+    font-size: 16px;
+    color: #4a5568;
+    text-align: center;
+}
+
+.name + h3, .discount + h3, .date + h3 {
+    color: #666;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Details column styling */
+.SpecialOffers td:first-child {
+    background-color: #f8f9fa;
+    border-radius: 6px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    body{
+    body {
         border: #6A0DAD;
     }
+
     table {
-        display:table;
+        display: table;
         width: 100%;
         box-sizing: border-box;
     }
@@ -158,13 +206,30 @@ body {
         content: "";
     }
 
-    button{
+    button {
         padding: 5px;
-        margin:5px;
+        margin: 5px;
+    }
+
+    .name, .discount, .date {
+        font-size: 14px;
+    }
+
+    .name + h3, .discount + h3, .date + h3 {
+        font-size: 13px;
+    }
+
+    .OfferImage {
+        width: 100px;
+        max-width: 100%;
+    }
+
+    .OfferImage:hover {
+        transform: scale(1.05);
     }
 }
 
-/* Optional: Add smooth scrolling for the whole page */
+/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }

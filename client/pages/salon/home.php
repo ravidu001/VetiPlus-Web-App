@@ -8,7 +8,8 @@
     <link rel="text/image" href="../../assets/images/vetiplus-logo.png">
     <link rel="stylesheet" href="../../assets/cssFiles/salon/Dashboard.css"> 
     <link rel="stylesheet" href="../../assets/cssFiles/salon/Home.css">
-    <link rel="stylesheet" href="../../assets/cssFiles/common/userFooter.css">  
+    <link rel="stylesheet" href="../../assets/cssFiles/common/userFooter.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/salon/PopUp.css">
 
     <title>Document</title>
 </head>
@@ -34,4 +35,5 @@
         </div> 
     </div> 
 </body>
+    <script src="../../assets/jsFIles/salon/PopUp.js"></script> 
 </html>

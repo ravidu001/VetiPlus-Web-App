@@ -11,7 +11,7 @@
     <div class="container">
         <div class="form-wrapper">
             <a href="./salonprofile.php"><i class="fa-solid fa-circle-xmark pageclose"></i></a>
-            <h1 class="form-title">Update Your Salon Profile</h1>
+            <h1 class="form-title">Your Salon Profile</h1>
             <p>Make the profile more attractive to help improve your products.</p>
             
             <form id="profileForm" class="profile-form">
@@ -23,8 +23,8 @@
                     <input type="text" 
                            id="salonName" 
                            name="salonName" 
-                           placeholder="e.g., VetiPlus"
-                           required>
+                           value="VetiPlus"
+                           readonly>
                 </div>
 
                 <!-- Image Upload Section -->
@@ -56,8 +56,8 @@
                     <input type="text" 
                            id="ownerName" 
                            name="ownerName" 
-                           placeholder="e.g., Abdul Rahim"
-                           required>
+                           value = "Ramesh Peshala"
+                           readonly>
                 </div>
         
                 <!-- Salon Contact Number -->
@@ -68,9 +68,9 @@
                     <input type="tel" 
                            id="salonContactNumber" 
                            name="salonContactNumber" 
-                           placeholder="0776533981"
+                           value = "045-8906789"
                            pattern="[0-9]{10}" 
-                           required>
+                           readonly>
                 </div>
 
                 <!-- Salon Email -->
@@ -81,8 +81,8 @@
                     <input type="email" 
                            id="salonEmail" 
                            name="salonEmail" 
-                           placeholder="pabashi@gmail.com"
-                           required>
+                           value="pabashi@gmail.com"
+                           readonly>
                 </div>
 
                 <!-- Salon Address -->
@@ -93,8 +93,8 @@
                     <input type="text" 
                            id="salonAddress" 
                            name="salonAddress" 
-                           placeholder="Siripa 5, Colombo"
-                           required>
+                           value="Siripa 5, Colombo"
+                           readonly>
                 </div>
 
                 <!-- Salon URL -->
@@ -105,9 +105,9 @@
                     <input type="url" 
                            id="salonUrl" 
                            name="salonUrl" 
-                           placeholder="https://www.example.com"
+                           value="https://www.example.com"
                            pattern="https?://.*" 
-                           required>
+                           readonly>
                 </div>
 
                 <!-- Open Days -->

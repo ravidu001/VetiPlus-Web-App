@@ -29,7 +29,7 @@
                 <!-- Service Charge -->
                 <div class="form-group">
                     <label for="serviceCharge">
-                        <i class="fas fa-dollar-sign"></i> Discount <span class="required">*</span>
+                        <i class="fa-solid fa-rupee-sign"></i> Discount <span class="required">*</span>
                     </label>
                     <div class="price-input-wrapper">
                         <input type="number" 
@@ -85,7 +85,7 @@
                     
                         <div class="image-upload-box">
                             <div class="image-preview">
-                                <img src="/api/placeholder/150/150" alt="Preview 1" id="preview1">
+                                <img src="/api/placeholder/150/150" alt="Preview" id="preview1">
                             </div>
                             <div class="upload-button">
                                 <i class="fas fa-upload"></i>
