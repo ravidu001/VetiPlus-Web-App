@@ -28,16 +28,37 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <img src="../../assets/images/user.png" alt="">
                     <h2>Ramesh Peshala</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, facilis.</p>
+                    <div>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bx-star icon' ></i>
+                    </div>
                 </div>
                 <div class="feedback-inside-top">
                     <img src="../../assets/images/user.png" alt="">
                     <h2>Ramesh Peshala</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, facilis.</p>
+                    <div>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bx-star icon' ></i>
+                    </div>
                 </div>
                 <div class="feedback-inside-top">
                     <img src="../../assets/images/user.png" alt="">
                     <h2>Ramesh Peshala</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, facilis.</p>
+                    <div>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bx-star icon' ></i>
+                    </div>
                 </div>
             </div>
             <div class="feedback-inside">
@@ -45,16 +66,37 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <img src="../../assets/images/user.png" alt="">
                     <h2>Ramesh Peshala</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, facilis.</p>
+                    <div>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bx-star icon' ></i>
+                    </div>
                 </div>
                 <div class="feedback-inside-top">
                     <img src="../../assets/images/user.png" alt="">
                     <h2>Ramesh Peshala</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, facilis.</p>
+                    <div>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bx-star icon' ></i>
+                    </div>
                 </div>
                 <div class="feedback-inside-top">
                     <img src="../../assets/images/user.png" alt="">
                     <h2>Ramesh Peshala</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, facilis.</p>
+                    <div>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bxs-star icon'></i>
+                    <i class='bx bx-star icon' ></i>
+                    </div>
                 </div>
             </div>
         </div>

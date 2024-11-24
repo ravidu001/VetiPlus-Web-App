@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="../../assets/cssFiles/Owner/navbar.css" type="text/css">
     <link rel="stylesheet" href="../../assets/cssFiles/Owner/appointment.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
@@ -78,7 +80,12 @@
                 </div>
             </form>
         </div>
+        <div class="appointmnet-chart">
+        <h1>Appointments vs Canceled Appointments</h1>
+        <canvas id="appointmentChart" width="800" height="400"></canvas>
+        </div>
     </div>
+    <script src="../../assets/jsFIles/Owner/appointmentChar.js"></script>
     </section>
 </body>
 </html>
