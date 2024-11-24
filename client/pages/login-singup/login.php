@@ -23,6 +23,7 @@
             if (password_verify($password, $row['password'])) {
                 $_SESSION['user_id'] = $row['email'];
                 
+                // Check if the user is logging in for the first time
                 if ($row['loginCount'] == 0) {
                     // increase the login count
                     $loginCount = $row['loginCount'] + 1;
