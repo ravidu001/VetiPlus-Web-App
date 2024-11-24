@@ -22,6 +22,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="menu-bar">
         <div class="menu">
             <ul class="menu-links">
+                <h4>Main Menu</h4>
                 <li class="nav-link <?= $current_page == 'home.php' ? 'active' : '' ?>">
                     <a href="home.php">
                         <i class='bx bx-home icon'></i>

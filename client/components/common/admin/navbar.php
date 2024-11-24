@@ -22,6 +22,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <div class="menu-bar">
             <div class="menu">
                 <ul class="menu-links">
+                    <h4>Main Menu</h4>
                     <li class="nav-link <?= $current_page == 'home.php' ? 'active' : '' ?>">                        
                         <a href="home.php">
                             <i class='bx bx-home icon'></i>
@@ -46,6 +47,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                             <span class="text nav-text">Payment</span>
                         </a>
                     </li>
+                    <h4>Other Menu</h4>
                     <li class="nav-link <?= $current_page == 'feedback.php' ? 'active' : '' ?>">
                         <a href="feedback.php">
                         <i class='bx bx-message-dots icon'></i>
@@ -88,7 +90,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     </div>
                 </ul>
             </div>
-
+            
             <div class="bottom-content">
                 <li class="nav-link <?= $current_page == 'profile.php' ? 'active' : '' ?>">
                     <a href="profile.php">

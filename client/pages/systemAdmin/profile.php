@@ -22,25 +22,42 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <?php include '../../components/common/admin/navbar.php'; ?>
 
     <section class="home">
-        <div class="profile">
-            <div class="profile_top">
-                <div class="profile_top_inside">
-                    <div class="profile_top_inside_left">
-                        <img src="../../assets/images/image_8.jpg" alt="">
-                    </div>
-                    <div class="profile_top_inside_right">
-                        <h2>Full Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp; Ramesh Peshala</h2>
-                        <h2>Date of Birth &nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp;2002/05/09</h2>
-                        <h2>Email &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp; rameshpeshala84@gmail.com</h2>
-                        <h2>Phone Number &nbsp;:-&nbsp;&nbsp;&nbsp; 0762163506</h2>
-                        <h2>Address &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;:- &nbsp;&nbsp; 419,Gangasirigama , Thissamaharama</h2>
-                        <h2>Gender &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp;&nbsp; Male</h2>
-                    </div>
+        <div class="profile_top">
+            <div class="profile_top_inside">
+                <div class="profile_top_inside_left">
+                    <img src="../../assets/images/user.png" alt="">
                 </div>
+                <table>
+                    <tr>
+                        <td>Full Name</td>
+                        <td>:-</td>
+                        <td>Ramesh Peshala</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:-</td>
+                        <td>rameshpeshala84@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td>:-</td>
+                        <td>0762163506</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>:-</td>
+                        <td>419,Gangasirigama , Thissamaharama</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <div class="profile_down">
+                                <button onclick="openModal()">Edit Profile</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
-            <div class="profile_down">
-                <button onclick="openModal()">Edit Profile</button>
-            </div>
+        </div>
         </div>
         <div id="passwordModal" class="modal">
             <div class="modal-content">

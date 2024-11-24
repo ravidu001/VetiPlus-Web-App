@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
     <title>VetiPlus</title>
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/navbar.css" type="text/css">4
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/navbar.css" type="text/css">
     <link rel="stylesheet" href="../../assets/cssFiles/Owner/profile.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -27,24 +27,42 @@
     <?php include '../../components/common/owner/navbar.php'; ?>
 
     <section class="home">
-         <div class="profile">
         <div class="profile_top">
             <div class="profile_top_inside">
                 <div class="profile_top_inside_left">
-                    <img src="../../assets/images/image_8.jpg" alt="">
+                    <img src="../../assets/images/user.png" alt="">
                 </div>
-                <div class="profile_top_inside_right">
-                    <h2>Full Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp; Ramesh Peshala</h2>
-                    <h2>Email &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp; rameshpeshala84@gmail.com</h2>
-                    <h2>Phone Number &nbsp;:-&nbsp;&nbsp;&nbsp; 0762163506</h2>
-                    <h2>Address &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;:- &nbsp;&nbsp; 419,Gangasirigama , Thissamaharama</h2>
-               </div>
+                    <table>
+                        <tr>
+                            <td>Full Name</td>
+                            <td>:-</td>
+                            <td>Ramesh Peshala</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:-</td>
+                            <td>rameshpeshala84@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number</td>
+                            <td>:-</td>
+                            <td>0762163506</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>:-</td>
+                            <td>419,Gangasirigama , Thissamaharama</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div class="profile_down">
+                                    <button onclick="openModal()">Edit Profile</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
             </div>
         </div>
-        <div class="profile_down">
-            <button onclick="openModal()">Edit Profile</button>
-        </div>
-    </div>
 </div>
 <div id="passwordModal" class="modal">
     <div class="modal-content">
