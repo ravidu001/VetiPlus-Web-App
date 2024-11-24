@@ -23,10 +23,10 @@ body {
 }
 
 /* Header and Content Section */
-.header-name {
+/* .header-name {
     color: #6A0DAD;
     /* margin-bottom: 1.5rem; */
-}
+/* } */
 
 .Service-details .content-1 {
     display: flex;
@@ -99,7 +99,7 @@ body {
 }
 
 .Service-details table th {
-    background-color: #f8f9fa;
+    background-color: #f8f3fb;
     color: #333;
     padding: 1rem;
     font-weight: 600;

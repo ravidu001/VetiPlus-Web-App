@@ -133,7 +133,7 @@ button.ok:hover {
 }
 
 .userdetail td button{
-    gap:1rem;
+    margin:0.1rem;
     padding: 7px;
 }
 
