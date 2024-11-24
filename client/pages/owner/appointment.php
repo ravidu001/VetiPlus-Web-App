@@ -14,9 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
     <title>VetiPlus</title>
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/navbar.css" type="text/css">4
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/navbar.css" type="text/css">
     <link rel="stylesheet" href="../../assets/cssFiles/Owner/appointment.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
@@ -30,16 +32,40 @@
     <div class="Appoinment">
         <div class="Appoinment-inside">
             <div class="Appoinment-inside-left">
-                <h2>Daily Appointment</h2>
-                <h2>45</h2>
+            <div>
+            <i class='bx bx-calendar-check icon'></i>
+             </div>
+             <div>
+             <h2>Daily Appointment</h2>
+             <h3>45</h3>
+             </div>
             </div>
             <div class="Appoinment-inside-left">
-                <h2>Cancel Appointment</h2>
-                <h2>15</h2>
+            <div>
+            <i class='bx bx-calendar-check icon'></i>
+             </div>
+             <div>
+             <h2>Monthly Appointment</h2>
+             <h3>30</h3>
+             </div>
             </div>
             <div class="Appoinment-inside-left">
-                <h2>Total Appointment</h2>
-                <h2>523</h2>
+            <div>
+            <i class='bx bx-calendar-check icon'></i>
+             </div>
+             <div>
+             <h2>Monthly Cancel Appointment</h2>
+             <h3>567</h3>
+             </div>
+            </div>
+            <div class="Appoinment-inside-left">
+            <div>
+            <i class='bx bx-calendar-x icon'></i>
+             </div>
+             <div>
+             <h2>Cancel Appointment</h2>
+             <h3>45</h3>
+             </div>
             </div>
         </div>
         <div class="Appoinment-outside">
@@ -54,7 +80,12 @@
                 </div>
             </form>
         </div>
+        <div class="appointmnet-chart">
+        <h1>Appointments vs Canceled Appointments</h1>
+        <canvas id="appointmentChart" width="800" height="400"></canvas>
+        </div>
     </div>
+    <script src="../../assets/jsFIles/Owner/appointmentChar.js"></script>
     </section>
 </body>
 </html>

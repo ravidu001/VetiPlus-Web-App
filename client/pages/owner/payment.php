@@ -13,9 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
     <title>VetiPlus</title>
-    <link rel="stylesheet" href="../../assets/cssFiles/Owner/navbar.css" type="text/css">4
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/navbar.css" type="text/css">
     <link rel="stylesheet" href="../../assets/cssFiles/Owner/payment.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -29,16 +30,40 @@
     <div class="payment">
         <div class="payment-inside">
             <div class="payment-inside-top">
-                <h2>Daily Income</h2>
-                <h3>Rs.15 000</h3>
+             <div>
+             <i class='bx bx-trending-up icon'></i>
+             </div>
+             <div>
+             <h2>Daily Income</h2>
+             <h3>Rs.15 000</h3>
+             </div>
             </div>
             <div class="payment-inside-top">
-                <h2>Total Income</h2>
-                <h3>Rs.1 000 000</h3>
+             <div>
+             <i class='bx bx-trending-up icon'></i>
+             </div>
+             <div>
+             <h2>Total Income</h2>
+             <h3>Rs.1 000 000</h3>
+             </div>
             </div>
             <div class="payment-inside-top">
-                <h2>Total Expenses</h2>
-                <h3>Rs.100 000</h3>
+             <div>
+             <i class='bx bx-trending-down icon' ></i>
+             </div>
+             <div>
+             <h2>Monthly Expenses</h2>
+             <h3>Rs.9 000</h3>
+             </div>
+            </div>
+            <div class="payment-inside-top">
+             <div>
+             <i class='bx bx-trending-down icon' ></i>
+             </div>
+             <div>
+             <h2>Total Expenses</h2>
+             <h3>Rs.100 000</h3>
+             </div>
             </div>
         </div>
         <div class="Payment-outside">
@@ -55,7 +80,12 @@
                 </div>      
             </form>
         </div>
+        <div class="payment-chart">
+        <h1>Monthly Income and Outcome Statistics</h1>
+        <canvas id="paymentChart"></canvas>
+        </div>
     </div>
+    <script src="../../assets/jsFIles/Owner/paymentChart.js"></script>
     </section>
 </body>
 </html>

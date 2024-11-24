@@ -40,3 +40,7 @@
     color: #000000;
     /* Text color for the active link */
 }
+.icon{
+    font-size: 30px;
+    color: var(--background-primary);
+}
