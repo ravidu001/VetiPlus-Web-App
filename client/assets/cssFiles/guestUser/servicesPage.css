@@ -1,0 +1,40 @@
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px 5%;
+    padding: 1em;
+}
+.services .card {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 1em;
+
+    padding: 1em;
+    border-radius: 2em;
+    margin: 5px;
+
+    background-image: linear-gradient(lightblue, white);
+}
+.services .text {
+    text-align: center;
+}
+.services .text p {
+    font-size: 1.2em;
+}
+.services .appointments {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.services .otherServices {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.services img {
+    width: 40%;
+    object-fit: contain;
+}

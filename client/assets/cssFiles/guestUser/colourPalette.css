@@ -1,0 +1,52 @@
+/* Light Theme */
+body {
+    --background-color: #ffffff;           /* for body background */
+    --primary-bg-color: #dbd2db;           /* for div backgrounds */
+    --primary-border-color: #6a0dad;       /* for borders mostly */
+    --text-color: #616161;                 /* for all text generally in body */
+    
+    /* Navigation and Sidebar */
+    --nav-bg-color: #6A0DAD;               /* for sidebars and navbars bg */
+    /* --nav-text-color: #4b4343;             normal navbar text colour */
+    --nav-text-color: #a48fb3;             /* normal navbar text colour */
+    --nav-hover-text-color: #ffff;       /* text colour when hovering and for active tab */
+    /* --nav-hover-text-color: #110f0f;       text colour when hovering and for active tab */
+    
+    --inset-shadow-color: #ffffff;         /* for box-shadow inset */
+    --shadow-color: #808080;               /* shadow effect colour */
+
+    /* Button and Hover Effects */
+    --button-bg-color: #9b009b;            /* when hovering */
+    --button-hover-bg-color: #640064;      /* Darker blue for button hover */
+    --button-text-color: #ffffff;          /* White text on buttons */
+    
+    /* --link-hover-color: #1e90ff;           Same as primary for link/text hover */
+}
+
+/* Dark Theme */
+body.darkTheme {
+    --background-color: #1a2e3b;           /* Dark blue-gray */
+    --primary-color: #0a84ff;              /* Bright blue for main accents */
+    --secondary-color: #4b97cf;            /* Softer blue for headers/secondary elements */
+    --text-color: #d1e8ff;                 /* Light blue for readability */
+    
+    /* Navigation and Sidebar */
+    --nav-bg-color: #1a2e3b;               /* Dark background for navigation */
+    --sidebar-bg-color: #2c3e50;           /* Darker blue-gray for sidebar */
+    
+    /* Button and Hover Effects */
+    --button-bg-color: #0a84ff;            /* Same as primary for buttons */
+    --button-text-color: #1a2e3b;          /* Dark text on buttons */
+    --button-hover-bg-color: #357ab7;      /* Darker blue for button hover */
+    --link-hover-color: #4b97cf;           /* Softer blue for link/text hover */
+    --shadow-color: #424242;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+nav, footer {
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color)
+}

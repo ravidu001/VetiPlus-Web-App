@@ -69,3 +69,25 @@ nav.navBar {
         display: none;
     }
 }
+
+/* only for petOwner navbar: */
+
+#appointmentTypes {
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 35%;
+    
+    background-color: var(--nav-bg-color);
+    border-bottom: 2px solid var(--primary-border-color);
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 10;
+}
+
+#appointmentIcon:hover + #appointmentTypes,
+#appointmentIcon:focus + #appointmentTypes,
+#appointmentTypes:hover {
+    display: block;
+}

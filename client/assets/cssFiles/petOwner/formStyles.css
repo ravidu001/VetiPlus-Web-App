@@ -1,0 +1,93 @@
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+fieldset legend {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+/* form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 5px;
+}
+form label {
+    margin-left: 20%;
+}
+input[type=radio] {
+    margin: 5px;
+}
+form button{
+    padding: 5px;
+    border-radius: 10px;
+
+    margin: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+}
+form button:hover {
+    background-color: var(--button-hover-bg-color);
+} */
+
+form {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 0.5fr;
+    align-items: center;
+
+    padding: 20px;
+    gap: 10px;
+}
+form label {
+    grid-column: 1;
+    padding: 5px;
+}
+form .input-field,
+form .display-field {
+    grid-column: 2;
+    padding: 5px;
+}
+form button{
+    /* grid-column: 3; */
+    padding: 5px;
+    border-radius: 10px;
+    width: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+}
+form button:hover {
+    cursor: pointer;
+    background-color: var(--button-hover-bg-color);
+}
+
+.unchangingData {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 0.5fr;
+    align-items: center;
+
+    padding: 20px;
+    gap: 10px;
+}
+.unchangingData .field {
+    grid-column: 1;
+    padding: 5px;
+}
+.unchangingData .data {
+    grid-column: 2;
+    padding: 5px;
+}
