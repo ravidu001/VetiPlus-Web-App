@@ -1,4 +1,8 @@
 <?php
+    session_start();
+    $_SESSION['user_id'] = 'piggy@pig.com';
+    $userID = $_SESSION['user_id'];
+
     include '../../../config.php';
 ?>
 
@@ -26,12 +30,11 @@
                 border: 2px solid var(--primary-border-color);
                 padding: 2em;
 
-                margin: 1em;
-                margin-left: 12%;
-                margin-right: 12%;
+                width: fit-content;
+                margin: 1em auto 1em auto;
 
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 gap: 2rem;
             }
 
@@ -61,18 +64,21 @@
                 padding: 15px;
                 margin-bottom: 15px;
 
-                font-size: 1.2em;
+                font-size: 1.3em;
             }
             form fieldset legend {
                 font-weight: bold;
             }
             form input {
                 padding: 5px;
+                font-size: 1rem;
             }
             form input:valid {
                 border: 2px solid green;
             }
-
+            form input[type=date]:invalid {
+                color: grey;
+            }
             .formButtons {
                 display: flex;
                 justify-content: center;
@@ -108,16 +114,30 @@
                 <fieldset>
                     <legend>Personal Details</legend>
                     <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="eg: John Doe" required>
+                        <input type="text" id="name" name="name" minlength="5" placeholder="eg: John Doe" required>
+                    <?php 
+                        $today = new DateTime("now");
+                        $todayDate = $today->format('Y-m-d');
+                        $tenYearsAgoDate = (clone $today)->modify('-10 years')->format('Y-m-d');
+                    ?>
                     <label for="dob">Date of Birth</label>
-                        <input type="date" id="dob" name="dob" max="<?= (new DateTime("now"))->format('Y-m-d') ?>" required>
+                        <input type="date" id="dob" name="dob"max="<?= $tenYearsAgoDate ?>" required>
                     <label for="contact">Contact Number</label>
-                        <input type="tel" id="contact" name="contact" pattern="07\d\d\d\d\d\d\d\d" placeholder="eg: 0767130191" required>
+                        <input type="text" id="contact" name="contact" pattern="07\d\d\d\d\d\d\d\d" minlength="10" placeholder="eg: 0767130191" required>
+                    <label for="nic">NIC number</label>
+                        <input type="text" id="nic" name="nic" placeholder="eg: 200229001015 or 712441524V" pattern="(?:[4-9][0-9]{8}[vVxX])|(?:[12][0-9]{11})" required>
+                    <label for="male">Gender</label>
+                        <div>
+                            <label for="male">Male</label>
+                            <input type="radio" id="male" value="male" name="gender" required>
+                            <label for="female">Female</label>
+                            <input type="radio" id="female" value="female" name="gender" required>
+                        </div>
                 </fieldset>
                 <fieldset>
                     <legend>Address</legend>
-                    <label for="homeNo">Apartment/ House no.</label>
-                        <input type="text" id="homeNo" name="homeNo" placeholder="eg: 103/1A" required>
+                    <label for="houseNo">Apartment/ House no.</label>
+                        <input type="text" id="houseNo" name="houseNo" placeholder="eg: 103/1A" required>
                     <label for="street">Street</label>
                         <input type="text" id="street" name="street" placeholder="eg: Hena Road" required>
                     <label for="city">City</label>
@@ -138,7 +158,7 @@
         <script>
             const userName = document.getElementById('name');
             const dob = document.getElementById('dob');
-            const homeNo = document.getElementById('homeNo');
+            const houseNo = document.getElementById('houseNo');
             const street = document.getElementById('street');
             const city = document.getElementById('city');
             const contact = document.getElementById('contact');
@@ -148,30 +168,91 @@
         </script>
     </body>
 </html>
+
 <?php
-
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    // $name = htmlspecialchars($_POST['name']);
+    // $dob = htmlspecialchars($_POST['dob']);
+    // $contact = htmlspecialchars($_POST['contact']);
 
-    // $fname = htmlspecialchars($_POST['fname']);
-    // $lname = htmlspecialchars($_POST['lname']);
+    // $houseNo = htmlspecialchars($_POST['houseNo']);
+    // $street = htmlspecialchars($_POST['street']);
+    // $city = htmlspecialchars($_POST['city']);
+    function sanitizeInput($input) {
+        return htmlspecialchars(trim($input));
+    }
+    $sanitized = array_map('sanitizeInput', $_POST);
+    
+    $name = $sanitized['name']; 
+    $dob = $sanitized['dob'];
+    $contact = $sanitized['contact'];
+    $nic = $sanitized['nic'];
+    $gender = $sanitized['gender'];
 
-    $name = htmlspecialchars($_POST['name']);
-    $dob = htmlspecialchars($_POST['dob']);
-
-    $homeNo = htmlspecialchars($_POST['homeNo']);
-    $street = htmlspecialchars($_POST['street']);
-    $city = htmlspecialchars($_POST['city']);
-
-    $contact = htmlspecialchars($_POST['contact']);
+    $houseNo = $sanitized['houseNo'];
+    $street = $sanitized['street'];
+    $city = $sanitized['city'];
 
     $errors = [];
+    $validInputs = true;
+
+    function addError ($msg) {
+        global $errors, $validInputs;
+        array_push($errors, $msg);
+        $validInputs = false;
+    }
+
+    if(empty($name)) addError("Empty name value provided!");
+    elseif (strlen($name) < 5) addError("Name should be at least 5 characters.");
 
     $today = new DateTime("now");
-    $tenYearsAgo = $today->modify('-10 years')->format('Y-m-d');
+    $tenYearsAgo = (clone $today)->modify('-10 years')->format('Y-m-d');
     $dobDate = DateTime::createFromFormat('Y-m-d', $dob);
 
-    if ($dobDate && $dobDate > new DateTime($tenYearsAgo)) array_push($errors, "Invalid date of birth: should be 10 years at least");
+    if ($dobDate && $dobDate > new DateTime($tenYearsAgo)) addError("Invalid date of birth: you should be 10 years at least.");
 
+    $contactRegex = '/07\\d\\d\\d\\d\\d\\d\\d\\d/i';
+    if(empty($contact)) addError("No contact number provided!");
+    elseif (!preg_match($contactRegex, $contact)) addError("Contact number does not follow Sri Lankan phone pattern!\n10 numbers starting with 07.");
+
+    $nicRegex = '/(?:[4-9][0-9]{8}[vVxX])|(?:[12][0-9]{11})/';
+    if(empty($nic)) addError("No NIC number provided!");
+    elseif (!preg_match($nicRegex, $nic)) addError("NIC number does not follow Sri Lankan NIC number pattern.");
+
+    if($gender != 'male' && $gender != 'female') addError("Gender is not selected!");
+
+    if(empty($houseNo)) addError("No house number or apartment number provided for Address!");
+    if(empty($street)) addError("No street name provided for Address!");
+    if(empty($city)) addError("No city provided for Address!");
+
+    $lastLogin = $today->format('Y-m-d H:i');
+
+    if($validInputs) {
+        $stmt = $conn->prepare("INSERT INTO petowner
+            (petOwnerID, fullName, DOB, contactNumber, NIC, gender, houseNo, street, city, lastLogin)
+            VALUES (?,?,?,?,?,?,?,?,?,?)");
+        $stmt->bind_param("ssssssssss",$userID, $name, $dob, $contact, $nic, $gender, $houseNo, $street, $city, $lastLogin);
+        $insertDone = $stmt->execute();
+        if($insertDone) {
+            echo "
+            <script>
+                alert(`Successfully Registered!\nWelcome to the VetiPlus Pet owner Community!`);
+                window.location.href = './dashboard.php';
+            </script>";
+        }
+    }
+    else {
+        $errorsFormatted = array_map(function($error) { return
+            "$error\n";
+        }, $errors);
+        $errorsString = implode('', $errorsFormatted);
+
+        echo "
+        <script>
+            alert(`$errorsString`);
+            window.location.href = './petOwnerRegister.php';
+        </script>";
+    }
 }
 // else {
 //     header("Location: ../../../../index.php");

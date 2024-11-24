@@ -1,7 +1,6 @@
 <?php
     session_start();
-    if (!isset($_SESSION['user_id']))
-        $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
+    $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
     $userID = $_SESSION['user_id'];
 
     include '../../../config.php';
@@ -10,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Home</title>
+        <title>PetOwner - Dashboard</title>
         <link rel="icon" href="<?= BASE_PATH ?>/client/assets/images/vetiplus-logo.png" type="image/png">
 
         <meta charset="UTF-8">
