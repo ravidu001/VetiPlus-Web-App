@@ -42,7 +42,7 @@ fileInput2.addEventListener('change', function(event) {
 });
 
 function redirect() {
-    // alert('Registered Successfully');
+    alert('Registered Successfully');
     // header('Location: ../../../client/pages/salon/ServiceDetails.php?status=success');
-    window.location.href = './?status=success';
+    window.location.href = './home.php?status=success';
 }

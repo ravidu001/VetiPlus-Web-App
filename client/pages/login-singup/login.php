@@ -34,13 +34,19 @@
                             header('Location: ../vetDoctor/profile.php');
                             break;
                         case 'Pet Owner':
-                            header('Location: ../petOwner/home.php');
+                            header('Location: ../petOwner/petOwnerRegister.php');
                             break;
                         case 'Salon':
-                            header('Location: ../salon/home.php');
+                            header('Location: ../salon/FirstTimeRenderPage.php');
                             break;
                         case 'Vet Assistant':
                             header('Location: ../vetAssistant/home.php');
+                            break;
+                        case 'System Admin':
+                            header('Location: ../systemAdmin/home.php');
+                            break;
+                        case 'Owner':
+                            header('Location: ../owner/home.php');
                             break;
                         default:
                             $message[] = 'User type not recognized!';
@@ -57,7 +63,7 @@
                             header('Location: ../vetDoctor/homeNew.php');
                             break;
                         case 'Pet Owner':
-                            header('Location: ../petOwner/home.php');
+                            header('Location: ../petOwner/dashboard.php');
                             break;
                         case 'Salon':
                             header('Location: ../salon/home.php');
@@ -65,6 +71,13 @@
                         case 'Vet Assistant':
                             header('Location: ../vetAssistant/home.php');
                             break;
+                        case 'System Admin':
+                            header('Location: ../systemAdmin/home.php');
+                            break;
+                        case 'Owner':
+                            header('Location: ../owner/home.php');
+                            break;
+
                         default:
                             $message[] = 'User type not recognized!';
                     }
