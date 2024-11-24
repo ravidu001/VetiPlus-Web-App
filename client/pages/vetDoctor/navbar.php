@@ -207,5 +207,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
 </nav>
 
 <script src="../../assets/jsFIles/vetDocotor/darkmode.js"></script>
+<script src="../../assets/jsFIles/vetDocotor/appointmentnavbar.js"></script>
 <script src="../../assets/jsFIles/vetDocotor/medicalnavbar.js"></script>
 <script src="../../assets/jsFIles/vetDocotor/reviewnavbar.js"></script>
