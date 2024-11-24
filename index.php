@@ -22,7 +22,6 @@
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/guestHome.css" rel="stylesheet">
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/happyCx.css" rel="stylesheet">
 
-
     </head>
 
     <body>
@@ -30,21 +29,21 @@
         <!-- navbar on top: -->
         <?php include INCLUDE_BASE.'/client/components/guestUser/guestNavbar.php'; ?>
 
-        <div class="hero-section">
+        <section class="hero-section">
             <header>
                 VetiPlus:<br/>
                 Connecting Pet Parents<br/>with<br/>Quality Care
             </header>
             <img class="heroImg" src="./client/assets/images/guestUser/guestHeroes/homeHero.png" alt="">
-        </div>
+        </section>
 
         <h1>Our Services</h1>
         <div class="serviceCards"></div>
 
-        <div class="homeDiv1">
+        <div class="homeDiv">
             <img src="./client/assets/images/guestUser/homeImg/SittingDoggo.png" alt="SittingDoggo">
             <div class="homeDivText">
-                <p class="homeDivHeader">Pets do speak, but only to those who know how to listen.</p>
+                <h2>Pets do speak, but only to those who know how to listen.</h2>
                 <p>Join the VetiPlus family today and connect with professionals who take pet care to another level.</p>    
                 <a href="pages/login.html" class="regBtn">
                     <button>Register</button>
@@ -52,9 +51,9 @@
             </div>
         </div>
 
-        <div class="homeDiv2">
+        <div class="homeDiv">
             <div class="homeDivText">
-                <p class="homeDivHeader">Why Choose Us</p>
+                <h2>Why Choose Us</h2>
                 <p>
                     VetiPlus is a community of pet owners andservice providers revolutionizing pet care.
                     Whether you're a pet parent or a dedicated professional, 
@@ -134,6 +133,7 @@
         <?php include INCLUDE_BASE.'/client/components/guestUser/guestFooter.php'; ?>
 
         <script>
+
             const imgFolder = "./client/assets/images/serviceIcons/"
             const services = [
                 {
@@ -163,5 +163,6 @@
                                 <img src='${ser.imgLoc}'/>
                             </div>`)
         </script>
+        <script src="<?= INCLUDE_BASE ?>/client/pages/guestUser/heroHeight.js"></script>
     </body>
 </html>

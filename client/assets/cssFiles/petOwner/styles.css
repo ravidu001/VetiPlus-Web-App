@@ -36,8 +36,9 @@ body {
 .dashArea {
     background-color: var(--primary-bg-color);
     border: 2px solid var(--primary-border-color);
+    box-shadow: 0px 0px 20px var(--shadow-color);
     
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 15px 0;
     padding: 10px;
 
@@ -46,12 +47,18 @@ body {
     display: flex;
     flex-direction: column;
 }
+.dashArea h2,
+.resultZero {
+    margin: 10px;
+    margin-left: 10%;
+}
+
 /* the area where php retrived data are mapped */
 .dashAreaContent {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 3px;
+    gap: 5px;
 
     padding: 10px;
 }
@@ -62,11 +69,13 @@ body {
     flex-direction: column;
     overflow-y: auto;
 
-    margin: 15px 20rem;
-    padding: 10px;
+    margin: 5vh 15vw;
+    padding: 5%;
 
     background-color: var(--primary-bg-color);
+    /* box-shadow:0px 0px 10px 5px rgb(216, 214, 214); */
     border: 2px solid var(--primary-border-color);
+    box-shadow: 0px 0px 20px var(--shadow-color);
     
     border-radius: 10px;
 

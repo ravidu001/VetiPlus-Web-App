@@ -40,13 +40,15 @@
                     <?php
                         $stmt = $conn->prepare("SELECT * FROM petOwner WHERE petOwnerID = ?");
                         $stmt->bind_param("s", $userID);
-                        $stmt->execute();
+                        $stmt->execute();                  
                         $profileDetails = $stmt->get_result()->fetch_assoc();
+                        
+                        $stmt->close();
                     ?>
                     <img src="<?= BASE_PATH.'/client/assets/images/profilePics/petOwner/'.$profileDetails['profilePicture']?>"
                         alt="profile Picture">
                     <div class="textContent">
-                        <h4>Welcome back!</h4>
+                        <h3>Welcome back!</h3>
                         <p><?= $profileDetails['fullName'] ?></p>
                     </div>
                 </div>
@@ -60,21 +62,25 @@
                         $stmt->bind_param("s", $userID);
                         $stmt->execute();
                         $result = $stmt->get_result();
+                        $stmt->close();
 
-                        if($result->num_rows > 0) {
+                        if($result->num_rows > 0) :
                             $data = $result->fetch_all(MYSQLI_ASSOC);
-                            $dataMapped = array_map(function($x) { return
-                                "<form action='./petProfile.php' method='get' class='petCard' onclick='this.submit()' title='Go to Pet Profile Page.'>
-                                    <input type='text' name='petID' value='{$x['petID']}' hidden>
-                                    <img src='".BASE_PATH."/client/assets/images/profilePics/pet/{$x['profilePicture']}' class='petImg' alt='Pet Image'>
-                                    <h3>{$x['name']}</h3>
-                                </form>";
-                            }, $data);
-                            foreach($dataMapped as $petCard) echo $petCard;
-                        }
-                        else echo "No Pets Added Yet!";
+                            foreach ($data as $k => $pet) :
+                            ?>
+                                <form action='./petProfile.php' method='post' class='petCard' onclick='this.submit()' title='Go to Pet Profile Page.'>
+                                <!-- <div data-href='./petProfile.php' class='petCard' onclick='navigateToPetProfile(<?= $pet['petID']; ?>, this)' title='Go to Pet Profile Page.'> -->
+                                    <input type='text' name='petID' id='petID' value='<?= $pet['petID'] ?>' hidden>
+                                    <img src='<?= BASE_PATH."/client/assets/images/profilePics/pet/".$pet['profilePicture'] ?>' class='petImg' alt='Pet Image'>
+                                    <h3><?= $pet['name'] ?></h3>
+                                <!-- </div> -->
+                                </form>
+                            <?php
+                            endforeach;
+                        else: echo "No Pets Added Yet!";
+                        endif;
                     ?>
-                    <a class="petCard" href="">
+                    <a class="petCard" href="./addPet.php">
                         <i class="bx bxs-plus-circle bx-lg"></i>
                         <h3>Add Pet</h3>
                     </a>                   
@@ -83,53 +89,74 @@
     
             <section id="upcomingAppointments" class="dashArea">  
                 <h2>Upcoming Appointments</h2>
-                <div id="upcomingAppointments_content" class="dashAreaContent"></div>
                 <?php
                     $today = new DateTime("now");
                     $now = $today->getTimestamp();
 
-                    $stmt = $conn->prepare("SELECT pet.name, app.dateTime, vet.fullName, session.clinicLocation
+                    $stmt = $conn->prepare("(SELECT pet.name, app.dateTime, vet.fullName, session.clinicLocation, session.district, 'vet' AS appointmentType
                                         FROM (((appointment AS app
                                         INNER JOIN pet ON app.petID = pet.petID)
                                         INNER JOIN session ON app.sessionID = session.sessionID)
                                         INNER JOIN vetdoctor AS vet ON session.doctorID = vet.doctorID)
-                                        WHERE app.petOwnerID = ?");
+                                        WHERE app.petOwnerID = ?)
+                                        UNION
+                                        (SELECT pet.name, gmSes.dateTime, gmSes.notes, salon.name, salon.address, 'salon' AS appointmentType
+                                        FROM (((groomingsession AS gmSes
+                                        INNER JOIN pet ON pet.petID = gmSes.petID)
+                                        INNER JOIN salonsession AS salSes ON gmSes.salSessionID = salSes.salSessionID)
+                                        INNER JOIN salon ON salon.salonID = salSes.salonID)
+                                        WHERE gmSes.petOwnerID = ?)
+                                        ORDER BY dateTime");
 
-                    $stmt->bind_param("s", $userID);
+                    $stmt->bind_param("ss", $userID, $userID);
                     $stmt->execute();
                     $result = $stmt->get_result();
+                    $stmt->close();
 
                     if($result->num_rows > 0) {
                         $data = $result->fetch_all(MYSQLI_ASSOC);
-                        $dataMapped = array_map(function($x) { return
-                            ;
-                        }, $data);
+
+                        // $dataMapped = array_map(function($x) {
+                        foreach ($data as $x) :
+                            $icon = $x['appointmentType'] === 'vet'
+                                ? "<i class='bx bxs-injection'></i>"
+                                : "<i class='bx bxs-brush'></i>";
+
+                            $date = date("d.m.Y", strtotime($x['dateTime']));
+                            $time = date("h:i A", strtotime($x['dateTime']));
+
+                            $provider = $x['appointmentType'] === 'vet'
+                                ? $x['fullname']
+                                : $x['notes'];
+
+                            $location = $x['appointmentType'] === 'vet'
+                                ? $x['clinicLocation']." | ".$x['district']
+                                : $x['salon.name']." | ".$x['address'];
+
+                            ?>
+                            <div class='appointmentCard'>
+                                <div class='appointmentType'><?= $icon ?></div>
+                                <h3><?= $x['pet.name'] ?></h3>
+                                <p><?= $provider ?></p>
+                                <p><?= $date ."|". $time ?></p>
+                                <p><?= $location ?></p>
+                            </div> 
+                            <?php
+                        endforeach;
+                        // }, $data);
                     }
-                    else echo "No Appointments Made Yet!";
+                    else echo "<p class='resultZero'>No Appointments Made Yet!</p>";
                 ?>
             </section>
         </div>
+        <script>
+            // function navigateToPetProfile (petID, petCard) {
+            //     window.location.href = petCard.getAttribute('data-href')
+            // }
+        </script>
 
         <!-- footer at page's bottom: -->
         <?php include INCLUDE_BASE.'/client/components/petOwner/userFooter.php'; ?>
-        
-        <!-- <script src="./mapDashboard.js"></script> -->
-
-        <script>
-            
-        </script>
 
     </body>
 </html>
-
-
-<!-- 
-    <form action='./petProfile.php' method='get' class='petCard' onclick='this.submit()'>
-        <input type='text' name='petID' value='{$x['petID']}' hidden>
-        <img src='".BASE_PATH."/client/assets/images/vetiplus-logo.png' class='petImg' alt='Pet Image'>
-        <h3>{$x['name']}</h3>
-    </form>
--->
-<div class="appointmentCard">
-
-</div>

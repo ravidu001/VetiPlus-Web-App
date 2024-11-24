@@ -21,15 +21,17 @@
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/poppinsFont.css" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+        <link href="<?= BASE_PATH ?>//client/assets/cssFiles/common/aboutPage.css" rel="stylesheet">
+
         <!-- <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/dashboard.css" rel="stylesheet"> -->
     </head>
     <body>
         <!-- navbar on top: -->
         <?php include INCLUDE_BASE.'/client/components/petOwner/userNavbar.php'; ?>
 
-        <div class="content">
-            
-        <?php include INCLUDE_BASE.'/client/components/common/aboutUsContent.php'; ?>
+        <div class="content">    
+            <!-- sections containing text and info -->
+            <?php include INCLUDE_BASE.'/client/components/common/aboutUsContent.php'; ?>
         </div>
 
         <!-- footer at page's bottom: -->

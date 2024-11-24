@@ -38,6 +38,7 @@
             <img class="heroImg" src="../../assets/images/guestUser/guestHeroes/aboutUsHero.png" alt="">
         </div>
 
+        <!-- sections containing text and info -->
         <?php include INCLUDE_BASE.'/client/components/common/aboutUsContent.php'; ?>
 
         <!-- footer at page's bottom: -->
@@ -45,13 +46,3 @@
 
     </body>
 </html>
-
-
-<link href="<?= BASE_PATH.'/client/assets/cssFiles/common/colourPalette.css'?>" rel="stylesheet">
-<link href="<?= BASE_PATH.'/client/assets/cssFiles/common/styles.css'?>" rel="stylesheet">
-
-<link href="<?= BASE_PATH.'/client/assets/cssFiles/common/navBar.css'?>" rel="stylesheet">
-<link href="<?= BASE_PATH.'/client/assets/cssFiles/common/myFooter.css'?>" rel="stylesheet">
-<link href="<?= BASE_PATH.'/client/assets/cssFiles/common/hero.css'?>" rel="stylesheet">
-
-<link href="<?= BASE_PATH.'/client/assets/cssFiles/common/aboutPage.css'?>" rel="stylesheet">

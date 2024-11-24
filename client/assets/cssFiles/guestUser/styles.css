@@ -20,6 +20,13 @@ body {
     display: flex;
     flex-direction: column;
 }
+section {
+    margin: 20px, 10%;
+    padding: 5vw;
+
+    display: flex;
+    justify-content: center;
+}
 
 /* .blurBG {
     filter: blur(5px);

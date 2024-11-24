@@ -9,7 +9,8 @@ body {
     --nav-bg-color: #6A0DAD;               /* for sidebars and navbars bg */
     /* --nav-text-color: #4b4343;             normal navbar text colour */
     --nav-text-color: #a48fb3;             /* normal navbar text colour */
-    --nav-hover-text-color: #110f0f;       /* text colour when hovering and for active tab */
+    --nav-hover-text-color: #ffff;       /* text colour when hovering and for active tab */
+    /* --nav-hover-text-color: #110f0f;       text colour when hovering and for active tab */
     
     --inset-shadow-color: #ffffff;         /* for box-shadow inset */
     --shadow-color: #808080;               /* shadow effect colour */

@@ -1,4 +1,4 @@
-<div class="aboutSections">
+<section class="aboutSections">
     <img src="../../assets/images/guestUser/aboutUs/ourStory.png" alt="Our Story">
     <div class="text">
         <header class="mainH">Our Story</header>
@@ -15,8 +15,8 @@
             so that every pet can receive the love and attention they deserve.
         </p>
     </div>
-</div>
-<div class="aboutSections">
+</section>
+<section class="aboutSections">
     <img src="../../assets/images/guestUser/aboutUs/joinUs.png" alt="Join the VetiPlus family">
     <div class="text">
         <header>Join the<br/>VetiPlus family</header>
@@ -26,12 +26,12 @@
             VetiPlus provides the tools to make your experience seamless and rewarding.
             Become part of our family today.
         </p>
-        <a href="../pages/selectUser.html">
+        <a href="#">
             <button>Get Started</button>
         </a>
     </div>
-</div>
-<div class="aboutSections">
+</section>
+<section class="aboutSections">
     <div class="text">
         <header>The VetiPlus Team </header>
         <p>
@@ -42,4 +42,4 @@
         </p>
     </div>
     <img src="../../assets/images/guestUser/aboutUs/theTeam.png" alt="">
-</div>
+</section>

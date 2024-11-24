@@ -1,5 +1,4 @@
 
-
 #myProfile_content {
     display: flex;
 }
@@ -18,7 +17,8 @@
     height: 15rem;
 
     border-radius: 20px;
-    background-color: var(--primary-bg-color);
+    background-color: white;
+    /* background-color: var(--primary-bg-color); */
     border: 2px solid var(--primary-border-color);
     padding: 10px;
     
@@ -35,9 +35,17 @@
 }
 .petCard:hover {
     cursor: pointer;
+    
+    transition: all 0.3s ease;
+    transform: scale(1.02);
+    box-shadow: 5px 5px 10px var(--shadow-color), inset 5px 5px 20px white;
 }
 
-.popup {
+
+
+
+
+/* .popup {
     position: fixed;
     visibility: hidden;
     opacity: 0;
@@ -59,4 +67,4 @@
 .popup form {
     display: flex;
     flex-direction: column;
-}
+} */

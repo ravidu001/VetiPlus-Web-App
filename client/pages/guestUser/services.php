@@ -15,55 +15,12 @@
 
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/navBar.css" rel="stylesheet">
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/myFooter.css" rel="stylesheet">
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/myFooter.css" rel="stylesheet">
+
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/hero.css" rel="stylesheet">
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/servicesPage.css" rel="stylesheet">
 
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        
-        <style>
-            .services {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-
-                margin: 1em;
-                padding: 1em;
-            }
-            .services .card {
-                display: flex;
-                align-items: center;
-                justify-items: center;
-                gap: 1em;
-
-                padding: 1em;
-                border-radius: 2em;
-                margin: 1em;
-
-                background-image: linear-gradient(lightblue, white);
-            }
-            .services .text {
-                text-align: center;
-            }
-            .services .text header {
-                font-size: 2em;
-                font-weight: bold;
-            }
-            .services .text p {
-                font-size: 1.2em;
-            }
-            .services .appointments {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-            }
-            .services .otherServices {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-            .services img {
-                width: 40%;
-                object-fit: contain;
-            }
-        </style>
         
     </head>
     <body>
@@ -84,7 +41,7 @@
             <div class="appointments">
                 <div class=" card">
                     <div class="text">
-                        <header>Vet Appointments</header>
+                        <h1>Vet Appointments</h1>
                         <p>
                             Book hassle-free veterinary appointments.
                             Access top-quality care for your pets with just a few clicks.
@@ -94,7 +51,7 @@
                 </div>
                 <div class=" card">
                     <div class="text">
-                        <header>Salon Appointments</header>
+                        <h1>Salon Appointments</h1>
                         <p>
                             Pamper your pet with ease.
                             Schedule grooming sessions at your preferred pet salons through our platform.
@@ -107,7 +64,7 @@
             <div class="otherServices">
                 <div class=" card">
                     <div class="text">
-                        <header>Adoption</header>
+                        <h1>Adoption</h1>
                         <p>
                             Find your perfect furry companion.
                             Connect with local shelters and rescues to give a loving home to a pet in need.
@@ -117,7 +74,7 @@
                 </div>
                 <div class=" card">
                     <div class="text">
-                        <header>Pet Breeding</header>
+                        <h1>Pet Breeding</h1>
                         <p>
                             Responsible pet breeding made simple.
                             Connect with reputable breeders or list your breeding services on our platform.
@@ -127,7 +84,7 @@
                 </div>
                 <div class=" card">
                     <div class="text">
-                        <header>Unified Records</header>
+                        <h1>Unified Records</h1>
                         <p>
                             Maintain records on your pet in one place.
                             No longer is it needed to carry about (and misplace) your pet's record books.

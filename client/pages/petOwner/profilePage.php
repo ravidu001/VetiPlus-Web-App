@@ -98,25 +98,18 @@
                 
                 <!-- <div class="userData"> -->
                     <label id="address">Address: </label>
-                    <span class="display-field"><?= $data['houseNo'].', '.$data['street'].'<br/>'.$data['city']; ?></span>
+                    <span class="display-field"><?= $data['houseNo'].', '.$data['street'].',<br/>'.$data['city']; ?></span>
 
                     <input type="text" id="houseNo" class="input-field" name="houseNo" value="<?= $data['houseNo']; ?>" required>
                     <input type="text" id="street" class="input-field" name="street" value="<?= $data['street']; ?>" required>
                     <input type="text" id="city" class="input-field" name="city" value="<?= $data['city']; ?>" required>
                 <!-- </div> -->
-                
-                <!-- <div class="userData"> -->
-                    <!-- <label for="nic">Available for breeding: </label>
-                    <span class="display-field"><?= $data['breedAvailable'] == 1 ? 'Yes': 'No'; ?></span>
-
-                    <label for="breedAvailYes" class="input-field">Yes</label>
-                        <input type="radio" id="breedAvailYes" class="input-field" name="breedAvail" value="1" required>
-                    <label for="breedAvailNo" class="input-field">No</label>
-                        <input type="radio" id="breedAvailNo" class="input-field" name="breedAvail" value="0" required> -->
-                <!-- </div> -->
 
                 <button type="submit" style="display: none;" id="save-button">Save</button>
             </form>
+
+            <button type="button" id="logoutButton">Logout</button>
+
         </div>
 
         <!-- footer at page's bottom: -->
@@ -144,6 +137,29 @@
                     saveButton.style.display = "none";
                 }
             }
+
+            document.getElementById('logoutButton').addEventListener('click', function () {
+                if (confirm('Are you sure you want to logout?')) {
+                    // Send a logout request to the server
+                    fetch('<?= BASE_PATH ?>/client/pages/petOwner/logout.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            window.location.href = '<?= BASE_PATH ?>/index.php';
+                        } else {
+                            alert('Failed to logout. Please try again.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Logout error:', error);
+                        alert('An error occurred while logging out.');
+                    });
+                }
+            });
+
         </script>
     </body>
 </html>
@@ -156,12 +172,25 @@
             $contact = $_POST['contact'];
             $dob = $_POST['dob'];
             $nic = $_POST['nic'];
+            $houseNo = $_POST['houseNo'];
+            $street = $_POST['street'];
+            $city = $_POST['city'];
+
+            $stmt = $conn->prepare("UPDATE petowner
+                            SET fullName = ?, contactNumber = ?, DOB = ?, houseNo = ?, street = ?, city = ?
+                            WHERE petOwnerID = ?");
+            $stmt->bind_param("sssssss", $name, $contact, $dob, $houseNo, $street, $city, $userID);
+            $updateSuccess = $stmt->execute();
+            $stmt->close();
+            if (!$updateSuccess) echo "
+                <script> alert('Failed to update details: '$conn->error) </script>";
+
 
         }
         if (isset($_POST['formName']) && $_POST['formName'] == 'profilePicEdit') {
             $uploadedPhoto = $_FILES['photo'];
 
-            $targetDir = BASE_PATH.'/client/assets/images/profilePics/petOwner/';
+            $targetDir = INCLUDE_BASE.'/client/assets/images/profilePics/petOwner/';
             $fileName = basename($uploadedPhoto['name']);
             $targetFilePath = "$targetDir$fileName";
             
@@ -171,14 +200,19 @@
                 $stmt->bind_param("ss", $fileName, $userID);
 
                 if ($stmt->execute()) {
-                    echo "Image uploaded and saved";
-                    exit;
+                    echo "
+                    <script>
+                        alert('Image uploaded and saved');
+                        window.location.assign(window.location.href);    // refresh the current page
+                    </script>";
                 } else {
-                    echo "Database error: ". $conn->error;
+                    echo "<script> alert(Database error: $conn->error) </script>";
                 }
             } else {
-                echo "Error uploading file";
+                echo "<script> alert(Error uploading file: $conn->error) </script>";
             }   
         }
     }
 ?>
+
+<!-- <script> </script> -->

@@ -10,10 +10,10 @@
     width: 15%;
     padding: 1em;
 
-    font-size: 1rem;
     text-align: center;
 
     background-color: lightblue;
+    border: 1px solid var(--primary-border-color);
     border-radius: 20px;
     
     display: flex;
@@ -28,8 +28,12 @@
     object-fit: contain;
 }
 
+h1 {
+    margin-left: 10%;
+}
+
 /* for the description divs */
-.homeDiv1, .homeDiv2 {
+.homeDiv {
     font-size: 1rem;
     padding: 3em 10em;
 
@@ -37,19 +41,17 @@
     align-items: center;
     justify-content: center;
 }
-
-.homeDiv1 img, .homeDiv2 img {
+.homeDiv img {
     height: auto;
     width: 60%;
 }
 .homeDivText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color: black;
-    font-size: 1.1em;
-}
-.homeDivHeader {
-    font-size: 1.5em;
-    font-weight: bold;
+    gap: 5px;
 }
 
 .regBtn button {
@@ -69,6 +71,7 @@
     background-color: lightblue;
     transition: ease 500ms;
 }
+
 /* for user types: */
 .userTypes {
     display: flex;

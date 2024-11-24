@@ -22,7 +22,7 @@
         </a>
         <a href="<?= BASE_PATH . '/client/pages/guestUser/contact.php' ?>"
         class="<?= ($current_pg == 'contact.php') ? 'active' : ''; ?>">
-            <i class="bx bxs-home bx-sm" id="contactIcon"></i>
+            <i class="bx bxs-phone-call bx-sm" id="contactIcon"></i>
             <label for="contactIcon" class="collapsable">Contact Us</label>
         </a>
     </div>
@@ -31,3 +31,7 @@
         <label for="loginIcon">Login</label>
     </a>
 </nav>
+
+<!-- this  script is to adjust the hero section's height based on the navBar's -->
+<script>
+</script>

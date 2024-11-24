@@ -9,12 +9,13 @@ nav.navBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    z-index: 10;
 }
 
 #navBar-logo {
     width: auto;
-    height: 5rem;
-    padding: 3px;
+    height: 4rem;
 }
 
 .navBar .links {
@@ -42,7 +43,9 @@ nav.navBar {
     padding: 15px;
 }
 .navBar a:hover {
-    box-shadow: 3px 3px 3px var(--shadow-color), inset 2px 2px 5px var(--inset-shadow-color);
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+    box-shadow: inset 3px 3px 10px var(--shadow-color);
 }
 .navBar a:hover,
 .navBar a.active {
