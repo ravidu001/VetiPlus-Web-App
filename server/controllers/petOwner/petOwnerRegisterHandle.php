@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
+$_SESSION['user_id'] = 'piggy@pig.com';
 $userID = $_SESSION['user_id'];
 
 include '../../../config.php';
@@ -56,33 +56,32 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     $lastLogin = $today->format('Y-m-d H:i');
 
+    header('Content-Type: application/json');
+
     if($validInputs) {
         $stmt = $conn->prepare("INSERT INTO petowner
             (petOwnerID, fullName, DOB, contactNumber, NIC, gender, houseNo, street, city, lastLogin)
             VALUES (?,?,?,?,?,?,?,?,?,?)");
         $stmt->bind_param("ssssssssss",$userID, $name, $dob, $contact, $nic, $gender, $houseNo, $street, $city, $lastLogin);
         $insertDone = $stmt->execute();
+        $stmt->close();
+        
         if($insertDone) {
-            echo "
-            <script>
-                alert(`Successfully Registered!\nWelcome to the VetiPlus Pet owner Community!`);
-                window.location.href = './dashboard.php';
-            </script>";
+            echo json_encode(["status" => "success", "message" => "Account created successfully."]);
+            exit();
+        } else {
+            echo json_encode(["status" => "failure", "message" => "Error creating account. Please try again in a few minutes."]);
+            exit();
         }
     }
     else {
         $errorsFormatted = array_map(function($error) { return
-            "$error\n";
+            "$error ";
         }, $errors);
         $errorsString = implode('', $errorsFormatted);
 
-        echo "
-        <script>
-            alert(`$errorsString`);
-            window.location.href = './petOwnerRegister.php';
-        </script>";
+        echo json_encode(["status" => "failure", "message" => $errorsString]);
+        exit();
     }
 }
-// else {
-//     header("Location: ../../../../index.php");
-// }
+else header("Location: ".BASE_PATH."/index.php");

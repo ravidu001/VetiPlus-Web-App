@@ -20,6 +20,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $species = $sanitized['species'];
     $breed = $sanitized['breed'];
 
+    $errors = [];
+    $validInputs = true;
+
+    function addError ($msg) {
+        global $errors, $validInputs;
+        array_push($errors, $msg);
+        $validInputs = false;
+    }
+
+    if(empty($name)) addError("Empty name value provided!");
+
+    
+    $today = new DateTime("now");
+    $todayDate = $today->format('Y-m-d');
+    $dobDate = DateTime::createFromFormat('Y-m-d', $dob);
+
+    if ($dobDate && $dobDate > $todayDate) addError("Adding possible future pets is not allowed.");
+
+
     $breedAvailable = $sanitized['breedAvailable'];
     ($breedAvailable == 1) 
         ? $breedDescription = $sanitized['breedDescription']
@@ -46,20 +65,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo json_encode(["status" => "success", "message" => "Pet Profile created successfully."]);
             exit();
         } else {
-            echo json_encode(["status" => "failure", "message" => "Unable to add pet!".$conn->error]);
+            echo json_encode(["status" => "failure", "message" => "Unable to add pet!"]);
             exit();
         }
     }
     else {
-        echo json_encode(["status" => "failure", "message" => "Error in uploading profile picture!".$conn->error]);
+        echo json_encode(["status" => "failure", "message" => "Error in uploading profile picture!"]);
         exit();
     }
 }
 else header("Location: ".BASE_PATH."/client/pages/petOwner/dashboard.php");
-
-
-// <script>
-// console.log('Pet Profile created')
-// alert('Pet Successfully Added')
-// window.location.href = "<?= BASE_PATH.'/client/pages/petOwner/dashboard.php'"
-// </script>

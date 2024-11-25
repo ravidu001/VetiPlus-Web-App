@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Vet Appointments</title>
+        <title>Register Pet</title>
         <link rel="icon" href="<?= BASE_PATH ?>/client/assets/images/vetiplus-logo.png" type="image/png">
 
         <meta charset="UTF-8">
@@ -121,7 +121,7 @@
                 })
                 .catch(error => {
                     console.error('An error occurred:'+ error);
-                    alert('An error occurred.\nPlease try again later.'+error+'hmm');
+                    alert('An error occurred.\nPlease try again later.'+ error);
                 })
             })
         </script>

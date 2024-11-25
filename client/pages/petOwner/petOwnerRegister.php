@@ -1,6 +1,7 @@
 <?php
     session_start();
-    $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
+    $_SESSION['user_id'] = 'hmm@hmm.com';
+    // $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
     $userID = $_SESSION['user_id'];
 
     include '../../../config.php';
@@ -108,7 +109,7 @@
             <div class="logoPart">
                 <img src="<?= BASE_PATH ?>/client/assets/images/vetiplus-logo.png" alt="VetiPlus Logo">
             </div>
-            <form id="regForm" method="post"
+            <form id="petOwnerRegisterForm" method="post"
                 action="<?= BASE_PATH.'/server/controllers/petOwner/petOwnerRegisterHandle.php' ?>">
                 <h1>Pet Owner Signup</h1>
                 <fieldset>
@@ -156,15 +157,43 @@
         <?php include INCLUDE_BASE.'/client/components/guestUser/guestFooter.php'; ?>
 
         <script>
-            const userName = document.getElementById('name');
-            const dob = document.getElementById('dob');
-            const houseNo = document.getElementById('houseNo');
-            const street = document.getElementById('street');
-            const city = document.getElementById('city');
-            const contact = document.getElementById('contact');
+            document.getElementById('petOwnerRegisterForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                const formData = new FormData(this);
 
-            const regForm = document.getElementById('regForm');
+                fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error(`HTTP Error: ${response.status}`);
+                    }
+                })
+                .then(data => {
+                    if (data.status === 'success') {
+                        alert(data.message);
+                        window.location.href = '<?= BASE_PATH.'/client/pages/petOwner/dashboard.php' ?>';
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('An error occurred\n'+ error);
+                    alert('An error occurred.\nPlease try again later.\n'+ error);
+                })
+            })
 
+            // const userName = document.getElementById('name');
+            // const dob = document.getElementById('dob');
+            // const houseNo = document.getElementById('houseNo');
+            // const street = document.getElementById('street');
+            // const city = document.getElementById('city');
+            // const contact = document.getElementById('contact');
+
+            // const petOwnerRegisterForm = document.getElementById('petOwnerRegisterForm');
         </script>
     </body>
 </html>
