@@ -49,7 +49,7 @@
                 <label for="weight">Weight:</label>
                     <input type="number" id="weight" name="weight" required>
                     
-                <label for="species">Species:</label>
+                <!-- <label for="species">Species:</label>
                     <select name="species" id="species" onchange="displayOtherTypeBox()" required>
                         <option value="">Select an option:</option>
                         <option value="dog">Dog</option>
@@ -58,11 +58,21 @@
                         <option value="bird">Bird</option>
                         <option value="hamster">Hamster</option>
                         <option value="other">Other</option>
-                    </select>
-
+                    </select> -->
                 <!-- text option for other pet type: -->
-                <label for="otherPet" id="otherPetLabel" style="display: none;">Enter pet type:</label>
-                    <input type="text" id="otherPetInput" name="otherSpecies" style="display: none;" disabled required>
+                <!-- <label for="otherPet" id="otherPetLabel" style="display: none;">Enter pet species:</label>
+                    <input type="text" id="otherPetInput" name="otherSpecies" style="display: none;" disabled required> -->
+
+                    
+                    <label for="species">Species:</label>
+                    <input type="text" id="species" name="species" list="petSpecies">
+                    <datalist id="petSpecies">
+                        <option value="Dog">
+                        <option value="Cat">
+                        <option value="Rabbit">
+                        <option value="Bird">
+                        <option value="Hamster">
+                    </datalist>
 
                 <label for="breed">Breed:</label>
                     <input type="text" id="breed" name="breed" required>
@@ -101,27 +111,31 @@
                 }
             }
 
-            const displayOtherTypeBox = () => {
-                const otherPetLabel = document.getElementById('otherPetLabel')
-                const otherPetInput = document.getElementById('otherPetInput')
+            // const displayOtherTypeBox = () => {
+            //     const otherPetLabel = document.getElementById('otherPetLabel')
+            //     const otherPetInput = document.getElementById('otherPetInput')
 
-                const selectOption = document.getElementById('species').value;
-                if (selectOption == 'other'){
-                    otherPetLabel.style.display = "block"
-                    otherPetInput.style.display = "block"
-                    otherPetInput.disabled = false
-                }
-                else{
-                    otherPetLabel.style.display = "none"
-                    otherPetInput.style.display = "none"
-                    otherPetInput.disabled = true
-                }
-            }
+            //     const selectOption = document.getElementById('species').value;
+            //     if (selectOption == 'other'){
+            //         otherPetLabel.style.display = "block"
+            //         otherPetInput.style.display = "block"
+            //         otherPetInput.disabled = false
+            //     }
+            //     else{
+            //         otherPetLabel.style.display = "none"
+            //         otherPetInput.style.display = "none"
+            //         otherPetInput.disabled = true
+            //     }
+            // }
         </script>
     </body>
 </html>
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        function sanitizeInput($input) {
+            return htmlspecialchars(trim($input));
+        }
+        $sanitized = array_map('sanitizeInput', $_POST);
 
         $name = htmlspecialchars($_POST['name']);
         $dob = htmlspecialchars($_POST['dob']);

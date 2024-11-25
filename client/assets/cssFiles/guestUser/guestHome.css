@@ -83,7 +83,7 @@ h1 {
 .userTypes .userCard {
     width: 20%;
     padding: 1rem;
-    background-color: aqua;
+    background-color: var(--primary-bg-color);
 
     /* border: 1px solid blue; */
     border-radius: 20px;
@@ -101,7 +101,6 @@ h1 {
     height: auto;
 
     border-radius: 20px;
-    background-color: lightblue;
 }
 .userTypes .userCard .userTitle {
     font-size: 1.5em;

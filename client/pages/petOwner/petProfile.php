@@ -18,9 +18,6 @@
     $stmt->close();
 
     if ($result->num_rows <= 0) {
-        // $error_message = urlencode($conn->error); // Encode the error message
-        // header("Location: ./errorPage.php?msg=$error_message");
-        // exit();
         echo $conn->error;
     }
     $data = $result->fetch_assoc();
@@ -105,7 +102,7 @@
                         </span>
 
                         <label for="breedDescription">Description for breeding your pet:</label>
-                        <span class="display-field"><?= $data['breedDescription']; ?></span>
+                        <span class="display-field"><?= $data['breedDescription'] ?? "Not-applicable"; ?></span>
                             <textarea name="breedDescription" id="breedDescription" class="input-field" cols="30" rows="5" style="resize: none; display:none;"
                                 <?= !$data['breedAvailable'] ? 'disabled': ''; ?> required>
                                 <?= $data['breedDescription']; ?>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
+    $_SESSION['user_id'] = 'piggy@pig.com';
     $userID = $_SESSION['user_id'];
 
     include '../../../config.php';
@@ -45,7 +45,7 @@
                         $stmt->close();
                     ?>
                     <img src="<?= BASE_PATH.'/client/assets/images/profilePics/petOwner/'.$profileDetails['profilePicture']?>"
-                        alt="profile Picture">
+                        alt="Add a profile picture.">
                     <div class="textContent">
                         <h3>Welcome back!</h3>
                         <p><?= $profileDetails['fullName'] ?></p>
@@ -65,18 +65,14 @@
 
                         if($result->num_rows > 0) :
                             $data = $result->fetch_all(MYSQLI_ASSOC);
-                            foreach ($data as $k => $pet) :
-                            ?>
+                            foreach ($data as $k => $pet) : ?>
                                 <form action='./petProfile.php' method='post' class='petCard' onclick='this.submit()' title='Go to Pet Profile Page.'>
-                                <!-- <div data-href='./petProfile.php' class='petCard' onclick='navigateToPetProfile(<?= $pet['petID']; ?>, this)' title='Go to Pet Profile Page.'> -->
                                     <input type='text' name='petID' id='petID' value='<?= $pet['petID'] ?>' hidden>
                                     <img src='<?= BASE_PATH."/client/assets/images/profilePics/pet/".$pet['profilePicture'] ?>' class='petImg' alt='Pet Image'>
                                     <h3><?= $pet['name'] ?></h3>
-                                <!-- </div> -->
                                 </form>
-                            <?php
-                            endforeach;
-                        else: echo "No Pets Added Yet!";
+                            <?php endforeach;
+                        else: echo "<h3>No Pets Added Yet!</h3>";
                         endif;
                     ?>
                     <a class="petCard" href="./addPet.php">

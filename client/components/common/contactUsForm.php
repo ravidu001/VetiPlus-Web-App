@@ -23,7 +23,7 @@
                 <input type="email" id="email" name="email" required>
             
             <label for="contact">Contact number:</label>
-                <input type="tel" id="contact" name="contact" required pattern="[0][7][0-9]{8}" placeholder="07X-XXXXXXXX">
+                <input type="text" id="contact" name="contact" required pattern="[0][7][0-9]{8}" placeholder="07X-XXXXXXXX">
             
             <label for="msgType">Type of Message:</label>
             <select name="msgType" id="msgType">
@@ -40,10 +40,20 @@
 </div>
 <?php
 
-    $email = $_POST['email'];
-    $contact = $_POST['contact'];
-    $msgType = $_POST['msgType'];
-    $msg = $_POST['msg'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    function sanitizeInput($input) {
+        return htmlspecialchars(trim($input));
+    }
+    $sanitized = array_map('sanitizeInput', $_POST);
 
-    $stmt = $conn->prepare("INSERT INTO ")
+    $email = $sanitized['email'];
+    $contact = $sanitized['contact'];
+    $msgType = $sanitized['msgType'];
+    $msg = $sanitized['msg'];
+
+    $stmt = $conn->prepare("INSERT INTO x (email, contact, message)
+            VALUES (?,?,?)");
+    $stmt->bind_param("sss",$email, $contact, $msg);
+}
+
 ?>
