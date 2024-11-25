@@ -3,6 +3,7 @@
 session_start();
 $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
 $userID = $_SESSION['user_id'];
+
 include '../../../config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {

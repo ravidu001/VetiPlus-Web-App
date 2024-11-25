@@ -109,7 +109,7 @@
                 <img src="<?= BASE_PATH ?>/client/assets/images/vetiplus-logo.png" alt="VetiPlus Logo">
             </div>
             <form id="regForm" method="post"
-                action="<?= INCLUDE_BASE.'/server/controllers/petOwner/petOwnerRegisterHandle.php' ?>">
+                action="<?= BASE_PATH.'/server/controllers/petOwner/petOwnerRegisterHandle.php' ?>">
                 <h1>Pet Owner Signup</h1>
                 <fieldset>
                     <legend>Personal Details</legend>

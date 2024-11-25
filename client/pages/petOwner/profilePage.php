@@ -148,6 +148,7 @@
                     .then(response => response.json())
                     .then(data => {
                         if (data.status === 'success') {
+                            alert('Successfully logged out.')
                             window.location.href = '<?= BASE_PATH ?>/index.php';
                         } else {
                             alert('Failed to logout. Please try again.');

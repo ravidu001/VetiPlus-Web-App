@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $_SESSION['user_id'] = 'piggy@pig.com';
+    $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
     $userID = $_SESSION['user_id'];
 
     include '../../../config.php';
@@ -75,7 +75,7 @@
                         else: echo "<h3>No Pets Added Yet!</h3>";
                         endif;
                     ?>
-                    <a class="petCard" href="./addPet.php">
+                    <a class="petCard" href="./petRegister.php">
                         <i class="bx bxs-plus-circle bx-lg"></i>
                         <h3>Add Pet</h3>
                     </a>                   
