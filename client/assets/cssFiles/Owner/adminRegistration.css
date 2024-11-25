@@ -14,35 +14,6 @@
 .admin-regi-top h1{
     font-size: 35px;
 }
-.admin-regi-inside{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    margin: 20px 100px;
-}
-.admin-regi-inside-left{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    border: 3px solid var(--background-primary);
-    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
-    color: var(--text-color);
-    height: 400px;
-
-}
-.admin-regi-inside-left label{
-    font-size: 20px;
-    margin: 10px;
-    font-weight: bold;
-}
-.admin-regi-inside-left input{
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 5px;
-    width: 70%;
-    border: none;
-}
 .admin-regi-down{
     display: flex;
     align-items: center;
@@ -57,7 +28,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin: 20px;
 }
 .admin-regi-bottom button{
     padding: 10px;
@@ -143,4 +114,87 @@
     color: white;
     font-size: 20px;
     cursor: pointer;
+
+}
+form{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--background-primary);
+    width: 85%;
+    padding: 20px;
+    height: 30%;
+    margin: 20px 100px;
+}
+.regi-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.regi-img img{
+    width: 200px;
+    height: 200px;
+}
+form h1{
+    margin: 20px 100px;
+    color: var(--background-primary);
+}
+table {
+    width: 80%;
+    border-collapse: separate; /* Use separate borders for spacing */
+    border-spacing: 10px; /* Add gap between rows and columns */
+    margin: 20px auto; /* Center the table */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+}
+
+table tr {
+    margin: 10px 0; /* Add vertical spacing between rows */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+td, th {
+    text-align: left;
+    font-size: 18px;
+    padding: 15px 10px; /* Add padding inside cells */
+    border: 1px solid #CDEDF6; /* Light border color */
+    border-radius: 5px; /* Rounded corners for cells */
+}
+
+th {
+    color: white; /* Text color for header */
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+}
+
+/* Input Field Styling */
+label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block; /* Ensure label occupies its own line */
+    margin-bottom: 5px; /* Add space between label and input */
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%; /* Full width of table cell */
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    transition: border-color 0.3s ease;
+    border: 3px solid var(--background-primary);
+}
+
+input:focus {
+    outline: none;
+}
+.regi-icon{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.icon{
+    font-size: 30px;
+    color: var(--background-primary);
 }

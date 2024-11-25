@@ -42,28 +42,100 @@ include(__DIR__ . '/../../../server/controllers/Owner/createAdmin.php');
             </div>
             <div>
                 <form action="" method="POST" onsubmit="return validateForm()">
-                    <div class="admin-regi-inside">
-                        <div class="admin-regi-inside-left">
-                            <label for="name"> Name</label>
-                            <input type="text" id="name" name="name" placeholder="Name" required>
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Email" required>
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" placeholder="Password" required>
-                            <label for="cpassword">Confirm Password</label>
-                            <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" required>
-                        </div>
-                        <div class="admin-regi-inside-left">
-                            <label for="address">Address</label>
-                            <input type="text" id="address" name="address" placeholder="Address" required>
-                            <label for="city">Gender</label>
-                            <input type="text" id="gender" name="gender" placeholder="Gender" required>
-                            <label for="phone">Phone Number</label>
-                            <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required>
-                            <label for="state">NIC</label>
-                            <input type="text" id="nic" name="nic" placeholder="NIC" required>
-                        </div>
-                    </div>
+                   <div class="regi-img">
+                   <img src="../../assets/images/user.png" alt="">
+                   </div>
+                   <h1>Fill the Details</h1>
+                    <table>
+                        <tr>
+                            <td>
+                              <div class="regi-icon">
+                              <i class='bx bxs-user-circle icon'></i>
+                              <label for="name"> Name</label>
+                              </div>
+                            </td>
+                            <td>
+                                <input type="text" id="name" name="name" placeholder="Name" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="regi-icon">
+                            <i class='bx bxs-envelope icon' ></i>
+                              <label for="email">Email</label>
+                              </div>
+                            </td>
+                            <td>
+                                <input type="email" id="email" name="email" placeholder="Email" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="regi-icon">
+                            <i class='bx bxs-lock icon'></i>
+                              <label for="password">Password</label>
+                              </div>
+                            </td>
+                            <td>
+                                <input type="password" id="password" name="password" placeholder="Password" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="regi-icon">
+                            <i class='bx bxs-lock icon'></i>
+                              <label for="cpassword">Confirm Password</label>
+                              </div>
+                            </td>
+                            <td>
+                                <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="regi-icon">
+                            <i class='bx bxs-home icon'></i>
+                              <label for="address">Address</label>
+                              </div>
+                            </td>
+                            <td>
+                                <input type="text" id="address" name="address" placeholder="Address" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="regi-icon">
+                            <i class='bx bxs-phone icon'></i>
+                              <label for="phone_number">Phone Number</label>
+                              </div>
+                            </td>
+                            <td>
+                                <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="regi-icon">
+                            <i class='bx bxs-message-check icon'></i>
+                              <label for="nic">NIC</label>
+                              </div>
+                            </td>
+                            <td>
+                                <input type="text" id="nic" name="nic" placeholder="NIC" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="regi-icon">
+                            <i class='bx bx-child icon'></i>
+                              <label for="gender">Gender</label>
+                              </div>
+                            </td>
+                            <td>
+                                <input type="text" id=gender name="gender" placeholder="gender" required>
+                            </td>
+                        </tr>
+                    </table>
                     <div class="admin-regi-bottom">
                         <button type="submit" name="submit">Register</button>
                     </div>
