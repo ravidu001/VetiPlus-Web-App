@@ -18,38 +18,11 @@
     display: flex;
     flex-direction: column;
     height: 60%;
+   border: 3px solid var(--background-primary);
+   border-radius: 10px;
+   background-color: var(--background-white);
+    margin: 20px 100px;
 
-}
-.profile_top_inside{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px 100px;
-    height: 100%;  
-    border: 3px solid var(--background-primary);
-    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
-    color: var(--text-color);
-    border-radius: 10px;
-}
-.profile_top_inside_left{
-    width: 35%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.profile_top_inside_left img{
-    width: 250px;
-    height: 250px;
-}
-.profile_top_inside_right{
-    width: 65%;
-    height: 450px;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    gap: 20px;
 }
 .profile_down{
     margin: 40px 100px;
@@ -148,5 +121,65 @@
 }
 .icon{
     font-size: 50px;
+    color: var(--background-primary);
+}
+.regi-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.regi-img img{
+    width: 200px;
+    height: 200px;
+}
+table {
+    width: 80%;
+    border-collapse: separate; /* Use separate borders for spacing */
+    border-spacing: 10px; /* Add gap between rows and columns */
+    margin: 20px 200px; /* Center the table */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    
+    
+}
+
+table tr {
+    margin: 10px 0; /* Add vertical spacing between rows */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+   
+}
+
+
+td, th {
+    text-align: left;
+    font-size: 18px;
+    padding: 20px 15px; /* Add padding inside cells */
+    border-radius: 5px; 
+    
+    
+}
+
+th {
+    color: white; /* Text color for header */
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+}
+
+/* Input Field Styling */
+label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block; /* Ensure label occupies its own line */
+    margin-bottom: 5px; /* Add space between label and input */
+    color: #333;
+}
+.regi-icon{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.icon{
+    font-size: 30px;
     color: var(--background-primary);
 }

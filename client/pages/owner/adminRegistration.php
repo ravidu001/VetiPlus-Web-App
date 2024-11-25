@@ -121,17 +121,6 @@ include(__DIR__ . '/../../../server/controllers/Owner/createAdmin.php');
                                 <input type="text" id="nic" name="nic" placeholder="NIC" required>
                             </td>
                         </tr>
-                        <!-- <tr>
-                            <td>
-                            <div class="regi-icon">
-                            <i class='bx bx-child icon'></i>
-                              <label for="gender">Gender</label>
-                              </div>
-                            </td>
-                            <td>
-                                <input type="text" id=gender name="gender" placeholder="gender" required>
-                            </td>
-                        </tr> -->
                         <tr>
                             <td>
                             <div class="regi-icon">
