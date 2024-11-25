@@ -37,9 +37,6 @@ include(__DIR__ . '/../../../server/controllers/Owner/createAdmin.php');
 
     <section class="home">
         <div class="admin-regi">
-            <div class="admin-regi-top">
-                <h1>Admin Registration Form</h1>
-            </div>
             <div>
                 <form action="" method="POST" onsubmit="return validateForm()">
                    <div class="regi-img">
@@ -124,7 +121,7 @@ include(__DIR__ . '/../../../server/controllers/Owner/createAdmin.php');
                                 <input type="text" id="nic" name="nic" placeholder="NIC" required>
                             </td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td>
                             <div class="regi-icon">
                             <i class='bx bx-child icon'></i>
@@ -133,6 +130,21 @@ include(__DIR__ . '/../../../server/controllers/Owner/createAdmin.php');
                             </td>
                             <td>
                                 <input type="text" id=gender name="gender" placeholder="gender" required>
+                            </td>
+                        </tr> -->
+                        <tr>
+                            <td>
+                            <div class="regi-icon">
+                            <i class='bx bx-child icon'></i>
+                              <label for="gender">Gender</label>
+                              </div>
+                            </td>
+                            <td>
+                                <select id="gender" name="gender" class="gender" required>
+                                    <option value="" disabled selected>Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
                             </td>
                         </tr>
                     </table>

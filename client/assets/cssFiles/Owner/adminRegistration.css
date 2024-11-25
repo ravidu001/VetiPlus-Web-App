@@ -1,19 +1,6 @@
 .admin-regi{
     width: 100%;
 }
-.admin-regi-top {
-    margin: 10px 100px;
-    height: 80px;
-    border: 3px solid var(--background-primary);
-    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.admin-regi-top h1{
-    font-size: 35px;
-}
 .admin-regi-down{
     display: flex;
     align-items: center;
@@ -119,10 +106,12 @@
 form{
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     border: 3px solid var(--background-primary);
+    background-color: var(--background-white);
     width: 85%;
     padding: 20px;
     height: 30%;
     margin: 20px 100px;
+    border-radius: 10px;
 }
 .regi-img{
     display: flex;
@@ -156,7 +145,6 @@ td, th {
     text-align: left;
     font-size: 18px;
     padding: 15px 10px; /* Add padding inside cells */
-    border: 1px solid #CDEDF6; /* Light border color */
     border-radius: 5px; /* Rounded corners for cells */
 }
 
@@ -197,4 +185,36 @@ input:focus {
 .icon{
     font-size: 30px;
     color: var(--background-primary);
+}
+.gender {
+    width: 100%; 
+    padding: 10px; 
+    font-size: 16px; 
+    font-family: Arial, sans-serif; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #f9f9f9; 
+    color: #333;
+    cursor: pointer; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.gender:hover {
+    border: 3px solid var(--background-primary); 
+}
+
+.gender:focus {
+    border: 3px solid var(--background-primary); 
+    outline: none; 
+}
+
+.gender option[value=""][disabled] {
+    color: #aaa;
+ 
+}
+
+.gender option {
+    color: #333; 
+    background: #fff; 
+    padding: 10px; 
 }
