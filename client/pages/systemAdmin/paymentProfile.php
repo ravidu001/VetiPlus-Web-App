@@ -84,6 +84,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
           </table>
         </div>
       </div>
+      <div class="payment-btn">
+        <button>Report generator</button>
+      </div>
     </div>
   </section>
 </body>

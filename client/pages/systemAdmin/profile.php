@@ -80,7 +80,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                             </div>
                         </td>
                         <td>
-                           <h3>200212702901</h3>
+                            <h3>200212702901</h3>
                         </td>
                     </tr>
                     <tr>
@@ -96,8 +96,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     </tr>
                 </table>
                 <div class="profile_down">
-                                <button onclick="openModal()">Edit Profile</button>
-                            </div>
+                    <button onclick="openModal()">Edit Profile</button>
+                </div>
             </div>
         </div>
         </div>

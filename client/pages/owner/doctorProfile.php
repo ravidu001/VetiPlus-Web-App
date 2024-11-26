@@ -13,7 +13,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
     <title>VetiPlus</title>
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Admin/doctorProfile.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/doctorProfile.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -22,22 +22,99 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <?php include '../../components/common/owner/navbar.php'; ?>
 
     <section class="home">
-    <div class="doctor_profile">
-        <div class="doctor_profile_top">
-            <div class="doctor_profile_top_left">
-                <img src="../../assets/images/user.png" alt="">
-            </div>
-            <div class="doctor_profile_top_right">
-                <h2>Full Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp; Ramesh Peshala</h2>
-                <h2>Date of Birth &nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp;2002/05/09</h2>
-                <h2>Gender &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp; Male</h2>
-                <h2>Email &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp; rameshpeshala84@gmail.com</h2>
-                <h2>Phone Number &nbsp;:-&nbsp;&nbsp;&nbsp; 0762163506</h2>
-                <h2>NIC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:- &nbsp;&nbsp;200212702901</h2>
+        <div class="doctor_profile">
+            <div class="doctor_profile_top">
+                <div class="doctor_profile_top_left">
+                    <img src="../../assets/images/user.png" alt="">
+                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-user-circle icon'></i>
+                                <label for="name"> Name</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>Ramesh Peshala</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-envelope icon'></i>
+                                <label for="email">Email</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>rameshpeshala84@gmail.com</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-home icon'></i>
+                                <label for="address">Address</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>419,Gangasirigama,Thissamaharama</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-phone icon'></i>
+                                <label for="phone_number">Phone Number</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>0762163506</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-message-check icon'></i>
+                                <label for="nic">NIC</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>200212702901</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bx-child icon'></i>
+                                <label for="gender">Gender</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>Male</h3>
+                        </td>
+                    </tr>
+                </table>
+                <div class="doc-pro-down">
+                    <div class="doc-pro-down-inside">
+                    <i class='bx bx-calendar-check icon'></i>
+                        <h2>Number of Appointment</h2>
+                        <h3>10</h3>
+                    </div>
+                    <div class="doc-pro-down-inside">
+                    <i class='bx bx-user-plus icon'></i>
+                        <h2>Number of Patients</h2>
+                        <h3>8</h3>
+                    </div>
+                    <div class="doc-pro-down-inside">
+                    <i class='bx bx-user-x icon'></i>
+                        <h2>Number of Cancel Appointment</h2>
+                        <h3>2</h3>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 </body>
 
 </html>

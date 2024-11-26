@@ -37,7 +37,6 @@ button {
 }
 .appointment-btn button{
   margin: 20px 100px;
-  background-color: #B89ACB;
   cursor: pointer;
   background-color: var(--background-light);
   color: var(--text-white);
