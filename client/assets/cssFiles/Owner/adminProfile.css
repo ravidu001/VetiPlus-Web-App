@@ -139,8 +139,7 @@ table {
     margin: 20px 200px; /* Center the table */
     border-radius: 10px; /* Rounded corners */
     padding: 20px;
-    
-    
+
 }
 
 table tr {
@@ -155,7 +154,7 @@ td, th {
     font-size: 18px;
     padding: 20px 15px; /* Add padding inside cells */
     border-radius: 5px; 
-    
+    border: 2px solid aqua;
     
 }
 
@@ -170,8 +169,8 @@ th {
 label {
     font-size: 18px;
     font-weight: bold;
-    display: block; /* Ensure label occupies its own line */
-    margin-bottom: 5px; /* Add space between label and input */
+    display: block; 
+    margin-bottom: 5px; 
     color: #333;
 }
 .regi-icon{

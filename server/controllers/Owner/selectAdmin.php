@@ -1,6 +1,4 @@
 <?php
-
-
 include ( __DIR__ . '/../../../server/config/backendConfig.php');
 $message = ''; 
 $admin = [];

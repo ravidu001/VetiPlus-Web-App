@@ -12,7 +12,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
     <title>VetiPlus</title>
-    <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">4
+    <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/profile.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -29,33 +29,75 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </div>
                 <table>
                     <tr>
-                        <td>Full Name</td>
-                        <td>:-</td>
-                        <td>Ramesh Peshala</td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td>:-</td>
-                        <td>rameshpeshala84@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>Phone Number</td>
-                        <td>:-</td>
-                        <td>0762163506</td>
-                    </tr>
-                    <tr>
-                        <td>Address</td>
-                        <td>:-</td>
-                        <td>419,Gangasirigama , Thissamaharama</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <div class="profile_down">
-                                <button onclick="openModal()">Edit Profile</button>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-user-circle icon'></i>
+                                <label for="name"> Name</label>
                             </div>
+                        </td>
+                        <td>
+                            <h3>Ramesh Peshala</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-envelope icon'></i>
+                                <label for="email">Email</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>rameshpeshala84@gmail.com</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-home icon'></i>
+                                <label for="address">Address</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>419,Gangasirigama,Thissamaharama</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-phone icon'></i>
+                                <label for="phone_number">Phone Number</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>0762163506</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-message-check icon'></i>
+                                <label for="nic">NIC</label>
+                            </div>
+                        </td>
+                        <td>
+                           <h3>200212702901</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bx-child icon'></i>
+                                <label for="gender">Gender</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>Male</h3>
                         </td>
                     </tr>
                 </table>
+                <div class="profile_down">
+                                <button onclick="openModal()">Edit Profile</button>
+                            </div>
             </div>
         </div>
         </div>

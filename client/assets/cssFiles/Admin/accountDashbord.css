@@ -70,19 +70,20 @@
 .account-inside-lower-left form button {
     padding: 10px;
     font-size: 20px;
-    border: 2px solid var(--background-primary);
-    background-color: var(--body-color);
+    background-color: var(--background-light);
     border-radius: 10px;
     width: 200px;
     height: 50px;
     cursor: pointer;
+    border: none;
+    color: var(--text-white);
    
 }
 
 .account-inside-lower-left form button:hover {
     background-color: var(--background-primary);
     box-shadow: 5px 5px 10px var(--shadow-color);
-    color: white;
+    color: var(--text-white);
     transform: scale(1.1);
 }
 .admin-navbar-inside-left-inner-1 ul li.active {
