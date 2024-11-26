@@ -64,54 +64,28 @@
     border-radius: 10px;
     height: 45px;
     width: 250px;
+    border: 3px solid var(--background-primary);
 }
 
 .account-inside-lower-left form button {
     padding: 10px;
     font-size: 20px;
-    background-color: #B89ACB;
-    border: 3px solid var(--background-primary);
-    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    background-color: var(--background-light);
     border-radius: 10px;
     width: 200px;
     height: 50px;
     cursor: pointer;
+    border: none;
+    color: var(--text-white);
+   
 }
 
 .account-inside-lower-left form button:hover {
-    background-color: #8F53B4;
-    color: white;
+    background-color: var(--background-primary);
+    box-shadow: 5px 5px 10px var(--shadow-color);
+    color: var(--text-white);
+    transform: scale(1.1);
 }
-
-.account-inside-lower-right form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    height: 300px;
-    border-radius: 10px;
-    background-color: #F1DBFF;
-}
-
-.account-inside-lower-right form input {
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 10px;
-}
-
-.account-inside-lower-right form button {
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: #B89ACB;
-    cursor: pointer;
-}
-
-.account-inside-lower-right form button:hover {
-    background-color: #8F53B4;
-    color: white;
-}
-
 .admin-navbar-inside-left-inner-1 ul li.active {
     background-color: #F8ECFF;
     /* Active background color */

@@ -1,7 +1,5 @@
 <?php
-
 $current_page = basename($_SERVER['PHP_SELF']);
-
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +16,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
 </head>
 
 <body>
-    <!-- Include navbar -->
     <?php include '../../components/common/admin/navbar.php'; ?>
 
     <section class="home">
@@ -143,6 +140,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </div>
         <div class="modal" id="systemModal">
             <div class="modal-content">
+            <i class='bx bxs-check-circle icon'></i>
                 <h3 id="modal-message">Do you want to proceed?</h3>
                 <button onclick="confirmAction()">Yes</button>
                 <button onclick="closeModal()">No</button>

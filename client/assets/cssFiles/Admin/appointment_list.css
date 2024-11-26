@@ -37,14 +37,15 @@ button {
 }
 .appointment-btn button{
   margin: 20px 100px;
-  background-color: #B89ACB;
   cursor: pointer;
-  border: 3px solid var(--background-primary);
-  color: black;
+  background-color: var(--background-light);
+  color: var(--text-white);
+  border: none;
 }
 .appointment-btn button:hover{
-  background-color: #8F53B4;
-  color: white;
+  background-color: var(--background-primary);
+  color: var(--text-white);
+  transform: scale(1.1);
 }
 
 .accept {

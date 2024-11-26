@@ -13,18 +13,18 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
     <title>VetiPlus</title>
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">
-    <link rel="stylesheet" href="../../assets/cssFiles/Admin/profile.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/Owner/doctorProfile.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <!-- Include navbar -->
-    <?php include '../../components/common/admin/navbar.php'; ?>
+    <?php include '../../components/common/owner/navbar.php'; ?>
 
     <section class="home">
-        <div class="profile_top">
-            <div class="profile_top_inside">
-                <div class="profile_top_inside_left">
+        <div class="doctor_profile">
+            <div class="doctor_profile_top">
+                <div class="doctor_profile_top_left">
                     <img src="../../assets/images/user.png" alt="">
                 </div>
                 <table>
@@ -95,38 +95,26 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         </td>
                     </tr>
                 </table>
-                <div class="profile_down">
-                    <button onclick="openModal()">Edit Profile</button>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div id="passwordModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-content-inside">
-                    <h3>Do you want to change your password?</h3>
-                    <span class="close" onclick="closeModal()">&times;</span>
-                </div>
-                <button onclick="showPasswordForm()">Yes</button>
-                <button onclick="closeModal()">No</button>
-                <div id="passwordForm" style="display: none;">
-                    <h3>Change Password</h3>
-                    <form onsubmit="changePassword(event)">
-
-                        <input type="password" id="newPassword" placeholder="Enter new Password" required><br><br>
-
-                        <input type="password" id="confirmPassword" placeholder="Confirm new Password" required><br><br>
-
-                        <button type="submit">Change Password</button>
-                    </form>
-                </div>
-                <div id="successMessage" style="display: none;">
-                    <h3>Password chnaged successfully</h3>
+                <div class="doc-pro-down">
+                    <div class="doc-pro-down-inside">
+                    <i class='bx bx-calendar-check icon'></i>
+                        <h2>Number of Appointment</h2>
+                        <h3>10</h3>
+                    </div>
+                    <div class="doc-pro-down-inside">
+                    <i class='bx bx-user-plus icon'></i>
+                        <h2>Number of Patients</h2>
+                        <h3>8</h3>
+                    </div>
+                    <div class="doc-pro-down-inside">
+                    <i class='bx bx-user-x icon'></i>
+                        <h2>Number of Cancel Appointment</h2>
+                        <h3>2</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <script src="../../assets/jsFIles/Admin/changePassword.js"></script>
 </body>
 
 </html>

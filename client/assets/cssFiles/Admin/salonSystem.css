@@ -110,3 +110,7 @@ button {
 .modal button:hover {
     background-color: #d8b4f3;
 }
+.icon{
+    font-size: 30px;
+    color: var(--background-primary);
+}

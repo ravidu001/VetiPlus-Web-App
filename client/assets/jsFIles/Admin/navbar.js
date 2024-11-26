@@ -49,7 +49,3 @@ toggle.addEventListener("click", () => {
     modeText.innerText = "Dark Mode";
   }
 });
-
-searchBtn.addEventListener("click", () => {
-  sidebar.classList.remove("close");
-});
