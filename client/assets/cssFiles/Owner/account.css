@@ -88,19 +88,20 @@
 .account-inside-lower-left form a{
     padding: 10px;
     font-size: 20px;
-    background-color: #B89ACB;
+    background-color: var(--background-light);
     width: 200px;
     height: 50px;
-    border: 3px solid var(--background-primary);
+    border: none;
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: var(--text-white);
     text-align: center;
 }
 .account-inside-lower-left form a:hover{
-    background-color: #8F53B4;
-    color: white;
+    background-color: var(--background-primary);
+    color: var(--text-white);
+    transform: scale(1.1);
 }
 .admin-navbar-inside-left-inner-1 ul li.active {
     background-color: #F8ECFF; /* Active background color */

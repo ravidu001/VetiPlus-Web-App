@@ -36,28 +36,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <h2>NIC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:- &nbsp;&nbsp;200212702901</h2>
             </div>
         </div>
-        <div class="doctor_profile_down">
-            <div>
-                <button onclick="openConfirmModal()">Reset Password</button>
-            </div>
-        </div>
     </div>
-    <div id="modal" class="modal-background" style="display: none;">
-            <div class="modal-content">
-                <p>Do you want to reset your password?</p>
-                <div class="modal-buttons">
-                    <button onclick="confirmReset()">Yes</button>
-                    <button onclick="pcloseModal()">No</button>
-                </div>
-            </div>
-        </div>
-        <div id="confirmationModal" class="modal-background" style="display: none;">
-            <div class="modal-content">
-                <p class="confirmation-message">Password reset process initiated</p>
-            </div>
-        </div>
-        <script src="../../assets/jsFIles/Admin/passwordReset.js"></script>
-    </section>
+</section>
 </body>
 
 </html>

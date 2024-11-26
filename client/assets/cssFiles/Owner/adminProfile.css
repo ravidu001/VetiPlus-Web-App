@@ -34,16 +34,17 @@
 .profile_down button{
     width: 250px;
     height: 40px;
-    background-color: #B89ACB;
-    border: 3px solid var(--background-primary);
+    background-color: var(--background-light);
     border-radius: 5px;
-    color: black;
+    color: var(--text-white);
+    border: none;
     font-size: 15px;
     cursor: pointer;
 }
 .profile_down button:hover{
-    background-color: #8F53B4;
-    color: white;
+    background-color: var(--background-primary);
+    color: var(--text-white);
+    transform: scale(1.1);
 }
 .delete-form{
     padding: 20px;
