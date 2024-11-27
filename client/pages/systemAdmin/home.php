@@ -51,7 +51,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <h4>2345</h4>
                     </div>
                 </div>
-                <div class="home-after-outer">
+                <div class="home-after-inside">
                     <i class='bx bx-calendar-plus icon'></i>
                     <div>
                         <h3>Total Appointment</h3>
@@ -59,14 +59,14 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     </div>
                 </div>
 
-                <div class="home-below-inside">
+                <div class="home-after-inside">
                     <i class='bx bxs-dollar-circle icon'></i>
                     <div>
                         <h3>Total Transactions</h3>
                         <h4>234</h4>
                     </div>
                 </div>
-                <div class="home-below-inside">
+                <div class="home-after-inside">
                     <i class='bx bxs-store icon'></i>
                     <div>
                         <h3>Total Salon </h3>
