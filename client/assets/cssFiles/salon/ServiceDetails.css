@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family:"Inter", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -10,6 +10,17 @@ body {
 .sidebarandsevice {
     display: flex;
     gap: 1rem;
+}
+
+body:has(#sidebar.close) .pagecontent {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+
+.pagecontent{
+    margin-left: 250px; /*width of sidebar */ 
+    transition: margin-left 0.3s ease-in-out;
+    width: calc(100%- 250px);
 }
 
 .Service-details {
@@ -28,6 +39,12 @@ body {
     /* margin-bottom: 1.5rem; */
 /* } */
 
+.header-name {
+    font-family:"Inter", sans-serif;
+    text-align: center;
+    
+}
+
 .Service-details .content-1 {
     display: flex;
     justify-content: space-between;
@@ -43,9 +60,7 @@ body {
     padding: 8px 12px;
     width: 70px;
     font-size: 16px;
-    color: #6A0DAD;
-    background-color: white;
-    background-color: #3d0466;
+    background-color: #ab5fe1;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -72,22 +87,22 @@ body {
 
 .Service-details button.delete {
     margin-bottom: 5px;
-    background-color: #3d0466;
+    background-color: #ab5fe1;
 }
 
 .Service-details button.delete:hover {
-    background-color: #ab5fe1;
-    color: black;
+    background-color: #6A0DAD;
+    transform: scale(1.1);
 }
 
 .Service-details button.edit {
     margin-bottom: 5px;
-    background-color: #3d0466;
+    background-color: #ab5fe1; 
 }
 
 .Service-details button.edit:hover {
-    background-color: #ab5fe1;
-    color: black;
+    background-color: #6A0DAD;
+    transform: scale(1.1);
 }
 
 /* Enhanced Table Styles */
@@ -141,7 +156,7 @@ body {
 }
 
 .Service-details .service-photo:hover {
-    transform: scale(2.05);
+    transform: scale(1.5);
 }
 
 /* service details name ,description and charge css */
@@ -192,7 +207,7 @@ body {
 /* Links */
 .Service-details a {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 
 /* Description Column */

@@ -2,9 +2,21 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #fff;
+    /* background-color: #fff; */
+    /* background-color: black; */
 }
 
+body:has(#sidebar.close) .pagecontent {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+
+
+.pagecontent{
+    margin-left: 250px; /*width of sidebar */ 
+    transition: margin-left 0.3s ease-in-out;
+    width: calc(100%- 250px);
+}
 
 
 /* Header Styling */
@@ -16,10 +28,15 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    box-shadow: 5px 2px 5px rgba(213, 118, 235, 0.3);
+    /* box-shadow: 5px 2px 5px rgba(213, 118, 235, 0.3); */
     border: #e0bdf9 2px solid;
     border-radius: 5px;
 }
+
+/* when sidebar is closed, reduce the margin
+#sidebar.close + .dashboardcontent {
+    margin-left: 90px; 
+} */
 
 .dashbardheader h3 {
     color: #6A0DAD;
@@ -42,13 +59,15 @@ body {
 }
 
 .profile img {
+    object-fit: cover;
     width: 40px;
-    height: 30px;
+    height: 40px;
     border-radius: 50%;
 }
 
 .profile .name {
     font-weight: bold;
+    font-size: 17px;
 }
 
 .profile button:hover{
@@ -77,7 +96,7 @@ body {
     background-color: #eeddfa;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    /* box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3); */
 }
 
 /* Part1 Content Styling */
@@ -85,15 +104,21 @@ body {
     display: grid;
     align-items: center;
     background-color: white;
-    padding: 15px;
+    padding: 10px;
     border-radius: 8px;
     color: black;
     margin-bottom: 20px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); */
 }
 
+/* .upcominappointments {
+    color: gray;
+    font-size: 10px;
+    padding: 3px;
+} */
+
 .appointmentCount .icon {
-    font-size: 28px;
+    font-size: 20px;
     margin-right: 15px;
 }
 
@@ -103,17 +128,18 @@ body {
 }
 
 .appointmentname {
-    margin: 0;
-    font-weight: bold;
-    font-size: 30px;
+    font-family:  "Inter",sans-serif;
+    margin: 10px;
+    font-size: 20px;
 
 }
 
 .appointmentno {
     margin-left: 30px;
     color: #6A0DAD;
-    font-size: 28px;
+    font-size: 20px;
     text-align: center;
+    font-family:  "Inter",sans-serif;
 }
 
 /* Calendar Styling */
@@ -147,81 +173,180 @@ body {
     margin-bottom: 20px;
 }
 
-.part2header h2 {
+.part2header p {
     background-color: #fff;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    padding: 8px;
+    text-align: center;
+    font-family: "Inter",sans-serif;
+    font-size: 17px;
+    padding: 5px;
     border-radius: 4px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1); */
 }
 
-/* Upcoming Appointments Styling */
-.upcominappointments {
+
+
+/* .upcominappointments {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    border-radius: 6px;
 }
 
 .appointmentbox {
     display: flex;
     align-items: center;
-    gap: 10px;
-    background-color: white;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
     padding: 10px;
-    border-radius: 8px;
-    box-shadow: 15px 5px 15px rgba(0, 0, 0, 0.3);
+    gap: 0.8rem;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.appointmentbox .imageandview{
-    display: grid;
-    align-items: center;
-    margin-left: auto;
+.appointmentbox:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.appointmentbox img.image {
+.image {
+    flex-shrink: 0;
     width: 60px;
-    height: 50px;
+    height: 60px;
+    overflow: hidden;
     border-radius: 50%;
-    margin-bottom: 5px;
+    border: 2px solid #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.appointmentbox .username {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    margin: 0;
-    font-size: 18px;
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-.appointmentbox .servicename {
-    font-size: 16px;
-    color: rgb(120, 120, 120);
-    text-align: center;
+.userdetails {
+    display: flex;
+    flex-direction: column;
+}
+.userdetails p {
+    font-family:"Inter",sans-serif; 
+    color: #4e4d4d;
+    font-size: 13px;
 }
 
-.appointmentbox .time {
-    margin: 2px;
+.username {
+    font-family:"Inter",sans-serif; 
     font-size: 14px;
-    color: rgb(120, 120, 120);
+    font-weight: bold;
+    color: #666;
+}
+
+.time {
+    font-family:"Inter",sans-serif; 
+    color: #666;
+    font-size: 12px;
+}
+
+.servicename {
+    color: #555;
+    font-size: 13px;
+    font-weight: bold;
+}
+ */
+
+
+ .upcominappointments {
+    border-radius: 12px;
+    margin: 10px;
+}
+
+.realtime {
+    color: #666;
+    font-size: 14px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
-.appointmentbox button {
-    margin-left: auto;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #6A0DAD;
-    color: white;
-    border: none;
-    cursor: pointer;
+.appointmentbox {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
 }
 
-.appointmentbox button:hover{
-        background-color: #eed9fe;
-        color: black;
+.image {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.image img.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.petimage {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.userdetails {
+    flex-grow: 1;
+}
+
+.userdetails .icon {
+    color: gray;
+    size: 5px;
+    margin: 2px;
 
 }
+
+.username  {
+    display: inline;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 5px;
+    color:gray;
+}
+
+.servicename{
+    display: inline;
+    margin-left: 5px;
+    font-size: 13px;
+    color: #666;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fa-paw {
+    margin-right: 5px;
+}
+
+.number {
+    display: inline;
+    font-size: 12px;
+    color: gray;
+}
+
+.time {
+    display: inline;
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
 
 /* Optional: Add smooth scrolling for the whole page */
 html {

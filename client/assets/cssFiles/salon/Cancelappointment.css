@@ -13,6 +13,18 @@
     background-color: #ffffff;
 }
 
+/* sidebar close and open css*/
+body:has(#sidebar.close) .pagecontent {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+
+
+.pagecontent{
+    margin-left: 250px; /*width of sidebar */ 
+    transition: margin-left 0.3s ease-in-out;
+    width: calc(100%- 250px);
+}
 
 .appointmentcontent {
     gap: 1rem;

@@ -50,11 +50,12 @@ body {
     background-color: var(--primary-color-light);
     padding: 10px;
     top: 0;
+    left: 0;
     transition: width 0.3s ease-in-out;
-    overflow: hidden;
-    top: 0;
-    align-self: start; 
-    z-index:100; /* remove */
+    overflow-y: auto;
+    z-index: 1000;
+    /* align-self: start;  */
+    /* z-index:100; remove */
 }
 
 #sidebar .nav-link.active {
@@ -126,8 +127,8 @@ body {
 
 #sidebar .logo{
     margin-left: 10px;
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
