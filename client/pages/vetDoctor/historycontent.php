@@ -43,86 +43,10 @@
     </table>
 
     <div class="button-container">
-        <button type="submit" class="queueBtn">Queue</button>
+        <button type="submit" class="completeBtn" >Completed</button>
         <button type="submit" class="cancelBtn">Cancelled</button>
-        <button type="submit" class="completeBtn">Rescheduled</button>
     </div>
 
-    <table class="appoinment-table" id="queue">
-        <tr>
-            <th> </th>
-            <th> Owner's Profile </th>
-            <th> Owner's Name </th>
-            <th> Pet's Profile </th>
-            <th> Pet's Detail </th>
-            <th> Contact Number </th>
-            <th> Session</th>
-        </tr>
-        <tr>
-            <td> 1 </td>
-            <td> <div class="owner-profile"><img src="../../assets/images/dog.jpg" alt="owner1" class="owner-pic"> </div></td>
-            <td>  John Doe </td>
-            <td> <div class="pet-profile"><img src="../../assets/images/vetDoctor/profile/defaultProfile.png" alt="pet1" class="pet-pic"> </div></td>
-            <td>  
-                <p> Roky </p>
-                <p> Labrador </p>
-                <p> 2 years </p>
-             </td>
-            <td>  0771234567 </td>
-            <td>  15:00 </td>
-        </tr>
-        <tr>
-            <td> 2 </td>
-            <td> <div class="owner-profile"><img src="../../assets/images/dogProfileimage.jpg" alt="owner2" class="owner-pic"> </div></td>
-            <td>  Jane Doe </td>
-            <td> <div class="pet-profile"><img src="../../assets/images/vetDoctor/profile/defaultProfile.png" alt="pet2" class="pet-pic"> </div></td>
-            <td>  
-                <p> Tom </p>
-                <p> Persian </p>
-                <p> 1 year </p>
-             </td>
-            <td>  0777654321 </td>
-            <td>  16:30 </td>
-        </tr>
-    </table>
-
-    <table class="appoinment-table" id="cancelled">
-        <tr>
-            <th> </th>
-            <th> Owner's Profile </th>
-            <th> Owner's Name </th>
-            <th> Pet's Profile </th>
-            <th> Pet's Detail </th>
-            <th> Contact Number </th>
-            <th> Session</th>
-        </tr>
-        <tr>
-            <td> 1 </td>
-            <td> <div class="owner-profile"><img src="../../assets/images/dog.jpg" alt="owner1" class="owner-pic"> </div></td>
-            <td>   Doe </td>
-            <td> <div class="pet-profile"><img src="../../assets/images/vetDoctor/profile/defaultProfile.png" alt="pet1" class="pet-pic"> </div></td>
-            <td>  
-                <p> Puppy </p>
-                <p> Labrador </p>
-                <p> 2 years </p>
-             </td>
-            <td>  0771234567 </td>
-            <td>  15:30 </td>
-        </tr>
-        <tr>
-            <td> 2 </td>
-            <td> <div class="owner-profile"><img src="../../assets/images/dogProfileimage.jpg" alt="owner2" class="owner-pic"> </div></td>
-            <td>  Jane Doe </td>
-            <td> <div class="pet-profile"><img src="../../assets/images/vetDoctor/profile/defaultProfile.png" alt="pet2" class="pet-pic"> </div></td>
-            <td>  
-                <p> Tom </p>
-                <p> Persian </p>
-                <p> 1 year </p>
-             </td>
-            <td>  0777654321 </td>
-            <td>  17:00 </td>
-        </tr>
-    </table>
 
     <table class="appoinment-table" id="rescheduled">
         <tr>
@@ -162,6 +86,45 @@
         </tr>
     </table>
 
+    <!-- Cancelled Appointments details history -->
+    <table class="appoinment-table" id="cancelled">
+        <tr>
+            <th> </th>
+            <th> Owner's Profile </th>
+            <th> Owner's Name </th>
+            <th> Pet's Profile </th>
+            <th> Pet's Detail </th>
+            <th> Contact Number </th>
+            <th> Session</th>
+        </tr>
+        <tr>
+            <td> 1 </td>
+            <td> <div class="owner-profile"><img src="../../assets/images/dog.jpg" alt="owner1" class="owner-pic"> </div></td>
+            <td>   Doe </td>
+            <td> <div class="pet-profile"><img src="../../assets/images/vetDoctor/profile/defaultProfile.png" alt="pet1" class="pet-pic"> </div></td>
+            <td>  
+                <p> Puppy </p>
+                <p> Labrador </p>
+                <p> 2 years </p>
+             </td>
+            <td>  0771234567 </td>
+            <td>  15:30 </td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td> <div class="owner-profile"><img src="../../assets/images/dogProfileimage.jpg" alt="owner2" class="owner-pic"> </div></td>
+            <td>  Jane Doe </td>
+            <td> <div class="pet-profile"><img src="../../assets/images/vetDoctor/profile/defaultProfile.png" alt="pet2" class="pet-pic"> </div></td>
+            <td>  
+                <p> Tom </p>
+                <p> Persian </p>
+                <p> 1 year </p>
+             </td>
+            <td>  0777654321 </td>
+            <td>  17:00 </td>
+        </tr>
+    </table>
+
 </div>
 
-<script src="../../assets/jsFIles/vetDocotor/view.js"></script>
+<script src="../../assets/jsFIles/vetDocotor/history.js"></script>
