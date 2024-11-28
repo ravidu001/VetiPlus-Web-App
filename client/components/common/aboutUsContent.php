@@ -26,9 +26,6 @@
             VetiPlus provides the tools to make your experience seamless and rewarding.
             Become part of our family today.
         </p>
-        <a href="#">
-            <button>Get Started</button>
-        </a>
     </div>
 </section>
 <section class="aboutSections">

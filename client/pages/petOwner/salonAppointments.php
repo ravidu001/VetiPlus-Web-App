@@ -79,7 +79,7 @@
                                 <h3>Bingo</h3>
                                 <span>Full Bath - Mr.Perera</span>
                                 <span><b>Example Salon</b> No.103\1A, Hena Road, Mount-Lavinia</span>
-                                <h4>05.12.2024 | 6:00PM</h4>
+                                <h4>05.06.2024 | 6:00PM</h4>
                             </div>
                             <button><i class="bx bxs-star bx-md"></i> Rate Appointment</button>
                         </div>
@@ -89,7 +89,7 @@
                                 <h3>Ginger</h3>
                                 <span>Nail Cutting - Miss.Rajamani</span>
                                 <span><b>Example Salon</b> No.103\1A, Hena Road, Mount-Lavinia</span>
-                                <h4>05.12.2024 | 6:00PM</h4>
+                                <h4>05.10.2024 | 6:00PM</h4>
                             </div>
                             <div class="Rating">
                                 <i class="bx bxs-star bx-sm"></i>

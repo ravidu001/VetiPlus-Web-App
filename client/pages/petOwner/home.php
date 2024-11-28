@@ -25,6 +25,8 @@
 
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/appointmentPages.css" rel="stylesheet">
+    
     </head>
 
     <body>
@@ -85,62 +87,36 @@
     
             <section id="upcomingAppointments" class="dashArea">  
                 <h2>Upcoming Appointments</h2>
-                <?php
-                    $today = new DateTime("now");
-                    $now = $today->getTimestamp();
-
-                    $stmt = $conn->prepare("(SELECT pet.name, app.dateTime, vet.fullName, session.clinicLocation, session.district, 'vet' AS appointmentType
-                                        FROM (((appointment AS app
-                                        INNER JOIN pet ON app.petID = pet.petID)
-                                        INNER JOIN session ON app.sessionID = session.sessionID)
-                                        INNER JOIN vetdoctor AS vet ON session.doctorID = vet.doctorID)
-                                        WHERE app.petOwnerID = ?)
-                                        UNION
-                                        (SELECT pet.name, gmSes.dateTime, gmSes.notes, salon.name, salon.address, 'salon' AS appointmentType
-                                        FROM (((groomingsession AS gmSes
-                                        INNER JOIN pet ON pet.petID = gmSes.petID)
-                                        INNER JOIN salonsession AS salSes ON gmSes.salSessionID = salSes.salSessionID)
-                                        INNER JOIN salon ON salon.salonID = salSes.salonID)
-                                        WHERE gmSes.petOwnerID = ?)
-                                        ORDER BY dateTime");
-
-                    $stmt->bind_param("ss", $userID, $userID);
-                    $stmt->execute();
-                    $result = $stmt->get_result();
-                    $stmt->close();
-
-                    if($result->num_rows > 0) {
-                        $data = $result->fetch_all(MYSQLI_ASSOC);
-
-                        foreach ($data as $x) :
-                            $iconLocation = $x['appointmentType'] === 'vet'
-                                ? BASE_PATH.'/client/assets/images/petOwner/vetIcon.png'
-                                : BASE_PATH.'/client/assets/images/petOwner/salonIcon.png';
-
-                            $date = date("d.m.Y", strtotime($x['dateTime']));
-                            $time = date("h:i A", strtotime($x['dateTime']));
-
-                            $provider = $x['appointmentType'] === 'vet'
-                                ? $x['fullname']
-                                : $x['notes'];
-
-                            $location = $x['appointmentType'] === 'vet'
-                                ? $x['clinicLocation']." | ".$x['district']
-                                : $x['salon.name']." | ".$x['address'];
-
-                        ?>
-                            <div class='appointmentCard'>
-                                <img src="$iconLocation" class="appointmentIcon" alt="appointmentIcon">
-                                <h3><?= $x['pet.name'] ?></h3>
-                                <p><?= $provider ?></p>
-                                <p><?= $date ."|". $time ?></p>
-                                <p><?= $location ?></p>
-                            </div> 
-                        <?php
-                        endforeach;
-                    }
-                    else echo "<p class='resultZero'>No Appointments Made Yet!</p>";
-                ?>
+                <div class="appointments-container scrollAppointments">
+                    <?php for ($i=0; $i<2; $i++) :?>
+                        <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/salonIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <h3>Bingo</h3>
+                                <span>Full Bath - Mr.Perera</span>
+                                <span><b>Example Salon</b> No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.12.2024 | 6:00PM</h4>
+                            </div>
+                            <div class="appintmentOptions">
+                                <button><i class="bx bxs-edit bx-md"></i> Edit</button>
+                                <button><i class="bx bxs-calendar-edit bx-md"></i> Reschedule</button>
+                            </div>
+                        </div>
+                        <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/vetIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <h3>Bingo</h3>
+                                <span>Monthly Check-up</span>
+                                <span><b>Dr. Rajapakse</b> No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.12.2024 | 6:00PM</h4>
+                            </div>
+                            <div class="appintmentOptions">
+                                <button><i class="bx bxs-edit bx-md"></i> Edit</button>
+                                <button><i class="bx bxs-calendar-edit bx-md"></i> Reschedule</button>
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
             </section>
         </div>
         <script>

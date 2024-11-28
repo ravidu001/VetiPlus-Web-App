@@ -80,7 +80,7 @@
                                 <span>Monthly check-up</span>
                                 <span><b>Dr. Mohan</b></span>
                                 <span>No.103\1A, Hena Road, Mount-Lavinia</span>
-                                <h4>05.12.2024 | 6:00PM</h4>
+                                <h4>05.07.2024 | 6:00PM</h4>
                             </div>
                             <button><i class="bx bxs-star bx-md"></i> Rate Appointment</button>
                         </div>
@@ -91,7 +91,7 @@
                                 <span>Monthly check-up</span>
                                 <span><b>Dr. Mohan</b></span>
                                 <span><b>PetCare Clinic</b>, No.103\1A, Hena Road, Mount-Lavinia</span>
-                                <h4>05.12.2024 | 6:00PM</h4>
+                                <h4>05.11.2024 | 6:00PM</h4>
                             </div>
                             <div class="Rating">
                                 <i class="bx bxs-star bx-sm"></i>
