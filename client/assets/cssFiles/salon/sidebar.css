@@ -43,9 +43,10 @@ body {
 
 #sidebar {
     /*  position:Sticky */
-    position: fixed;
+    /* position: fixed; */
     height: 100vh;
     width: 260px;
+    position:Sticky;
     padding-left: 0;
     background-color: var(--primary-color-light);
     padding: 10px;
@@ -55,7 +56,7 @@ body {
     overflow-y: auto;
     z-index: 1000;
     /* align-self: start;  */
-    /* z-index:100; remove */
+
 }
 
 #sidebar .nav-link.active {

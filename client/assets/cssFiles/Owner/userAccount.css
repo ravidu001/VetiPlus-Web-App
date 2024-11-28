@@ -55,29 +55,13 @@
     gap: 30px;
     
 }
-.user-account-outside-left button{
-    width: 300px;
-    height: 40px;
-    background-color: #B89ACB;
-    border: 3px solid var(--background-primary);
-    color: var(--text-color);
-    border-radius: 5px;
-    color: black;
-    font-size: 15px;
-    cursor: pointer;
-}
-.user-account-outside-left button:hover{
-    background-color: #8F53B4;
-    color: white;
-}
 .user-account-outside-left a{
     width: 300px;
     height: 40px;
-    background-color: #B89ACB;
-    border: 3px solid var(--background-primary);
+    background-color: var(--background-light);
     border: none;
     border-radius: 5px;
-    color: black;
+    color: var(--text-white);
     font-size: 15px;
     cursor: pointer;
     text-decoration: none;
@@ -87,8 +71,9 @@
     justify-content: center;
 }
 .user-account-outside-left a:hover{
-    background-color: #8F53B4;
-    color: white;
+    background-color: var(--background-primary);
+    color: var(--text-white);
+    transform: scale(1.1);
 }
 
 .user-account-outside-right{

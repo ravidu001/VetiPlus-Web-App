@@ -48,17 +48,18 @@
 .admin-outside-left button{
     padding: 10px;
     font-size: 20px;
-    background-color: #B89ACB;
-    border: 3px solid var(--background-primary);
-    color: black;
+    background-color: var(--background-light);
+    border: none;
+    color: var(--text-white);
     border-radius: 10px;
     width: 30%;
     cursor: pointer;
     align-items: center;
 }
 .admin-outside-left button:hover{
-    background-color: #8F53B4;
-    color: white;
+    background-color: var(--background-primary);
+    color: var(--text-white);
+    transform: scale(1.1);
 }
 .admin-outside-right{
     display: flex;
