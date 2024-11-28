@@ -103,13 +103,14 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         </td>
                     </tr>
                 </table>
-                <div class="doctor_profile_down">
-                    <button onclick="openConfirmModal()">Reset Password</button>
-                </div>
+            </div>
+            <div class="doctor_profile_down">
+                <button onclick="openConfirmModal()">Reset Password</button>
             </div>
         </div>
         <div id="modal" class="modal-background" style="display: none;">
             <div class="modal-content">
+                <i class='bx bxs-lock-open icon-1'></i>
                 <p>Do you want to reset your password?</p>
                 <div class="modal-buttons">
                     <button onclick="confirmReset()">Yes</button>
@@ -119,6 +120,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </div>
         <div id="confirmationModal" class="modal-background" style="display: none;">
             <div class="modal-content">
+                <i class='bx bxs-check-circle icon-1'></i>
                 <p class="confirmation-message">Password reset process initiated</p>
             </div>
         </div>
