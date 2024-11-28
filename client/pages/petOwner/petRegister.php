@@ -102,11 +102,11 @@
                 }
             }
 
-            document.getElementById('petRegisterForm').addEventListener('submit', function (event) {
+            function submitForm (event) {
                 event.preventDefault();
-                const formData = new FormData(this);
-
-                fetch(this.action, {
+                const formData = new FormData(event.target);
+    
+                fetch(event.target.action, {
                     method: 'POST',
                     body: formData,
                 })
@@ -123,7 +123,8 @@
                     console.error('An error occurred:'+ error);
                     alert('An error occurred.\nPlease try again later.'+ error);
                 })
-            })
+            }
+            document.getElementById('petRegisterForm').addEventListener('submit', submitForm);
         </script>
     </body>
 </html>

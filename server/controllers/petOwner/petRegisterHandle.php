@@ -15,7 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $sanitized['name'];
     $dob = $sanitized['dob'];
     $gender = $sanitized['gender'];
-    $weight = $sanitized['weight'];
 
     $species = $sanitized['species'];
     $breed = $sanitized['breed'];
@@ -30,47 +29,63 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if(empty($name)) addError("Empty name value provided!");
-
     
-    $today = new DateTime("now");
-    $todayDate = $today->format('Y-m-d');
+    $todayDate = new DateTime("now");
     $dobDate = DateTime::createFromFormat('Y-m-d', $dob);
-
+    
     if ($dobDate && $dobDate > $todayDate) addError("Adding possible future pets is not allowed.");
-
+    else $dobDateStr = $dobDate->format('Y-m-d');
 
     $breedAvailable = $sanitized['breedAvailable'];
-    ($breedAvailable == 1) 
-        ? $breedDescription = $sanitized['breedDescription']
-        : $breedDescription = '';
+    if ($breedAvailable == 1) {
+        $breedDescription = $sanitized['breedDescription'];
+        if(empty($breedDescription)) addError("Please provide a description for breeding your pet.");
+    } else $breedDescription = '';
 
-    $profilePicture = $_FILES['profilePicture'];
+    if(empty($species)) addError("No pet species provided!");
+    if(empty($breed)) addError("No pet breed provided!");
 
-    $targetDir = INCLUDE_BASE.'/client/assets/images/profilePics/pet/';
-    $fileName = basename($profilePicture['name']);
-    $targetFilePath = "$targetDir$fileName";
-    $uploadDone = move_uploaded_file($profilePicture['tmp_name'], $targetFilePath);
+    if(!isset($_FILES['profilePicture'])) addError("Please provide a profile picture for your pet.");
 
-    $stmt = $conn->prepare("INSERT INTO 
-                pet (petOwnerID, name, DOB, gender, weight, species, breed, breedAvailable, breedDescription, profilePicture)
-                VALUES (?,?,?,?,?,?,?,?,?,?)");
+    if($validInputs) {
 
-    if ($uploadDone) {
-        $stmt->bind_param("ssssdssiss", $userID, $name, $dob, $gender, $weight, $species, $breed, $breedAvailable, $breedDescription, $fileName);
+        $profilePicture = $_FILES['profilePicture'];
+    
+        $targetDir = INCLUDE_BASE.'/client/assets/images/profilePics/pet/';
+        $fileName = basename($profilePicture['name']);
+        $targetFilePath = "$targetDir$fileName";
+        $uploadDone = move_uploaded_file($profilePicture['tmp_name'], $targetFilePath);
+    
+        header('Content-Type: application/json');
         
-        $insertDone = $stmt->execute();
-        $stmt->close();
-        
-        if ($insertDone) {
-            echo json_encode(["status" => "success", "message" => "Pet Profile created successfully."]);
-            exit();
-        } else {
-            echo json_encode(["status" => "failure", "message" => "Unable to add pet!"]);
+        if ($uploadDone) {
+            $stmt = $conn->prepare("INSERT INTO 
+                        pet (petOwnerID, name, DOB, gender, species, breed, breedAvailable, breedDescription, profilePicture)
+                        VALUES (?,?,?,?,?,?,?,?,?)");
+            $stmt->bind_param("ssssssiss", $userID, $name, $dobDateStr, $gender, $species, $breed, $breedAvailable, $breedDescription, $fileName);
+            
+            $insertDone = $stmt->execute();
+            $stmt->close();
+            
+            if ($insertDone) {
+                echo json_encode(["status" => "success", "message" => "Pet Profile created successfully."]);
+                exit();
+            } else {
+                echo json_encode(["status" => "failure", "message" => "Unable to add pet!"]);
+                exit();
+            }
+        }
+        else {
+            echo json_encode(["status" => "failure", "message" => "Error in uploading profile picture!"]);
             exit();
         }
-    }
-    else {
-        echo json_encode(["status" => "failure", "message" => "Error in uploading profile picture!"]);
+    } else {
+        $errorsFormatted = array_map(function($error) { return
+            "$error ";
+        }, $errors);
+        $errorsString = implode('', $errorsFormatted);
+
+        echo json_encode(["status" => "failure", "message" => $errorsString]);
         exit();
     }
 }
