@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
-    <title>Profile </title>
+    <title>View Appointment </title>
     <link rel="stylesheet" href="../../../client/assets/cssFiles/common/navbarHorizontal.css" type="text/css">
     <link rel="stylesheet" href="../../../client/assets/cssFiles/vetDoctor/viewAppointmentcontent.css" type="text/css">
     <link rel="stylesheet" href="../../../client/assets/cssFiles/vetDoctor/calendar.css" type="text/css">
