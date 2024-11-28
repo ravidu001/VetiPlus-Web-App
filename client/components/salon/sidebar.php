@@ -123,12 +123,12 @@
                 </li>
 
                 <li>
-                <li class="nav-link <?= $current_page == 'about.php' ? 'active' : '' ?>"> 
-                    <a href="profile.html">
+                <!-- <li class="nav-link "> 
+                    <a href="../../pages/salon/AboutUsSalon.php">
                         <i class='bx bxs-user-account icon'></i>
                         <span>About Us</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li>
                 <li class="nav-link <?= $current_page == 'ContactSalon.php' ? 'active' : '' ?>"> 
