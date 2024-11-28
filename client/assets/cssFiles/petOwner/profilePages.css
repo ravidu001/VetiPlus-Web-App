@@ -36,6 +36,7 @@
 .profileDetailsEditForm label {
     grid-column: 1;
     padding: 5px;
+    font-weight: 500;
 }
 .profileDetailsEditForm .input-field,
 .profileDetailsEditForm .display-field {

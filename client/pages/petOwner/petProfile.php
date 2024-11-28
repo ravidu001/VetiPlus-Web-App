@@ -93,7 +93,7 @@
                     </span>
                    
                     <label for="breedDescription">Description for breeding your pet:</label>
-                    <span class="display-field"><?= $data['breedDescription'] ?? "Not-applicable"; ?></span>
+                    <span class="display-field"><?= $data['breedAvailable'] ? $data['breedDescription']: "Not-applicable"; ?></span>
                         <textarea name="breedDescription" id="breedDescription" class="input-field" cols="30" rows="5" style="resize: none; display:none;"
                             <?= !$data['breedAvailable'] ? 'disabled': ''; ?> required>
                             <?= $data['breedDescription']; ?>
@@ -103,11 +103,15 @@
                 </form>
 
                 <div class="unchangingData">
-                    <span class="field">Species:</span>
-                    <span class="data"><?= $data['species']; ?></span>
+                    <div class="dataContainer">
+                        <span class="field"><b>Species:</b></span>
+                        <span class="data"><?= $data['species']; ?></span>
+                    </div>
                     
-                    <span class="field">Breed:</span>
-                    <span class="data"><?= $data['breed']; ?></span>
+                    <div class="dataContainer">
+                        <span class="field"><b>Breed:</b></span>
+                        <span class="data"><?= $data['breed']; ?></span>
+                    </div>
                 </div>
 
                 <button id="deletePet" class="loneBtn">Delete Pet Profile</button>
