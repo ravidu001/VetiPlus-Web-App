@@ -45,7 +45,7 @@
             <label for="contactIcon" class="collapsable">Contact Us</label>
         </a>
     </div>
-    <a href="<?= BASE_PATH ?>/client/pages/petOwner/profilePage.php"
+    <a href="<?= BASE_PATH ?>/client/pages/petOwner/petOwnerProfile.php"
     class="<?= ($current_pg == 'profilePage.php') ? 'active' : ''; ?>">
         <i class="bx bxs-user-circle bx-sm" id="profileIcon"></i>
         <label for="profileIcon">Profile</label>

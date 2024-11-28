@@ -40,7 +40,7 @@
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/poppinsFont.css" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/profilePage.css" rel="stylesheet">
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/profilePages.css" rel="stylesheet">
 
     </head>
     <body>
@@ -51,9 +51,14 @@
             <h1>My Profile</h1>
 
             <div class="profilePicContainer">
-                <img src="<?= BASE_PATH.'/client/assets/images/profilePics/petOwner/'.$data['profilePicture'] ?>"
-                    alt="Profile Picture">
-                <form id="profilePicEdit" method="post" enctype="multipart/form-data"
+                <?php if (isset($data['profilePicture'])) : ?>
+                    <img src="<?= BASE_PATH.'/client/assets/images/profilePics/petOwner/'.$data['profilePicture'] ?>"
+                        alt="Profile Picture">
+                <?php else: ?>
+                    <span>No profile picture added.</span>
+                <?php endif; ?>
+
+                <form id="editPetOwnerProfilePic" method="post" enctype="multipart/form-data" class="profilePicEditForm"
                     action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
                     <input type="hidden" name="formName" value="profilePicEdit">
@@ -63,9 +68,10 @@
 
                     <button type="submit">Save</button>
                 </form>
+
             </div>
 
-            <form id="userEditForm" method="post"
+            <form id="editPetOwnerDetails" method="post" class="profileDetailsEditForm"
                 action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
                 <input type="hidden" name="formName" value="profileDetailsEdit">
@@ -108,7 +114,7 @@
                 <button type="submit" style="display: none;" id="save-button">Save</button>
             </form>
 
-            <button type="button" id="logoutButton">Logout</button>
+            <button id="logoutButton">Logout</button>
 
         </div>
 
@@ -138,9 +144,9 @@
                 }
             }
 
+            // petOwner logout
             document.getElementById('logoutButton').addEventListener('click', function () {
                 if (confirm('Are you sure you want to logout?')) {
-                    // Send a logout request to the server
                     fetch('<?= BASE_PATH ?>/client/pages/petOwner/logout.php', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
@@ -215,5 +221,3 @@
         }
     }
 ?>
-
-<!-- <script> </script> -->

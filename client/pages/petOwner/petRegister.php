@@ -44,9 +44,9 @@
                 
                 <label>Gender:</label>
                     <span>
-                        <label for="male">Male:</label>
+                        <label for="male" class="radioLabel">Male:</label>
                             <input type="radio" id="male" name="gender" value="male" required>
-                        <label for="female">Female:</label>
+                        <label for="female" class="radioLabel">Female:</label>
                             <input type="radio" id="female" name="gender" value="female" required>
                     </span>
 
@@ -68,9 +68,9 @@
 
                 <label for="breedAvailNo">Is your pet available for breeding?</label>
                 <span>
-                    <label for="breedAvailYes" class="input-field">Yes</label>
+                    <label for="breedAvailYes" class="radioLabel">Yes</label>
                         <input type="radio" id="breedAvailYes" name="breedAvailable" value="1" required onchange="toggleBreedDescription()">
-                    <label for="breedAvailNo" class="input-field">No</label>
+                    <label for="breedAvailNo" class="radioLabel">No</label>
                         <input type="radio" id="breedAvailNo" name="breedAvailable" value="0" selected required onchange="toggleBreedDescription()">
                 </span>
 

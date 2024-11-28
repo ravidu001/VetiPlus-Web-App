@@ -111,11 +111,10 @@
                     if($result->num_rows > 0) {
                         $data = $result->fetch_all(MYSQLI_ASSOC);
 
-                        // $dataMapped = array_map(function($x) {
                         foreach ($data as $x) :
-                            $icon = $x['appointmentType'] === 'vet'
-                                ? "<i class='bx bxs-injection'></i>"
-                                : "<i class='bx bxs-brush'></i>";
+                            $iconLocation = $x['appointmentType'] === 'vet'
+                                ? BASE_PATH.'/client/assets/images/petOwner/vetIcon.png'
+                                : BASE_PATH.'/client/assets/images/petOwner/salonIcon.png';
 
                             $date = date("d.m.Y", strtotime($x['dateTime']));
                             $time = date("h:i A", strtotime($x['dateTime']));
@@ -128,26 +127,23 @@
                                 ? $x['clinicLocation']." | ".$x['district']
                                 : $x['salon.name']." | ".$x['address'];
 
-                            ?>
+                        ?>
                             <div class='appointmentCard'>
-                                <div class='appointmentType'><?= $icon ?></div>
+                                <img src="$iconLocation" class="appointmentIcon" alt="appointmentIcon">
                                 <h3><?= $x['pet.name'] ?></h3>
                                 <p><?= $provider ?></p>
                                 <p><?= $date ."|". $time ?></p>
                                 <p><?= $location ?></p>
                             </div> 
-                            <?php
+                        <?php
                         endforeach;
-                        // }, $data);
                     }
                     else echo "<p class='resultZero'>No Appointments Made Yet!</p>";
                 ?>
             </section>
         </div>
         <script>
-            // function navigateToPetProfile (petID, petCard) {
-            //     window.location.href = petCard.getAttribute('data-href')
-            // }
+            
         </script>
 
         <!-- footer at page's bottom: -->
