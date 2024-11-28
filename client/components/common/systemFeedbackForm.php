@@ -1,67 +1,49 @@
-<div class="contactSection">
-    <div class="left">
-        <img src="<?= BASE_PATH ?>/client/assets/images/vetiplus-logo.png" alt="VetiPlus logo">
-        <div class="details">
-            <h2>Address</h2>
-                <p>UCSC Building Complex,<br/>
-                35 Reid Ave,<br/>
-                Colombo 00700</p>
-            <h2>Email</h2>
-                <p>vetiplus737@gmail.com</p>
-            <h2>Call us</h2>
-                <p>+94 12 345 6789<br/>+94 12 345 6789</p>
-        </div>
-    </div>
-    
+<div class="sysFeedbackForm dashArea">
     <img src="../../assets/images/guestUser/contactDoggo.png" id="contactDoggo" alt="contact Doggo">
     
-    <div class="contactForm">
-        <header>Connect with Us</header>
-        <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-    
-            <label for="email">Email address:</label>
-                <input type="email" id="email" name="email" required>
+    <form id="contactForm" enctype="multipart/form-data" method="post"
+         action="<?= BASE_PATH.'/server/controllers/common/sysFeedbackHandle.php' ?>">
+        
+        <h3>Connect with Us</h3>
             
-            <label for="contact">Contact number:</label>
-                <input type="text" id="contact" name="contact" pattern="07\d\d\d\d\d\d\d\d" minlength="10" placeholder="eg: 0767130191" required>
-            
-            <label for="">Rating</label>
-            
-            <label for="">Image</label>
-
-
+        <div class="inputContainer">
             <label for="msgType">Type of Message:</label>
-            <select name="msgType" id="msgType">
+            <select name="msgType" id="msgType" required>
                 <option value="feedback">Feedback</option>
                 <option value="complaint">Complaint</option>
             </select>
-    
+        </div>
+
+        <div class="inputContainer" id="rating-container">
+            <label for="rating">Rating</label>
+            <input type="range" id="rating" name="rating" min="0" max="5" value="5" required>
+        </div>
+        
+        <div class="inputContainer" id="complaintImage-container" style="display:none;">
+            <label for="complaintImage">Image</label>
+            <input type="file" id="complaintImage" name="complaintImage" accept="image/*" required>
+        </div>
+
+        <div class="inputContainer">
             <label for="msg">Message:</label>
-                <textarea id="msg" name="msg" placeholder="Enter a message for us." rows="10" cols="30" required></textarea>
-            
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+            <textarea id="msg" name="msg" placeholder="Enter a message for us." rows="5" cols="30" required></textarea>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
 </div>
 <script>
+    const ratingContainer = document.getElementById('rating-container');
+    const imageContainer = document.getElementById('complaintImage-container');
 
+    const msgType = document.getElementById('msgType')
+    msgType.addEventListener('change', (e) => {
+        if (msgType.value == 'feedback') {
+            ratingContainer.style.display = "flex"
+            imageContainer.style.display = "none"
+        } else if (msgType.value == 'complaint') {
+            ratingContainer.style.display = "none"
+            imageContainer.style.display = "flex"
+        }
+    })
 </script>
-<?php
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    function sanitizeInput($input) {
-        return htmlspecialchars(trim($input));
-    }
-    $sanitized = array_map('sanitizeInput', $_POST);
-
-    $email = $sanitized['email'];
-    $contact = $sanitized['contact'];
-    $msgType = $sanitized['msgType'];
-    $msg = $sanitized['msg'];
-
-    $stmt = $conn->prepare("INSERT INTO x (email, contact, message)
-            VALUES (?,?,?)");
-    $stmt->bind_param("sss",$email, $contact, $msg);
-}
-
-?>

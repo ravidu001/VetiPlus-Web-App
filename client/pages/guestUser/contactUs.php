@@ -16,7 +16,8 @@
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/navBar.css" rel="stylesheet">
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/myFooter.css" rel="stylesheet">
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/guestUser/hero.css" rel="stylesheet">
-        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/common/staticContactUs.css" rel="stylesheet">
+        
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/common/contactUs.css" rel="stylesheet">
 
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -36,7 +37,7 @@
             <img class="heroImg" src="../../assets/images/guestUser/guestHeroes/contactUsHero.png" alt="">
         </div>
 
-        <?php include INCLUDE_BASE.'/client/components/guestUser/guestStaticContactUs.php'; ?>
+        <?php include INCLUDE_BASE.'/client/components/common/staticContactUs.php'; ?>
 
         <!-- footer at page's bottom: -->
         <?php include INCLUDE_BASE.'/client/components/guestUser/guestFooter.php'; ?>

@@ -20,8 +20,8 @@
             <i class="bx bxs-like bx-sm" id="aboutIcon"></i>
             <label for="aboutIcon" class="collapsable">About Us</label>
         </a>
-        <a href="<?= BASE_PATH . '/client/pages/guestUser/contact.php' ?>"
-        class="<?= ($current_pg == 'contact.php') ? 'active' : ''; ?>">
+        <a href="<?= BASE_PATH . '/client/pages/guestUser/contactUs.php' ?>"
+        class="<?= ($current_pg == 'contactUs.php') ? 'active' : ''; ?>">
             <i class="bx bxs-phone-call bx-sm" id="contactIcon"></i>
             <label for="contactIcon" class="collapsable">Contact Us</label>
         </a>

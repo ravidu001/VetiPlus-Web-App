@@ -6,7 +6,7 @@
                 <li><a href="<?= BASE_PATH . '/index.php' ?>">Home</a></li>
                 <li><a href="<?= BASE_PATH . '/client/pages/guestUser/services.php' ?>">Our Services</a></li>
                 <li><a href="<?= BASE_PATH . '/client/pages/guestUser/aboutUs.php' ?>">About Us</a></li>
-                <li><a href="<?= BASE_PATH . '/client/pages/guestUser/contact.php' ?>">Contact Us</a></li>
+                <li><a href="<?= BASE_PATH . '/client/pages/guestUser/contactUs.php' ?>">Contact Us</a></li>
             </ul>
         </div>
         <div>

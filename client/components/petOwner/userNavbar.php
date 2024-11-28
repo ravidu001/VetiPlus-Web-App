@@ -6,7 +6,7 @@
 
     <div class="links">
         <a href="<?= BASE_PATH ?>/client/pages/petOwner/home.php"
-        class="<?= ($current_pg == 'dashboard.php') ? 'active' : ''; ?>">
+        class="<?= ($current_pg == 'home.php') ? 'active' : ''; ?>">
             <i class="bx bxs-home bx-sm" id="homeIcon"></i>
             <label for="homeIcon" class="collapsable">Home</label>
         </a>
@@ -33,14 +33,14 @@
             <label for="otherServiceIcon" class="collapsable">Other Services</label>
         </a>
         
-        <a href="<?= BASE_PATH ?>/client/pages/petOwner/about.php"
-        class="<?= ($current_pg == 'about.php') ? 'active' : ''; ?>">
+        <a href="<?= BASE_PATH ?>/client/pages/petOwner/aboutUs.php"
+        class="<?= ($current_pg == 'aboutUs.php') ? 'active' : ''; ?>">
             <i class="bx bxs-group bx-sm" id="aboutIcon"></i>
             <label for="aboutIcon" class="collapsable">About Us</label>
         </a>
 
-        <a href="<?= BASE_PATH ?>/client/pages/petOwner/contact.php"
-        class="<?= ($current_pg == 'contact.php') ? 'active' : ''; ?>">
+        <a href="<?= BASE_PATH ?>/client/pages/petOwner/contactUs.php"
+        class="<?= ($current_pg == 'contactUs.php') ? 'active' : ''; ?>">
             <i class="bx bxs-phone-call bx-sm" id="contactIcon"></i>
             <label for="contactIcon" class="collapsable">Contact Us</label>
         </a>
