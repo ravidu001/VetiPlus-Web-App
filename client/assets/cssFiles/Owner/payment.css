@@ -74,7 +74,7 @@
 .Payment-outside form .Payment-outside-down  a{
     padding: 10px;
     font-size: 20px;
-    background-color: var(--bakground-light);
+    background-color: var(--background-light);
     border: none;
     color: var(--text-white);
     border-radius: 10px;
