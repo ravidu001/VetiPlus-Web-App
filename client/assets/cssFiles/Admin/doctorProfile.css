@@ -6,13 +6,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 20px 100px;
-    height: auto;
-    border: 3px solid var(--background-primary);
+    margin: 40px 200px;
     color: var(--text-color);
     background-color: var(--background-white);
-    border-radius: 10px;
+    height: 60%;
+    width: 70%;
+    border-radius: 20px;
+    border: 3px solid var(--background-primary);
 }
 
 .doctor_profile_top_left {
@@ -28,13 +28,14 @@
     height: 250px;
 }
 .doctor_profile_down button {
-    margin: 20px 100px;
+    margin: 20px 200px;
     cursor: pointer;
     background-color: var(--background-light);
     color: var(--text-white);
     border: none;
-    width: 150px;
+    width: 200px;
     height: 50px;
+    border-radius: 5px;
 }
 .doctor_profile_down button:hover {
     background-color: var(--background-primary);
@@ -177,5 +178,9 @@ label {
 }
 .icon{
     font-size: 30px;
+    color: var(--background-primary);
+}
+.icon-1{
+    font-size: 50px;
     color: var(--background-primary);
 }
