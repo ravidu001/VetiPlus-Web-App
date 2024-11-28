@@ -47,12 +47,14 @@
 
 .message {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
+    height: 100px;
     background-color: var(--background-white);
-    border: 3px solid var(--background-primary);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -178,6 +180,10 @@ input:focus {
 }
 .icon{
     font-size: 30px;
+    color: var(--background-primary);
+}
+.icon-1{
+    font-size: 50px;
     color: var(--background-primary);
 }
 .gender {

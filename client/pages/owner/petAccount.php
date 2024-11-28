@@ -1,7 +1,7 @@
 <?php
- 
-  $current_page = basename($_SERVER['PHP_SELF']);
-  
+
+$current_page = basename($_SERVER['PHP_SELF']);
+
 ?>
 
 <!DOCTYPE html>
@@ -18,26 +18,67 @@
 </head>
 
 <body>
-    
+
     <?php include_once "../../components/common/admin/message.php" ?>
 
     <!-- Include navbar -->
     <?php include '../../components/common/owner/navbar.php'; ?>
 
     <section class="home">
-    <div class="pet-account">
-    <div class="pet-account-inside">
-            <div class="pet-account-inside-left">
-                <img src="../../assets/images/pet.jpg" alt="">
-           </div>
-           <div class="pet-account-inside-right">
-                <h2>Pet ID  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp; 22001557</h2>
-                 <h2>Name &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp; Rocky</h2>
-                 <h2>Gender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :-&nbsp; Male</h2>
-                 <h2>Pet Owner &nbsp;&nbsp; :-&nbsp;Ramesh Peshala</h2>
-           </div>
-        </div> 
-    </div>
- </section>
+        <div class="pet-account">
+            <div class="pet-account-inside">
+                <div class="pet-account-inside-left">
+                    <img src="../../assets/images/pet.jpg" alt="">
+                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxl-baidu icon'></i>
+                                <label for="id">Pet ID</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>2200157</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-cat icon'></i>
+                                <label for="name">Name</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>Rocky</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bx-child icon'></i>
+                                <label for="gender">Gender</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>Male</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-user-circle icon'></i>
+                                <label for="petowner">Pet Owner</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>Ramesh Peshala</h3>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
