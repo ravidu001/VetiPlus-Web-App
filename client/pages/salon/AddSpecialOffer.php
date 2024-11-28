@@ -34,7 +34,7 @@
                     <div class="price-input-wrapper">
                         <input type="number" 
                                id="serviceCharge" 
-                               name="serviceCharge" 
+                               name="discount" 
                                placeholder="0.00"
                                step="0.01"
                                min="0"
@@ -60,8 +60,8 @@
                         <i class="fas fa-clock"></i> Close Date(Specail Offer) <span class="required">*</span>
                     </label>
                     <input type="date" 
-                           id="offerClosetDat" 
-                           name="offerClosetDat" 
+                           id="offerClosetDate" 
+                           name="offerClosetDate" 
                            placeholder = "mm/dd/year"
                            required>
                 </div>
