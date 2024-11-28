@@ -1,7 +1,5 @@
 <?php
-
 $current_page = basename($_SERVER['PHP_SELF']);
-
 ?>
 
 <!DOCTYPE html>
@@ -12,13 +10,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
     <title>VetiPlus</title>
-    <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">4
+    <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/salonSystem.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <!-- Include navbar -->
     <?php include '../../components/common/admin/navbar.php'; ?>
 
     <section class="home">
@@ -143,6 +140,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </div>
         <div class="modal" id="systemModal">
             <div class="modal-content">
+            <i class='bx bxs-check-circle icon'></i>
                 <h3 id="modal-message">Do you want to proceed?</h3>
                 <button onclick="confirmAction()">Yes</button>
                 <button onclick="closeModal()">No</button>

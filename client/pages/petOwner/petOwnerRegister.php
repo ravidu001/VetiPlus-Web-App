@@ -111,6 +111,8 @@
                         <input type="text" id="name" name="name" placeholder="eg: John Doe" required>
                     <label for="dob">Date of Birth</label>
                         <input type="date" id="dob" name="dob" max="<?= (new DateTime("now"))->format('Y-m-d') ?>" required>
+                    <label for="contact">Contact Number</label>
+                        <input type="tel" id="contact" name="contact" pattern="07\d\d\d\d\d\d\d\d" placeholder="eg: 0767130191" required>
                 </fieldset>
                 <fieldset>
                     <legend>Address</legend>
@@ -121,20 +123,7 @@
                     <label for="city">City</label>
                         <input type="text" id="city" name="city" placeholder="eg: Mount-Lavinia" required>
                 </fieldset>
-                <fieldset>
-                    <legend>Contact</legend>
-                    <label for="contact">Contact Number</label>
-                        <input type="tel" id="contact" name="contact" pattern="07\d\d\d\d\d\d\d\d" placeholder="eg: 0767130191" required>
-                    <label for="email">Email</label>
-                        <input type="email" id="email" name="email" pattern="^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}" placeholder="user@gmail.com" required>
-                </fieldset>
-                <fieldset>
-                    <legend>Password Setup</legend>
-                    <label for="password">Enter a Password</label>
-                        <input type="password" id="password" name="password" required>
-                    <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" id="confirmPassword" required>
-                </fieldset>
+                
                 <span id="errorMsg"></span>
                 <div class="formButtons">
                     <button type="reset">Clear</button>
@@ -153,9 +142,6 @@
             const street = document.getElementById('street');
             const city = document.getElementById('city');
             const contact = document.getElementById('contact');
-            const email = document.getElementById('email');
-            const password = document.getElementById('password');
-            const confirmPassword = document.getElementById('confirmPassword');
 
             const regForm = document.getElementById('regForm');
 
@@ -177,14 +163,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $city = htmlspecialchars($_POST['city']);
 
     $contact = htmlspecialchars($_POST['contact']);
-    $email = htmlspecialchars($_POST['email']);
-
-    $password = htmlspecialchars($_POST['password']);
 
     $errors = [];
-
-    $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-    if ($email == false) array_push($errors, "Invalid Email");
 
     $today = new DateTime("now");
     $tenYearsAgo = $today->modify('-10 years')->format('Y-m-d');
