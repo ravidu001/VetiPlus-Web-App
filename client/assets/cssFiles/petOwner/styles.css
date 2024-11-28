@@ -48,6 +48,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+.dashArea h1,
 .dashArea h2,
 .resultZero {
     margin: 15px;

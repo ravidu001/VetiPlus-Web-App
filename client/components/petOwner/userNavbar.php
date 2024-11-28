@@ -27,12 +27,28 @@
             </a>
         </div>
 
-        <a href="<?= BASE_PATH ?>/client/pages/petOwner/otherServices.php"
+        <a href="#" id="otherServiceIcon"
+        class="<?= ($current_pg == 'petAdoption.php' || $current_pg == 'petBreeding.php') ? 'active' : ''; ?>">
+            <i class="bx bxs-chevrons-right bx-sm" ></i>
+            <label for="otherServiceIcon" class="collapsable">Appointments</label>
+        </a>
+        <div id="otherServiceTypes">
+            <a href="<?= BASE_PATH ?>/client/pages/petOwner/petAdoption.php">
+                <i class="bx bxs-dog bx-sm" id="otherServiceIcon"></i>
+                <label for="otherServiceIcon" class="collapsable">Pet Adoption</label>
+            </a>
+            <a href="<?= BASE_PATH ?>/client/pages/petOwner/petBreeding.php">
+                <i class="bx bxs-heart bx-sm" id="otherServiceIcon"></i>
+                <label for="otherServiceIcon" class="collapsable">Pet Breeding</label>
+            </a>
+        </div>
+
+        <!-- <a href="<?= BASE_PATH ?>/client/pages/petOwner/otherServices.php"
         class="<?= ($current_pg == 'otherServices.php') ? 'active' : ''; ?>">
             <i class="bx bxs-heart bx-sm" id="otherServiceIcon"></i>
             <label for="otherServiceIcon" class="collapsable">Other Services</label>
-        </a>
-        
+         </a> -->
+
         <a href="<?= BASE_PATH ?>/client/pages/petOwner/aboutUs.php"
         class="<?= ($current_pg == 'aboutUs.php') ? 'active' : ''; ?>">
             <i class="bx bxs-group bx-sm" id="aboutIcon"></i>

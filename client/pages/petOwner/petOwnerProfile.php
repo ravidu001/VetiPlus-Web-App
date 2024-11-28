@@ -1,7 +1,7 @@
 <?php 
     session_start();
-    if (!isset($_SESSION['user_id']))
-        $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
+    // if (!isset($_SESSION['user_id']))
+    //     $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
     $userID = $_SESSION['user_id'];
 
     include '../../../config.php';
@@ -13,9 +13,6 @@
     $stmt->close();
 
     if ($result->num_rows <= 0) {
-        // $error_message = urlencode($conn->error); // Encode the error message
-        // header("Location: ./errorPage.php?msg=$error_message");
-        // exit();
         echo $conn->error;
     }
     $data = $result->fetch_assoc();
@@ -114,7 +111,11 @@
                 <button type="submit" style="display: none;" id="save-button">Save</button>
             </form>
 
-            <button id="logoutButton">Logout</button>
+            <form action="../login-singup/logout.php" method="post">
+                <button type="submit">Logout</button>
+            </form>
+
+            <!-- <button id="logoutButton">Logout</button> -->
 
         </div>
 

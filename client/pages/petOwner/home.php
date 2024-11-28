@@ -1,7 +1,7 @@
 <?php
     session_start();
-    if (!isset($_SESSION['user_id']))
-        $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
+    // if (!isset($_SESSION['user_id']))
+    //     $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
     $userID = $_SESSION['user_id'];
 
     include '../../../config.php';
@@ -46,9 +46,13 @@
                         $profileDetails = $stmt->get_result()->fetch_assoc();
                         
                         $stmt->close();
+                        if (!empty($profileDetails['profilePicture'])):
                     ?>
                     <img src="<?= BASE_PATH.'/client/assets/images/profilePics/petOwner/'.$profileDetails['profilePicture']?>"
-                        alt="Add a profile picture.">
+                        alt="Profile picture.">
+                    <?php else: ?>
+                        <p>Add a profile picture.</p>
+                    <?php endif; ?>
                     <div class="textContent">
                         <h3>Welcome back!</h3>
                         <p><?= $profileDetails['fullName'] ?></p>
@@ -75,8 +79,11 @@
                                     <h3><?= $pet['name'] ?></h3>
                                 </form>
                             <?php endforeach;
-                        else: echo "<h3>No Pets Added Yet!</h3>";
-                        endif;
+                        else: ?>
+                            <div class="petCard">
+                                <h3>No Pets<br/>added yet!</h3>
+                            </div>
+                        <?php endif;
                     ?>
                     <a class="petCard" href="./petRegister.php">
                         <i class="bx bxs-plus-circle bx-lg"></i>

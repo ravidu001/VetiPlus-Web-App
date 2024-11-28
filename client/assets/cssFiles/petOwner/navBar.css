@@ -60,10 +60,6 @@ nav.navBar {
     text-underline-offset: 5px;
 }
 
-.navBar .logout {
-    padding: 10px;
-    border-radius: 5px;
-}
 @media (width <= 1050px) {
     .collapsable {
         display: none;
@@ -71,12 +67,11 @@ nav.navBar {
 }
 
 /* only for petOwner navbar: */
-
 #appointmentTypes {
     display: none;
     position: absolute;
     top: 80%;
-    left: 35%;
+    left: 33%;
     
     background-color: var(--nav-bg-color);
     border-bottom: 2px solid var(--primary-border-color);
@@ -89,5 +84,25 @@ nav.navBar {
 #appointmentIcon:hover + #appointmentTypes,
 #appointmentIcon:focus + #appointmentTypes,
 #appointmentTypes:hover {
+    display: block;
+}
+
+#otherServiceTypes {
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    
+    background-color: var(--nav-bg-color);
+    border-bottom: 2px solid var(--primary-border-color);
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 10;
+}
+
+#otherServiceIcon:hover + #otherServiceTypes,
+#otherServiceIcon:focus + #otherServiceTypes,
+#otherServiceTypes:hover {
     display: block;
 }

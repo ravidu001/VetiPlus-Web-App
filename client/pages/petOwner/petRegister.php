@@ -1,7 +1,7 @@
 <?php
     session_start();
-    if (!isset($_SESSION['user_id']))
-        $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
+    // if (!isset($_SESSION['user_id']))
+    //     $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
     $userID = $_SESSION['user_id'];
 
     include '../../../config.php';
