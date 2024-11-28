@@ -5,13 +5,15 @@
 }
 .user-account-inside{
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin: 40px 100px;
-    border-radius: 50px;
-    border: 3px solid var(--background-primary);
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 200px;
     color: var(--text-color);
-    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    background-color: var(--background-white);
+    height: 60%;
+    width: 70%;
+    border-radius: 50px;
+    border: 3px solid var(--background-primary)
 }
 .user-account-inside-left{
     width: 40%;
@@ -26,24 +28,14 @@
     margin: 10px;
 
 }
-.user-account-inside-right{
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    justify-content: left;
-    margin: 10px;
-    gap: 30px;
-}
-.user-account-inside-right h2{
-    font-size: 17px;
-    font-weight: 500;
-}
 .user-account-outside{
     display: flex;
     flex-direction: row;
-    margin: 10px 100px;
-    justify-content: space-between;
+    margin-left: 200px;
+    justify-content:center;
+    align-items: center;
     height: 40%;
+    width: 70%;
 }
 
 .user-account-outside-left{
@@ -51,8 +43,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 20px;
     width: 40%;
-    gap: 30px;
     
 }
 .user-account-outside-left a{
@@ -75,19 +67,9 @@
     color: var(--text-white);
     transform: scale(1.1);
 }
-
-.user-account-outside-right{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    gap: 90px;
-    padding: 10px;
-    margin-left: 100px;
+.user-account-outside table{
+    width: 100%;
     border: 3px solid var(--background-primary);
-    color: var(--text-color);
-    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
-    border-radius: 30px;
 }
 .user-account-outside-right h2{
     font-size: 17px;
@@ -100,59 +82,50 @@
 .admin-navbar-inside-left-inner-1 ul li.active a {
     color: #000000; 
 }
-.blurred {
-    filter: blur(10px);
-    }
-.modal-background {
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background: rgba(0, 0, 0, 0.5); 
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     z-index: 1000;
-        }
+table {
+    width: 90%;
+    border-collapse: separate; 
+    border-spacing: 10px; 
+    margin: 20px 100px; 
+    border-radius: 10px; 
+    padding: 20px;
+    background-color: var(--background-white);
+}
 
-.modal-content {
-     background-color: #F1DBFF;
-     padding: 30px;
-     border-radius: 8px;
-     width: 300px;
-     text-align: center;
-     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    }
-.modal-content p{
+table tr {
+    margin: 10px 0; 
+    transition: background-color 0.3s ease; 
+}
+
+
+td {
+    text-align: left;
+    font-size: 18px;
+    padding: 20px 15px; 
+    border-radius: 5px; 
+    width: 60%;
+}
+
+th {
+    color: white; 
     font-size: 20px;
-    color: #000000;
-}
-.modal-content input{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #000000;
+    font-weight: bold;
+    border: none;
 }
 
-.modal-buttons {
-     margin-top: 20px;
-     display: flex;
-     justify-content: space-between;
-    
+label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block; 
+    margin-bottom: 5px; 
+    color:var(--background-primary);
 }
-.modal-buttons button {
-     padding: 10px 20px;
-     border: none;
-     border-radius: 5px;
-     cursor: pointer;
+.regi-icon{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
 }
-.modal-buttons button:hover {
-     background-color: #B89ACB;
-     color: #000000;
+.icon{
+    font-size: 30px;
+    color: var(--background-primary);
 }
-.confirmation-message {
-     font-size: 18px;
-     color: #F1DBFF; 
-        }

@@ -21,6 +21,10 @@
     border: 3px solid var(--background-primary);
     color: var(--text-color);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    transition: 0.5s;
+}
+.accounts-inside-left:hover{
+    transform: scale(1.1);
 }
 .accounts-inside-left-icon{
     display: flex;

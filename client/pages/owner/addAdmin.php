@@ -51,7 +51,7 @@
                     </form>
                 </div>
                 <div class="admin-outside-right">
-                    <a href="adminRegistration.php" class="btn">Add Admin</a>
+                    <a href="./adminRegistration.php" class="btn">Add Admin</a>
                 </div>
             </div>
         </div>

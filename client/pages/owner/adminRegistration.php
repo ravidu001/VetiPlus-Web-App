@@ -29,6 +29,7 @@ include(__DIR__ . '/../../../server/controllers/Owner/createAdmin.php');
         <div class="blurred-background"></div>
         <div class="message">
             <?= htmlspecialchars($message) ?>
+            <i class='bx bxs-check-circle icon-1'></i>
         </div>
     <?php endif; ?>
 

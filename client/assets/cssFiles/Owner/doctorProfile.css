@@ -79,6 +79,7 @@ label {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+    padding: 15px;
     margin-bottom: 40px;
 }
 .doc-pro-down-inside{
@@ -89,6 +90,10 @@ label {
     padding: 10px;
     width: 25%;
     border: 3px solid var(--background-primary);
+    transition:0.5s;
+}
+.doc-pro-down-inside:hover{
+    transform: scale(1.1);
 }
 .doc-pro-down-inside h2{
     font-size: 17px;
