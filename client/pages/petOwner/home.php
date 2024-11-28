@@ -46,9 +46,13 @@
                         $profileDetails = $stmt->get_result()->fetch_assoc();
                         
                         $stmt->close();
+                        if (!empty($profileDetails['profilePicture'])):
                     ?>
                     <img src="<?= BASE_PATH.'/client/assets/images/profilePics/petOwner/'.$profileDetails['profilePicture']?>"
-                        alt="Add a profile picture.">
+                        alt="Profile picture.">
+                    <?php else: ?>
+                        <p>Add a profile picture.</p>
+                    <?php endif; ?>
                     <div class="textContent">
                         <h3>Welcome back!</h3>
                         <p><?= $profileDetails['fullName'] ?></p>

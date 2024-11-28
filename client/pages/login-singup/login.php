@@ -64,7 +64,7 @@
                             header('Location: ../vetDoctor/homeNew.php');
                             break;
                         case 'Pet Owner':
-                            header('Location: ../petOwner/dashboard.php');
+                            header('Location: ../petOwner/home.php');
                             break;
                         case 'Salon':
                             header('Location: ../salon/home.php');

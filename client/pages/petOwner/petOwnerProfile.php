@@ -114,7 +114,11 @@
                 <button type="submit" style="display: none;" id="save-button">Save</button>
             </form>
 
-            <button id="logoutButton">Logout</button>
+            <form action="../login-singup/logout.php" method="post">
+                <button type="submit">Logout</button>
+            </form>
+
+            <!-- <button id="logoutButton">Logout</button> -->
 
         </div>
 
