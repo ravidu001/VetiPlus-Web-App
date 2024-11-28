@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salon Profile Edit Form</title>
     <link rel="stylesheet" href="../../assets/cssFiles/salon/SalonProfileEdit.css">
+    <link rel="stylesheet" href="../../assets/cssFiles/salon/PopUp.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <div class="form-wrapper">
-            <a href="./salonprofile.php"><i class="fa-solid fa-circle-xmark pageclose"></i></a>
+            <a href="./home.php"><i class="fa-solid fa-circle-xmark pageclose"></i></a>
             <h1 class="form-title">Your Salon Profile</h1>
             <p>Make the profile more attractive to help improve your products.</p>
             
