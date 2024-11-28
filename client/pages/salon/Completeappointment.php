@@ -51,6 +51,105 @@
                                         <td>Pet Bathing</td>
                                         <td>0776533229</td>
                                     </tr>
+                                    <tr>
+                                        <td>6.00 a.m - 6.30 a.m</td>
+                                        <td>
+                                            <div class="user">
+                                                <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                Abdual Rahim Vijepala
+                                            </div>
+                                        </td>
+                                        <td>Pet Bathing</td>
+                                        <td>0776533229</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.00 a.m - 6.30 a.m</td>
+                                        <td>
+                                            <div class="user">
+                                                <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                Abdual Rahim Vijepala
+                                            </div>
+                                        </td>
+                                        <td>Pet Bathing</td>
+                                        <td>0776533229</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.00 a.m - 6.30 a.m</td>
+                                        <td>
+                                            <div class="user">
+                                                <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                Abdual Rahim Vijepala
+                                            </div>
+                                        </td>
+                                        <td>Pet Bathing</td>
+                                        <td>0776533229</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.00 a.m - 6.30 a.m</td>
+                                        <td>
+                                            <div class="user">
+                                                <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                Abdual Rahim Vijepala
+                                            </div>
+                                        </td>
+                                        <td>Pet Bathing</td>
+                                        <td>0776533229</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.00 a.m - 6.30 a.m</td>
+                                        <td>
+                                            <div class="user">
+                                                <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                Abdual Rahim Vijepala
+                                            </div>
+                                        </td>
+                                        <td>Pet Bathing</td>
+                                        <td>0776533229</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.00 a.m - 6.30 a.m</td>
+                                        <td>
+                                            <div class="user">
+                                                <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                Abdual Rahim Vijepala
+                                            </div>
+                                        </td>
+                                        <td>Pet Bathing</td>
+                                        <td>0776533229</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.00 a.m - 6.30 a.m</td>
+                                        <td>
+                                            <div class="user">
+                                                <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                Abdual Rahim Vijepala
+                                            </div>
+                                        </td>
+                                        <td>Pet Bathing</td>
+                                        <td>0776533229</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.00 a.m - 6.30 a.m</td>
+                                        <td>
+                                            <div class="user">
+                                                <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                Abdual Rahim Vijepala
+                                            </div>
+                                        </td>
+                                        <td>Pet Bathing</td>
+                                        <td>0776533229</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.00 a.m - 6.30 a.m</td>
+                                        <td>
+                                            <div class="user">
+                                                <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                Abdual Rahim Vijepala
+                                            </div>
+                                        </td>
+                                        <td>Pet Bathing</td>
+                                        <td>0776533229</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

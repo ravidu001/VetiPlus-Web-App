@@ -54,6 +54,104 @@
                                                 <button class="ok">Completed</button>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td>6.30 a.m - 7.00 a.m</td>
+                                            <td>
+                                                <div class="user">
+                                                    <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                    Abdual Rahim Vijepala
+                                                </div>
+                                            </td>
+                                            <td>Pet Bathing</td>
+                                            <td>0776533229</td>
+                                            <td>
+                                                <button class="ok">Completed</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.00 a.m - 7.30 a.m</td>
+                                            <td>
+                                                <div class="user">
+                                                    <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                    Abdual Rahim Vijepala
+                                                </div>
+                                            </td>
+                                            <td>Pet Bathing</td>
+                                            <td>0776533229</td>
+                                            <td>
+                                                <button class="ok">Completed</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>8.00 a.m - 8.30 a.m</td>
+                                            <td>
+                                                <div class="user">
+                                                    <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                    Abdual Rahim Vijepala
+                                                </div>
+                                            </td>
+                                            <td>Pet Bathing</td>
+                                            <td>0776533229</td>
+                                            <td>
+                                                <button class="ok">Completed</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9.00 a.m - 9.30 a.m</td>
+                                            <td>
+                                                <div class="user">
+                                                    <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                    Abdual Rahim Vijepala
+                                                </div>
+                                            </td>
+                                            <td>Pet Bathing</td>
+                                            <td>0776533229</td>
+                                            <td>
+                                                <button class="ok">Completed</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10.00 a.m - 10.30 a.m</td>
+                                            <td>
+                                                <div class="user">
+                                                    <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                    Abdual Rahim Vijepala
+                                                </div>
+                                            </td>
+                                            <td>Pet Bathing</td>
+                                            <td>0776533229</td>
+                                            <td>
+                                                <button class="ok">Completed</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>11.00 a.m - 11.30 a.m</td>
+                                            <td>
+                                                <div class="user">
+                                                    <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                    Abdual Rahim Vijepala
+                                                </div>
+                                            </td>
+                                            <td>Pet Bathing</td>
+                                            <td>0776533229</td>
+                                            <td>
+                                                <button class="ok">Completed</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>12.00 a.m - 12.30 a.m</td>
+                                            <td>
+                                                <div class="user">
+                                                    <img src="../../assets/images/salon/boy.jpg" alt="userimage">
+                                                    Abdual Rahim Vijepala
+                                                </div>
+                                            </td>
+                                            <td>Pet Bathing</td>
+                                            <td>0776533229</td>
+                                            <td>
+                                                <button class="ok">Completed</button>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>

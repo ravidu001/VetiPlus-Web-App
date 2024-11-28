@@ -8,16 +8,18 @@
 </header>
 <div class="pagecontent">
     <div class="dashbardheader">
-        <h3>Dashboard</h3>
+        <!-- <h3>Dashboard</h3> -->
+        <div class="profile">
+            <img class="profile" src="../../assets/images/salon/girl.jpg" alt="profile.php">
+            <p>Owner :</p>
+            <p class="name">Pabodya Nethsarani</p>
+            
+        </div>
         <div class="icon">
             <i class="fa-solid fa-magnifying-glass icon"></i>
             <i class="fa-regular fa-bell icon"></i>
         </div>
-        <div class="profile">
-            <p>Owner :</p>
-            <p class="name">Pabodya Nethsarani</p>
-            <img class="profile" src="../../assets/images/salon/girl.jpg" alt="profile.php">
-        </div>
+        
     </div>
 
     <div class="dashcontent">
@@ -49,6 +51,56 @@
                 <p>
                     Upcoming Appointments
                 </p>
+            </div>
+
+            <div class="upcominappointments">
+                <p class="realtime">8.30 a.m </p>
+                    <div class="appointmentbox">
+                        <div class="image">
+                            <img class="image" src="../../assets/images/salon/boy.jpg" alt="boy">
+                            <img class="petimage" src="../../assets/images/White Playful Pet Shop Logo.png">
+                        </div>
+                        <div class="userdetails">
+                            <p class=" username">Abdul Rahim</p><br>
+                            <i class="fa-solid fa-paw icon" ><p class="servicename">Pet Bathing</p></i><br>
+                            <p class="number">077-5369984</p><br>
+                            <p class="time"><b>9.30a.m - 10.30p.m</b></p>
+                        </div>
+                    </div>
+            </div>
+
+            
+            <div class="upcominappointments">
+                <p class="realtime">8.30 a.m </p>
+                    <div class="appointmentbox">
+                        <div class="image">
+                            <img class="image" src="../../assets/images/salon/boy.jpg" alt="boy">
+                            <img class="petimage" src="../../assets/images/White Playful Pet Shop Logo.png">
+                        </div>
+                        <div class="userdetails">
+                            <p class=" username">Abdul Rahim</p><br>
+                            <i class="fa-solid fa-paw icon" ><p class="servicename">Pet Bathing</p></i><br>
+                            <p class="number">077-5369984</p><br>
+                            <p class="time"><b>9.30a.m - 10.30p.m</b></p>
+                        </div>
+                    </div>
+            </div>
+
+            
+            <div class="upcominappointments">
+                <p class="realtime">8.30 a.m </p>
+                    <div class="appointmentbox">
+                        <div class="image">
+                            <img class="image" src="../../assets/images/salon/boy.jpg" alt="boy">
+                            <img class="petimage" src="../../assets/images/White Playful Pet Shop Logo.png">
+                        </div>
+                        <div class="userdetails">
+                            <p class=" username">Abdul Rahim</p><br>
+                            <i class="fa-solid fa-paw icon" ><p class="servicename">Pet Bathing</p></i><br>
+                            <p class="number">077-5369984</p><br>
+                            <p class="time"><b>9.30a.m - 10.30p.m</b></p>
+                        </div>
+                    </div>
             </div>
             
             <!-- <div class="upcominappointments">
@@ -86,6 +138,36 @@
                             <i class="fa-solid fa-paw icon" ><p class="servicename">Pet Bathing</p></i><br>
                             <p class="number">077-5369984</p><br>
                             <p class="time"><b>10.30a.m - 11.00p.m</b></p>
+                        </div>
+                    </div>
+            </div>
+            <div class="upcominappointments">
+                <p class="realtime">11.00 a.m </p>
+                    <div class="appointmentbox">
+                        <div class="image">
+                            <img class="image" src="../../assets/images/salon/boy.jpg" alt="boy">
+                            <img class="petimage" src="../../assets/images/White Playful Pet Shop Logo.png">
+                        </div>
+                        <div class="userdetails">
+                            <p class=" username">Abdul Rahim</p><br>
+                            <i class="fa-solid fa-paw icon" ><p class="servicename">Pet Bathing</p></i><br>
+                            <p class="number">077-5369984</p><br>
+                            <p class="time"><b>11.00a.m - 11.30p.m</b></p>
+                        </div>
+                    </div>
+            </div>
+            <div class="upcominappointments">
+                <p class="realtime">11.30 a.m </p>
+                    <div class="appointmentbox">
+                        <div class="image">
+                            <img class="image" src="../../assets/images/salon/boy.jpg" alt="boy">
+                            <img class="petimage" src="../../assets/images/White Playful Pet Shop Logo.png">
+                        </div>
+                        <div class="userdetails">
+                            <p class=" username">Abdul Rahim</p><br>
+                            <i class="fa-solid fa-paw icon" ><p class="servicename">Pet Bathing</p></i><br>
+                            <p class="number">077-5369984</p><br>
+                            <p class="time"><b>11.30a.m - 11.30p.m</b></p>
                         </div>
                     </div>
             </div>

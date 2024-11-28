@@ -114,7 +114,7 @@
                 <!-- Open Days -->
                 <div class=" tableform">
                     <label for="salonOpenDays">
-                        <i class="fa-solid fa-calendar-days"></i> Open Days <span class="required">*</span>
+                        <i class="fa-solid fa-calendar-days"></i> Open Days (Usually)<span class="required">*</span>
                     </label>
                    
                         <div id="dayTable" class="day-table">
@@ -136,7 +136,7 @@
                 <!-- Salon Open Time -->
                 <div class="form-group">
                     <label for="salonOpenTime">
-                        <i class="fa-regular fa-calendar-days"></i> Salon Open Time <span class="required">*</span>
+                        <i class="fa-regular fa-calendar-days"></i> Salon Open Time (Usually)<span class="required">*</span>
                     </label>
                     <select id="salonOpenTime" name="salonOpenTime" required>
                         <option value="">Select Open Time</option>
@@ -158,7 +158,7 @@
                 <!-- Salon Close Time -->
                 <div class="form-group">
                     <label for="salonCloseTime">
-                        <i class="fa-solid fa-clock"></i> Salon Close Time <span class="required">*</span>
+                        <i class="fa-solid fa-clock"></i> Salon Close Time (Usually)<span class="required">*</span>
                     </label>
                     <select id="salonCloseTime" name="salonCloseTime" required>
                         <option value="">Select Close Time</option>
