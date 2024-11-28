@@ -1,7 +1,7 @@
 <?php
     session_start();
-    $_SESSION['user_id'] = 'hmm@hmm.com';
-    // $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
+    if (!isset($_SESSION['user_id']))
+        $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
     $userID = $_SESSION['user_id'];
 
     include '../../../config.php';
@@ -139,8 +139,8 @@
                     <legend>Address</legend>
                     <label for="houseNo">Apartment/ House no.</label>
                         <input type="text" id="houseNo" name="houseNo" placeholder="eg: 103/1A" required>
-                    <label for="street">Street</label>
-                        <input type="text" id="street" name="street" placeholder="eg: Hena Road" required>
+                    <label for="streetName">Street</label>
+                        <input type="text" id="streetName" name="streetName" placeholder="eg: Hena Road" required>
                     <label for="city">City</label>
                         <input type="text" id="city" name="city" placeholder="eg: Mount-Lavinia" required>
                 </fieldset>
@@ -175,7 +175,7 @@
                 .then(data => {
                     if (data.status === 'success') {
                         alert(data.message);
-                        window.location.href = '<?= BASE_PATH.'/client/pages/petOwner/dashboard.php' ?>';
+                        window.location.href = '<?= BASE_PATH.'/client/pages/petOwner/home.php' ?>';
                     } else {
                         alert(data.message);
                     }
@@ -185,15 +185,6 @@
                     alert('An error occurred.\nPlease try again later.\n'+ error);
                 })
             })
-
-            // const userName = document.getElementById('name');
-            // const dob = document.getElementById('dob');
-            // const houseNo = document.getElementById('houseNo');
-            // const street = document.getElementById('street');
-            // const city = document.getElementById('city');
-            // const contact = document.getElementById('contact');
-
-            // const petOwnerRegisterForm = document.getElementById('petOwnerRegisterForm');
         </script>
     </body>
 </html>

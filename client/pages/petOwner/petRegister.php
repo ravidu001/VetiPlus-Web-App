@@ -114,7 +114,7 @@
                 .then(data => {
                     if (data.status === 'success') {
                         alert(data.message);
-                        window.location.href = '<?= BASE_PATH.'/client/pages/petOwner/dashboard.php' ?>';
+                        window.location.href = '<?= BASE_PATH.'/client/pages/petOwner/home.php' ?>';
                     } else {
                         alert(data.message);
                     }

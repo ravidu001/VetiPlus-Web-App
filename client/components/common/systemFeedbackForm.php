@@ -23,12 +23,17 @@
                 <input type="email" id="email" name="email" required>
             
             <label for="contact">Contact number:</label>
-                <input type="text" id="contact" name="contact" required pattern="[0][7][0-9]{8}" placeholder="07X-XXXXXXXX">
+                <input type="text" id="contact" name="contact" pattern="07\d\d\d\d\d\d\d\d" minlength="10" placeholder="eg: 0767130191" required>
             
+            <label for="">Rating</label>
+            
+            <label for="">Image</label>
+
+
             <label for="msgType">Type of Message:</label>
             <select name="msgType" id="msgType">
-                <option value="inquiry">Inquiry</option>
                 <option value="feedback">Feedback</option>
+                <option value="complaint">Complaint</option>
             </select>
     
             <label for="msg">Message:</label>
@@ -38,6 +43,9 @@
         </form>
     </div>
 </div>
+<script>
+
+</script>
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

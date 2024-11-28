@@ -104,10 +104,10 @@
                 
                 <!-- <div class="userData"> -->
                     <label id="address">Address: </label>
-                    <span class="display-field"><?= $data['houseNo'].', '.$data['street'].',<br/>'.$data['city']; ?></span>
+                    <span class="display-field"><?= $data['houseNo'].', '.$data['streetName'].',<br/>'.$data['city']; ?></span>
 
                     <input type="text" id="houseNo" class="input-field" name="houseNo" value="<?= $data['houseNo']; ?>" required>
-                    <input type="text" id="street" class="input-field" name="street" value="<?= $data['street']; ?>" required>
+                    <input type="text" id="streetName" class="input-field" name="streetName" value="<?= $data['streetName']; ?>" required>
                     <input type="text" id="city" class="input-field" name="city" value="<?= $data['city']; ?>" required>
                 <!-- </div> -->
 
@@ -180,13 +180,13 @@
             $dob = $_POST['dob'];
             $nic = $_POST['nic'];
             $houseNo = $_POST['houseNo'];
-            $street = $_POST['street'];
+            $streetName = $_POST['streetName'];
             $city = $_POST['city'];
 
             $stmt = $conn->prepare("UPDATE petowner
-                            SET fullName = ?, contactNumber = ?, DOB = ?, houseNo = ?, street = ?, city = ?
+                            SET fullName = ?, contactNumber = ?, DOB = ?, houseNo = ?, streetName = ?, city = ?
                             WHERE petOwnerID = ?");
-            $stmt->bind_param("sssssss", $name, $contact, $dob, $houseNo, $street, $city, $userID);
+            $stmt->bind_param("sssssss", $name, $contact, $dob, $houseNo, $streetName, $city, $userID);
             $updateSuccess = $stmt->execute();
             $stmt->close();
             if (!$updateSuccess) echo "

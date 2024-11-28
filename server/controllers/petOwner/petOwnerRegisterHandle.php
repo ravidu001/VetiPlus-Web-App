@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-$_SESSION['user_id'] = 'piggy@pig.com';
 $userID = $_SESSION['user_id'];
 
 include '../../../config.php';
@@ -19,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $gender = $sanitized['gender'];
 
     $houseNo = $sanitized['houseNo'];
-    $street = $sanitized['street'];
+    $streetName = $sanitized['streetName'];
     $city = $sanitized['city'];
 
     $errors = [];
@@ -51,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if($gender != 'male' && $gender != 'female') addError("Gender is not selected!");
 
     if(empty($houseNo)) addError("No house number or apartment number provided for Address!");
-    if(empty($street)) addError("No street name provided for Address!");
+    if(empty($streetName)) addError("No street name provided for Address!");
     if(empty($city)) addError("No city provided for Address!");
 
     $lastLogin = $today->format('Y-m-d H:i');
@@ -60,9 +59,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     if($validInputs) {
         $stmt = $conn->prepare("INSERT INTO petowner
-            (petOwnerID, fullName, DOB, contactNumber, NIC, gender, houseNo, street, city, lastLogin)
+            (petOwnerID, fullName, DOB, contactNumber, NIC, gender, houseNo, streetName, city, lastLogin)
             VALUES (?,?,?,?,?,?,?,?,?,?)");
-        $stmt->bind_param("ssssssssss",$userID, $name, $dob, $contact, $nic, $gender, $houseNo, $street, $city, $lastLogin);
+        $stmt->bind_param("ssssssssss",$userID, $name, $dob, $contact, $nic, $gender, $houseNo, $streetName, $city, $lastLogin);
         $insertDone = $stmt->execute();
         $stmt->close();
         

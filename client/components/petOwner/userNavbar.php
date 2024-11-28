@@ -5,10 +5,10 @@
     <img src="<?= BASE_PATH ?>/client/assets/images/vetiplus-logo.png" alt="VetiPlus logo" id="navBar-logo">
 
     <div class="links">
-        <a href="<?= BASE_PATH ?>/client/pages/petOwner/dashboard.php"
+        <a href="<?= BASE_PATH ?>/client/pages/petOwner/home.php"
         class="<?= ($current_pg == 'dashboard.php') ? 'active' : ''; ?>">
-            <i class="bx bxs-dashboard bx-sm" id="dashboardIcon"></i>
-            <label for="dashboardIcon" class="collapsable">Dashboard</label>
+            <i class="bx bxs-home bx-sm" id="homeIcon"></i>
+            <label for="homeIcon" class="collapsable">Home</label>
         </a>
 
         <a href="#" id="appointmentIcon"

@@ -1,0 +1,58 @@
+/* content area with many dashAreas (usually sections) */
+.dashContent {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.dashArea {
+    background-color: var(--primary-bg-color);
+    border: 2px solid var(--primary-border-color);
+    box-shadow: 0px 0px 15px var(--shadow-color);
+    
+    border-radius: 10px;
+    margin: 2rem 10rem;
+    padding: 20px;
+
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+}
+.dashArea h2{
+    margin: 15px;
+    margin-left: 10%;
+}
+
+.dashArea#FAQs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+details {
+    border: 2px solid var(--primary-border-color);
+    border-radius: 15px;
+
+    padding: 2%;
+    background-color: var(--background-color);
+}
+details summary {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+details ul {
+    margin-left: 10px;
+}
+
+.dashArea#vpDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dashArea#vpDetails img.vpLogo {
+    width: 15%;
+    height: auto;
+}
