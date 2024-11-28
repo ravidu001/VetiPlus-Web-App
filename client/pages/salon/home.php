@@ -32,4 +32,5 @@
     </div> 
 </body>
     <script src="../../assets/jsFIles/salon/PopUp.js"></script> 
+    <script src="../../assets/jsFIles/salon/sidebar.js"></script>
 </html>

@@ -14,10 +14,11 @@ body:has(#sidebar.close) .pagecontent {
 
 
 .pagecontent{
-    margin-left: 250px; /*width of sidebar */ 
+    margin-left: 280px; /*width of sidebar */ 
     transition: margin-left 0.3s ease-in-out;
-    width: calc(100%- 250px);
+    width: calc(100%- 280px);
 }
+
 
 .box1 {
     background: var(--background-white);
