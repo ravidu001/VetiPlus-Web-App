@@ -71,8 +71,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <th> <input type="reset"  id="cancelBtn" value="Clear"> </th>
-                            <th> <input type="submit" name="next" id="nextBtn" value="Next" > </th>
+                            <th> <input type="reset"  id="cancelBtn" value="Clear" class="allbutton"> </th>
+                            <th> <input type="submit" name="next" id="nextBtn" value="Next" class="allbutton"> </th>
                         </tr>
                     </tbody>
                 </table>
@@ -140,8 +140,12 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th> <input type="reset" id="cancelRequest" value="Cancel"> </th>
-                                <th> <input type="submit" name="generate" id="generate" value="Generate"> </th>
+                                <th> <input type="reset" id="cancelRequest" value="Cancel" class="allbutton"> </th>
+                                <th> 
+                                    <a href="./certificateview.php">
+                                        <button type="button" name="generate" id="generate" value="Generate" class="allbutton"> Generate</button>
+                                    </a>
+                                </th>
                             </tr>
                         </tbody>
                     </table>
@@ -150,6 +154,7 @@
         </div>
     <div>
 </div>
-
+        
+        
 
 <script src="../../assets/jsFIles/vetDocotor/certificate.js"></script> 

@@ -108,6 +108,25 @@ th {
     padding-right:100px;
 }
 
+.allbutton {
+    margin: 30px 0 0 30px;
+    background: var(--background-light);
+    color: var(--text-black);
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.allbutton:hover {
+    background: var(--background-primary);
+    color: var(--text-white);
+    transform: scale(1.2);
+    box-shadow: var(--shadow-color) 2px 2px 10px;
+}
+
+
 
 </style>
 </head>
@@ -194,6 +213,10 @@ th {
         </div>
             
     </div>
+
+    <a href="./homeNew.php">
+            <button type="button" name="back" id="back" value="Back" class="allbutton"> Back</button>     
+    </a>
 
     <script>document.addEventListener('DOMContentLoaded', function() {
     // Example of dynamically populating certificate details

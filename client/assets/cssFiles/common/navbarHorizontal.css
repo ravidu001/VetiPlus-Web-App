@@ -373,3 +373,20 @@ body.dark .switch::before {
 .nav-link.active  .text {
     color: white;
 }
+
+.allbutton {
+    background: var(--background-light);
+    color: var(--text-black);
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.allbutton:hover {
+    background: var(--background-primary);
+    color: var(--text-white);
+    transform: scale(1.1);
+    box-shadow: var(--shadow-color) 0px 5px 15px;
+}
