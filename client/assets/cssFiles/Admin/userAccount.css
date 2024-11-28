@@ -1,18 +1,18 @@
 .user-account {
-    display: flex;
-    flex-direction: column;
     width: 100%;
 }
 
 .user-account-inside {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin: 40px 100px;
-    border-radius: 50px;
-    border: 3px solid var(--background-primary);
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 200px;
     color: var(--text-color);
-    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    background-color: var(--background-white);
+    height: 60%;
+    width: 70%;
+    border-radius: 20px;
+    border: 3px solid var(--background-primary);
 }
 
 .user-account-inside-left {
@@ -122,10 +122,11 @@
 }
 
 .modal-content {
-    background-color: #F1DBFF;
-    padding: 30px;
+    background-color: white;
+    border: 3px solid var(--background-primary);
+    padding: 20px;
     border-radius: 8px;
-    width: 300px;
+    width: 400px;
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -146,7 +147,10 @@
 .modal-buttons {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 
 }
 
@@ -165,4 +169,59 @@
 .confirmation-message {
     font-size: 18px;
     color: #F1DBFF;
+}
+.user-account-outside table{
+    width: 100%;
+    border: 3px solid var(--background-primary);
+}
+table {
+    width: 90%;
+    border-collapse: separate; 
+    border-spacing: 10px; 
+    margin: 20px 100px; 
+    border-radius: 10px; 
+    padding: 20px;
+    background-color: var(--background-white);
+}
+
+table tr {
+    margin: 10px 0; 
+    transition: background-color 0.3s ease; 
+}
+
+
+td {
+    text-align: left;
+    font-size: 18px;
+    padding: 20px 15px; 
+    border-radius: 5px; 
+    width: 60%;
+}
+
+th {
+    color: white; 
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block; 
+    margin-bottom: 5px; 
+    color:var(--background-primary);
+}
+.regi-icon{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.icon{
+    font-size: 30px;
+    color: var(--background-primary);
+}
+.icon-1{
+    font-size: 50px;
+    color: var(--background-primary);
 }

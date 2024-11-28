@@ -1,12 +1,11 @@
 function openDeleteModal() {
     document.getElementById("deleteModal").style.display = "flex";  
-    document.getElementById("main-content").classList.add("blurred");
+  
 }
 function closeModal() {
     document.getElementById("deleteModal").style.display = "none";
     document.getElementById("passwordModal").style.display = "none";
     document.getElementById("dconfirmationModal").style.display = "none";
-    document.getElementById("main-content").classList.remove("blurred");
 }
 function openPasswordModal() {
     closeModal(); 

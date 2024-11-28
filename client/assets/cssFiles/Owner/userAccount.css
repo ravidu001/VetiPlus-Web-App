@@ -12,8 +12,8 @@
     background-color: var(--background-white);
     height: 60%;
     width: 70%;
-    border-radius: 50px;
-    border: 3px solid var(--background-primary)
+    border-radius: 20px;
+    border: 3px solid var(--background-primary);
 }
 .user-account-inside-left{
     width: 40%;

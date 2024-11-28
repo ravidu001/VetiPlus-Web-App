@@ -1,11 +1,12 @@
 function openConfirmModal() {
     document.getElementById("modal").style.display = "flex";  
-    document.getElementById("main-content").classList.add("blurred"); 
+    
 }
 
 function pcloseModal() {
-    document.getElementById("main-content").classList.remove("blurred"); 
+    
     document.getElementById("modal").style.display="none";
+
 }
 
 function confirmReset() {
@@ -14,6 +15,6 @@ function confirmReset() {
 
     setTimeout(() => {
         document.getElementById("confirmationModal").style.display = "none"; 
-        document.getElementById("main-content").classList.remove("blurred"); 
+        
     }, 3000);
 }

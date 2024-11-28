@@ -6,13 +6,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 20px 100px;
-    height: auto;
-    border: 3px solid var(--background-primary);
+    margin: 40px 200px;
     color: var(--text-color);
     background-color: var(--background-white);
-    border-radius: 10px;
+    height: 60%;
+    width: 70%;
+    border-radius: 20px;
+    border: 3px solid var(--background-primary);
 }
 
 .doctor_profile_top_left {
