@@ -3,12 +3,12 @@
         <div>
             <h2>Quick Links:</h2>
             <ul class="quickLinks">
-                <li><a href="<?= BASE_PATH ?>/client/pages/petOwner/dashboard.php">Dashboard</a></li>
+                <li><a href="<?= BASE_PATH ?>/client/pages/petOwner/home.php">Dashboard</a></li>
                 <li><a href="<?= BASE_PATH ?>/client/pages/petOwner/vetAppointments.php">Vet Appointments</a></li>
                 <li><a href="<?= BASE_PATH ?>/client/pages/petOwner/salonAppointments.php">Salon Appointments</a></li>
                 <li><a href="<?= BASE_PATH ?>/client/pages/petOwner/otherServices.php">Other Services</a></li>
-                <li><a href="<?= BASE_PATH ?>/client/pages/petOwner/about.php">About Us</a></li>
-                <li><a href="<?= BASE_PATH ?>/client/pages/petOwner/contact.php">Contact</a></li>
+                <li><a href="<?= BASE_PATH ?>/client/pages/petOwner/aboutUs.php">About Us</a></li>
+                <li><a href="<?= BASE_PATH ?>/client/pages/petOwner/contactUs.php">Contact</a></li>
             </ul>
         </div>
         <div>

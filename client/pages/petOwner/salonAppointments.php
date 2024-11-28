@@ -1,7 +1,10 @@
 <?php
     session_start(); 
-    include '../../../config.php';
+    if (!isset($_SESSION['user_id']))
+        $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
+    $userID = $_SESSION['user_id'];
 
+    include '../../../config.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +22,7 @@
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/navBar.css" rel="stylesheet">
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/myFooter.css" rel="stylesheet">
 
-        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/servicePages.css" rel="stylesheet">
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/appointmentPages.css" rel="stylesheet">
 
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -30,56 +33,96 @@
 
         <div class="dashContent">
 
-            <section class="dashArea upcomingAppointments">
+            <section id="upcomingAppointments" class="dashArea">
                 <h2>Upcoming Appointments</h2>
+                <button class="expandCardSectionBtn" id="expandUpcomingAppointmentsBtn" title="Expand to view all"><i class="bx bxs-down-arrow-circle bx-lg"></i></button>
+                <div class="appointments-container scrollAppointments">
+                    <?php for ($i=0; $i<2; $i++) :?>
+                        <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/salonIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <h3>Bingo</h3>
+                                <span>Full Bath - Mr.Perera</span>
+                                <span><b>Example Salon</b> No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.12.2024 | 6:00PM</h4>
+                            </div>
+                            <div class="appintmentOptions">
+                                <button><i class="bx bxs-edit bx-md"></i> Edit</button>
+                                <button><i class="bx bxs-calendar-edit bx-md"></i> Reschedule</button>
+                            </div>
+                        </div>
+                        <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/salonIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <h3>Ginger</h3>
+                                <span>Nail Cutting - Miss.Rajamani</span>
+                                <span><b>Example Salon</b> No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.12.2024 | 6:00PM</h4>
+                            </div>
+                            <div class="appintmentOptions">
+                                <button><i class="bx bxs-edit bx-md"></i> Edit</button>
+                                <button><i class="bx bxs-calendar-edit bx-md"></i> Reschedule</button>
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </section>
+
+            <section id="historicalAppointments" class="dashArea">
+                <h2>Appointments History</h2>
+                <button class="expandCardSectionBtn" id="expandHstoricalAppointmentsBtn" title="Expand to view all"><i class="bx bxs-down-arrow-circle bx-lg"></i></button>
+                <div class="appointments-container scrollAppointments">
+                    <?php for ($i=0; $i<2; $i++) :?>
+                        <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/salonIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <h3>Bingo</h3>
+                                <span>Full Bath - Mr.Perera</span>
+                                <span><b>Example Salon</b> No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.06.2024 | 6:00PM</h4>
+                            </div>
+                            <button><i class="bx bxs-star bx-md"></i> Rate Appointment</button>
+                        </div>
+                        <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/salonIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <h3>Ginger</h3>
+                                <span>Nail Cutting - Miss.Rajamani</span>
+                                <span><b>Example Salon</b> No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.10.2024 | 6:00PM</h4>
+                            </div>
+                            <div class="Rating">
+                                <i class="bx bxs-star bx-sm"></i>
+                                <i class="bx bxs-star bx-sm"></i>
+                                <i class="bx bxs-star bx-sm"></i>
+                                <i class="bx bxs-star-half bx-sm"></i>
+                                <i class="bx bx-star bx-sm"></i>
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
             </section>
 
             <section id="availableSalons" class="dashArea">
                 <h2>Salons Available</h2>
-                <button id="expandCardSectionBtn"><i class="bx bxs-down-arrow-circle bx-lg"></i></button>
-                <div class="cards cardsScrollX">
-                    <div class="serviceCard">
-                        <img src="<?= BASE_PATH ?>/client/assets/images/salon/groomer.jpg" alt="salon Profile Picture">
-                        <h2>Example Salon</h2>
-                        <span class="address">No.103\1A, Hena Road, Mount-Lavinia</span>
-                        <span><b>Contact:</b> 0767130191</span>
-                        <span><b>Rating:</b> 4.0</span>
-                    </div>
-                    <div class="serviceCard">
-                        <img src="<?= BASE_PATH ?>/client/assets/images/salon/boy.jpg" alt="salon Profile Picture">
-                        <h2>Example Salon</h2>
-                        <span class="address">No.103\1A, Hena Road, Mount-Lavinia</span>
-                        <span><b>Contact:</b> 0767130191</span>
-                        <span><b>Rating:</b> 4.0</span>
-                    </div>
-                    <div class="serviceCard">
-                        <img src="<?= BASE_PATH ?>/client/assets/images/salon/girl.jpg" alt="salon Profile Picture">
-                        <h2>Example Salon</h2>
-                        <span class="address">No.103\1A, Hena Road, Mount-Lavinia</span>
-                        <span><b>Contact:</b> 0767130191</span>
-                        <span><b>Rating:</b> 4.0</span>
-                    </div>
-                    <div class="serviceCard">
-                        <img src="<?= BASE_PATH ?>/client/assets/images/salon/girl.jpg" alt="salon Profile Picture">
-                        <h2>Example Salon</h2>
-                        <span class="address">No.103\1A, Hena Road, Mount-Lavinia</span>
-                        <span><b>Contact:</b> 0767130191</span>
-                        <span><b>Rating:</b> 4.0</span>
-                    </div>
-                    <div class="serviceCard">
-                        <img src="<?= BASE_PATH ?>/client/assets/images/salon/girl.jpg" alt="salon Profile Picture">
-                        <h2>Example Salon</h2>
-                        <span class="address">No.103\1A, Hena Road, Mount-Lavinia</span>
-                        <span><b>Contact:</b> 0767130191</span>
-                        <span><b>Rating:</b> 4.0</span>
-                    </div>
-                    <div class="serviceCard">
-                        <img src="<?= BASE_PATH ?>/client/assets/images/salon/girl.jpg" alt="salon Profile Picture">
-                        <h2>Example Salon</h2>
-                        <span class="address">No.103\1A, Hena Road, Mount-Lavinia</span>
-                        <span><b>Contact:</b> 0767130191</span>
-                        <span><b>Rating:</b> 4.0</span>
-                    </div>
+                <button class="expandCardSectionBtn" id="expandProvidersBtn" title="Expand to view all"><i class="bx bxs-down-arrow-circle bx-lg"></i></button>
+                <div class="providerCard-container cardsScrollX">
+                    <?php for ($i=0; $i<4; $i++) :?>
+                        <div class="providerCard">
+                            <img src="<?= BASE_PATH ?>/client/assets/images/Teeth cleaning.jpg" alt="salon Profile Picture">
+                            <h2>Example Salon</h2>
+                            <span class="address">No.103\1A, Hena Road, Mount-Lavinia</span>
+                            <span><b>Contact:</b> 0767130191</span>
+                            <span><b>Rating:</b> 4.0</span>
+                        </div>
+                        <div class="providerCard">
+                            <img src="<?= BASE_PATH ?>/client/assets/images/Ear cleaning.jpg" alt="salon Profile Picture">
+                            <h2>Example Salon</h2>
+                            <span class="address">No.103\1A, Hena Road, Mount-Lavinia</span>
+                            <span><b>Contact:</b> 0767130191</span>
+                            <span><b>Rating:</b> 4.0</span>
+                        </div>
+                    <?php endfor; ?>
                 </div>
             </section>
         </div>
@@ -87,23 +130,6 @@
         <!-- footer at page's bottom: -->
         <?php include INCLUDE_BASE.'/client/components/petOwner/userFooter.php'; ?>
 
-        <script>
-            const cardsSection = document.querySelector('.cards')
-            const expandIcon = document.getElementById('availableSalons').querySelector('i')
-
-            const expandCardSectionBtn = document.getElementById('expandCardSectionBtn')
-            expandCardSectionBtn.addEventListener('click', () => {
-                cardsSection.classList.toggle('cardsScrollX')
-                cardsSection.classList.toggle('cardsWrap')
-
-                expandIcon.classList.toggle('bxs-down-arrow-circle')
-                expandIcon.classList.toggle('bxs-up-arrow-circle')
-            })
-            
-            // cardsSection.addEventListener('wheel', (e) => {
-            //     e.preventDefault();
-            //     cardsSection.scrollLeft += e.deltaY;
-            // })
-        </script>
+        <script src="appointmentPages.js"></script>
     </body>
 </html>

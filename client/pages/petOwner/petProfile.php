@@ -6,9 +6,9 @@
 
     include '../../../config.php';
 
-    if(isset($_POST['petID'])) {
-        $_SESSION['petID'] = $_POST['petID'];
-    }
+    if(isset($_POST['petID'])) $_SESSION['petID'] = $_POST['petID'];
+    if(!isset($_SESSION['petID'])) header("Location: ".BASE_PATH."/client/pages/petOwner/dashboard.php");
+
     $petID = $_SESSION['petID'];
 
     $stmt = $conn->prepare("SELECT * FROM pet WHERE petID = ? AND petOwnerID = ?");
@@ -18,9 +18,6 @@
     $stmt->close();
 
     if ($result->num_rows <= 0) {
-        // $error_message = urlencode($conn->error); // Encode the error message
-        // header("Location: ./errorPage.php?msg=$error_message");
-        // exit();
         echo $conn->error;
     }
     $data = $result->fetch_assoc();
@@ -43,76 +40,68 @@
 
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/profilePage.css" rel="stylesheet">
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/profilePages.css" rel="stylesheet">
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/formStyles.css" rel="stylesheet">
 
-        <!-- <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/dashboard.css" rel="stylesheet"> -->
     </head>
     <body>
         <!-- navbar on top: -->
         <?php include INCLUDE_BASE.'/client/components/petOwner/userNavbar.php'; ?>
 
         <div class="dashContent">
+
             <section class="dashArea">
                 <h2>Pet Profile</h2>
 
                 <div class="profilePicContainer">
                     <img src="<?= BASE_PATH.'/client/assets/images/profilePics/pet/'.$data['profilePicture'] ?>"
                         alt="Pet Profile Picture">
-                    <form id="profilePicEdit" method="post" enctype="multipart/form-data"
-                        action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
-                        <input type="hidden" name="formName" value="profilePicEdit">
+                    <form id="editPetProfilePic" method="post" enctype="multipart/form-data" class="profilePicEditForm"
+                        action="<?= BASE_PATH.'/server/controllers/petOwner/petProfile/editPetProfilePic.php' ?>">
 
                         <label for="profilePicture">Change Profile Picture:</label>    
                         <input type="file" id="profilePicture" accept="image/*" name="profilePicture" required>
 
                         <button type="submit">Save</button>
                     </form>
+
                 </div>
 
-                <form id="userEditForm" method="post"
-                    action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                <form id="editPetDetails" method="post" class="profileDetailsEditForm"
+                    action="<?= BASE_PATH.'/server/controllers/petOwner/petProfile/editPetDetails.php' ?>">
 
-                    <input type="hidden" name="formName" value="profileDetailsEdit">
-
-                    <!-- <div class="userData"> -->
-                        <label for="name">Name: </label>
-                        <span class="display-field"><?= $data['name']; ?></span>
-                        <input type="text" id="name" class="input-field" name="name" value="<?= $data['name']; ?>" required>
-                    <!-- </div> -->
+                    <label for="name">Name: </label>
+                    <span class="display-field"><?= $data['name']; ?></span>
+                    <input type="text" id="name" class="input-field" name="name" value="<?= $data['name']; ?>" required>
 
                     <button type="button" onclick="toggleEdit()">Edit</button>
-
-                        <label for="dob">Date of Birth: </label>
-                        <span class="display-field"><?= $data['DOB']; ?></span>
-                        <input type="text" id="dob" class="input-field" name="dob" value="<?= $data['DOB']; ?>" max="<?= (new DateTime("now"))->format('Y-m-d') ?>" required>
-                   
-                        <label for="name">Name: </label>
-                        <span class="display-field"><?= $data['name']; ?></span>
-                        <input type="text" id="name" class="input-field" name="name" value="<?= $data['name']; ?>" required>
-                   
                     
-                        <label>Available for breeding: </label>
-                        <span class="display-field"><?= $data['breedAvailable'] ? 'Yes': 'No'; ?></span>
-                        <span>
-                            <label for="breedAvailYes" class="input-field">Yes</label>
-                                <input type="radio" id="breedAvailYes" class="input-field" name="breedAvailable" value="1"
-                                    <?= $data['breedAvailable'] ? 'checked': ''; ?> required onchange="toggleBreedDescription()">
-                            <label for="breedAvailNo" class="input-field">No</label>
-                                <input type="radio" id="breedAvailNo" class="input-field" name="breedAvailable" value="0"
-                                    <?= !$data['breedAvailable'] ? 'checked': ''; ?> required onchange="toggleBreedDescription()">
-                        </span>
-
-                        <label for="breedDescription">Description for breeding your pet:</label>
-                        <span class="display-field"><?= $data['breedDescription']; ?></span>
-                            <textarea name="breedDescription" id="breedDescription" class="input-field" cols="30" rows="5" style="resize: none; display:none;"
-                                <?= !$data['breedAvailable'] ? 'disabled': ''; ?> required>
-                                <?= $data['breedDescription']; ?>
-                            </textarea>
+                    <label for="dob">Date of Birth: </label>
+                    <span class="display-field"><?= $data['DOB']; ?></span>
+                    <input type="text" id="dob" class="input-field" name="dob" value="<?= $data['DOB']; ?>" max="<?= (new DateTime("now"))->format('Y-m-d') ?>" required>
+                   
+                    <label>Available for breeding: </label>
+                    <span class="display-field"><?= $data['breedAvailable'] ? 'Yes': 'No'; ?></span>
+                    <span>
+                        <label for="breedAvailYes" class="input-field">Yes</label>
+                            <input type="radio" id="breedAvailYes" class="input-field" name="breedAvailable" value="1"
+                                <?= $data['breedAvailable'] ? 'checked': ''; ?> required onchange="toggleBreedDescription()">
+                        <label for="breedAvailNo" class="input-field">No</label>
+                            <input type="radio" id="breedAvailNo" class="input-field" name="breedAvailable" value="0"
+                                <?= !$data['breedAvailable'] ? 'checked': ''; ?> required onchange="toggleBreedDescription()">
+                    </span>
+                   
+                    <label for="breedDescription">Description for breeding your pet:</label>
+                    <span class="display-field"><?= $data['breedDescription'] ?? "Not-applicable"; ?></span>
+                        <textarea name="breedDescription" id="breedDescription" class="input-field" cols="30" rows="5" style="resize: none; display:none;"
+                            <?= !$data['breedAvailable'] ? 'disabled': ''; ?> required>
+                            <?= $data['breedDescription']; ?>
+                        </textarea>
                     
                     <button type="submit" style="display: none;" id="save-button">Save</button>
                 </form>
+
                 <div class="unchangingData">
                     <span class="field">Species:</span>
                     <span class="data"><?= $data['species']; ?></span>
@@ -121,12 +110,8 @@
                     <span class="data"><?= $data['breed']; ?></span>
                 </div>
 
-                <form id="deletePet" method="post"
-                    action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                <button id="deletePet" class="loneBtn">Delete Pet Profile</button>
 
-                    <input type="hidden" name="formName" value="deletePet">
-                    <button type="submit">Delete Pet Profile</button>
-                </form>
             </section>
 
             <section class="dashArea">
@@ -139,15 +124,56 @@
         <?php include INCLUDE_BASE.'/client/components/petOwner/userFooter.php'; ?>
 
         <script>
-            const deletePetForm = document.getElementById('deletePet')
-            deletePetForm.addEventListener('submit', (e) => {
-                e.preventDefault()
+            function submitForm (event) {
+                event.preventDefault();
+                const formData = new FormData(event.target);
+    
+                fetch(event.target.action, {
+                    method: 'POST',
+                    body: formData,
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        alert(data.message);
+                        window.location.href = "<?= BASE_PATH.'/client/pages/petOwner/petProfile.php' ?>";
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('An error occurred:'+ error);
+                    alert('An error occurred.\nPlease try again later.'+ error);
+                })
+            }
+            document.getElementById('editPetProfilePic').addEventListener('submit', submitForm);
+            document.getElementById('editPetDetails').addEventListener('submit', submitForm);
+
+            document.getElementById('deletePet').addEventListener('click', (event) => {
+                event.preventDefault()
                 const deleteConfirm = confirm("Do you really want to remove this pet?\nYou cannot access its details hereafter!")
-                if(deleteConfirm) deletePetForm.submit()
+                
+                if (deleteConfirm) {
+                    fetch("<?= BASE_PATH.'/server/controllers/petOwner/petProfile/deletePet.php' ?>", {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            alert(data.message);
+                            window.location.href = '<?= BASE_PATH.'/client/pages/petOwner/home.php' ?>';
+                        } else {
+                            alert(data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('An error occurred:'+ error);
+                        alert('An error occurred.\nPlease try again later.'+ error);
+                    })
+                }
             })
 
-            const breedingAvail = <?= $data['breedAvailable'] ?>;
-            
             const breedText = document.getElementById('breedDescription')
             function toggleBreedDescription() {
                 if (document.getElementById('breedAvailYes').checked) {
@@ -162,7 +188,6 @@
                 const inputFields = document.querySelectorAll('.input-field');
                 const editButton = document.querySelector('button[onclick="toggleEdit()"]')
                 const saveButton = document.getElementById('save-button');
-                // const breedDescriptionLabel = document.getElementById('breedDescriptionLabel')
 
                 if (editButton.textContent === "Edit") {
                     // Switch to edit mode
@@ -170,7 +195,6 @@
                     inputFields.forEach(field => field.style.display = 'inline-block');
                     editButton.textContent = "Cancel";
                     saveButton.style.display = "inline-block";
-                    // breedDescriptionLabel.style.display = "inline-block";
                 }
                 else {
                     // Switch back to display mode without saving
@@ -178,62 +202,8 @@
                     displayFields.forEach(field => field.style.display = 'inline');
                     editButton.textContent = "Edit";
                     saveButton.style.display = "none";
-                    // breedDescriptionLabel.style.display = "none";
                 }
             }
         </script>
-
     </body>
 </html>
-<?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (isset($_POST['formName']) && $_POST['formName'] == 'profilePicEdit') {
-            $profilePicture = $_FILES['profilePicture'];
-
-            $targetDir = INCLUDE_BASE.'/client/assets/images/profilePics/pet/';
-            $fileName = basename($profilePicture['name']);
-            $targetFilePath = "$targetDir$fileName";
-
-            $uploadDone = move_uploaded_file($profilePicture['tmp_name'], $targetFilePath);
-            if ($uploadDone) {
-                $stmt = $conn->prepare("UPDATE pet SET profilePicture = ? WHERE petID = ?");
-                $stmt->bind_param("ss", $fileName, $petID);
-
-                $execDone = $stmt->execute();
-                $stmt->close();
-                if ($execDone) { echo
-                    "<script>
-                        alert('Image updated successfully!');
-                        window.location.assign(window.location.href); // refresh current page
-                    </script>";
-                } else {
-                    echo "<script> 
-                        alert('Database error: " . addslashes($conn->error) . "'); 
-                    </script>";
-                }
-            } else {
-                echo "<script> alert(Error uploading file: $conn->error) </script>";
-            }
-        }
-        if (isset($_POST['formName']) && $_POST['formName'] == 'profileDetailsEdit') {
-            
-        }
-        if (isset($_POST['formName']) && $_POST['formName'] == 'deletePet') {
-            $stmt = $conn->prepare("DELETE FROM pet where petID = ?");
-            $stmt->bind_param("i", $petID);
-
-            $execDone = $stmt->execute();
-            $stmt->close();
-            if ($execDone) { echo "
-                <script>
-                    console.log('Pet Profile deleted');
-                    alert('Pet profile deleted!');
-                    window.location.href = './dashboard.php';
-                </script>";
-                exit();
-            }
-            else echo "<script> alert('Error deleting pet profile!') </script>";
-        }
-    }
-
-?>
