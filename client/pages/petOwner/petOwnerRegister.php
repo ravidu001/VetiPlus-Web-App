@@ -1,7 +1,7 @@
 <?php
     session_start();
-    if (!isset($_SESSION['user_id']))
-        $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
+    // if (!isset($_SESSION['user_id']))
+    //     $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
     $userID = $_SESSION['user_id'];
 
     include '../../../config.php';
@@ -24,84 +24,8 @@
 
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/registerPage.css" rel="stylesheet">
 
-        <style>
-            .formContainer {
-                border-radius: 20px;
-                border: 2px solid var(--primary-border-color);
-                padding: 2em;
-
-                width: fit-content;
-                margin: 1em auto 1em auto;
-
-                display: flex;
-                justify-content: center;
-                gap: 2rem;
-            }
-
-            .formContainer .logoPart {
-                background-color: var(--primary-border-color);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                border-radius: 10px;
-                padding: 1em;
-            }
-            .logoPart img {
-                width: 10em;
-            }
-            form {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-            }
-            form fieldset {
-                display: grid;
-                grid-template-columns: 1fr 2fr;
-                gap: 5px;
-
-                border: 1px solid var(--shadow-color);
-                padding: 15px;
-                margin-bottom: 15px;
-
-                font-size: 1.3em;
-            }
-            form fieldset legend {
-                font-weight: bold;
-            }
-            form input {
-                padding: 5px;
-                font-size: 1rem;
-            }
-            form input:valid {
-                border: 2px solid green;
-            }
-            form input[type=date]:invalid {
-                color: grey;
-            }
-            .formButtons {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 10vw;
-            }
-            .formButtons button {
-                padding: 5px;
-
-                font-size: 1.2em;
-
-                border-radius: 10px;
-                background-color: var(--button-bg-color);
-                color: var(--button-text-color);
-
-                width: 10vw;
-            }
-            .formButtons button:hover {
-                cursor: pointer;
-                background-color: var(--button-hover-bg-color);
-            }
-        </style>
     </head>
     <body>
 
