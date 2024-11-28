@@ -27,7 +27,7 @@
     transition: 0.5s;
 }
 .feedback-inside-top:hover{
-    transform: scale(1.05);
+    transform:scale(1.05);
 }
 
 .feedback-inside-top img {
