@@ -95,8 +95,64 @@
                                         </div>
                                     </div>
 
-                                    <div class="time-slot booked">
+                                    <div class="time-slot available">
                                         <div class="time-slot-time">12:00 PM</div>
+                                        <div class="time-slot-status">
+                                            <span class="status-icon available"></span>
+                                            Available
+                                        </div>
+                                    </div>
+
+                                    <div class="time-slot available">
+                                        <div class="time-slot-time">12:30 PM</div>
+                                        <div class="time-slot-status">
+                                            <span class="status-icon available"></span>
+                                            Available
+                                        </div>
+                                    </div>
+
+                                    <div class="time-slot available">
+                                        <div class="time-slot-time">1:00 AM</div>
+                                        <div class="time-slot-status">
+                                            <span class="status-icon available"></span>
+                                            Available
+                                        </div>
+                                    </div>
+
+                                    <div class="time-slot available">
+                                        <div class="time-slot-time">1:30 AM</div>
+                                        <div class="time-slot-status">
+                                            <span class="status-icon available"></span>
+                                            Available
+                                        </div>
+                                    </div>
+
+                                    <div class="time-slot available">
+                                        <div class="time-slot-time">2:00 AM</div>
+                                        <div class="time-slot-status">
+                                            <span class="status-icon available"></span>
+                                            Available
+                                        </div>
+                                    </div>
+
+                                    <div class="time-slot available">
+                                        <div class="time-slot-time">2:30 AM</div>
+                                        <div class="time-slot-status">
+                                            <span class="status-icon available"></span>
+                                            Available
+                                        </div>
+                                    </div>
+
+                                    <div class="time-slot available">
+                                        <div class="time-slot-time">3:00 AM</div>
+                                        <div class="time-slot-status">
+                                            <span class="status-icon available"></span>
+                                            Available
+                                        </div>
+                                    </div>
+
+                                    <div class="time-slot booked">
+                                        <div class="time-slot-time">3:30 PM</div>
                                         <div class="time-slot-status">
                                             <span class="status-icon booked"></span>
                                             Booked
@@ -104,7 +160,7 @@
                                     </div>
 
                                     <div class="time-slot blocked">
-                                        <div class="time-slot-time">12:30 PM</div>
+                                        <div class="time-slot-time">4:00 PM</div>
                                         <div class="time-slot-status">
                                             <span class="status-icon blocked"></span>
                                             Blocked

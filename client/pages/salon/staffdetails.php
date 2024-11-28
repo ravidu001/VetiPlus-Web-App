@@ -44,21 +44,74 @@
                     </thead>
 
                     <tbody>
-                        <td>J.W.D.Kapila</td>
-                        <td>
-                            <img src="../../assets/images/salon/boy.jpg" class="staff-picture">
-                        </td>
-                        <td>07785663324</td>
-                        <td>200178996325</td>
-                        <td>Embilipitiya ,Udagampola</td>
-                        <td>Nail polishing</td>
-                        <td>
-                            <button class="edit">Delete</button>
-                            <button class="edit">
-                                <a href="./EditStaff.php">
-                                Edit
-                            </button>
-                        </td>
+                        <tr>
+                            <td>J.W.D.Kapila</td>
+                            <td>
+                                <img src="../../assets/images/salon/boy.jpg" class="staff-picture">
+                            </td>
+                            <td>07785663324</td>
+                            <td>200178996325</td>
+                            <td>Embilipitiya ,Udagampola</td>
+                            <td>Nail polishing</td>
+                            <td>
+                                <button class="edit">Delete</button>
+                                <button class="edit">
+                                    <a href="./EditStaff.php">
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>J.W.D.Kapila</td>
+                            <td>
+                                <img src="../../assets/images/salon/boy.jpg" class="staff-picture">
+                            </td>
+                            <td>07785663324</td>
+                            <td>200178996325</td>
+                            <td>Embilipitiya ,Udagampola</td>
+                            <td>Nail polishing</td>
+                            <td>
+                                <button class="edit">Delete</button>
+                                <button class="edit">
+                                    <a href="./EditStaff.php">
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>J.W.D.Kapila</td>
+                            <td>
+                                <img src="../../assets/images/salon/boy.jpg" class="staff-picture">
+                            </td>
+                            <td>07785663324</td>
+                            <td>200178996325</td>
+                            <td>Embilipitiya ,Udagampola</td>
+                            <td>Nail polishing</td>
+                            <td>
+                                <button class="edit">Delete</button>
+                                <button class="edit">
+                                    <a href="./EditStaff.php">
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>J.W.D.Kapila</td>
+                            <td>
+                                <img src="../../assets/images/salon/boy.jpg" class="staff-picture">
+                            </td>
+                            <td>07785663324</td>
+                            <td>200178996325</td>
+                            <td>Embilipitiya ,Udagampola</td>
+                            <td>Nail polishing</td>
+                            <td>
+                                <button class="edit">Delete</button>
+                                <button class="edit">
+                                    <a href="./EditStaff.php">
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
                     </tbody>
 
                 </table>
