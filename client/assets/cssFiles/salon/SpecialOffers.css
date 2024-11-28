@@ -6,6 +6,17 @@ body {
     background-color: #f4f4f4;
 }
 
+body:has(#sidebar.close) .pagecontent {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+
+.pagecontent{
+    margin-left: 250px; /*width of sidebar */ 
+    transition: margin-left 0.3s ease-in-out;
+    width: calc(100%- 250px);
+}
+
 .SidebarandSpecialOffers {
     display: flex;
 }
@@ -18,6 +29,11 @@ body {
     border-radius: 8px;
     border: 2px solid #6A0DAD;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.SpecialOffers h2{
+    font-family: "Inter", sans-serif;
+    text-align: center;
 }
 
 .SpecialOffers .content-1 {
@@ -38,7 +54,7 @@ body {
     width: 70px;
     font-size: 16px;
     color: #ffffff;
-    background-color: #3d0466;
+    background-color: #b76feb;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -46,8 +62,7 @@ body {
 }
 
 .SpecialOffers .add:hover {
-    background-color: #b76feb;
-    color: black;
+    background-color: #6A0DAD;
 }
 
 /* Table Styles */
@@ -65,11 +80,12 @@ body {
 }
 
 .SpecialOffers table th {
-    font-size: 18px;
     background-color: #f8f3fb;
     color: #333;
-    align-items: center;
-    justify-content: center;
+    padding: 1rem;
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 2px solid #6A0DAD;
 }
 
 .SpecialOffers table tr:nth-child(even) {
@@ -121,21 +137,19 @@ body {
 
 .SpecialOffers button.delete {
     margin-bottom: 5px;
-    background-color: #3d0466;
+    background-color: #ab5fe1;
 }
 
 .SpecialOffers button.delete:hover {
-    background-color: #ab5fe1;
-    color: black;
+    background-color:#6A0DAD ;
 }
 
 .SpecialOffers button.edit {
-    background-color: #3d0466;
+    background-color: #ab5fe1;
 }
 
 .SpecialOffers button.edit:hover {
-    background-color: #ab5fe1;
-    color: black;
+    background-color: #6A0DAD;
 }
 
 /* Service Description styling */

@@ -13,6 +13,22 @@
     padding-bottom: 1em;
     width: 100%;
 }
+
+body:has(#sidebar.close) .footer {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+
+
+.footer{
+    margin-left: 200px; /*width of sidebar */ 
+    transition: margin-left 0.3s ease-in-out;
+    width: calc(100%- 200px);
+}
+
+
+
+
 .footer .footerLinks {
     color: inherit;
     display: flex;

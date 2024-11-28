@@ -13,7 +13,7 @@
         // Get the current file name (without query parameters)
         $current_page = basename($_SERVER['PHP_SELF']);
         // Check if any of the appointment pages are active
-        $appointment_active = in_array($current_page, ['Newappointment.php', 'Cancelappointment.php', 'Completeappointment.php']);
+        // $appointment_active = in_array($current_page, ['Newappointment.php', 'Cancelappointment.php', 'Completeappointment.php']);
     ?>
 
 </head>
@@ -23,11 +23,11 @@
         <nav id="sidebar" class="close">
             <ul>
                 <div class="logocontent">
-                    <img class="logo" src="../../assets/images/White Playful Pet Shop Logo.png" alt="logo">
+                    <img class="logo" src="../../assets/images/vetiplus-logo.png" alt="logo">
                     <span class="logoname">VetiPlus<br></span>
                 </div>
                 <button onclick="toggleSidebar()" id="toggle-btn">
-                        <i class='bx bxs-chevron-left-circle' ></i>
+                    <i class="fa-solid fa-circle-chevron-left icon"></i>
                 </button>  
                 </li>
                 <li>
@@ -37,7 +37,7 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <button onclick="toggleSubMenu(this)" class="dropdown-btn">
                         <i class='bx bx-calendar-event icon'></i>
                         <span>Appointment</span>
@@ -54,9 +54,38 @@
                             <a href="../../pages/salon/Completeappointment.php">Complete</a>
                         </li>
                     </ul>
+                </li> -->
+
+
+
+                <!-- <li> -->
+
+
+                <li class="nav-link <?= $current_page == 'Newappointment.php' ? 'active' : '' ?>"> 
+                    <a href="../../pages/salon/Newappointment.php">
+                        <i class="fa-regular fa-calendar-plus icon"></i></i>
+                        <span>Upcoming Appointments</span>
+                    </a>
                 </li>
 
-                <li>
+
+                <li class="nav-link <?= $current_page == 'Cancelappointment.php' ? 'active' : '' ?>"> 
+                    <a href="../../pages/salon/Cancelappointment.php">
+                        <i class="fa-regular fa-calendar-xmark icon"></i>
+                        <span>Cancel Appointments</span>
+                    </a>
+                </li>
+
+                <li class="nav-link <?= $current_page == 'Completeappointment.php' ? 'active' : '' ?>"> 
+                    <a href="../../pages/salon/Completeappointment.php">
+                        <i class="fa-regular fa-calendar-check icon"></i>
+                        <span>Complete Appointments</span>
+                    </a>
+                </li>
+
+
+
+
                 <li class="nav-link <?= $current_page == 'TimeSlot.php' ? 'active' : '' ?>"> 
                     <a href="../../pages/salon/TimeSlot.php">
                         <i class='bx bxs-pie-chart-alt icon'></i>
@@ -102,8 +131,8 @@
                 </li>
 
                 <li>
-                <li class="nav-link <?= $current_page == 'FirstTimeRenderPage.php' ? 'active' : '' ?>"> 
-                    <a href="../../pages/salon/FirstTimeRenderPage.php">
+                <li class="nav-link <?= $current_page == 'ContactUs.php' ? 'active' : '' ?>"> 
+                    <a href="../../pages/salon/ContactUs.php">
                         <i class='bx bxs-phone-call icon' ></i>
                         <span>Contact Us</span>
                     </a>
@@ -122,7 +151,7 @@
             <div class="bottomcontent">
                 <ul>
                     <li>
-                        <a href="profile.html">
+                        <a href="../../pages/login-singup/logout.php">
                             <i class='bx bx-log-out icon'></i>
                             <span>Log Out</span>
                         </a>

@@ -1,47 +1,52 @@
- /* Main layout */
+/* Main layout */
 body {
     margin: 0;
     padding: 0;
     background-color: #ffecff;
     font-family: Arial, sans-serif;
 }
+/*add the side bar close open*/
+body:has(#sidebar.close) .pagecontent {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+.pagecontent{
+    margin-left: 250px; /*width of sidebar */
+    transition: margin-left 0.3s ease-in-out;
+    width: calc(100%- 250px);
+    /* min-width: 60vw; */
+}
 
 .TimeSLotAndSideBar {
     display: flex;
-    min-height: 100vh;
+    gap: 1rem;
 }
-
 .SelectDateAndSlot {
-    flex: 1;
+    width: 70%;
     padding: 20px 40px;
 }
-
 h1 {
     color: #6a0dad;
     text-align: center;
     margin-bottom: 30px;
     font-size: 2rem;
 }
-
 /* Date selection and legend area */
 .DateAndScedule {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-
 .SelectDate {
-    width: 30%;
-    margin-left: 30%;
+    width: 100%;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 /* Legend styling */
 .legend {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     gap: 30px;
     margin-top: 20px;
@@ -49,80 +54,75 @@ h1 {
     border-top: 1px solid #c8a2c8;
 }
 
+.legendcontent {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+}
+
 .legend-item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
+    margin: 10px;
     color: #707070;
 }
-
 .color-box {
     width: 20px;
     height: 20px;
     border-radius: 4px;
 }
-
 .color-box.available {
     background-color: #c8a2c8;
 }
-
 .color-box.booked {
     background-color: #6a0dad;
 }
-
 .color-box.blocked {
     background-color: slategray;
 }
-
 /* Time slots container */
 .TimeSlotShedule .container {
     background-color: white;
     border-radius: 10px;
-    padding: 25px;
+    padding: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 /* Time slots grid layout */
 .time-slots {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 5px;
+    padding: 5px;
 }
-
 /* Individual time slot styling */
 .time-slot {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 5px;
     border-radius: 12px;
     background-color: white;
     border: 2px solid #c8a2c8;
     transition: all 0.3s ease;
     position: relative;
 }
-
 .time-slot:hover:not(.booked):not(.blocked) {
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(106, 13, 173, 0.15);
     cursor: pointer;
 }
-
 .time-slot.available {
     border-color: #c8a2c8;
     background-color: rgba(200, 162, 200, 0.1);
 }
-
 .time-slot.booked {
     border-color: #6a0dad;
     background-color: rgba(106, 13, 173, 0.1);
 }
-
 .time-slot.blocked {
     border-color: slategray;
     background-color: rgba(112, 128, 144, 0.1);
 }
-
 .time-slot-time {
     font-size: 1.2rem;
     font-weight: bold;
@@ -130,38 +130,31 @@ h1 {
     margin-bottom: 10px;
     text-align: center;
 }
-
 .time-slot-status {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 5px;
     color: #707070;
 }
-
 .status-icon {
     width: 12px;
     height: 12px;
     border-radius: 50%;
 }
-
 .status-icon.available {
     background-color: #c8a2c8;
 }
-
 .status-icon.booked {
     background-color: #6a0dad;
 }
-
 .status-icon.blocked {
     background-color: slategray;
 }
-
 /* Locked slot styling */
 .time-slot.locked {
     opacity: 0.8;
 }
-
 .locked-message {
     position: absolute;
     bottom: -10px;
@@ -171,42 +164,39 @@ h1 {
     color: white;
     padding: 4px 12px;
     border-radius: 15px;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     white-space: nowrap;
     z-index: 1;
 }
-
 /* Responsive design */
 @media (max-width: 1200px) {
     .time-slots {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 }
-
 @media (max-width: 768px) {
     .TimeSLotAndSideBar {
         flex-direction: column;
     }
-    
+   
     .SelectDateAndSlot {
         padding: 15px;
     }
-    
+   
     .legend {
         flex-wrap: wrap;
         gap: 15px;
     }
-    
+   
     .time-slots {
         grid-template-columns: 1fr;
     }
-    
+   
     .time-slot {
         padding: 15px;
     }
 }
-
 /* Optional: Add smooth scrolling for the whole page */
 html {
     scroll-behavior: smooth;
-}
+}  

@@ -1,10 +1,28 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family:"Inter", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;   
 }
+
+body:has(#sidebar.close) .pagecontent {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+
+.header-name {
+    font-family:"Inter", sans-serif;
+    text-align: center;
+    
+}
+
+.pagecontent{
+    margin-left: 250px; /*width of sidebar */ 
+    transition: margin-left 0.3s ease-in-out;
+    width: calc(100%- 250px);
+}
+
 
 .StaffandSidebar {
     display: flex;
@@ -40,22 +58,25 @@ body {
 }
 
 button.add {
-    background-color: #3d0466;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
+    display: table-column;
+    margin: 10px 0;
+    margin-right: auto;
+    padding: 8px 12px;
+    width: 70px;
     font-size: 16px;
+    background-color: #ab5fe1;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button.add:hover {
-    background-color: #b76feb;
+    background-color: #6A0DAD;
+    color: #fff;
 }
 
 button.edit {
-    background-color: #3d0466;
+    background-color: #ab5fe1;
     color: #ffffff;
     padding: 8px 16px;
     border: none;
@@ -66,7 +87,7 @@ button.edit {
 }
 
 button.edit:hover {
-    background-color:#b76feb;
+    background-color: #6A0DAD;
     color: white;
 }
 
@@ -82,8 +103,10 @@ button.edit:hover {
 .table th{
     background-color: #f8f3fb;
     color: #333;
-    border-bottom: 1px solid #ddd;
-    padding: 12px;
+    padding: 1rem;
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 2px solid #6A0DAD;
 }
 
 .table td {
