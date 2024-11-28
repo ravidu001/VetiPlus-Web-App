@@ -109,7 +109,7 @@
         <div class="left-panel">
             
                 <div class="home-icon">
-                    <a href="../vetDoctor/homeNew.php">  <!-- guest user file location-->
+                    <a href="../../../../index.php">  <!-- guest user file location-->
                         <i class='bx bx-home'></i>
                     </a>
                 </div>
