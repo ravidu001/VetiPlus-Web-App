@@ -1,5 +1,9 @@
 <?php
     session_start(); 
+    if (!isset($_SESSION['user_id']))
+        $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
+    $userID = $_SESSION['user_id'];
+
     include '../../../config.php';
 ?>
 
@@ -31,7 +35,7 @@
 
             <section id="upcomingAppointments" class="dashArea">
                 <h2>Upcoming Appointments</h2>
-                <button class="expandCardSectionBtn" id="expandAppointmentsBtn" title="Expand to view all"><i class="bx bxs-down-arrow-circle bx-lg"></i></button>
+                <button class="expandCardSectionBtn" id="expandUpcomingAppointmentsBtn" title="Expand to view all"><i class="bx bxs-down-arrow-circle bx-lg"></i></button>
                 <div class="appointments-container scrollAppointments">
                     <?php for ($i=0; $i<2; $i++) :?>
                         <div class="appointmentCard">
@@ -64,21 +68,39 @@
                 </div>
             </section>
 
-            <section id="appointmentHistory" class="dashArea">
-                <details>
-                <summary>View Appointment History</summary>
-                    <?php for ($i=0; $i<3; $i++) :?>
-                    <div class="appointmentCard historical">
-                        <img src="<?= BASE_PATH.'/client/assets/images/petOwner/salonIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
-                        <div class="appointmentDetails">
-                            <h3>Bingo</h3>
-                            <span>Full Bath - Mr.Perera</span>
-                            <span><b>Example Salon</b> No.103\1A, Hena Road, Mount-Lavinia</span>
-                            <span>05.12.2024 | 6:00PM</span>
+            <section id="historicalAppointments" class="dashArea">
+                <h2>Appointments History</h2>
+                <button class="expandCardSectionBtn" id="expandHstoricalAppointmentsBtn" title="Expand to view all"><i class="bx bxs-down-arrow-circle bx-lg"></i></button>
+                <div class="appointments-container scrollAppointments">
+                    <?php for ($i=0; $i<2; $i++) :?>
+                        <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/salonIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <h3>Bingo</h3>
+                                <span>Full Bath - Mr.Perera</span>
+                                <span><b>Example Salon</b> No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.12.2024 | 6:00PM</h4>
+                            </div>
+                            <button><i class="bx bxs-star bx-md"></i> Rate Appointment</button>
                         </div>
-                    </div>
+                        <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/salonIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <h3>Ginger</h3>
+                                <span>Nail Cutting - Miss.Rajamani</span>
+                                <span><b>Example Salon</b> No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.12.2024 | 6:00PM</h4>
+                            </div>
+                            <div class="Rating">
+                                <i class="bx bxs-star bx-sm"></i>
+                                <i class="bx bxs-star bx-sm"></i>
+                                <i class="bx bxs-star bx-sm"></i>
+                                <i class="bx bxs-star-half bx-sm"></i>
+                                <i class="bx bx-star bx-sm"></i>
+                            </div>
+                        </div>
                     <?php endfor; ?>
-                </details>
+                </div>
             </section>
 
             <section id="availableSalons" class="dashArea">

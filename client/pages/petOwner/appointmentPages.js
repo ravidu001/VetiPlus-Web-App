@@ -4,14 +4,22 @@ function toggleButtonSide (someIcon) {
     someIcon.classList.toggle('bxs-up-arrow-circle')
 }
 
-const appointmentsSection = document.querySelector('.appointments-container')
-const appointmentsExpandIcon = document.getElementById('upcomingAppointments').querySelector('i')
+const upcomingAppointmentsSection = document.getElementById('upcomingAppointments').querySelector('.appointments-container')
+const expandUpcomingAppointmentsBtn = document.getElementById('expandUpcomingAppointmentsBtn')
+const upcomingAppointmentsExpandIcon = expandUpcomingAppointmentsBtn.querySelector('i')
 
-const expandAppointmentsBtn = document.getElementById('expandAppointmentsBtn')
-expandAppointmentsBtn.addEventListener('click', () => {
-    appointmentsSection.classList.toggle('scrollAppointments')
+expandUpcomingAppointmentsBtn.addEventListener('click', () => {
+    upcomingAppointmentsSection.classList.toggle('scrollAppointments')
+    toggleButtonSide(upcomingAppointmentsExpandIcon)
+})
 
-    toggleButtonSide(appointmentsExpandIcon)
+
+const historicalAppointmentsSection = document.getElementById('historicalAppointments').querySelector('.appointments-container')
+const expandHstoricalAppointmentsBtn = document.getElementById('expandHstoricalAppointmentsBtn')
+const historicalAppointmentsExpandIcon = expandHstoricalAppointmentsBtn.querySelector('i')
+expandHstoricalAppointmentsBtn.addEventListener('click', () => {
+    historicalAppointmentsSection.classList.toggle('scrollAppointments')
+    toggleButtonSide(historicalAppointmentsExpandIcon)
 })
 
 const providerCardsSection = document.querySelector('.providerCard-container')

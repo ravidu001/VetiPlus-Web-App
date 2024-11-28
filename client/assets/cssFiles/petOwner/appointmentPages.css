@@ -60,7 +60,9 @@
     height: 100%;
     gap: 10px;
 }
-.appintmentOptions button {
+
+/* the button insides: serviceCard->.appintmentOptions or freely */
+.appointmentCard button {
     background-color: var(--button-bg-color);
     width: 5rem;
     border-radius: 10px;
@@ -81,27 +83,6 @@
     transform: scale(1.03);
     cursor: pointer;
 }
-
-/* for the appointment history section: */
-.dashArea#appointmentHistory {
-    margin: auto 15rem;
-}
-#appointmentHistory details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-#appointmentHistory summary {
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-.appointmentCard.historical {
-    font-size: 0.7rem;
-    justify-content: center;
-}
-
 
 /* for the service providers' section: */
 .providerCard-container {
