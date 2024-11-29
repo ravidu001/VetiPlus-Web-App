@@ -303,3 +303,7 @@ form .toggle-password {
         color: var(--background-white);
         box-shadow: var(--box-shadow);
 }
+
+.necessaryBtn {
+        color: red;
+}
