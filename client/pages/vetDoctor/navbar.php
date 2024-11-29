@@ -134,8 +134,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <li style="display:block"></li>
                 </div>
 
-                <li class="nav-link">
-                    <a href="#">
+                <li class="nav-link <?= $current_page == 'aboutus.php' ? 'active' : '' ?>">
+                    <a href="aboutus.php">
                         <i class='bx bx-group icon'></i>
                         <span class="text nav-text"> About Us</span>
                     </a>
