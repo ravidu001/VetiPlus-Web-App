@@ -90,7 +90,7 @@ form button:hover {
 
 
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid var(--primary-border-color);
 }
 .unchangingData .field {
     grid-column: 1;
