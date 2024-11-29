@@ -232,7 +232,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align:right;">
-                        <button type="submit" class="submitBtn" name="submit">Edit Profile</button>
+                        <button type="submit" class="submitBtn" name="submit">Save</button>
                     </td>
                 </tr>
             </table>

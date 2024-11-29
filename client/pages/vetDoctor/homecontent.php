@@ -26,7 +26,7 @@
 
 <!--add a container to display the table of feilds no., starting time, closing time, Assistance without borders-->
 <div class="frame">
-    <h2>My next Appointments</h2>
+    <h2>Next Session</h2>
     <table>
         <thead>
             <th> No.</th>
@@ -56,7 +56,7 @@
 </div>
 
 <div class="frame1">
-    <h2>My latest Review</h2>
+    <h2>Latest Review</h2>
     <table class="reviewTable">
     <thead class="reviewTableHead">
         <th>Content</th>

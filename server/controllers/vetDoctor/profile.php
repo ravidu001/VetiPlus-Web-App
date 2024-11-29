@@ -21,7 +21,7 @@
             $image = $_FILES['image']['name'];
             $image_size = $_FILES['image']['size'];
             $image_tmp_name = $_FILES['image']['tmp_name'];
-            $image_folder = '../../../client/assets/images/vetDoctor/profile/' . $image;
+            $image_folder = '../../../client/assets/images/vetDoctor/profile/' .$image;
             // Move the uploaded file to the desired folder
             if (move_uploaded_file($image_tmp_name, $image_folder)) {
                 echo "<script>alert('Profile image uploaded successfully.');</script>";
@@ -59,7 +59,7 @@
             $doctorCertificate = $_FILES['certificate']['name'];
             $doctorCertificate_size = $_FILES['certificate']['size'];
             $doctorCertificate_tmp_name = $_FILES['certificate']['tmp_name'];
-            $doctorCertificate_folder = '../../../client/assets/images/vetDoctor/certificate/' . $doctorCertificate;
+            $doctorCertificate_folder = '../../../client/assets/images/vetDoctor/certificate/' .$doctorCertificate;
         
             // Move the uploaded file to the desired folder
             if (move_uploaded_file($doctorCertificate_tmp_name, $doctorCertificate_folder)) {
