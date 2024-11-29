@@ -1,6 +1,6 @@
 <div class="frame">
     <div class="header">
-        <h2>View Appointments</h2>
+        <h2>View sessions</h2>
     </div>    
     
     <div class="calendar-container">
@@ -31,7 +31,7 @@
 
 
 
-    <h2 style="margin-top:40px;">My next Appointments</h2>
+    <h2 style="margin-top:40px;">Next Session</h2>
     <table>
         <thead>
             <th> No.</th>

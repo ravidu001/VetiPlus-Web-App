@@ -50,7 +50,7 @@
             <td>147, Galthude, Panadura</td>
             <td>10</td>
             <td>
-                <a href="./view.php">
+                <a href="./history.php">
                     <div class="viewbutton">
                         <i class='bx bx-right-arrow-circle' ></i>
                     </div>

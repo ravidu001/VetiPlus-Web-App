@@ -85,7 +85,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="name">Name</label>
+                        <label for="name">Name<span class="necessaryBtn">*</span></label>
                     </td>
                     <td>
                         <input type="text" id="name" name="name" placeholder="Enter your name">
@@ -93,7 +93,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="DOB">Date of birth</label>
+                        <label for="DOB">Date of birth<span class="necessaryBtn">*</span></label>
                     </td>
                     <td>
                         <input type="date" id="DOB" name="DOB">
@@ -101,7 +101,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="NIC">NIC</label>
+                        <label for="NIC">NIC<span class="necessaryBtn">*</span></label>
                     </td>
                     <td>
                         <input type="text" id="NIC" name="NIC" placeholder="Enter your NIC number">
@@ -109,7 +109,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="contactNumber">Phone number</label>
+                        <label for="contactNumber">Phone number<span class="necessaryBtn">*</span></label>
                     </td>
                     <td>
                         <input type="text" id="contactNumber" name="contactNumber" placeholder="Enter your phone number">
@@ -117,7 +117,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="address">Address</label>
+                        <label for="address">Address<span class="necessaryBtn">*</span></label>
                     </td>
                     <td>
                         <input type="text" id="address" name="address" placeholder="Enter your permanent address">
@@ -125,7 +125,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="gender">Gender</label>   
+                        <label for="gender">Gender<span class="necessaryBtn">*</span></label>   
                     </td>
                     <td>
                         <input type="radio" id="gender1" name="gender" value="male">Male
@@ -134,7 +134,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="bio">Bio</label>
+                        <label for="bio">Bio<span class="necessaryBtn">*</span></label>
                     </td>
                     <td>
                         <textarea class="bio" name="bio" placeholder="Enter your bio..."></textarea>
@@ -160,10 +160,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="experience">Year of Experience</label>
+                        <label for="experience">Year of Experience<span class="necessaryBtn">*</span></label>
                     </td>
                     <td>
-                        <input type="number" id="experience" name="experience" placeholder="Enter your years of experience">
+                        <input type="number" id="experience" name="experience" placeholder="Enter your years of experience" min="0" max="80">
                     </td>
                 </tr>
                 
@@ -199,7 +199,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="chargePerHour">Charge per hour</label>
+                        <label for="chargePerHour">Charge per hour<span class="necessaryBtn">*</span></label>
                     </td>
                     <td>
                         <input type="number" id="chargePerHour" name="chargePerHour" placeholder="Enter your charge per hour">
@@ -207,7 +207,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align:right;">
-                        <button type="submit" class="submitBtn" name="submit">Edit Profile</button>
+                        <button type="submit" class="submitBtn" name="submit">Save</button>
                     </td>
                 </tr>
             </table>
@@ -245,7 +245,7 @@
                     </td>
                 </tr>
                 <tr id="current-password">
-                    <td><label for="newCurrentPassword">Current Password</label></td>
+                    <td><label for="newCurrentPassword">Current Password<span class="necessaryBtn">*</span></label></td>
                     <td>
                         <div class="password-field">
                             <input type="password" id="newCurrentPassword" name="newCurrentPassword"
@@ -256,7 +256,7 @@
                     </td>
                 </tr>
                 <tr id="new-password">
-                    <td><label for="newPassword">New Password</label></td>
+                    <td><label for="newPassword">New Password<span class="necessaryBtn">*</span></label></td>
                     <td>
                         <div class="password-field">
                             <input type="password" id="newPassword" name="newPassword"
@@ -272,7 +272,7 @@
                 </tr>
                 </tr>
                 <tr id="confirm-password">
-                    <td><label for="confirmPassword">Confirm Password</label></td>
+                    <td><label for="confirmPassword">Confirm Password<span class="necessaryBtn">*</span></label></td>
                     <td>
                         <div class="password-field">
                             <input type="password" id="confirmPassword" name="confirmPassword"

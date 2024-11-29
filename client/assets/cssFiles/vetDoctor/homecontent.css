@@ -145,3 +145,15 @@
     color: var(--text-black);
 }
 
+.replyTextField {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid var(--text-primary);
+    border-radius: 50px;
+}
+
+.sendBtn {
+    margin-right: 20px;
+}

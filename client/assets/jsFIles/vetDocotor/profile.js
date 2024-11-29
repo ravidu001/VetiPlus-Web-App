@@ -174,6 +174,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+function validateExperience() {
+    var experience = document.getElementById('experience').value;
+    var experienceError = document.getElementById('experienceError');
 
+    if (experience <= 0) {
+        experienceError.textContent = 'Experience must be a positive number.';
+        alter('Experience must be a positive number.');
+        
+    } else {
+        experienceError.textContent = '';
+    }
+}
+
+function validateTreatmentTime() {
+    var treatmentTime = document.getElementById('treatmentTime').value;
+    var treatmentTimeError = document.getElementById('treatmentTimeError');
+
+    if (treatmentTime <= 0) {
+        treatmentTimeError.textContent = 'Time taken to treat (in minutes) must be a positive number.';
+    } else {
+        treatmentTimeError.textContent = '';
+    }
+}
 
       
