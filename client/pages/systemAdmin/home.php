@@ -26,34 +26,52 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <div class="home-before">
             <div class="home-1">
                 <div class="home-inside">
-                    <img src="../../assets/images/image_8.jpg" alt="">
+                    <img src="../../assets/images/user.png" alt="">
                     <div>
                         <h1>Ramesh Peshala</h1>
                         <h2>System Admin</h2>
                     </div>
-
                 </div>
                 <div class="home-inside-right">
                     <img src="../../assets/images/image_9.png" alt="">
                 </div>
             </div>
+            <div class="home-search">
+                <div class="searchbar">
+                    <i class='bx bx-search-alt-2 icon'></i>
+                    <input class="search" type="text" placeholder="Search...">
+                    <i class='bx bx-bell icon'></i>
+                </div>
+            </div>
             <div class="home-after">
                 <div class="home-after-inside">
-                    <h3>Total Account</h3>
-                    <h4>2345</h4>
+                    <i class='bx bxs-user-account icon'></i>
+                    <div>
+                        <h3>Total Account</h3>
+                        <h4>2345</h4>
+                    </div>
                 </div>
-                <div class="home-after-outer">
-                    <h3>Total Appointment</h3>
-                    <h4>4561</h4>
+                <div class="home-after-inside">
+                    <i class='bx bx-calendar-plus icon'></i>
+                    <div>
+                        <h3>Total Appointment</h3>
+                        <h4>4561</h4>
+                    </div>
                 </div>
 
-                <div class="home-below-inside">
-                    <h3>Total Transactions</h3>
-                    <h4>234</h4>
+                <div class="home-after-inside">
+                    <i class='bx bxs-dollar-circle icon'></i>
+                    <div>
+                        <h3>Total Transactions</h3>
+                        <h4>234</h4>
+                    </div>
                 </div>
-                <div class="home-below-inside">
-                    <h3>Total Salon </h3>
-                    <h4>102</h4>
+                <div class="home-after-inside">
+                    <i class='bx bxs-store icon'></i>
+                    <div>
+                        <h3>Total Salon </h3>
+                        <h4>102</h4>
+                    </div>
                 </div>
             </div>
             <div class="home-down">

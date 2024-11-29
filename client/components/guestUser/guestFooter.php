@@ -3,10 +3,10 @@
         <div>
             <h3>Quick Links:</h3>
             <ul class="quickLinks">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="<?= BASE_PATH . '/index.php' ?>">Home</a></li>
+                <li><a href="<?= BASE_PATH . '/client/pages/guestUser/services.php' ?>">Our Services</a></li>
+                <li><a href="<?= BASE_PATH . '/client/pages/guestUser/aboutUs.php' ?>">About Us</a></li>
+                <li><a href="<?= BASE_PATH . '/client/pages/guestUser/contactUs.php' ?>">Contact Us</a></li>
             </ul>
         </div>
         <div>

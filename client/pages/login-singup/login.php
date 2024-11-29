@@ -64,7 +64,7 @@
                             header('Location: ../vetDoctor/homeNew.php');
                             break;
                         case 'Pet Owner':
-                            header('Location: ../petOwner/dashboard.php');
+                            header('Location: ../petOwner/home.php');
                             break;
                         case 'Salon':
                             header('Location: ../salon/home.php');
@@ -109,7 +109,10 @@
         <div class="left-panel">
             
                 <div class="home-icon">
+
                     <a href="../../../index.php">  <!-- guest user file location-->
+
+                   
                         <i class='bx bx-home'></i>
                     </a>
                 </div>

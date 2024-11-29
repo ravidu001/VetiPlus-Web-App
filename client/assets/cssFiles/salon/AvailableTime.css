@@ -1,0 +1,74 @@
+        /* body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        } */
+        .container {
+            margin: 3rem;
+            width: 150%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .hours-table th, 
+        .hours-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .hours-table th {
+            background-color: #f2f2f2;
+        }
+        .edit-btn, 
+        .save-btn, 
+        .cancel-btn {
+            padding: 8px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .edit-btn, 
+        .save-btn, 
+        .cancel-btn :hover {
+            background-color: #6A0DAD;
+            transform: scale(1.1);
+        }
+
+
+        .edit-btn {
+            background-color: #ab5fe1;
+            color: white;
+        }
+        .save-btn {
+            background-color: #ab5fe1;
+            color: white;
+        }
+        .cancel-btn {
+            background-color: #f8f3fb;
+            color: white;
+        }
+        .edit-mode input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        .action-buttons {
+            margin-top: 15px;
+            text-align: right;
+        }
+        .error {
+            color: red;
+            font-size: 0.8em;
+            margin-top: 5px;
+        }

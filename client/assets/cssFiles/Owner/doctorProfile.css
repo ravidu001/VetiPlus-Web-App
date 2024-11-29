@@ -1,0 +1,105 @@
+.doctor_profile {
+    width: 100%;
+}
+
+.doctor_profile_top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 200px;
+    color: var(--text-color);
+    background-color: var(--background-white);
+    height: 60%;
+    width: 70%;
+    border-radius: 20px;
+    border: 3px solid var(--background-primary);
+}
+
+.doctor_profile_top_left {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.doctor_profile_top_left img {
+    width: 250px;
+    height: 250px;
+}
+table {
+    width: 80%;
+    border-collapse: separate; 
+    border-spacing: 10px; 
+    margin: 20px 200px; 
+    border-radius: 10px; 
+    padding: 20px;
+    
+}
+
+table tr {
+    margin: 10px 0; 
+    transition: background-color 0.3s ease; 
+}
+
+
+td {
+    text-align: left;
+    font-size: 18px;
+    padding: 20px 15px; 
+    border-radius: 5px; 
+    width: 60%;;
+}
+
+th {
+    color: white; 
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block; 
+    margin-bottom: 5px; 
+    color: #333;
+}
+.regi-icon{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.icon{
+    font-size: 30px;
+    color: var(--background-primary);
+}
+.doc-pro-down{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 40px;
+}
+.doc-pro-down-inside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    width: 25%;
+    border: 3px solid var(--background-primary);
+    transition:0.5s;
+}
+.doc-pro-down-inside:hover{
+    transform: scale(1.1);
+}
+.doc-pro-down-inside h2{
+    font-size: 17px;
+    font-weight: 500;
+}
+.icon{
+    font-size: 30px;
+    color: var(--background-primary);
+}

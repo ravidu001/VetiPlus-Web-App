@@ -6,6 +6,17 @@
     font-family: Arial, sans-serif;
 }
 
+body:has(#sidebar.close) .pagecontent {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+
+.pagecontent{
+    margin-left: 250px; /*width of sidebar */ 
+    transition: margin-left 0.3s ease-in-out;
+    width: calc(100%- 250px);
+}
+
 /* Layout */
 .sidebarandappointmentcontent {
     display: flex;
@@ -65,20 +76,22 @@ button.ok {
     font-weight: bold;
     cursor: pointer;
     color: #ffffff;
+    transition: 0.3s ease;
 }
 
 button.cancel {
-    background-color: #6A0DAD;
+    background-color: #e0bdf9;
 }
 
 button.ok {
-    background-color: #000000;
-    margin-left: 10px;
+    background-color: #ab5fe1;
 }
 
 button.cancel:hover,
 button.ok:hover {
-    opacity: 0.9;
+    background-color: #6A0DAD;
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
 /* Calendar */
@@ -122,10 +135,6 @@ button.ok:hover {
 .userdetail th {
     background-color: #e0bdf9;
     color: #6A0DAD;
-}
-
-.userdetail tr:hover {
-    background-color: #f3e8fc;
 }
 
 .userdetail td {

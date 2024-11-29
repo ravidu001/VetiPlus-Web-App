@@ -1,5 +1,9 @@
 <?php
     session_start(); 
+    // if (!isset($_SESSION['user_id']))
+    //     $_SESSION['user_id'] = 'sp.john.manuel737@gmail.com';
+    $userID = $_SESSION['user_id'];
+
     include '../../../config.php';
 ?>
 
@@ -18,7 +22,8 @@
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/navBar.css" rel="stylesheet">
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/myFooter.css" rel="stylesheet">
 
-        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/poppinsFont.css" rel="stylesheet">
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/appointmentPages.css" rel="stylesheet">
+
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     </head>
@@ -26,12 +31,107 @@
         <!-- navbar on top: -->
         <?php include INCLUDE_BASE.'/client/components/petOwner/userNavbar.php'; ?>
 
-        <div class="content">
-            
+        <div class="dashContent">
+
+            <section id="upcomingAppointments" class="dashArea">
+                <h2>Upcoming Appointments</h2>
+                <button class="expandCardSectionBtn" id="expandUpcomingAppointmentsBtn" title="Expand to view all"><i class="bx bxs-down-arrow-circle bx-lg"></i></button>
+                <div class="appointments-container scrollAppointments">
+                    <?php for ($i=0; $i<2; $i++) :?>
+                        <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/vetIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <h3>Bingo</h3>
+                                <span>Monthly Check-up</span>
+                                <span><b>Dr. Rajapakse</b> No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.12.2024 | 6:00PM</h4>
+                            </div>
+                            <div class="appintmentOptions">
+                                <button><i class="bx bxs-edit bx-md"></i> Edit</button>
+                                <button><i class="bx bxs-calendar-edit bx-md"></i> Reschedule</button>
+                            </div>
+                        </div>
+                        <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/vetIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <h3>Ginger</h3>
+                                <span>Hair loss check-up</span>
+                                <span><b>Dr. Vinayagar</b> No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.12.2024 | 6:00PM</h4>
+                            </div>
+                            <div class="appintmentOptions">
+                                <button><i class="bx bxs-edit bx-md"></i> Edit</button>
+                                <button><i class="bx bxs-calendar-edit bx-md"></i> Reschedule</button>
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </section>
+
+            <section id="historicalAppointments" class="dashArea">
+                <h2>Appointments History</h2>
+                <button class="expandCardSectionBtn" id="expandHstoricalAppointmentsBtn" title="Expand to view all"><i class="bx bxs-down-arrow-circle bx-lg"></i></button>
+                <div class="appointments-container scrollAppointments">
+                    <?php for ($i=0; $i<2; $i++) :?>
+                        <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/vetIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <h3>Bingo</h3>
+                                <span>Monthly check-up</span>
+                                <span><b>Dr. Mohan</b></span>
+                                <span>No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.07.2024 | 6:00PM</h4>
+                            </div>
+                            <button><i class="bx bxs-star bx-md"></i> Rate Appointment</button>
+                        </div>
+                        <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/vetIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <h3>Ginger</h3>
+                                <span>Monthly check-up</span>
+                                <span><b>Dr. Mohan</b></span>
+                                <span><b>PetCare Clinic</b>, No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.11.2024 | 6:00PM</h4>
+                            </div>
+                            <div class="Rating">
+                                <i class="bx bxs-star bx-sm"></i>
+                                <i class="bx bxs-star bx-sm"></i>
+                                <i class="bx bxs-star bx-sm"></i>
+                                <i class="bx bxs-star-half bx-sm"></i>
+                                <i class="bx bx-star bx-sm"></i>
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </section>
+
+            <section id="availableSalons" class="dashArea">
+                <h2>Salons Available</h2>
+                <button class="expandCardSectionBtn" id="expandProvidersBtn" title="Expand to view all"><i class="bx bxs-down-arrow-circle bx-lg"></i></button>
+                <div class="providerCard-container cardsScrollX">
+                    <?php for ($i=0; $i<4; $i++) :?>
+                        <div class="providerCard">
+                            <img src="<?= BASE_PATH ?>/client/assets/images/vetExamplePic.jpg" alt="salon Profile Picture">
+                            <h2>Dr. Mohan</h2>
+                            <span class="address">No.103\1A, Hena Road, Mount-Lavinia</span>
+                            <span><b>Contact:</b> 0767130191</span>
+                            <span><b>Rating:</b> 4.0</span>
+                        </div>
+                        <div class="providerCard">
+                            <img src="<?= BASE_PATH ?>/client/assets/images/vetExamplePic.jpg" alt="salon Profile Picture">
+                            <h2>Dr. Peiris</h2>
+                            <span class="address">No.105\1A, Hena Road, Dehiwela</span>
+                            <span><b>Contact:</b> 0767130191</span>
+                            <span><b>Rating:</b> 4.5</span>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </section>
         </div>
 
         <!-- footer at page's bottom: -->
         <?php include INCLUDE_BASE.'/client/components/petOwner/userFooter.php'; ?>
 
+        <script src="appointmentPages.js"></script>
     </body>
 </html>

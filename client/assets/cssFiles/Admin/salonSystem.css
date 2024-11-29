@@ -5,8 +5,6 @@
 table {
     width: 80%;
     border-collapse: collapse;
-    /* background-color: white; */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px 100px;
     color: black;
 }
@@ -21,10 +19,8 @@ td {
 }
 
 th {
-    background-color: #f0f0f0;
+   
     font-weight: bold;
-
-
 }
 
 td:last-child {
@@ -109,4 +105,8 @@ button {
 
 .modal button:hover {
     background-color: #d8b4f3;
+}
+.icon{
+    font-size: 30px;
+    color: var(--background-primary);
 }

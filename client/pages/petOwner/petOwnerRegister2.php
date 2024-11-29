@@ -205,33 +205,3 @@
 
     </body>
 </html>
-<?php
-
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-
-    // $fname = htmlspecialchars($_POST['fname']);
-    // $lname = htmlspecialchars($_POST['lname']);
-
-    $lname = htmlspecialchars($_POST['name']);
-    $dob = htmlspecialchars($_POST['dob']);
-
-    $homeNo = htmlspecialchars($_POST['homeNo']);
-    $street = htmlspecialchars($_POST['street']);
-    $city = htmlspecialchars($_POST['city']);
-
-    $contact = htmlspecialchars($_POST['contact']);
-    $email = htmlspecialchars($_POST['email']);
-
-    $password = htmlspecialchars($_POST['password']);
-
-
-    $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-    if ($email == false) echo "Invalid Email";
-
-
-}
-// else {
-//     header("Location: ../../../../index.php");
-// }
-
-?>

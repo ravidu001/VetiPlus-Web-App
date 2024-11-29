@@ -32,14 +32,3 @@
     font-size: 1.2em;
     margin: 1em;
 }
-.aboutSections .text button {
-    font-size: 1.3em;
-
-    border: 1px solid black;
-    color: white;
-    background-color: var(--bgColDark);
-
-    padding: 15px;
-    margin-right: 1em;
-    border-radius: 10px;
-}

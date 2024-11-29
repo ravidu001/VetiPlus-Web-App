@@ -373,3 +373,7 @@ body.dark .switch::before {
 .nav-link.active  .text {
    color: white;
 }
+.menu-links h4{
+   font-size: 14px;
+   font-weight: 300;
+}

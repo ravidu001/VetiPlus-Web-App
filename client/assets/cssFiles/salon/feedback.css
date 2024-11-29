@@ -7,7 +7,17 @@
     color: #333;
 }
 
+body:has(#sidebar.close) .pagecontent {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
 
+
+.pagecontent{
+    margin-left: 260px; /*width of sidebar */ 
+    transition: margin-left 0.3s ease-in-out;
+    width: calc(100%- 260px);
+}
 
 
 /* Feedback Details */
@@ -27,7 +37,7 @@
 }
 
 .feedbackdetail p {
-    text-align: left;
+    text-align: center;
     color: #333;
     line-height: 1.5;
     margin-bottom: 20px;
@@ -117,7 +127,7 @@ textarea[name="reply"] {
 button.reply {
     margin-top: 5px;
     padding: 8px 12px;
-    background-color: #642CA9;
+    background-color: #ab5fe1;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -126,7 +136,8 @@ button.reply {
 }
 
 button.reply:hover {
-    background-color: #551A8B;
+    background-color: #6A0DAD;
+    transform: scale(1.1);
 }
 
 /* Optional: Add smooth scrolling for the whole page */

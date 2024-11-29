@@ -12,7 +12,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../assets/images/logo.png" type="image/png">
     <title>VetiPlus</title>
-    <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">4
+    <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">
     <link rel="stylesheet" href="../../assets/cssFiles/Admin/profile.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -22,25 +22,84 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <?php include '../../components/common/admin/navbar.php'; ?>
 
     <section class="home">
-        <div class="profile">
-            <div class="profile_top">
-                <div class="profile_top_inside">
-                    <div class="profile_top_inside_left">
-                        <img src="../../assets/images/image_8.jpg" alt="">
-                    </div>
-                    <div class="profile_top_inside_right">
-                        <h2>Full Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp; Ramesh Peshala</h2>
-                        <h2>Date of Birth &nbsp;&nbsp;&nbsp; :- &nbsp;&nbsp;2002/05/09</h2>
-                        <h2>Email &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp; rameshpeshala84@gmail.com</h2>
-                        <h2>Phone Number &nbsp;:-&nbsp;&nbsp;&nbsp; 0762163506</h2>
-                        <h2>Address &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;:- &nbsp;&nbsp; 419,Gangasirigama , Thissamaharama</h2>
-                        <h2>Gender &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :- &nbsp;&nbsp; Male</h2>
-                    </div>
+        <div class="profile_top">
+            <div class="profile_top_inside">
+                <div class="profile_top_inside_left">
+                    <img src="../../assets/images/user.png" alt="">
+                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-user-circle icon'></i>
+                                <label for="name"> Name</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>Ramesh Peshala</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-envelope icon'></i>
+                                <label for="email">Email</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>rameshpeshala84@gmail.com</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-home icon'></i>
+                                <label for="address">Address</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>419,Gangasirigama,Thissamaharama</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-phone icon'></i>
+                                <label for="phone_number">Phone Number</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>0762163506</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bxs-message-check icon'></i>
+                                <label for="nic">NIC</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>200212702901</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="regi-icon">
+                                <i class='bx bx-child icon'></i>
+                                <label for="gender">Gender</label>
+                            </div>
+                        </td>
+                        <td>
+                            <h3>Male</h3>
+                        </td>
+                    </tr>
+                </table>
+                <div class="profile_down">
+                    <button onclick="openModal()">Edit Profile</button>
                 </div>
             </div>
-            <div class="profile_down">
-                <button onclick="openModal()">Edit Profile</button>
-            </div>
+        </div>
         </div>
         <div id="passwordModal" class="modal">
             <div class="modal-content">

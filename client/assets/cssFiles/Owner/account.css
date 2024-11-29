@@ -4,109 +4,108 @@
 .accounts-inside{
     display: flex;
     flex-direction: row;
-    margin: 10px 100px;
+    margin: 20px 100px;
     justify-content: space-between;
+    gap: 20px;
 }
 .accounts-inside-left{
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 60px;
+    padding: 20px;
+    height: 100px;
     gap: 20px;
-    width: 32%;
+    width: 250px;
     border: 3px solid var(--background-primary);
     color: var(--text-color);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    transition: 0.5s;
+}
+.accounts-inside-left:hover{
+    transform: scale(1.1);
+}
+.accounts-inside-left-icon{
+    display: flex;
+    flex-direction: row;
 }
 .accounts-inside-left h2{
-    font-size: 23px;
+    font-size: 15px;
+    font-weight: 500;
 }
 .account-inside-upper{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 50px 100px;
-    gap: 500px;
+    margin: 100px 100px;
+    gap: 200px;
 
 }
 .account-inside-upper-1{
-    padding: 10px 60px;
+    padding: 20px; 
+    width: 300px;
     border: 3px solid var(--background-primary);
     color: var(--text-color);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     font-size: 15px;
     font-weight: 700;
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     
+}
+.account-inside-upper-1 h3{
+    font-size: 15px;
 }
 .account-inside-lower{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 450px;
-    margin: 50px 70px;
+    gap: 100px;
+    margin: 50px 80px;
 }
 .account-inside-lower-left form{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
-    padding: 15px;
+    padding: 9px;
     border-radius: 10px;
-    height: 250px;
+    height: 270px;
+    width: 300px;
     border: 3px solid var(--background-primary);
     color: var(--text-color);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
 }
 .account-inside-lower-left form input{
-    padding: 10px;
-    font-size: 20px;
+    padding: 9px;
+    font-size: 15px;
+    height: 45px;
+    width: 250px;
     border-radius: 10px;
+    border: 3px solid var(--background-primary);
 }
 .account-inside-lower-left form a{
     padding: 10px;
     font-size: 20px;
-    background-color: #B89ACB;
-    border: 3px solid var(--background-primary);
+    background-color: var(--background-light);
+    width: 200px;
+    height: 50px;
+    border: none;
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: var(--text-white);
     text-align: center;
 }
 .account-inside-lower-left form a:hover{
-    background-color: #8F53B4;
-    color: white;
-}
-.account-inside-lower-right form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 15px;
-    height: 250px;
-    border-radius: 10px;
-    border: 3px solid var(--background-primary);
-    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
-}
-.account-inside-lower-right form input{
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 10px;
-}
-.account-inside-lower-right form a{
-    padding: 10px ;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: #B89ACB;
-    border: 3px solid var(--background-primary);
-    cursor: pointer;
-     text-decoration: none;
-    color: black;
-    text-align: center;
-}
-.account-inside-lower-right form a:hover{
-    background-color: #8F53B4;
-    color: white;
+    background-color: var(--background-primary);
+    color: var(--text-white);
+    transform: scale(1.1);
 }
 .admin-navbar-inside-left-inner-1 ul li.active {
     background-color: #F8ECFF; /* Active background color */
@@ -115,4 +114,7 @@
 .admin-navbar-inside-left-inner-1 ul li.active a {
     color: #000000; /* Text color for the active link */
 }
-
+.icon{
+    font-size: 30px;
+    color: var(--background-primary);
+}

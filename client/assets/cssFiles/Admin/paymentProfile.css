@@ -79,7 +79,7 @@ table {
 }
 
 thead {
-    background-color: #f0f0f0;
+    
 }
 
 th,
@@ -105,3 +105,17 @@ th {
     color: #000000;
     /* Text color for the active link */
 }
+.payment-btn button{
+    margin: 20px 100px;
+    cursor: pointer;
+    background-color: var(--background-light);
+    height: 40px;
+    width: 200px;
+    color: var(--text-white);
+    border: none;
+  }
+  .payment-btn button:hover{
+    background-color: var(--background-primary);
+    color: var(--text-white);
+    transform: scale(1.1);
+  }

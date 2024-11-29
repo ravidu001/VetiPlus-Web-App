@@ -9,20 +9,25 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 10px 100px;
-    gap: 20px;
+    
 }
 
 .feedback-inside-top {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
     align-items: center;
-    height: 300px;
+    justify-content: center;
+    height: 330px;
+    width: 300px;
     border-radius: 20px;
     gap: 10px;
     color: var(--text-color);
     border: 3px solid var(--background-primary);
-    box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    transition: 0.5s;
+}
+.feedback-inside-top:hover{
+    transform: scale(1.05);
 }
 
 .feedback-inside-top img {
@@ -39,4 +44,8 @@
 .admin-navbar-inside-left-inner-1 ul li.active a {
     color: #000000;
     /* Text color for the active link */
+}
+.icon{
+    font-size: 30px;
+    color: var(--background-primary);
 }

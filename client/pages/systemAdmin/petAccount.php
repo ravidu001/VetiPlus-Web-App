@@ -12,7 +12,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="icon" href="../../assets/images/logo.png" type="image/png">
      <title>VetiPlus</title>
-     <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">4
+     <link rel="stylesheet" href="../../assets/cssFiles/Admin/navbar.css" type="text/css">
      <link rel="stylesheet" href="../../assets/cssFiles/Admin/petAccount.css">
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
  </head>
@@ -27,12 +27,52 @@
                  <div class="pet-account-inside-left">
                      <img src="../../assets/images/pet.jpg" alt="">
                  </div>
-                 <div class="pet-account-inside-right">
-                     <h2>Pet ID &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp; 22001557</h2>
-                     <h2>Name &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp; Rocky</h2>
-                     <h2>Gender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :-&nbsp; Male</h2>
-                     <h2>Pet Owner &nbsp;&nbsp; :-&nbsp;Ramesh Peshala</h2>
-                 </div>
+                 <table>
+                     <tr>
+                         <td>
+                             <div class="regi-icon">
+                                 <i class='bx bxl-baidu icon'></i>
+                                 <label for="id">Pet ID</label>
+                             </div>
+                         </td>
+                         <td>
+                             <h3>2200157</h3>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             <div class="regi-icon">
+                                 <i class='bx bxs-cat icon'></i>
+                                 <label for="name">Name</label>
+                             </div>
+                         </td>
+                         <td>
+                             <h3>Rocky</h3>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             <div class="regi-icon">
+                                 <i class='bx bx-child icon'></i>
+                                 <label for="gender">Gender</label>
+                             </div>
+                         </td>
+                         <td>
+                             <h3>Male</h3>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             <div class="regi-icon">
+                                 <i class='bx bxs-user-circle icon'></i>
+                                 <label for="petowner">Pet Owner</label>
+                             </div>
+                         </td>
+                         <td>
+                             <h3>Ramesh Peshala</h3>
+                         </td>
+                     </tr>
+                 </table>
              </div>
          </div>
      </section>

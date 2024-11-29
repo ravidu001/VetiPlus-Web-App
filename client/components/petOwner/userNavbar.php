@@ -5,10 +5,10 @@
     <img src="<?= BASE_PATH ?>/client/assets/images/vetiplus-logo.png" alt="VetiPlus logo" id="navBar-logo">
 
     <div class="links">
-        <a href="<?= BASE_PATH ?>/client/pages/petOwner/dashboard.php"
-        class="<?= ($current_pg == 'dashboard.php') ? 'active' : ''; ?>">
-            <i class="bx bxs-dashboard bx-sm" id="dashboardIcon"></i>
-            <label for="dashboardIcon" class="collapsable">Dashboard</label>
+        <a href="<?= BASE_PATH ?>/client/pages/petOwner/home.php"
+        class="<?= ($current_pg == 'home.php') ? 'active' : ''; ?>">
+            <i class="bx bxs-home bx-sm" id="homeIcon"></i>
+            <label for="homeIcon" class="collapsable">Home</label>
         </a>
 
         <a href="#" id="appointmentIcon"
@@ -27,25 +27,41 @@
             </a>
         </div>
 
-        <a href="<?= BASE_PATH ?>/client/pages/petOwner/otherServices.php"
+        <a href="#" id="otherServiceIcon"
+        class="<?= ($current_pg == 'petAdoption.php' || $current_pg == 'petBreeding.php') ? 'active' : ''; ?>">
+            <i class="bx bxs-chevrons-right bx-sm" ></i>
+            <label for="otherServiceIcon" class="collapsable">Appointments</label>
+        </a>
+        <div id="otherServiceTypes">
+            <a href="<?= BASE_PATH ?>/client/pages/petOwner/petAdoption.php">
+                <i class="bx bxs-dog bx-sm" id="otherServiceIcon"></i>
+                <label for="otherServiceIcon" class="collapsable">Pet Adoption</label>
+            </a>
+            <a href="<?= BASE_PATH ?>/client/pages/petOwner/petBreeding.php">
+                <i class="bx bxs-heart bx-sm" id="otherServiceIcon"></i>
+                <label for="otherServiceIcon" class="collapsable">Pet Breeding</label>
+            </a>
+        </div>
+
+        <!-- <a href="<?= BASE_PATH ?>/client/pages/petOwner/otherServices.php"
         class="<?= ($current_pg == 'otherServices.php') ? 'active' : ''; ?>">
             <i class="bx bxs-heart bx-sm" id="otherServiceIcon"></i>
             <label for="otherServiceIcon" class="collapsable">Other Services</label>
-        </a>
-        
-        <a href="<?= BASE_PATH ?>/client/pages/petOwner/about.php"
-        class="<?= ($current_pg == 'about.php') ? 'active' : ''; ?>">
+         </a> -->
+
+        <a href="<?= BASE_PATH ?>/client/pages/petOwner/aboutUs.php"
+        class="<?= ($current_pg == 'aboutUs.php') ? 'active' : ''; ?>">
             <i class="bx bxs-group bx-sm" id="aboutIcon"></i>
             <label for="aboutIcon" class="collapsable">About Us</label>
         </a>
 
-        <a href="<?= BASE_PATH ?>/client/pages/petOwner/contact.php"
-        class="<?= ($current_pg == 'contact.php') ? 'active' : ''; ?>">
+        <a href="<?= BASE_PATH ?>/client/pages/petOwner/contactUs.php"
+        class="<?= ($current_pg == 'contactUs.php') ? 'active' : ''; ?>">
             <i class="bx bxs-phone-call bx-sm" id="contactIcon"></i>
             <label for="contactIcon" class="collapsable">Contact Us</label>
         </a>
     </div>
-    <a href="<?= BASE_PATH ?>/client/pages/petOwner/profilePage.php"
+    <a href="<?= BASE_PATH ?>/client/pages/petOwner/petOwnerProfile.php"
     class="<?= ($current_pg == 'profilePage.php') ? 'active' : ''; ?>">
         <i class="bx bxs-user-circle bx-sm" id="profileIcon"></i>
         <label for="profileIcon">Profile</label>

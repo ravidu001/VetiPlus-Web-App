@@ -9,18 +9,25 @@
 }
 .Appoinment-inside-left{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 60px;
+    padding: 20px;
+    height: 100px;
+    margin-top: 30px;
     gap: 20px;
-    width: 32%;
+    width: 250px;
     border: 3px solid var(--background-primary);
     color: var(--text-color);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    transition: 0.5s;
 }
-.Appoinment-inside-left h2{
-    font-size: 23px;
+.Appoinment-inside-left:hover{
+    transform: scale(1.1);
+}
+.Appoinment-inside-left h2,h3{
+    font-size: 15px;
+    font-weight: 500;
 }
 .Appoinment-outside{
     display: flex;
@@ -51,6 +58,9 @@
     padding: 10px;
     font-size: 20px;
     border-radius: 10px;
+    height: 45px;
+    width: 270px;
+    border: 3px solid var(--background-primary);
 }
 .Appoinment-outside form .Appoinment-outside-down{
     display: flex;
@@ -61,8 +71,9 @@
 .Appoinment-outside form .Appoinment-outside-down  a{
     padding: 10px;
     font-size: 20px;
-    background-color: #B89ACB;
-    border: 3px solid var(--background-primary);
+    background-color: var(--background-light);
+    color: var(--text-white);
+    border: none;
     border-radius: 10px;
     margin-top: 30px;
     width: 200px;
@@ -70,20 +81,35 @@
     align-items: center;
     text-decoration: none;
     text-align: center;
-    color: black;
 }
 .Appoinment-outside form .Appoinment-outside-down  a:hover{
-    background-color: #8F53B4;
-    color: white;
+    background-color: var(--background-primary);
+    color: var(--text-white);
+    transform: scale(1.1);
 }
-.Appoinment-outside-down  a:hover{
+/* .Appoinment-outside-down  a:hover{
     background-color: #F1DBFF;
     color: white;
-}
+} */
 .admin-navbar-inside-left-inner-1 ul li.active {
     background-color: #F8ECFF; /* Active background color */
 }
 
 .admin-navbar-inside-left-inner-1 ul li.active a {
     color: #000000; /* Text color for the active link */
+}
+.icon{
+    font-size: 20px;
+    color: var(--background-primary);
+}
+canvas {
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+.appointmnet-chart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }

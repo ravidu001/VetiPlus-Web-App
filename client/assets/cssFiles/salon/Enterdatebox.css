@@ -48,26 +48,31 @@ button.cancel, button.ok {
     border: none;
     cursor: pointer;
     font-weight: bold;
+    transition: 0.3s ease;
+
 }
 
 button.cancel {
     background-color: #e0bdf9;
-    color: black;
+    color: #ffffff;
 }
 
 button.cancel:hover {
     background-color: #6A0DAD;
     color: white;
+    transform: scale(1.1);
 }
 
 button.ok {
-    background-color: #6A0DAD;
+    background-color: #ab5fe1;
     color: white;
 }
 
 button.ok:hover {
-    background-color: #e0bdf9;
-    color: black;
+    background-color: #6A0DAD;
+    color: #ffffff;
+    transform: scale(1.1);
+    
 }
 
 /* Optional: Add smooth scrolling for the whole page */

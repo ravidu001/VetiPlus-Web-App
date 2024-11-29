@@ -42,17 +42,20 @@ body {
 }
 
 #sidebar {
+    /*  position:Sticky */
+    position: fixed;
     height: 100vh;
     width: 260px;
     padding-left: 0;
     background-color: var(--primary-color-light);
-    position: sticky;  
     padding: 10px;
     top: 0;
+    left: 0;
     transition: width 0.3s ease-in-out;
-    overflow: hidden;
-    top: 0;
-    align-self: start; 
+    overflow-y: auto;
+    z-index: 1000;
+    /* align-self: start;  */
+
 }
 
 #sidebar .nav-link.active {
@@ -124,8 +127,8 @@ body {
 
 #sidebar .logo{
     margin-left: 10px;
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 

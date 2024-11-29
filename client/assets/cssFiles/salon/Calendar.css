@@ -39,21 +39,27 @@ body {
 
 .selectdate{
     padding: 8px;
-    font-size: 15px;
+    font-size: 17px;
+    
 }
 
 .date-button {
     padding: 8px 16px;
-    background: #6A0DAD;
-    color: white;
-    border: none;
+    /* background: #6A0DAD; */
+    /* color: white; */
+    font-size: 14px;
+    border: #6A0DAD 2px solid;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    color:  #6A0DAD;
+    background-color: #ffecff;
+    transition:  0.3s ease; 
 }
 
 .date-button:hover {
-    background: #560a8b;
+    background: #6A0DAD;
+    color : #fff;
+    transform: scale(1.1);
 }
 
 .calendar-header {

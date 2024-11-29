@@ -15,7 +15,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 20px 100px;
-    height: 200px;
+    height: 130px;
     border: 3px solid var(--background-primary);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
     color: var(--text-color);
@@ -31,14 +31,16 @@
     
 }
 .home-inside-left h1{
-    font-size: 50px;
+    font-size: 30px;
+    font-weight: 500;
 }
 .home-inside-left h3{
     font-size: 20px;
+    font-weight: 500;
 }
 .home-inside-left img{
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     border-radius: 10px;
   
 }
@@ -49,8 +51,8 @@
     
 }
 .home-inside-right img{
-    width: 160px;
-    height: 160px;
+    width: 100px;
+    height: 100px;
     border-radius: 10px;
     margin-right: 10px;
 }
@@ -60,12 +62,23 @@
     justify-content: center;
     align-items: center;
     height: 100px;
-    width: 300px;
+    width: 250px;
     border-radius: 10px;
     padding: 40px;
     border: 3px solid var(--background-primary);
     color: var(--text-color);
     box-shadow: 10px 10px 15px rgba(202, 143, 225, 0.3);
+    transition: 0.5s;
+}
+.home-inside-middle:hover{
+    transform: scale(1.1);
+}
+.home-inside-middle h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+.home-inside-middle h3{
+    font-weight: 600;
 }
 .home-inside-outer{
     display: flex;
@@ -105,4 +118,8 @@
 
 canvas {
     box-shadow: 20px 20px 25px rgba(213, 212, 212, 0.3);
+}
+.icon{
+    font-size: 30px;
+    color: var(--background-primary);
 }
