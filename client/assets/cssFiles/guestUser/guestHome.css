@@ -109,3 +109,27 @@ h1 {
 .userTypes .userCard .userDescription {
     font-size: 1em;
 }
+
+.happyCxContainer {
+    display: flex;
+    gap: 10px;
+
+    margin: 10px 10vw 10px 10vw;
+    overflow-x: scroll;
+}
+.happyCxCard {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--primary-border-color);
+}
+.happyCxCard img {
+    height: 10rem;
+    width: auto;
+    border-radius: 10px;
+}
+.happyCxCard span {
+    display: block;
+}

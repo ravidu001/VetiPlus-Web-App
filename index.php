@@ -117,15 +117,37 @@
         </div>
 
         <h1>Our Happy Customers</h1>
-        <div class="happyCx">
-            <div class="cxCard">
-                <img src="" alt="">
-                <p class="cxTitle"></p>
-                <p class="cxReview">
-
-                </p>
-                <div class="stars"></div>
+        <div class="happyCxContainer">
+            <?php for ($i=0; $i<2; $i++): ?>
+            <div class="happyCxCard">
+                <img src="./client/assets/images/boy.jpg" alt="">
+                <div class="details">
+                    <span>Mr.Perera</span>
+                    <span>VetiPlus good!</span>
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star bx-md"></i>
+                    <i class="bx bxs-star bx-md"></i>
+                    <i class="bx bxs-star bx-md"></i>
+                    <i class="bx bxs-star bx-md"></i>
+                    <i class="bx bxs-star bx-md"></i>
+                </div>
             </div>
+            <div class="happyCxCard">
+                <img src="./client/assets/images/girl.jpg" alt="">
+                <div class="details">
+                    <span>Mrs.Sunil</span>
+                    <span>VetiPlus good!</span>
+                </div>
+                <div class="stars">
+                    <i class="bx bxs-star bx-md"></i>
+                    <i class="bx bxs-star bx-md"></i>
+                    <i class="bx bxs-star bx-md"></i>
+                    <i class="bx bxs-star bx-md"></i>
+                    <i class="bx bxs-star bx-md"></i>
+                </div>
+            </div>
+            <?php endfor; ?>
         </div>
 
         
@@ -133,7 +155,6 @@
         <?php include INCLUDE_BASE.'/client/components/guestUser/guestFooter.php'; ?>
 
         <script>
-
             const imgFolder = "./client/assets/images/serviceIcons/"
             const services = [
                 {

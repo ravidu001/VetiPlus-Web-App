@@ -42,6 +42,7 @@
 
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/profilePages.css" rel="stylesheet">
         <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/formStyles.css" rel="stylesheet">
+        <link href="<?= BASE_PATH ?>/client/assets/cssFiles/petOwner/appointmentPages.css" rel="stylesheet">
 
     </head>
     <body>
@@ -120,7 +121,30 @@
 
             <section class="dashArea">
                 <h2>Appointment History</h2>
-                
+                <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/salonIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <span>Full Bath - Mr.Perera</span>
+                                <span><b>Example Salon</b> No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.06.2024 | 6:00PM</h4>
+                            </div>
+                            <button><i class="bx bxs-star bx-md"></i> Rate Appointment</button>
+                        </div>
+                        <div class="appointmentCard">
+                            <img src="<?= BASE_PATH.'/client/assets/images/petOwner/salonIcon.png'?>" class="appointmentIcon" alt="appointmentIcon">
+                            <div class="appointmentDetails">
+                                <span>Nail Cutting - Miss.Rajamani</span>
+                                <span><b>Example Salon</b> No.103\1A, Hena Road, Mount-Lavinia</span>
+                                <h4>05.10.2024 | 6:00PM</h4>
+                            </div>
+                            <div class="Rating">
+                                <i class="bx bxs-star bx-sm"></i>
+                                <i class="bx bxs-star bx-sm"></i>
+                                <i class="bx bxs-star bx-sm"></i>
+                                <i class="bx bxs-star-half bx-sm"></i>
+                                <i class="bx bx-star bx-sm"></i>
+                            </div>
+                        </div>
             </section>
         </div>
 

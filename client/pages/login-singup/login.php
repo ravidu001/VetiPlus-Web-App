@@ -105,7 +105,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="container">
+    <div class="container">7
         <div class="left-panel">
             
                 <div class="home-icon">
