@@ -7,7 +7,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="../../assets/images/admin_logo.png" alt="logo">
+                    <img src="../../assets/images/adminprofile.jpg" alt="logo">
                 </span>
 
                 <div class="text header-text">
@@ -96,7 +96,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <a href="profile.php">
                         <!--<i class='bx bx-log-out icon'></i>-->
                         <div class="profile">
-                             <img src="../../assets/images/image_8.jpg" alt="">
+                             <img src="../../../assets/images/user.png" alt="">
                         </div>
                         <span class="text nav-text"> Profile</span>
                     </a>

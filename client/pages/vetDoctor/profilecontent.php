@@ -148,21 +148,21 @@
                     <td>
                     <input type="radio" id="gender1" name="gender" value="male"
                         <?php
-                        if ($gender == '') {
-                            echo 'checked';
-                        } elseif ($gender == 'male') {
-                            echo 'checked';
-                        } elseif ($gender == 'female') {
-                            echo 'disabled';
-                        }
+                        // if ($gender == '') {
+                        //     echo 'checked';
+                        // } elseif ($gender == 'male') {
+                        //     echo 'checked';
+                        // } elseif ($gender == 'female') {
+                        //     echo 'disabled';
+                        // }
                         ?>>Male
                     <input type="radio" id="gender2" name="gender" value="female" class="female"
                         <?php
-                        if ($gender == 'female') {
-                            echo 'checked';
-                        } elseif ($gender == 'male') {
-                            echo 'disabled';
-                        }
+                        // if ($gender == 'female') {
+                        //     echo 'checked';
+                        // } elseif ($gender == 'male') {
+                        //     echo 'disabled';
+                        // }
                         ?>>Female
                     </td>
                 </tr>

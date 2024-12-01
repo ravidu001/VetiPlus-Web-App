@@ -33,7 +33,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     </div>
                 </div>
                 <div class="home-inside-right">
-                    <img src="../../assets/images/image_9.png" alt="">
+                    <img src="../../assets/images/admin.jpg" alt="">
                 </div>
             </div>
             <div class="home-search">

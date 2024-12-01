@@ -1,12 +1,12 @@
 <?php
 
     // base location for images, plain href, css files and other stuff:
-    define('BASE_PATH', 'http://localhost/VetiPlus/VetiPlus-Web-App');
+    // define('BASE_PATH', 'http://localhost/VetiPlus/VetiPlus-Web-App');
 
 
 // base location for PHP FORM HANDLERS, HEADER locations
 // images, plain href, css files and other stuff:
-define('BASE_PATH', 'http://localhost/VetiPlus-Web-App');
+ define('BASE_PATH', 'http://localhost/VetiPlus-Web-App');
 
 // base location for php include files:
 define('INCLUDE_BASE', __DIR__);

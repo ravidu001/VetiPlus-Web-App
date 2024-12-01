@@ -5,6 +5,7 @@
     $userID = $_SESSION['user_id'];
 
     include '../../../config.php';
+    // echo "<script>alert(' .$userID.')</script>";
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +52,7 @@
                     </span>
 
                 <label for="weight">Weight:</label>
-                    <input type="number" id="weight" name="weight" required>
+                    <input type="number" id="weight" name="weight" min="0" required>
                     
                 <label for="species">Species:</label>
                     <input type="text" id="species" name="species" list="petSpecies">
@@ -110,6 +111,14 @@
                     method: 'POST',
                     body: formData,
                 })
+                // .then(response => response.text())
+                // .then(data => {     
+                //     try {
+                //         console.log(JSON.parse(data));
+                //     } catch (e) {
+                //         console.error('Error parsing JSON:', data);
+                //      }
+                // })
                 .then(response => response.json())
                 .then(data => {
                     if (data.status === 'success') {
